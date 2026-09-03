@@ -2,14 +2,113 @@
  * StatGyan AI - Client Application Logic
  * Communicates with FastAPI backend for Competency Gap Analysis,
  * Grounded Question Generation (QC), Blended Pathways, and Virtual Lab.
+ * Auto-detects server port (seamlessly works on port 8080, port 5500 Live Server, or file protocol).
  */
 
-const API_BASE = "";
+const API_BASE = (window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost") && window.location.port !== "8080"
+  ? "http://127.0.0.1:8080"
+  : "";
+
+// Built-in fallback cadres for offline/LiveServer zero-delay startup
+const BUILTIN_CADRES = [
+  {
+    "id": "jso",
+    "title": "Junior Statistical Officer (JSO)",
+    "cadre_group": "Subordinate Statistical Service (SSS)",
+    "required_competencies": {
+      "Survey Methodology & Sampling": 85,
+      "National Accounts & GDP Estimation": 60,
+      "Index Numbers (CPI & IIP)": 75,
+      "Data Analytics & Programming": 70,
+      "Field Operations & CAPI Validation": 90,
+      "Official Statistics Governance & Quality": 65
+    },
+    "typical_officer_profile": {
+      "assessed_competencies": {
+        "Survey Methodology & Sampling": 72,
+        "National Accounts & GDP Estimation": 45,
+        "Index Numbers (CPI & IIP)": 68,
+        "Data Analytics & Programming": 48,
+        "Field Operations & CAPI Validation": 88,
+        "Official Statistics Governance & Quality": 58
+      }
+    }
+  },
+  {
+    "id": "sso",
+    "title": "Senior Statistical Officer (SSO)",
+    "cadre_group": "Subordinate Statistical Service (SSS)",
+    "required_competencies": {
+      "Survey Methodology & Sampling": 90,
+      "National Accounts & GDP Estimation": 75,
+      "Index Numbers (CPI & IIP)": 88,
+      "Data Analytics & Programming": 82,
+      "Field Operations & CAPI Validation": 92,
+      "Official Statistics Governance & Quality": 80
+    },
+    "typical_officer_profile": {
+      "assessed_competencies": {
+        "Survey Methodology & Sampling": 84,
+        "National Accounts & GDP Estimation": 68,
+        "Index Numbers (CPI & IIP)": 82,
+        "Data Analytics & Programming": 62,
+        "Field Operations & CAPI Validation": 90,
+        "Official Statistics Governance & Quality": 76
+      }
+    }
+  },
+  {
+    "id": "iss_ad",
+    "title": "ISS Officer (Assistant / Deputy Director)",
+    "cadre_group": "Indian Statistical Service (Group A Central Service)",
+    "required_competencies": {
+      "Survey Methodology & Sampling": 95,
+      "National Accounts & GDP Estimation": 95,
+      "Index Numbers (CPI & IIP)": 92,
+      "Data Analytics & Programming": 88,
+      "Field Operations & CAPI Validation": 80,
+      "Official Statistics Governance & Quality": 95
+    },
+    "typical_officer_profile": {
+      "assessed_competencies": {
+        "Survey Methodology & Sampling": 92,
+        "National Accounts & GDP Estimation": 90,
+        "Index Numbers (CPI & IIP)": 85,
+        "Data Analytics & Programming": 72,
+        "Field Operations & CAPI Validation": 74,
+        "Official Statistics Governance & Quality": 94
+      }
+    }
+  },
+  {
+    "id": "field_investigator",
+    "title": "Field Investigator / Enumerator",
+    "cadre_group": "Field Operations Division Cadre",
+    "required_competencies": {
+      "Survey Methodology & Sampling": 70,
+      "National Accounts & GDP Estimation": 30,
+      "Index Numbers (CPI & IIP)": 60,
+      "Data Analytics & Programming": 45,
+      "Field Operations & CAPI Validation": 95,
+      "Official Statistics Governance & Quality": 60
+    },
+    "typical_officer_profile": {
+      "assessed_competencies": {
+        "Survey Methodology & Sampling": 62,
+        "National Accounts & GDP Estimation": 20,
+        "Index Numbers (CPI & IIP)": 50,
+        "Data Analytics & Programming": 35,
+        "Field Operations & CAPI Validation": 92,
+        "Official Statistics Governance & Quality": 50
+      }
+    }
+  }
+];
 
 // Global App State
 const state = {
   activeCadre: "jso",
-  cadres: [],
+  cadres: BUILTIN_CADRES,
   gapAnalysis: null,
   radarChart: null,
   activeAssessment: null,
@@ -66,30 +165,43 @@ function handleTabActivation(tabId) {
 }
 
 // 2. Role Switcher & Cadre Loading
+function populateCadresDropdown() {
+  const select = document.getElementById("cadre-select");
+  if (!select) return;
+  select.innerHTML = "";
+  state.cadres.forEach(c => {
+    const opt = document.createElement("option");
+    opt.value = c.id;
+    opt.textContent = `${c.title} (${c.cadre_group})`;
+    select.appendChild(opt);
+  });
+  select.value = state.activeCadre;
+}
+
 async function loadCadres() {
+  populateCadresDropdown();
   try {
     const res = await fetch(`${API_BASE}/api/cadres`);
-    const data = await res.json();
-    state.cadres = data.cadres;
-    
-    const select = document.getElementById("cadre-select");
-    select.innerHTML = "";
-    state.cadres.forEach(c => {
-      const opt = document.createElement("option");
-      opt.value = c.id;
-      opt.textContent = `${c.title} (${c.cadre_group})`;
-      select.appendChild(opt);
-    });
-
-    select.value = state.activeCadre;
-    triggerCompetencyAnalysis();
+    if (res.ok) {
+      const text = await res.text();
+      if (text && text.trim()) {
+        const data = JSON.parse(text);
+        if (data.cadres && data.cadres.length > 0) {
+          state.cadres = data.cadres;
+          populateCadresDropdown();
+        }
+      }
+    }
   } catch (err) {
-    console.error("Failed to load cadres:", err);
+    console.warn("API cadres fetch unavailable, using built-in MoSPI cadres:", err);
   }
+  
+  triggerCompetencyAnalysis();
 }
 
 function setupRoleSwitcher() {
   const select = document.getElementById("cadre-select");
+  if (!select) return;
   select.addEventListener("change", (e) => {
     state.activeCadre = e.target.value;
     triggerCompetencyAnalysis();
@@ -105,14 +217,113 @@ async function triggerCompetencyAnalysis() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ cadre_id: state.activeCadre })
     });
-    const data = await res.json();
+
+    if (!res.ok) {
+      throw new Error(`HTTP ${res.status}`);
+    }
+    const text = await res.text();
+    if (!text || !text.trim()) {
+      throw new Error("Empty response payload");
+    }
+
+    const data = JSON.parse(text);
     state.gapAnalysis = data;
     renderCompetencyOverview(data);
     renderRadarChart(data.radar_data);
     renderDomainList(data.domain_breakdown);
   } catch (err) {
-    console.error("Competency analysis failed:", err);
+    console.warn("API competency analysis failed, computing client-side deterministic gap:", err);
+    const fallback = computeClientSideGap(state.activeCadre);
+    state.gapAnalysis = fallback;
+    renderCompetencyOverview(fallback);
+    renderRadarChart(fallback.radar_data);
+    renderDomainList(fallback.domain_breakdown);
   }
+}
+
+function computeClientSideGap(cadreId, customScores = null) {
+  const cadre = state.cadres.find(c => c.id === cadreId) || state.cadres[0];
+  const required = cadre.required_competencies;
+  const assessed = customScores || cadre.typical_officer_profile.assessed_competencies;
+
+  const domainBreakdown = [];
+  let totalGap = 0;
+  let criticalCount = 0;
+  let readinessSum = 0;
+
+  for (const [dom, req] of Object.entries(required)) {
+    const cur = assessed[dom] || 40;
+    const gap = Math.max(0, req - cur);
+    totalGap += gap;
+    const ratio = Math.min(1.0, cur / Math.max(1, req));
+    readinessSum += ratio;
+
+    let status = "Competent";
+    let severity = "Low";
+    if (gap >= 20) {
+      status = "Critical Deficit";
+      severity = "Critical";
+      criticalCount++;
+    } else if (gap >= 10) {
+      status = "Moderate Gap";
+      severity = "Moderate";
+    }
+
+    domainBreakdown.push({
+      domain: dom,
+      required_level: req,
+      assessed_level: cur,
+      gap_delta: gap,
+      status: status,
+      severity: severity
+    });
+  }
+
+  const numDomains = Object.keys(required).length;
+  const avgGap = +(totalGap / numDomains).toFixed(1);
+  const readinessPct = +( (readinessSum / numDomains) * 100 ).toFixed(1);
+
+  return {
+    cadre_id: cadre.id,
+    cadre_title: cadre.title,
+    overall_readiness_pct: readinessPct,
+    average_gap: avgGap,
+    critical_gap_count: criticalCount,
+    domain_breakdown: domainBreakdown,
+    radar_data: {
+      labels: Object.keys(required),
+      required: Object.values(required),
+      assessed: Object.keys(required).map(d => assessed[d] || 40)
+    }
+  };
+}
+
+function computeClientSideInference(cadreId, text) {
+  const cadre = state.cadres.find(c => c.id === cadreId) || state.cadres[0];
+  const lower = text.toLowerCase();
+  
+  const scores = { ...cadre.typical_officer_profile.assessed_competencies };
+  
+  if (lower.includes("plfs") || lower.includes("sampling") || lower.includes("scrutiny") || lower.includes("cws") || lower.includes("ups") || lower.includes("survey")) {
+    scores["Survey Methodology & Sampling"] = Math.min(95, (scores["Survey Methodology & Sampling"] || 70) + 14);
+  }
+  if (lower.includes("capi") || lower.includes("tablet") || lower.includes("cspro") || lower.includes("field") || lower.includes("household")) {
+    scores["Field Operations & CAPI Validation"] = Math.min(98, (scores["Field Operations & CAPI Validation"] || 85) + 10);
+  }
+  if (lower.includes("cpi") || lower.includes("iip") || lower.includes("index") || lower.includes("price") || lower.includes("laspeyres")) {
+    scores["Index Numbers (CPI & IIP)"] = Math.min(95, (scores["Index Numbers (CPI & IIP)"] || 65) + 14);
+  }
+  if (lower.includes("r") || lower.includes("python") || lower.includes("analytics") || lower.includes("code") || lower.includes("weight") || lower.includes("data")) {
+    scores["Data Analytics & Programming"] = Math.min(92, (scores["Data Analytics & Programming"] || 45) + 16);
+  }
+  if (lower.includes("gdp") || lower.includes("gva") || lower.includes("national accounts") || lower.includes("sna") || lower.includes("macro")) {
+    scores["National Accounts & GDP Estimation"] = Math.min(95, (scores["National Accounts & GDP Estimation"] || 45) + 15);
+  }
+  if (lower.includes("quality") || lower.includes("governance") || lower.includes("nso") || lower.includes("audit") || lower.includes("appraisal")) {
+    scores["Official Statistics Governance & Quality"] = Math.min(95, (scores["Official Statistics Governance & Quality"] || 55) + 12);
+  }
+
+  return computeClientSideGap(cadreId, scores);
 }
 
 function renderCompetencyOverview(data) {
@@ -457,11 +668,17 @@ function renderMCQs(data) {
 }
 
 // 5. Blended Pathway (iGOT + NSSTA)
-async function loadPathway() {
+async function loadPathway(retryCount = 0) {
   const container = document.getElementById("pathway-timeline");
   if (!container) return;
 
-  container.innerHTML = `<div style="color: #94A3B8; padding: 1.5rem;">Synthesizing Blended iGOT + NSSTA Pathway...</div>`;
+  container.innerHTML = `
+    <div style="text-align: center; padding: 2rem; color: #94A3B8;">
+      <div class="pulse-dot" style="display: inline-block; margin-bottom: 0.5rem;"></div>
+      <div style="font-weight: 600; color: #F8FAFC;">Synthesizing Blended iGOT + NSSTA Pathway...</div>
+      <div style="font-size: 0.75rem; color: #64748B; margin-top: 4px;">Aligning digital foundations with physical TPAC workshops</div>
+    </div>
+  `;
 
   try {
     const res = await fetch(`${API_BASE}/api/recommender/pathway`, {
@@ -469,12 +686,154 @@ async function loadPathway() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ cadre_id: state.activeCadre })
     });
-    const data = await res.json();
+
+    if (!res.ok) {
+      throw new Error(`Server returned HTTP ${res.status} (${res.statusText || 'Error'})`);
+    }
+
+    const text = await res.text();
+    if (!text || !text.trim()) {
+      throw new Error("Server returned an empty response payload");
+    }
+
+    const data = JSON.parse(text);
+    if (!data.learning_pathway || data.learning_pathway.length === 0) {
+      throw new Error("No learning pathway steps generated");
+    }
+
     state.pathway = data;
     renderPathway(data);
   } catch (err) {
-    container.innerHTML = `<div style="color: #EF4444;">Failed to build pathway: ${err}</div>`;
+    console.warn("Pathway recommendation error:", err);
+    if (retryCount < 1) {
+      // Auto-retry once after 700ms in case server was restarting
+      setTimeout(() => loadPathway(retryCount + 1), 700);
+      return;
+    }
+    renderPathwayError(container, err);
   }
+}
+
+function renderPathwayError(container, err) {
+  container.innerHTML = `
+    <div class="card" style="border-color: rgba(239, 68, 68, 0.4); background: rgba(239, 68, 68, 0.08); text-align: center; padding: 2rem;">
+      <div style="font-size: 2rem; margin-bottom: 0.5rem;">⚠️</div>
+      <div style="font-weight: 700; color: #EF4444; font-size: 1.05rem; margin-bottom: 0.5rem;">Pathway Synthesis Temporary Interruption</div>
+      <div style="color: #94A3B8; font-size: 0.85rem; max-width: 500px; margin: 0 auto 1.25rem;">
+        The blended recommendation engine encountered a temporary response error: <br>
+        <code style="color: #F87171; background: rgba(0,0,0,0.3); padding: 2px 8px; border-radius: 4px; display: inline-block; margin-top: 4px;">${err.message || err}</code>
+      </div>
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <button class="btn btn-primary" onclick="loadPathway(0)">
+          <span>🔄</span> Retry Pathway Generation
+        </button>
+        <button class="btn btn-secondary" onclick="loadSamplePathway()">
+          <span>📋</span> Load Standard MoSPI Blended Pathway
+        </button>
+      </div>
+    </div>
+  `;
+}
+
+function loadSamplePathway() {
+  const fallbackPathway = {
+    officer_cadre: "Junior Statistical Officer (JSO)",
+    total_pathway_steps: 6,
+    total_online_hours: 50,
+    total_residential_days: 13,
+    total_karmayogi_credits: 9.0,
+    learning_pathway: [
+      {
+        step_order: 1,
+        phase: "Phase 1: Digital Foundation",
+        channel: "iGOT Karmayogi",
+        domain: "Data Analytics & Programming",
+        targeted_gap_points: 22.0,
+        course_code: "IGOT-MOSPI-R-PROG-301",
+        title: "Statistical Programming in R for Survey Analysis",
+        format: "Online (Coding Exercises)",
+        duration: "20 hours",
+        credits: 3.0,
+        status: "Ready for One-Click Enrollment"
+      },
+      {
+        step_order: 2,
+        phase: "Phase 2: In-Person Applied Lab",
+        channel: "NSSTA TPAC (Greater Noida)",
+        domain: "Data Analytics & Programming",
+        targeted_gap_points: 22.0,
+        course_code: "NSSTA-TPAC-2026-R-PY-PROG",
+        title: "Advanced R & Python Statistical Modeling for Official Publications",
+        format: "Hands-on High-Performance Computing Lab",
+        duration: "5 days (Residential)",
+        dates: "02-06 Nov 2026",
+        location: "Computer Centre, NSSTA, Greater Noida",
+        tpac_approval_ref: "TPAC/MoSPI/2026/IT-09",
+        prerequisite_required: "IGOT-MOSPI-R-PROG-301",
+        status: "Nominations Open"
+      },
+      {
+        step_order: 3,
+        phase: "Phase 1: Digital Foundation",
+        channel: "iGOT Karmayogi",
+        domain: "National Accounts & GDP Estimation",
+        targeted_gap_points: 15.0,
+        course_code: "IGOT-MOSPI-NAS-401",
+        title: "System of National Accounts 2008 & GVA Estimation",
+        format: "Online (Theory & Case Studies)",
+        duration: "16 hours",
+        credits: 2.5,
+        status: "Ready for One-Click Enrollment"
+      },
+      {
+        step_order: 4,
+        phase: "Phase 2: In-Person Applied Lab",
+        channel: "NSSTA TPAC (Greater Noida)",
+        domain: "National Accounts & GDP Estimation",
+        targeted_gap_points: 15.0,
+        course_code: "NSSTA-TPAC-2026-NAS-MACRO",
+        title: "Macroeconomic Aggregates & Supply-Use Tables (SUT) Intensive",
+        format: "Advanced Residential Program",
+        duration: "5 days (Residential)",
+        dates: "07-11 Dec 2026",
+        location: "NSSTA, Greater Noida",
+        tpac_approval_ref: "TPAC/MoSPI/2026/NAD-11",
+        prerequisite_required: "IGOT-MOSPI-NAS-401",
+        status: "Nominations Open"
+      },
+      {
+        step_order: 5,
+        phase: "Phase 1: Digital Foundation",
+        channel: "iGOT Karmayogi",
+        domain: "Survey Methodology & Sampling",
+        targeted_gap_points: 13.0,
+        course_code: "IGOT-MOSPI-SAMPL-101",
+        title: "Foundations of Official Sample Survey Design",
+        format: "Online (Self-Paced)",
+        duration: "12 hours",
+        credits: 2.0,
+        status: "Ready for One-Click Enrollment"
+      },
+      {
+        step_order: 6,
+        phase: "Phase 2: In-Person Applied Lab",
+        channel: "NSSTA TPAC (Greater Noida)",
+        domain: "Survey Methodology & Sampling",
+        targeted_gap_points: 13.0,
+        course_code: "NSSTA-TPAC-2026-ADV-SAMPL",
+        title: "Advanced Stratified Sampling & Small Area Estimation Lab",
+        format: "Residential Workshop (In-Person Lab)",
+        duration: "5 days (Residential)",
+        dates: "12-16 Oct 2026",
+        location: "Plot No. 22, Knowledge Park-II, Greater Noida, UP",
+        tpac_approval_ref: "TPAC/MoSPI/2026/S-14",
+        prerequisite_required: "IGOT-MOSPI-SAMPL-101",
+        status: "Nominations Open"
+      }
+    ]
+  };
+  state.pathway = fallbackPathway;
+  renderPathway(fallbackPathway);
 }
 
 function renderPathway(data) {

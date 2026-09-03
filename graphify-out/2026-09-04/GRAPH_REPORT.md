@@ -1,16 +1,16 @@
 # Graph Report - StatGyan AI  (2026-09-04)
 
 ## Corpus Check
-- 46 files · ~68,929 words
+- 47 files · ~72,466 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 700 nodes · 719 edges · 35 communities (33 shown, 1 thin omitted)
-- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 2 edges (avg confidence: 0.85)
+- 727 nodes · 772 edges · 38 communities (36 shown, 1 thin omitted)
+- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 3 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `33f4822e`
+- Built from commit: `af25a577`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -48,6 +48,9 @@
 - server.py
 - app.js
 - GroundedMCQGenerator
+- CompetencyGapModel
+- ProctoringTrustEngine
+- VirtualLabEvaluator
 - PredictiveAnalyticsEngine
 
 ## God Nodes (most connected - your core abstractions)
@@ -69,7 +72,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (35 total, 1 thin omitted)
+## Communities (38 total, 1 thin omitted)
 
 ### Community 0 - "Graphify Knowledge Graph Rule"
 Cohesion: 0.67
@@ -188,32 +191,46 @@ Cohesion: 0.22
 Nodes (8): Analogous Inspiration, Constraint-Based Ideation, First Principles Thinking, How Might We (HMW), Ideation Frameworks Reference, Jobs to Be Done (JTBD), Pre-mortem, SCAMPER
 
 ### Community 30 - "server.py"
-Cohesion: 0.05
-Nodes (41): analyze_competency(), AnalyzeRequest, cadre_analytics(), DecaySimulateRequest, evaluate_lab_code(), export_moodle(), export_qti(), generate_assessment() (+33 more)
+Cohesion: 0.08
+Nodes (37): analyze_competency(), AnalyzeRequest, cadre_analytics(), DecaySimulateRequest, evaluate_lab_code(), export_moodle(), export_qti(), generate_assessment() (+29 more)
 
 ### Community 31 - "app.js"
-Cohesion: 0.15
-Nodes (22): executeLabCode(), handleTabActivation(), loadCadreAnalytics(), loadCadres(), loadPathway(), renderCompetencyOverview(), renderDecayResults(), renderDivisionalHeatmap() (+14 more)
+Cohesion: 0.11
+Nodes (34): executeLabCode(), handleTabActivation(), initWebcamStream(), loadCadreAnalytics(), loadCadres(), loadPathway(), loadSampleMCQs(), loadSamplePathway() (+26 more)
 
 ### Community 32 - "GroundedMCQGenerator"
 Cohesion: 0.18
 Nodes (8): GroundedMCQGenerator, Any, StatGyan AI - Grounded Question (MCQ) & Assessment Generator with QC Pipeline…, Selects and validates grounded MCQs passing full QC inspection., Automated 3-Stage QC Audit: 1. Grounding Citation Check 2. Distractor…, Exports assessment items to QTI 2.1 standard XML format for LMS/Karmayogi…, Exports assessment to standard Moodle XML., Grounded pre-verified MoSPI technical item bank mapped to exact manual…
 
-### Community 33 - "PredictiveAnalyticsEngine"
+### Community 33 - "CompetencyGapModel"
+Cohesion: 0.22
+Nodes (5): CompetencyGapModel, Any, StatGyan AI - Competency Assessment & Skill Gap Model Uses TF-IDF, Latent…, Uses TF-IDF cosine similarity to infer domain affinities from officer self-…, Evaluates competency gap against cadre benchmark.
+
+### Community 35 - "ProctoringTrustEngine"
+Cohesion: 0.33
+Nodes (3): ProctoringTrustEngine, Any, StatGyan AI - AI Proctoring & Restriction Engine Integrates anti-cheating…
+
+### Community 36 - "VirtualLabEvaluator"
+Cohesion: 0.25
+Nodes (5): Any, StatGyan AI - Virtual Statistical Lab Evaluator Auto-evaluates statistical…, Executes standard weighted MoSPI calculation over microdata records: - Employed…, Evaluates submitted script against test cases and survey multiplier rules., VirtualLabEvaluator
+
+### Community 37 - "PredictiveAnalyticsEngine"
 Cohesion: 0.25
 Nodes (5): PredictiveAnalyticsEngine, Any, StatGyan AI - Cadre Readiness Forecaster & HR Heatmap Analytics Aggregates…, Returns divisional capability matrix for admin heatmaps., Simulates readiness & shortfall risk for upcoming official statistical surveys.
 
 ## Knowledge Gaps
 - **469 isolated node(s):** `idea-refine.sh script`, `state`, `Overview`, `When to Use`, `Hyrum's Law` (+464 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 526 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 528 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **1 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `GroundedMCQGenerator` connect `GroundedMCQGenerator` to `server.py`?**
-  _High betweenness centrality (0.003) - this node is a cross-community bridge._
-- **Why does `PredictiveAnalyticsEngine` connect `PredictiveAnalyticsEngine` to `server.py`?**
+  _High betweenness centrality (0.004) - this node is a cross-community bridge._
+- **Why does `CompetencyGapModel` connect `CompetencyGapModel` to `server.py`?**
+  _High betweenness centrality (0.002) - this node is a cross-community bridge._
+- **Why does `ProctoringTrustEngine` connect `ProctoringTrustEngine` to `server.py`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **What connects `idea-refine.sh script`, `state`, `Overview` to the rest of the system?**
   _469 weakly-connected nodes found - possible documentation gaps or missing edges._
@@ -223,5 +240,3 @@ _Questions this graph is uniquely positioned to answer:_
   _Cohesion score 0.06666666666666667 - nodes in this community are weakly interconnected._
 - **Should `Test-Driven Development` be split into smaller, more focused modules?**
   _Cohesion score 0.06666666666666667 - nodes in this community are weakly interconnected._
-- **Should `Git Workflow and Versioning` be split into smaller, more focused modules?**
-  _Cohesion score 0.07407407407407407 - nodes in this community are weakly interconnected._

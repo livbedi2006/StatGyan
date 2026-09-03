@@ -32,6 +32,9 @@
   "30": "server.py",
   "31": "app.js",
   "32": "GroundedMCQGenerator",
-  "33": "PredictiveAnalyticsEngine",
-  "34": "README.md"
+  "33": "CompetencyGapModel",
+  "34": "README.md",
+  "35": "ProctoringTrustEngine",
+  "36": "VirtualLabEvaluator",
+  "37": "PredictiveAnalyticsEngine"
 }
