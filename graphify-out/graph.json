@@ -14,7 +14,7 @@
       "file_type": "code",
       "norm_label": "analyzerequest",
       "source_file": "backend/server.py",
-      "source_location": "L46"
+      "source_location": "L48"
     },
     {
       "id": "backend_server_decaysimulaterequest",
@@ -27,7 +27,7 @@
       "file_type": "code",
       "norm_label": "decaysimulaterequest",
       "source_file": "backend/server.py",
-      "source_location": "L60"
+      "source_location": "L62"
     },
     {
       "id": "backend_server_generatemcqrequest",
@@ -40,7 +40,7 @@
       "file_type": "code",
       "norm_label": "generatemcqrequest",
       "source_file": "backend/server.py",
-      "source_location": "L54"
+      "source_location": "L56"
     },
     {
       "id": "backend_server_inferrequest",
@@ -53,7 +53,7 @@
       "file_type": "code",
       "norm_label": "inferrequest",
       "source_file": "backend/server.py",
-      "source_location": "L50"
+      "source_location": "L52"
     },
     {
       "id": "backend_server_labevaluaterequest",
@@ -66,20 +66,33 @@
       "file_type": "code",
       "norm_label": "labevaluaterequest",
       "source_file": "backend/server.py",
-      "source_location": "L65"
+      "source_location": "L67"
     },
     {
-      "id": "ml_engine_competency_model_competencygapmodel",
-      "label": "CompetencyGapModel",
+      "id": "backend_server_proctoringeventrequest",
+      "label": "ProctoringEventRequest",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 30,
       "community_name": "server.py",
       "file_type": "code",
-      "norm_label": "competencygapmodel",
-      "source_file": "ml_engine/competency_model.py",
-      "source_location": "L31"
+      "norm_label": "proctoringeventrequest",
+      "source_file": "backend/server.py",
+      "source_location": "L75"
+    },
+    {
+      "id": "backend_server_proctoringstartrequest",
+      "label": "ProctoringStartRequest",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "server.py",
+      "file_type": "code",
+      "norm_label": "proctoringstartrequest",
+      "source_file": "backend/server.py",
+      "source_location": "L70"
     },
     {
       "id": "ml_engine_decay_model_skilldecaymodel",
@@ -95,6 +108,19 @@
       "source_location": "L52"
     },
     {
+      "id": "ml_engine_predictive_analytics_predictiveanalyticsengine",
+      "label": "PredictiveAnalyticsEngine",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "server.py",
+      "file_type": "code",
+      "norm_label": "predictiveanalyticsengine",
+      "source_file": "ml_engine/predictive_analytics.py",
+      "source_location": "L121"
+    },
+    {
       "id": "ml_engine_recommender_model_blendedpathwayrecommender",
       "label": "BlendedPathwayRecommender",
       "_callable": true,
@@ -105,19 +131,6 @@
       "file_type": "code",
       "norm_label": "blendedpathwayrecommender",
       "source_file": "ml_engine/recommender_model.py",
-      "source_location": "L10"
-    },
-    {
-      "id": "ml_engine_virtual_lab_evaluator_virtuallabevaluator",
-      "label": "VirtualLabEvaluator",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 30,
-      "community_name": "server.py",
-      "file_type": "code",
-      "norm_label": "virtuallabevaluator",
-      "source_file": "ml_engine/virtual_lab_evaluator.py",
       "source_location": "L10"
     },
     {
@@ -134,17 +147,43 @@
       "source_location": "L19"
     },
     {
-      "id": "ml_engine_predictive_analytics_predictiveanalyticsengine",
-      "label": "PredictiveAnalyticsEngine",
+      "id": "ml_engine_competency_model_competencygapmodel",
+      "label": "CompetencyGapModel",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 33,
-      "community_name": "PredictiveAnalyticsEngine",
+      "community_name": "CompetencyGapModel",
       "file_type": "code",
-      "norm_label": "predictiveanalyticsengine",
-      "source_file": "ml_engine/predictive_analytics.py",
-      "source_location": "L121"
+      "norm_label": "competencygapmodel",
+      "source_file": "ml_engine/competency_model.py",
+      "source_location": "L31"
+    },
+    {
+      "id": "ml_engine_proctoring_model_proctoringtrustengine",
+      "label": "ProctoringTrustEngine",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "ProctoringTrustEngine",
+      "file_type": "code",
+      "norm_label": "proctoringtrustengine",
+      "source_file": "ml_engine/proctoring_model.py",
+      "source_location": "L21"
+    },
+    {
+      "id": "ml_engine_virtual_lab_evaluator_virtuallabevaluator",
+      "label": "VirtualLabEvaluator",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "VirtualLabEvaluator",
+      "file_type": "code",
+      "norm_label": "virtuallabevaluator",
+      "source_file": "ml_engine/virtual_lab_evaluator.py",
+      "source_location": "L10"
     },
     {
       "id": "backend_server_analyze_competency",
@@ -156,7 +195,7 @@
       "file_type": "code",
       "norm_label": "analyze_competency()",
       "source_file": "backend/server.py",
-      "source_location": "L90"
+      "source_location": "L104"
     },
     {
       "id": "backend_server_cadre_analytics",
@@ -168,7 +207,7 @@
       "file_type": "code",
       "norm_label": "cadre_analytics()",
       "source_file": "backend/server.py",
-      "source_location": "L143"
+      "source_location": "L157"
     },
     {
       "id": "backend_server_evaluate_lab_code",
@@ -180,7 +219,7 @@
       "file_type": "code",
       "norm_label": "evaluate_lab_code()",
       "source_file": "backend/server.py",
-      "source_location": "L152"
+      "source_location": "L166"
     },
     {
       "id": "backend_server_export_moodle",
@@ -192,7 +231,7 @@
       "file_type": "code",
       "norm_label": "export_moodle()",
       "source_file": "backend/server.py",
-      "source_location": "L117"
+      "source_location": "L131"
     },
     {
       "id": "backend_server_export_qti",
@@ -204,7 +243,7 @@
       "file_type": "code",
       "norm_label": "export_qti()",
       "source_file": "backend/server.py",
-      "source_location": "L111"
+      "source_location": "L125"
     },
     {
       "id": "backend_server_generate_assessment",
@@ -216,7 +255,7 @@
       "file_type": "code",
       "norm_label": "generate_assessment()",
       "source_file": "backend/server.py",
-      "source_location": "L102"
+      "source_location": "L116"
     },
     {
       "id": "backend_server_get_cadres",
@@ -228,7 +267,7 @@
       "file_type": "code",
       "norm_label": "get_cadres()",
       "source_file": "backend/server.py",
-      "source_location": "L86"
+      "source_location": "L100"
     },
     {
       "id": "backend_server_get_knowledge_graph",
@@ -240,7 +279,31 @@
       "file_type": "code",
       "norm_label": "get_knowledge_graph()",
       "source_file": "backend/server.py",
-      "source_location": "L156"
+      "source_location": "L191"
+    },
+    {
+      "id": "backend_server_get_proctoring_policy",
+      "label": "get_proctoring_policy()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "server.py",
+      "file_type": "code",
+      "norm_label": "get_proctoring_policy()",
+      "source_file": "backend/server.py",
+      "source_location": "L170"
+    },
+    {
+      "id": "backend_server_get_proctoring_report",
+      "label": "get_proctoring_report()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "server.py",
+      "file_type": "code",
+      "norm_label": "get_proctoring_report()",
+      "source_file": "backend/server.py",
+      "source_location": "L187"
     },
     {
       "id": "backend_server_health_check",
@@ -252,7 +315,7 @@
       "file_type": "code",
       "norm_label": "health_check()",
       "source_file": "backend/server.py",
-      "source_location": "L71"
+      "source_location": "L84"
     },
     {
       "id": "backend_server_infer_competency",
@@ -264,7 +327,19 @@
       "file_type": "code",
       "norm_label": "infer_competency()",
       "source_file": "backend/server.py",
-      "source_location": "L95"
+      "source_location": "L109"
+    },
+    {
+      "id": "backend_server_log_proctoring_event",
+      "label": "log_proctoring_event()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "server.py",
+      "file_type": "code",
+      "norm_label": "log_proctoring_event()",
+      "source_file": "backend/server.py",
+      "source_location": "L178"
     },
     {
       "id": "backend_server_recommend_pathway",
@@ -276,7 +351,7 @@
       "file_type": "code",
       "norm_label": "recommend_pathway()",
       "source_file": "backend/server.py",
-      "source_location": "L123"
+      "source_location": "L137"
     },
     {
       "id": "backend_server_serve_index",
@@ -288,7 +363,7 @@
       "file_type": "code",
       "norm_label": "serve_index()",
       "source_file": "backend/server.py",
-      "source_location": "L214"
+      "source_location": "L249"
     },
     {
       "id": "backend_server_simulate_decay",
@@ -300,55 +375,19 @@
       "file_type": "code",
       "norm_label": "simulate_decay()",
       "source_file": "backend/server.py",
-      "source_location": "L128"
+      "source_location": "L142"
     },
     {
-      "id": "ml_engine_competency_model_competencygapmodel_evaluate_gap",
-      "label": ".evaluate_gap()",
+      "id": "backend_server_start_proctoring_session",
+      "label": "start_proctoring_session()",
       "_callable": true,
       "_origin": "ast",
       "community": 30,
       "community_name": "server.py",
       "file_type": "code",
-      "norm_label": ".evaluate_gap()",
-      "source_file": "ml_engine/competency_model.py",
-      "source_location": "L43"
-    },
-    {
-      "id": "ml_engine_competency_model_competencygapmodel_infer_competency_from_text",
-      "label": ".infer_competency_from_text()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 30,
-      "community_name": "server.py",
-      "file_type": "code",
-      "norm_label": ".infer_competency_from_text()",
-      "source_file": "ml_engine/competency_model.py",
-      "source_location": "L107"
-    },
-    {
-      "id": "ml_engine_competency_model_competencygapmodel_init",
-      "label": ".__init__()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 30,
-      "community_name": "server.py",
-      "file_type": "code",
-      "norm_label": ".__init__()",
-      "source_file": "ml_engine/competency_model.py",
-      "source_location": "L32"
-    },
-    {
-      "id": "ml_engine_competency_model_competencygapmodel_init_vectorizer",
-      "label": "._init_vectorizer()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 30,
-      "community_name": "server.py",
-      "file_type": "code",
-      "norm_label": "._init_vectorizer()",
-      "source_file": "ml_engine/competency_model.py",
-      "source_location": "L38"
+      "norm_label": "start_proctoring_session()",
+      "source_file": "backend/server.py",
+      "source_location": "L174"
     },
     {
       "id": "ml_engine_decay_model_skilldecaymodel_compute_decay",
@@ -375,6 +414,42 @@
       "source_location": "L53"
     },
     {
+      "id": "ml_engine_predictive_analytics_predictiveanalyticsengine_forecast_survey_readiness",
+      "label": ".forecast_survey_readiness()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "server.py",
+      "file_type": "code",
+      "norm_label": ".forecast_survey_readiness()",
+      "source_file": "ml_engine/predictive_analytics.py",
+      "source_location": "L144"
+    },
+    {
+      "id": "ml_engine_predictive_analytics_predictiveanalyticsengine_get_divisional_heatmap",
+      "label": ".get_divisional_heatmap()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "server.py",
+      "file_type": "code",
+      "norm_label": ".get_divisional_heatmap()",
+      "source_file": "ml_engine/predictive_analytics.py",
+      "source_location": "L126"
+    },
+    {
+      "id": "ml_engine_predictive_analytics_predictiveanalyticsengine_init",
+      "label": ".__init__()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "server.py",
+      "file_type": "code",
+      "norm_label": ".__init__()",
+      "source_file": "ml_engine/predictive_analytics.py",
+      "source_location": "L122"
+    },
+    {
       "id": "ml_engine_recommender_model_blendedpathwayrecommender_generate_pathway",
       "label": ".generate_pathway()",
       "_callable": true,
@@ -399,42 +474,6 @@
       "source_location": "L11"
     },
     {
-      "id": "ml_engine_virtual_lab_evaluator_virtuallabevaluator_evaluate_submission",
-      "label": ".evaluate_submission()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 30,
-      "community_name": "server.py",
-      "file_type": "code",
-      "norm_label": ".evaluate_submission()",
-      "source_file": "ml_engine/virtual_lab_evaluator.py",
-      "source_location": "L43"
-    },
-    {
-      "id": "ml_engine_virtual_lab_evaluator_virtuallabevaluator_init",
-      "label": ".__init__()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 30,
-      "community_name": "server.py",
-      "file_type": "code",
-      "norm_label": ".__init__()",
-      "source_file": "ml_engine/virtual_lab_evaluator.py",
-      "source_location": "L11"
-    },
-    {
-      "id": "ml_engine_virtual_lab_evaluator_virtuallabevaluator_run_benchmark_calculation",
-      "label": ".run_benchmark_calculation()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 30,
-      "community_name": "server.py",
-      "file_type": "code",
-      "norm_label": ".run_benchmark_calculation()",
-      "source_file": "ml_engine/virtual_lab_evaluator.py",
-      "source_location": "L17"
-    },
-    {
       "id": "static_js_app_executelabcode",
       "label": "executeLabCode()",
       "_callable": true,
@@ -444,7 +483,7 @@
       "file_type": "code",
       "norm_label": "executelabcode()",
       "source_file": "static/js/app.js",
-      "source_location": "L495"
+      "source_location": "L502"
     },
     {
       "id": "static_js_app_handletabactivation",
@@ -456,7 +495,19 @@
       "file_type": "code",
       "norm_label": "handletabactivation()",
       "source_file": "static/js/app.js",
-      "source_location": "L51"
+      "source_location": "L58"
+    },
+    {
+      "id": "static_js_app_initwebcamstream",
+      "label": "initWebcamStream()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "initwebcamstream()",
+      "source_file": "static/js/app.js",
+      "source_location": "L830"
     },
     {
       "id": "static_js_app_loadcadreanalytics",
@@ -468,7 +519,7 @@
       "file_type": "code",
       "norm_label": "loadcadreanalytics()",
       "source_file": "static/js/app.js",
-      "source_location": "L401"
+      "source_location": "L408"
     },
     {
       "id": "static_js_app_loadcadres",
@@ -480,7 +531,7 @@
       "file_type": "code",
       "norm_label": "loadcadres()",
       "source_file": "static/js/app.js",
-      "source_location": "L62"
+      "source_location": "L69"
     },
     {
       "id": "static_js_app_loadpathway",
@@ -492,7 +543,7 @@
       "file_type": "code",
       "norm_label": "loadpathway()",
       "source_file": "static/js/app.js",
-      "source_location": "L323"
+      "source_location": "L330"
     },
     {
       "id": "static_js_app_rendercompetencyoverview",
@@ -504,7 +555,7 @@
       "file_type": "code",
       "norm_label": "rendercompetencyoverview()",
       "source_file": "static/js/app.js",
-      "source_location": "L111"
+      "source_location": "L118"
     },
     {
       "id": "static_js_app_renderdecayresults",
@@ -516,7 +567,7 @@
       "file_type": "code",
       "norm_label": "renderdecayresults()",
       "source_file": "static/js/app.js",
-      "source_location": "L561"
+      "source_location": "L568"
     },
     {
       "id": "static_js_app_renderdivisionalheatmap",
@@ -528,7 +579,7 @@
       "file_type": "code",
       "norm_label": "renderdivisionalheatmap()",
       "source_file": "static/js/app.js",
-      "source_location": "L413"
+      "source_location": "L420"
     },
     {
       "id": "static_js_app_renderdomainlist",
@@ -540,7 +591,7 @@
       "file_type": "code",
       "norm_label": "renderdomainlist()",
       "source_file": "static/js/app.js",
-      "source_location": "L179"
+      "source_location": "L186"
     },
     {
       "id": "static_js_app_renderknowledgegraph",
@@ -552,7 +603,7 @@
       "file_type": "code",
       "norm_label": "renderknowledgegraph()",
       "source_file": "static/js/app.js",
-      "source_location": "L587"
+      "source_location": "L594"
     },
     {
       "id": "static_js_app_rendermcqs",
@@ -564,7 +615,7 @@
       "file_type": "code",
       "norm_label": "rendermcqs()",
       "source_file": "static/js/app.js",
-      "source_location": "L260"
+      "source_location": "L267"
     },
     {
       "id": "static_js_app_renderpathway",
@@ -576,7 +627,7 @@
       "file_type": "code",
       "norm_label": "renderpathway()",
       "source_file": "static/js/app.js",
-      "source_location": "L343"
+      "source_location": "L350"
     },
     {
       "id": "static_js_app_renderradarchart",
@@ -588,7 +639,7 @@
       "file_type": "code",
       "norm_label": "renderradarchart()",
       "source_file": "static/js/app.js",
-      "source_location": "L118"
+      "source_location": "L125"
     },
     {
       "id": "static_js_app_renderreadinessforecasts",
@@ -600,7 +651,7 @@
       "file_type": "code",
       "norm_label": "renderreadinessforecasts()",
       "source_file": "static/js/app.js",
-      "source_location": "L452"
+      "source_location": "L459"
     },
     {
       "id": "static_js_app_runmcqgeneration",
@@ -612,7 +663,7 @@
       "file_type": "code",
       "norm_label": "runmcqgeneration()",
       "source_file": "static/js/app.js",
-      "source_location": "L234"
+      "source_location": "L241"
     },
     {
       "id": "static_js_app_setupassessmentfilters",
@@ -624,7 +675,19 @@
       "file_type": "code",
       "norm_label": "setupassessmentfilters()",
       "source_file": "static/js/app.js",
-      "source_location": "L214"
+      "source_location": "L221"
+    },
+    {
+      "id": "static_js_app_setupbrowserlockdownlisteners",
+      "label": "setupBrowserLockdownListeners()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "setupbrowserlockdownlisteners()",
+      "source_file": "static/js/app.js",
+      "source_location": "L742"
     },
     {
       "id": "static_js_app_setupdecaysimulator",
@@ -636,7 +699,7 @@
       "file_type": "code",
       "norm_label": "setupdecaysimulator()",
       "source_file": "static/js/app.js",
-      "source_location": "L541"
+      "source_location": "L548"
     },
     {
       "id": "static_js_app_setupnavigation",
@@ -648,7 +711,19 @@
       "file_type": "code",
       "norm_label": "setupnavigation()",
       "source_file": "static/js/app.js",
-      "source_location": "L31"
+      "source_location": "L38"
+    },
+    {
+      "id": "static_js_app_setupproctoringengine",
+      "label": "setupProctoringEngine()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "setupproctoringengine()",
+      "source_file": "static/js/app.js",
+      "source_location": "L667"
     },
     {
       "id": "static_js_app_setuproleswitcher",
@@ -660,7 +735,7 @@
       "file_type": "code",
       "norm_label": "setuproleswitcher()",
       "source_file": "static/js/app.js",
-      "source_location": "L84"
+      "source_location": "L91"
     },
     {
       "id": "static_js_app_setupvirtuallab",
@@ -672,7 +747,43 @@
       "file_type": "code",
       "norm_label": "setupvirtuallab()",
       "source_file": "static/js/app.js",
-      "source_location": "L488"
+      "source_location": "L495"
+    },
+    {
+      "id": "static_js_app_showlockdownfreezemodal",
+      "label": "showLockdownFreezeModal()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "showlockdownfreezemodal()",
+      "source_file": "static/js/app.js",
+      "source_location": "L924"
+    },
+    {
+      "id": "static_js_app_startextensiondomscanner",
+      "label": "startExtensionDOMScanner()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "startextensiondomscanner()",
+      "source_file": "static/js/app.js",
+      "source_location": "L791"
+    },
+    {
+      "id": "static_js_app_toggleproctoringmode",
+      "label": "toggleProctoringMode()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "toggleproctoringmode()",
+      "source_file": "static/js/app.js",
+      "source_location": "L698"
     },
     {
       "id": "static_js_app_triggercompetencyanalysis",
@@ -684,7 +795,31 @@
       "file_type": "code",
       "norm_label": "triggercompetencyanalysis()",
       "source_file": "static/js/app.js",
-      "source_location": "L94"
+      "source_location": "L101"
+    },
+    {
+      "id": "static_js_app_triggerproctoringviolation",
+      "label": "triggerProctoringViolation()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "triggerproctoringviolation()",
+      "source_file": "static/js/app.js",
+      "source_location": "L846"
+    },
+    {
+      "id": "static_js_app_updateproctoringhud",
+      "label": "updateProctoringHUD()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "updateproctoringhud()",
+      "source_file": "static/js/app.js",
+      "source_location": "L874"
     },
     {
       "id": "ml_engine_mcq_generator_groundedmcqgenerator_export_moodle_xml",
@@ -759,40 +894,148 @@
       "source_location": "L215"
     },
     {
-      "id": "ml_engine_predictive_analytics_predictiveanalyticsengine_forecast_survey_readiness",
-      "label": ".forecast_survey_readiness()",
+      "id": "ml_engine_competency_model_competencygapmodel_evaluate_gap",
+      "label": ".evaluate_gap()",
       "_callable": true,
       "_origin": "ast",
       "community": 33,
-      "community_name": "PredictiveAnalyticsEngine",
+      "community_name": "CompetencyGapModel",
       "file_type": "code",
-      "norm_label": ".forecast_survey_readiness()",
-      "source_file": "ml_engine/predictive_analytics.py",
-      "source_location": "L144"
+      "norm_label": ".evaluate_gap()",
+      "source_file": "ml_engine/competency_model.py",
+      "source_location": "L43"
     },
     {
-      "id": "ml_engine_predictive_analytics_predictiveanalyticsengine_get_divisional_heatmap",
-      "label": ".get_divisional_heatmap()",
+      "id": "ml_engine_competency_model_competencygapmodel_infer_competency_from_text",
+      "label": ".infer_competency_from_text()",
       "_callable": true,
       "_origin": "ast",
       "community": 33,
-      "community_name": "PredictiveAnalyticsEngine",
+      "community_name": "CompetencyGapModel",
       "file_type": "code",
-      "norm_label": ".get_divisional_heatmap()",
-      "source_file": "ml_engine/predictive_analytics.py",
-      "source_location": "L126"
+      "norm_label": ".infer_competency_from_text()",
+      "source_file": "ml_engine/competency_model.py",
+      "source_location": "L107"
     },
     {
-      "id": "ml_engine_predictive_analytics_predictiveanalyticsengine_init",
+      "id": "ml_engine_competency_model_competencygapmodel_init",
       "label": ".__init__()",
       "_callable": true,
       "_origin": "ast",
       "community": 33,
-      "community_name": "PredictiveAnalyticsEngine",
+      "community_name": "CompetencyGapModel",
       "file_type": "code",
       "norm_label": ".__init__()",
-      "source_file": "ml_engine/predictive_analytics.py",
-      "source_location": "L122"
+      "source_file": "ml_engine/competency_model.py",
+      "source_location": "L32"
+    },
+    {
+      "id": "ml_engine_competency_model_competencygapmodel_init_vectorizer",
+      "label": "._init_vectorizer()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "CompetencyGapModel",
+      "file_type": "code",
+      "norm_label": "._init_vectorizer()",
+      "source_file": "ml_engine/competency_model.py",
+      "source_location": "L38"
+    },
+    {
+      "id": "ml_engine_proctoring_model_proctoringtrustengine_get_security_policy",
+      "label": ".get_security_policy()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "ProctoringTrustEngine",
+      "file_type": "code",
+      "norm_label": ".get_security_policy()",
+      "source_file": "ml_engine/proctoring_model.py",
+      "source_location": "L113"
+    },
+    {
+      "id": "ml_engine_proctoring_model_proctoringtrustengine_get_session_summary",
+      "label": ".get_session_summary()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "ProctoringTrustEngine",
+      "file_type": "code",
+      "norm_label": ".get_session_summary()",
+      "source_file": "ml_engine/proctoring_model.py",
+      "source_location": "L88"
+    },
+    {
+      "id": "ml_engine_proctoring_model_proctoringtrustengine_init",
+      "label": ".__init__()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "ProctoringTrustEngine",
+      "file_type": "code",
+      "norm_label": ".__init__()",
+      "source_file": "ml_engine/proctoring_model.py",
+      "source_location": "L22"
+    },
+    {
+      "id": "ml_engine_proctoring_model_proctoringtrustengine_log_incident",
+      "label": ".log_incident()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "ProctoringTrustEngine",
+      "file_type": "code",
+      "norm_label": ".log_incident()",
+      "source_file": "ml_engine/proctoring_model.py",
+      "source_location": "L40"
+    },
+    {
+      "id": "ml_engine_proctoring_model_proctoringtrustengine_start_session",
+      "label": ".start_session()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "ProctoringTrustEngine",
+      "file_type": "code",
+      "norm_label": ".start_session()",
+      "source_file": "ml_engine/proctoring_model.py",
+      "source_location": "L25"
+    },
+    {
+      "id": "ml_engine_virtual_lab_evaluator_virtuallabevaluator_evaluate_submission",
+      "label": ".evaluate_submission()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "VirtualLabEvaluator",
+      "file_type": "code",
+      "norm_label": ".evaluate_submission()",
+      "source_file": "ml_engine/virtual_lab_evaluator.py",
+      "source_location": "L43"
+    },
+    {
+      "id": "ml_engine_virtual_lab_evaluator_virtuallabevaluator_init",
+      "label": ".__init__()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "VirtualLabEvaluator",
+      "file_type": "code",
+      "norm_label": ".__init__()",
+      "source_file": "ml_engine/virtual_lab_evaluator.py",
+      "source_location": "L11"
+    },
+    {
+      "id": "ml_engine_virtual_lab_evaluator_virtuallabevaluator_run_benchmark_calculation",
+      "label": ".run_benchmark_calculation()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "VirtualLabEvaluator",
+      "file_type": "code",
+      "norm_label": ".run_benchmark_calculation()",
+      "source_file": "ml_engine/virtual_lab_evaluator.py",
+      "source_location": "L17"
     },
     {
       "id": "agents_skills_security_and_hardening_skill",
@@ -6202,28 +6445,6 @@
       "source_location": ""
     },
     {
-      "id": "ml_engine_competency_model",
-      "label": "competency_model.py",
-      "_origin": "ast",
-      "community": 30,
-      "community_name": "server.py",
-      "file_type": "code",
-      "norm_label": "competency_model.py",
-      "source_file": "ml_engine/competency_model.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "ml_engine_competency_model_py_any",
-      "label": "Any",
-      "_origin": "ast",
-      "community": 30,
-      "community_name": "server.py",
-      "file_type": "code",
-      "norm_label": "any",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "ml_engine_decay_model",
       "label": "decay_model.py",
       "_origin": "ast",
@@ -6236,6 +6457,28 @@
     },
     {
       "id": "ml_engine_decay_model_py_any",
+      "label": "Any",
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "server.py",
+      "file_type": "code",
+      "norm_label": "any",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "ml_engine_predictive_analytics",
+      "label": "predictive_analytics.py",
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "server.py",
+      "file_type": "code",
+      "norm_label": "predictive_analytics.py",
+      "source_file": "ml_engine/predictive_analytics.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "ml_engine_predictive_analytics_py_any",
       "label": "Any",
       "_origin": "ast",
       "community": 30,
@@ -6268,28 +6511,6 @@
       "source_location": ""
     },
     {
-      "id": "ml_engine_virtual_lab_evaluator",
-      "label": "virtual_lab_evaluator.py",
-      "_origin": "ast",
-      "community": 30,
-      "community_name": "server.py",
-      "file_type": "code",
-      "norm_label": "virtual_lab_evaluator.py",
-      "source_file": "ml_engine/virtual_lab_evaluator.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "ml_engine_virtual_lab_evaluator_py_any",
-      "label": "Any",
-      "_origin": "ast",
-      "community": 30,
-      "community_name": "server.py",
-      "file_type": "code",
-      "norm_label": "any",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "post",
       "label": "post",
       "_origin": "ast",
@@ -6312,7 +6533,7 @@
       "source_location": "L1"
     },
     {
-      "id": "backend_server_rationale_157",
+      "id": "backend_server_rationale_192",
       "label": "Returns nodes and edges connecting Cadres, Competencies, Manuals, and Courses.",
       "_origin": "ast",
       "community": 30,
@@ -6320,40 +6541,7 @@
       "file_type": "rationale",
       "norm_label": "returns nodes and edges connecting cadres, competencies, manuals, and courses.",
       "source_file": "backend/server.py",
-      "source_location": "L157"
-    },
-    {
-      "id": "ml_engine_competency_model_rationale_1",
-      "label": "StatGyan AI - Competency Assessment & Skill Gap Model Uses TF-IDF, Latent\u2026",
-      "_origin": "ast",
-      "community": 30,
-      "community_name": "server.py",
-      "file_type": "rationale",
-      "norm_label": "statgyan ai - competency assessment & skill gap model uses tf-idf, latent...",
-      "source_file": "ml_engine/competency_model.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "ml_engine_competency_model_rationale_108",
-      "label": "Uses TF-IDF cosine similarity to infer domain affinities from officer self-\u2026",
-      "_origin": "ast",
-      "community": 30,
-      "community_name": "server.py",
-      "file_type": "rationale",
-      "norm_label": "uses tf-idf cosine similarity to infer domain affinities from officer self-...",
-      "source_file": "ml_engine/competency_model.py",
-      "source_location": "L108"
-    },
-    {
-      "id": "ml_engine_competency_model_rationale_44",
-      "label": "Evaluates competency gap against cadre benchmark.",
-      "_origin": "ast",
-      "community": 30,
-      "community_name": "server.py",
-      "file_type": "rationale",
-      "norm_label": "evaluates competency gap against cadre benchmark.",
-      "source_file": "ml_engine/competency_model.py",
-      "source_location": "L44"
+      "source_location": "L192"
     },
     {
       "id": "ml_engine_decay_model_rationale_1",
@@ -6378,6 +6566,39 @@
       "source_location": "L62"
     },
     {
+      "id": "ml_engine_predictive_analytics_rationale_1",
+      "label": "StatGyan AI - Cadre Readiness Forecaster & HR Heatmap Analytics Aggregates\u2026",
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "server.py",
+      "file_type": "rationale",
+      "norm_label": "statgyan ai - cadre readiness forecaster & hr heatmap analytics aggregates...",
+      "source_file": "ml_engine/predictive_analytics.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "ml_engine_predictive_analytics_rationale_127",
+      "label": "Returns divisional capability matrix for admin heatmaps.",
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "server.py",
+      "file_type": "rationale",
+      "norm_label": "returns divisional capability matrix for admin heatmaps.",
+      "source_file": "ml_engine/predictive_analytics.py",
+      "source_location": "L127"
+    },
+    {
+      "id": "ml_engine_predictive_analytics_rationale_145",
+      "label": "Simulates readiness & shortfall risk for upcoming official statistical surveys.",
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "server.py",
+      "file_type": "rationale",
+      "norm_label": "simulates readiness & shortfall risk for upcoming official statistical surveys.",
+      "source_file": "ml_engine/predictive_analytics.py",
+      "source_location": "L145"
+    },
+    {
       "id": "ml_engine_recommender_model_rationale_1",
       "label": "StatGyan AI - Blended Learning Pathway Recommender Bridges digital self-paced\u2026",
       "_origin": "ast",
@@ -6398,39 +6619,6 @@
       "norm_label": "builds a sequenced blended pathway based on identified competency gaps.",
       "source_file": "ml_engine/recommender_model.py",
       "source_location": "L28"
-    },
-    {
-      "id": "ml_engine_virtual_lab_evaluator_rationale_1",
-      "label": "StatGyan AI - Virtual Statistical Lab Evaluator Auto-evaluates statistical\u2026",
-      "_origin": "ast",
-      "community": 30,
-      "community_name": "server.py",
-      "file_type": "rationale",
-      "norm_label": "statgyan ai - virtual statistical lab evaluator auto-evaluates statistical...",
-      "source_file": "ml_engine/virtual_lab_evaluator.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "ml_engine_virtual_lab_evaluator_rationale_18",
-      "label": "Executes standard weighted MoSPI calculation over microdata records: - Employed\u2026",
-      "_origin": "ast",
-      "community": 30,
-      "community_name": "server.py",
-      "file_type": "rationale",
-      "norm_label": "executes standard weighted mospi calculation over microdata records: - employed...",
-      "source_file": "ml_engine/virtual_lab_evaluator.py",
-      "source_location": "L18"
-    },
-    {
-      "id": "ml_engine_virtual_lab_evaluator_rationale_44",
-      "label": "Evaluates submitted script against test cases and survey multiplier rules.",
-      "_origin": "ast",
-      "community": 30,
-      "community_name": "server.py",
-      "file_type": "rationale",
-      "norm_label": "evaluates submitted script against test cases and survey multiplier rules.",
-      "source_file": "ml_engine/virtual_lab_evaluator.py",
-      "source_location": "L44"
     },
     {
       "id": "static_js_app",
@@ -6543,59 +6731,59 @@
       "source_location": "L35"
     },
     {
-      "id": "ml_engine_predictive_analytics",
-      "label": "predictive_analytics.py",
+      "id": "ml_engine_competency_model",
+      "label": "competency_model.py",
       "_origin": "ast",
       "community": 33,
-      "community_name": "PredictiveAnalyticsEngine",
+      "community_name": "CompetencyGapModel",
       "file_type": "code",
-      "norm_label": "predictive_analytics.py",
-      "source_file": "ml_engine/predictive_analytics.py",
+      "norm_label": "competency_model.py",
+      "source_file": "ml_engine/competency_model.py",
       "source_location": "L1"
     },
     {
-      "id": "ml_engine_predictive_analytics_py_any",
+      "id": "ml_engine_competency_model_py_any",
       "label": "Any",
       "_origin": "ast",
       "community": 33,
-      "community_name": "PredictiveAnalyticsEngine",
+      "community_name": "CompetencyGapModel",
       "file_type": "code",
       "norm_label": "any",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "ml_engine_predictive_analytics_rationale_1",
-      "label": "StatGyan AI - Cadre Readiness Forecaster & HR Heatmap Analytics Aggregates\u2026",
+      "id": "ml_engine_competency_model_rationale_1",
+      "label": "StatGyan AI - Competency Assessment & Skill Gap Model Uses TF-IDF, Latent\u2026",
       "_origin": "ast",
       "community": 33,
-      "community_name": "PredictiveAnalyticsEngine",
+      "community_name": "CompetencyGapModel",
       "file_type": "rationale",
-      "norm_label": "statgyan ai - cadre readiness forecaster & hr heatmap analytics aggregates...",
-      "source_file": "ml_engine/predictive_analytics.py",
+      "norm_label": "statgyan ai - competency assessment & skill gap model uses tf-idf, latent...",
+      "source_file": "ml_engine/competency_model.py",
       "source_location": "L1"
     },
     {
-      "id": "ml_engine_predictive_analytics_rationale_127",
-      "label": "Returns divisional capability matrix for admin heatmaps.",
+      "id": "ml_engine_competency_model_rationale_108",
+      "label": "Uses TF-IDF cosine similarity to infer domain affinities from officer self-\u2026",
       "_origin": "ast",
       "community": 33,
-      "community_name": "PredictiveAnalyticsEngine",
+      "community_name": "CompetencyGapModel",
       "file_type": "rationale",
-      "norm_label": "returns divisional capability matrix for admin heatmaps.",
-      "source_file": "ml_engine/predictive_analytics.py",
-      "source_location": "L127"
+      "norm_label": "uses tf-idf cosine similarity to infer domain affinities from officer self-...",
+      "source_file": "ml_engine/competency_model.py",
+      "source_location": "L108"
     },
     {
-      "id": "ml_engine_predictive_analytics_rationale_145",
-      "label": "Simulates readiness & shortfall risk for upcoming official statistical surveys.",
+      "id": "ml_engine_competency_model_rationale_44",
+      "label": "Evaluates competency gap against cadre benchmark.",
       "_origin": "ast",
       "community": 33,
-      "community_name": "PredictiveAnalyticsEngine",
+      "community_name": "CompetencyGapModel",
       "file_type": "rationale",
-      "norm_label": "simulates readiness & shortfall risk for upcoming official statistical surveys.",
-      "source_file": "ml_engine/predictive_analytics.py",
-      "source_location": "L145"
+      "norm_label": "evaluates competency gap against cadre benchmark.",
+      "source_file": "ml_engine/competency_model.py",
+      "source_location": "L44"
     },
     {
       "id": "readme",
@@ -6608,6 +6796,94 @@
       "norm_label": "readme.md",
       "source_file": "README.md",
       "source_location": "L1"
+    },
+    {
+      "id": "ml_engine_proctoring_model",
+      "label": "proctoring_model.py",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "ProctoringTrustEngine",
+      "file_type": "code",
+      "norm_label": "proctoring_model.py",
+      "source_file": "ml_engine/proctoring_model.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "ml_engine_proctoring_model_py_any",
+      "label": "Any",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "ProctoringTrustEngine",
+      "file_type": "code",
+      "norm_label": "any",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "ml_engine_proctoring_model_rationale_1",
+      "label": "StatGyan AI - AI Proctoring & Restriction Engine Integrates anti-cheating\u2026",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "ProctoringTrustEngine",
+      "file_type": "rationale",
+      "norm_label": "statgyan ai - ai proctoring & restriction engine integrates anti-cheating...",
+      "source_file": "ml_engine/proctoring_model.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "ml_engine_virtual_lab_evaluator",
+      "label": "virtual_lab_evaluator.py",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "VirtualLabEvaluator",
+      "file_type": "code",
+      "norm_label": "virtual_lab_evaluator.py",
+      "source_file": "ml_engine/virtual_lab_evaluator.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "ml_engine_virtual_lab_evaluator_py_any",
+      "label": "Any",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "VirtualLabEvaluator",
+      "file_type": "code",
+      "norm_label": "any",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "ml_engine_virtual_lab_evaluator_rationale_1",
+      "label": "StatGyan AI - Virtual Statistical Lab Evaluator Auto-evaluates statistical\u2026",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "VirtualLabEvaluator",
+      "file_type": "rationale",
+      "norm_label": "statgyan ai - virtual statistical lab evaluator auto-evaluates statistical...",
+      "source_file": "ml_engine/virtual_lab_evaluator.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "ml_engine_virtual_lab_evaluator_rationale_18",
+      "label": "Executes standard weighted MoSPI calculation over microdata records: - Employed\u2026",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "VirtualLabEvaluator",
+      "file_type": "rationale",
+      "norm_label": "executes standard weighted mospi calculation over microdata records: - employed...",
+      "source_file": "ml_engine/virtual_lab_evaluator.py",
+      "source_location": "L18"
+    },
+    {
+      "id": "ml_engine_virtual_lab_evaluator_rationale_44",
+      "label": "Evaluates submitted script against test cases and survey multiplier rules.",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "VirtualLabEvaluator",
+      "file_type": "rationale",
+      "norm_label": "evaluates submitted script against test cases and survey multiplier rules.",
+      "source_file": "ml_engine/virtual_lab_evaluator.py",
+      "source_location": "L44"
     },
     {
       "id": "agents_skills_git_workflow_and_versioning_skill",
@@ -8529,6 +8805,18 @@
       "weight": 1.0
     },
     {
+      "source": "ml_engine_proctoring_model_proctoringtrustengine_log_incident",
+      "target": "ml_engine_proctoring_model_proctoringtrustengine_start_session",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "ml_engine/proctoring_model.py",
+      "source_location": "L49",
+      "weight": 1.0
+    },
+    {
       "source": "ml_engine_virtual_lab_evaluator_virtuallabevaluator_evaluate_submission",
       "target": "ml_engine_virtual_lab_evaluator_virtuallabevaluator_run_benchmark_calculation",
       "relation": "calls",
@@ -8549,7 +8837,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L53",
+      "source_location": "L60",
       "weight": 1.0
     },
     {
@@ -8561,7 +8849,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L55",
+      "source_location": "L62",
       "weight": 1.0
     },
     {
@@ -8573,7 +8861,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L57",
+      "source_location": "L64",
       "weight": 1.0
     },
     {
@@ -8585,7 +8873,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L406",
+      "source_location": "L413",
       "weight": 1.0
     },
     {
@@ -8597,7 +8885,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L407",
+      "source_location": "L414",
       "weight": 1.0
     },
     {
@@ -8609,7 +8897,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L78",
+      "source_location": "L85",
       "weight": 1.0
     },
     {
@@ -8621,7 +8909,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L337",
+      "source_location": "L344",
       "weight": 1.0
     },
     {
@@ -8633,7 +8921,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L254",
+      "source_location": "L261",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app_setupbrowserlockdownlisteners",
+      "target": "static_js_app_triggerproctoringviolation",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "static/js/app.js",
+      "source_location": "L756",
       "weight": 1.0
     },
     {
@@ -8645,7 +8945,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L553",
+      "source_location": "L560",
       "weight": 1.0
     },
     {
@@ -8657,7 +8957,31 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L45",
+      "source_location": "L52",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app_setupproctoringengine",
+      "target": "static_js_app_triggerproctoringviolation",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "static/js/app.js",
+      "source_location": "L675",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app_setupproctoringengine",
+      "target": "static_js_app_setupbrowserlockdownlisteners",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "static/js/app.js",
+      "source_location": "L695",
       "weight": 1.0
     },
     {
@@ -8669,7 +8993,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L88",
+      "source_location": "L95",
       "weight": 1.0
     },
     {
@@ -8681,7 +9005,43 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L89",
+      "source_location": "L96",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app_startextensiondomscanner",
+      "target": "static_js_app_triggerproctoringviolation",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "static/js/app.js",
+      "source_location": "L805",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app_toggleproctoringmode",
+      "target": "static_js_app_startextensiondomscanner",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "static/js/app.js",
+      "source_location": "L731",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app_toggleproctoringmode",
+      "target": "static_js_app_initwebcamstream",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "static/js/app.js",
+      "source_location": "L732",
       "weight": 1.0
     },
     {
@@ -8693,7 +9053,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L103",
+      "source_location": "L110",
       "weight": 1.0
     },
     {
@@ -8705,7 +9065,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L104",
+      "source_location": "L111",
       "weight": 1.0
     },
     {
@@ -8717,7 +9077,31 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L105",
+      "source_location": "L112",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app_triggerproctoringviolation",
+      "target": "static_js_app_updateproctoringhud",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "static/js/app.js",
+      "source_location": "L862",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app_triggerproctoringviolation",
+      "target": "static_js_app_showlockdownfreezemodal",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "static/js/app.js",
+      "source_location": "L865",
       "weight": 1.0
     },
     {
@@ -8729,7 +9113,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "backend/server.py",
-      "source_location": "L89",
+      "source_location": "L103",
       "weight": 1.0
     },
     {
@@ -8741,7 +9125,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "backend/server.py",
-      "source_location": "L142",
+      "source_location": "L156",
       "weight": 1.0
     },
     {
@@ -8753,7 +9137,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "backend/server.py",
-      "source_location": "L151",
+      "source_location": "L165",
       "weight": 1.0
     },
     {
@@ -8765,7 +9149,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "backend/server.py",
-      "source_location": "L116",
+      "source_location": "L130",
       "weight": 1.0
     },
     {
@@ -8777,7 +9161,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "backend/server.py",
-      "source_location": "L110",
+      "source_location": "L124",
       "weight": 1.0
     },
     {
@@ -8789,7 +9173,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "backend/server.py",
-      "source_location": "L101",
+      "source_location": "L115",
       "weight": 1.0
     },
     {
@@ -8801,7 +9185,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "backend/server.py",
-      "source_location": "L85",
+      "source_location": "L99",
       "weight": 1.0
     },
     {
@@ -8813,7 +9197,31 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "backend/server.py",
-      "source_location": "L155",
+      "source_location": "L190",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server_get_proctoring_policy",
+      "target": "get",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "decorator",
+      "source_file": "backend/server.py",
+      "source_location": "L169",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server_get_proctoring_report",
+      "target": "get",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "decorator",
+      "source_file": "backend/server.py",
+      "source_location": "L186",
       "weight": 1.0
     },
     {
@@ -8825,7 +9233,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "backend/server.py",
-      "source_location": "L70",
+      "source_location": "L83",
       "weight": 1.0
     },
     {
@@ -8837,7 +9245,19 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "backend/server.py",
-      "source_location": "L94",
+      "source_location": "L108",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server_log_proctoring_event",
+      "target": "post",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "decorator",
+      "source_file": "backend/server.py",
+      "source_location": "L177",
       "weight": 1.0
     },
     {
@@ -8849,7 +9269,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "backend/server.py",
-      "source_location": "L122",
+      "source_location": "L136",
       "weight": 1.0
     },
     {
@@ -8861,7 +9281,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "backend/server.py",
-      "source_location": "L213",
+      "source_location": "L248",
       "weight": 1.0
     },
     {
@@ -8873,7 +9293,19 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "backend/server.py",
-      "source_location": "L127",
+      "source_location": "L141",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server_start_proctoring_session",
+      "target": "post",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "decorator",
+      "source_file": "backend/server.py",
+      "source_location": "L173",
       "weight": 1.0
     },
     {
@@ -8970,6 +9402,54 @@
       "context": "generic_arg",
       "source_file": "ml_engine/predictive_analytics.py",
       "source_location": "L126",
+      "weight": 1.0
+    },
+    {
+      "source": "ml_engine_proctoring_model_proctoringtrustengine_get_security_policy",
+      "target": "ml_engine_proctoring_model_py_any",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "source_file": "ml_engine/proctoring_model.py",
+      "source_location": "L113",
+      "weight": 1.0
+    },
+    {
+      "source": "ml_engine_proctoring_model_proctoringtrustengine_get_session_summary",
+      "target": "ml_engine_proctoring_model_py_any",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "source_file": "ml_engine/proctoring_model.py",
+      "source_location": "L88",
+      "weight": 1.0
+    },
+    {
+      "source": "ml_engine_proctoring_model_proctoringtrustengine_log_incident",
+      "target": "ml_engine_proctoring_model_py_any",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "source_file": "ml_engine/proctoring_model.py",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "ml_engine_proctoring_model_proctoringtrustengine_start_session",
+      "target": "ml_engine_proctoring_model_py_any",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "source_file": "ml_engine/proctoring_model.py",
+      "source_location": "L25",
       "weight": 1.0
     },
     {
@@ -9070,6 +9550,18 @@
     },
     {
       "source": "backend_server",
+      "target": "ml_engine_proctoring_model_proctoringtrustengine",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend/server.py",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
       "target": "ml_engine_competency_model",
       "relation": "imports_from",
       "_origin": "ast",
@@ -9141,6 +9633,18 @@
       "weight": 1.0
     },
     {
+      "source": "backend_server",
+      "target": "ml_engine_proctoring_model",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend/server.py",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
       "source": "backend_server_analyze_competency",
       "target": "backend_server_analyzerequest",
       "relation": "references",
@@ -9149,7 +9653,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "backend/server.py",
-      "source_location": "L90",
+      "source_location": "L104",
       "weight": 1.0
     },
     {
@@ -9161,7 +9665,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "backend/server.py",
-      "source_location": "L152",
+      "source_location": "L166",
       "weight": 1.0
     },
     {
@@ -9173,7 +9677,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "backend/server.py",
-      "source_location": "L102",
+      "source_location": "L116",
       "weight": 1.0
     },
     {
@@ -9185,7 +9689,19 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "backend/server.py",
-      "source_location": "L95",
+      "source_location": "L109",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server_log_proctoring_event",
+      "target": "backend_server_proctoringeventrequest",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "backend/server.py",
+      "source_location": "L178",
       "weight": 1.0
     },
     {
@@ -9197,7 +9713,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "backend/server.py",
-      "source_location": "L123",
+      "source_location": "L137",
       "weight": 1.0
     },
     {
@@ -9209,7 +9725,19 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "backend/server.py",
-      "source_location": "L128",
+      "source_location": "L142",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server_start_proctoring_session",
+      "target": "backend_server_proctoringstartrequest",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "backend/server.py",
+      "source_location": "L174",
       "weight": 1.0
     },
     {
@@ -15396,178 +15924,13 @@
     },
     {
       "source": "backend_server",
-      "target": "backend_server_generate_assessment",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/server.py",
-      "source_location": "L102",
-      "weight": 1.0
-    },
-    {
-      "source": "backend_server",
-      "target": "backend_server_export_qti",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/server.py",
-      "source_location": "L111",
-      "weight": 1.0
-    },
-    {
-      "source": "backend_server",
-      "target": "backend_server_export_moodle",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/server.py",
-      "source_location": "L117",
-      "weight": 1.0
-    },
-    {
-      "source": "backend_server",
-      "target": "backend_server_recommend_pathway",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/server.py",
-      "source_location": "L123",
-      "weight": 1.0
-    },
-    {
-      "source": "backend_server",
-      "target": "backend_server_simulate_decay",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/server.py",
-      "source_location": "L128",
-      "weight": 1.0
-    },
-    {
-      "source": "backend_server",
-      "target": "backend_server_cadre_analytics",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/server.py",
-      "source_location": "L143",
-      "weight": 1.0
-    },
-    {
-      "source": "backend_server",
-      "target": "backend_server_evaluate_lab_code",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/server.py",
-      "source_location": "L152",
-      "weight": 1.0
-    },
-    {
-      "source": "backend_server",
-      "target": "backend_server_get_knowledge_graph",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/server.py",
-      "source_location": "L156",
-      "weight": 1.0
-    },
-    {
-      "source": "backend_server",
-      "target": "backend_server_serve_index",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/server.py",
-      "source_location": "L214",
-      "weight": 1.0
-    },
-    {
-      "source": "backend_server",
-      "target": "backend_server_analyzerequest",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/server.py",
-      "source_location": "L46",
-      "weight": 1.0
-    },
-    {
-      "source": "backend_server",
-      "target": "backend_server_inferrequest",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/server.py",
-      "source_location": "L50",
-      "weight": 1.0
-    },
-    {
-      "source": "backend_server",
-      "target": "backend_server_generatemcqrequest",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/server.py",
-      "source_location": "L54",
-      "weight": 1.0
-    },
-    {
-      "source": "backend_server",
-      "target": "backend_server_decaysimulaterequest",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/server.py",
-      "source_location": "L60",
-      "weight": 1.0
-    },
-    {
-      "source": "backend_server",
-      "target": "backend_server_labevaluaterequest",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/server.py",
-      "source_location": "L65",
-      "weight": 1.0
-    },
-    {
-      "source": "backend_server",
-      "target": "backend_server_health_check",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/server.py",
-      "source_location": "L71",
-      "weight": 1.0
-    },
-    {
-      "source": "backend_server",
       "target": "backend_server_get_cadres",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "backend/server.py",
-      "source_location": "L86",
+      "source_location": "L100",
       "weight": 1.0
     },
     {
@@ -15578,7 +15941,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "backend/server.py",
-      "source_location": "L90",
+      "source_location": "L104",
       "weight": 1.0
     },
     {
@@ -15589,7 +15952,238 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "backend/server.py",
-      "source_location": "L95",
+      "source_location": "L109",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_generate_assessment",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L116",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_export_qti",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L125",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_export_moodle",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L131",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_recommend_pathway",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L137",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_simulate_decay",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L142",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_cadre_analytics",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L157",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_evaluate_lab_code",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L166",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_get_proctoring_policy",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L170",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_start_proctoring_session",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L174",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_log_proctoring_event",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L178",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_get_proctoring_report",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L187",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_get_knowledge_graph",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L191",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_serve_index",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L249",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_analyzerequest",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L48",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_inferrequest",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L52",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_generatemcqrequest",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L56",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_decaysimulaterequest",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L62",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_labevaluaterequest",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L67",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_proctoringstartrequest",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L70",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_proctoringeventrequest",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L75",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_health_check",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L84",
       "weight": 1.0
     },
     {
@@ -15637,6 +16231,17 @@
       "weight": 1.0
     },
     {
+      "source": "ml_engine_proctoring_model",
+      "target": "ml_engine_proctoring_model_proctoringtrustengine",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ml_engine/proctoring_model.py",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
       "source": "ml_engine_recommender_model",
       "target": "ml_engine_recommender_model_blendedpathwayrecommender",
       "relation": "contains",
@@ -15671,18 +16276,18 @@
     },
     {
       "source": "static_js_app",
-      "target": "static_js_app_rendercompetencyoverview",
+      "target": "static_js_app_triggercompetencyanalysis",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L111",
+      "source_location": "L101",
       "weight": 1.0
     },
     {
       "source": "static_js_app",
-      "target": "static_js_app_renderradarchart",
+      "target": "static_js_app_rendercompetencyoverview",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -15693,13 +16298,24 @@
     },
     {
       "source": "static_js_app",
+      "target": "static_js_app_renderradarchart",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L125",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
       "target": "static_js_app_renderdomainlist",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L179",
+      "source_location": "L186",
       "weight": 1.0
     },
     {
@@ -15710,7 +16326,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L214",
+      "source_location": "L221",
       "weight": 1.0
     },
     {
@@ -15721,7 +16337,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L234",
+      "source_location": "L241",
       "weight": 1.0
     },
     {
@@ -15732,18 +16348,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L260",
-      "weight": 1.0
-    },
-    {
-      "source": "static_js_app",
-      "target": "static_js_app_setupnavigation",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "static/js/app.js",
-      "source_location": "L31",
+      "source_location": "L267",
       "weight": 1.0
     },
     {
@@ -15754,7 +16359,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L323",
+      "source_location": "L330",
       "weight": 1.0
     },
     {
@@ -15765,7 +16370,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L343",
+      "source_location": "L350",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_setupnavigation",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L38",
       "weight": 1.0
     },
     {
@@ -15776,7 +16392,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L401",
+      "source_location": "L408",
       "weight": 1.0
     },
     {
@@ -15787,7 +16403,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L413",
+      "source_location": "L420",
       "weight": 1.0
     },
     {
@@ -15798,7 +16414,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L452",
+      "source_location": "L459",
       "weight": 1.0
     },
     {
@@ -15809,7 +16425,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L488",
+      "source_location": "L495",
       "weight": 1.0
     },
     {
@@ -15820,18 +16436,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L495",
-      "weight": 1.0
-    },
-    {
-      "source": "static_js_app",
-      "target": "static_js_app_handletabactivation",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "static/js/app.js",
-      "source_location": "L51",
+      "source_location": "L502",
       "weight": 1.0
     },
     {
@@ -15842,7 +16447,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L541",
+      "source_location": "L548",
       "weight": 1.0
     },
     {
@@ -15853,7 +16458,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L561",
+      "source_location": "L568",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_handletabactivation",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L58",
       "weight": 1.0
     },
     {
@@ -15864,7 +16480,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L587",
+      "source_location": "L594",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_setupproctoringengine",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L667",
       "weight": 1.0
     },
     {
@@ -15875,7 +16502,73 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L62",
+      "source_location": "L69",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_toggleproctoringmode",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L698",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_setupbrowserlockdownlisteners",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L742",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_startextensiondomscanner",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L791",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_initwebcamstream",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L830",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_triggerproctoringviolation",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L846",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_updateproctoringhud",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L874",
       "weight": 1.0
     },
     {
@@ -15886,18 +16579,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L84",
+      "source_location": "L91",
       "weight": 1.0
     },
     {
       "source": "static_js_app",
-      "target": "static_js_app_triggercompetencyanalysis",
+      "target": "static_js_app_showlockdownfreezemodal",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L94",
+      "source_location": "L924",
       "weight": 1.0
     },
     {
@@ -15908,7 +16601,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "backend/server.py",
-      "source_location": "L46",
+      "source_location": "L48",
       "weight": 1.0
     },
     {
@@ -15919,7 +16612,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "backend/server.py",
-      "source_location": "L60",
+      "source_location": "L62",
       "weight": 1.0
     },
     {
@@ -15930,7 +16623,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "backend/server.py",
-      "source_location": "L54",
+      "source_location": "L56",
       "weight": 1.0
     },
     {
@@ -15941,7 +16634,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "backend/server.py",
-      "source_location": "L50",
+      "source_location": "L52",
       "weight": 1.0
     },
     {
@@ -15952,7 +16645,29 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "backend/server.py",
-      "source_location": "L65",
+      "source_location": "L67",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server_proctoringeventrequest",
+      "target": "basemodel",
+      "relation": "inherits",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L75",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server_proctoringstartrequest",
+      "target": "basemodel",
+      "relation": "inherits",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L70",
       "weight": 1.0
     },
     {
@@ -16121,6 +16836,61 @@
       "weight": 1.0
     },
     {
+      "source": "ml_engine_proctoring_model_proctoringtrustengine",
+      "target": "ml_engine_proctoring_model_proctoringtrustengine_get_security_policy",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ml_engine/proctoring_model.py",
+      "source_location": "L113",
+      "weight": 1.0
+    },
+    {
+      "source": "ml_engine_proctoring_model_proctoringtrustengine",
+      "target": "ml_engine_proctoring_model_proctoringtrustengine_init",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ml_engine/proctoring_model.py",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "ml_engine_proctoring_model_proctoringtrustengine",
+      "target": "ml_engine_proctoring_model_proctoringtrustengine_start_session",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ml_engine/proctoring_model.py",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "ml_engine_proctoring_model_proctoringtrustengine",
+      "target": "ml_engine_proctoring_model_proctoringtrustengine_log_incident",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ml_engine/proctoring_model.py",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "ml_engine_proctoring_model_proctoringtrustengine",
+      "target": "ml_engine_proctoring_model_proctoringtrustengine_get_session_summary",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ml_engine/proctoring_model.py",
+      "source_location": "L88",
+      "weight": 1.0
+    },
+    {
       "source": "ml_engine_recommender_model_blendedpathwayrecommender",
       "target": "ml_engine_recommender_model_blendedpathwayrecommender_init",
       "relation": "method",
@@ -16187,14 +16957,14 @@
       "weight": 1.0
     },
     {
-      "source": "backend_server_rationale_157",
+      "source": "backend_server_rationale_192",
       "target": "backend_server_get_knowledge_graph",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "backend/server.py",
-      "source_location": "L157",
+      "source_location": "L192",
       "weight": 1.0
     },
     {
@@ -16352,6 +17122,17 @@
       "weight": 1.0
     },
     {
+      "source": "ml_engine_proctoring_model_rationale_1",
+      "target": "ml_engine_proctoring_model",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ml_engine/proctoring_model.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
       "source": "ml_engine_recommender_model_rationale_1",
       "target": "ml_engine_recommender_model",
       "relation": "rationale_for",
@@ -16426,7 +17207,19 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "static/js/app.js",
-      "source_location": "L217",
+      "source_location": "L224",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app_setupproctoringengine",
+      "target": "static_js_app_toggleproctoringmode",
+      "relation": "indirect_call",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "argument",
+      "source_file": "static/js/app.js",
+      "source_location": "L670",
       "weight": 1.0
     },
     {
@@ -16438,7 +17231,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "static/js/app.js",
-      "source_location": "L491",
+      "source_location": "L498",
       "weight": 1.0
     },
     {
@@ -16465,5 +17258,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "33f4822e6077297b9cf1c04c0f7ad732d762ed1b"
+  "built_at_commit": "a0e2a1249603a4d2d1e443074934521cd110d21e"
 }

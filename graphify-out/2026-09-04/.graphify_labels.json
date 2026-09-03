@@ -28,5 +28,10 @@
   "26": "Source-Driven Development",
   "27": "Refinement & Evaluation Criteria",
   "28": "Ideation Frameworks Reference",
-  "29": "idea-refine.sh"
+  "29": "idea-refine.sh",
+  "30": "server.py",
+  "31": "app.js",
+  "32": "GroundedMCQGenerator",
+  "33": "PredictiveAnalyticsEngine",
+  "34": "README.md"
 }
