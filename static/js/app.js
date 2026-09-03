@@ -14,7 +14,13 @@ const state = {
   radarChart: null,
   activeAssessment: null,
   pathway: null,
-  analytics: null
+  analytics: null,
+  // Proctoring state
+  isExamLocked: false,
+  proctoringSessionId: "SESSION-MOSPI-2026-001",
+  trustScore: 100,
+  strikes: 0,
+  incidents: []
 };
 
 // Initialize on DOM Ready
@@ -25,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupAssessmentFilters();
   setupVirtualLab();
   setupDecaySimulator();
+  setupProctoringEngine();
 });
 
 // 1. Navigation Tabs
@@ -655,3 +662,272 @@ async function renderKnowledgeGraph() {
     console.error("Knowledge graph rendering failed:", err);
   }
 }
+
+// 10. AI Proctoring & Security Lockdown Engine
+function setupProctoringEngine() {
+  const toggleBtn = document.getElementById("btn-toggle-proctoring");
+  if (toggleBtn) {
+    toggleBtn.addEventListener("click", toggleProctoringMode);
+  }
+
+  // Setup violation simulation buttons
+  document.getElementById("btn-sim-tab-switch")?.addEventListener("click", () => {
+    triggerProctoringViolation("TAB_SWITCH_ATTEMPT", "Candidate switched away from assessment window (Alt+Tab or new tab).", "HIGH");
+  });
+
+  document.getElementById("btn-sim-extension")?.addEventListener("click", () => {
+    triggerProctoringViolation("AI_EXTENSION_INJECTION", "Unauthorized AI Extension (ChatGPT/Monica/Sider) injected DOM elements.", "HIGH");
+  });
+
+  document.getElementById("btn-sim-second-face")?.addEventListener("click", () => {
+    triggerProctoringViolation("MULTIPLE_FACES_DETECTED", "Computer vision model detected a second individual in camera frame.", "HIGH");
+  });
+
+  document.getElementById("btn-sim-offscreen")?.addEventListener("click", () => {
+    triggerProctoringViolation("OFF_SCREEN_GAZE", "Candidate gaze shifted away from screen (>3.5s). Possible mobile device use.", "MEDIUM");
+  });
+
+  document.getElementById("btn-dismiss-freeze")?.addEventListener("click", () => {
+    document.getElementById("lockdown-overlay").classList.remove("active");
+  });
+
+  // Browser Lockdown Event Listeners
+  setupBrowserLockdownListeners();
+}
+
+function toggleProctoringMode() {
+  state.isExamLocked = !state.isExamLocked;
+  const statusPill = document.getElementById("proctoring-status-pill");
+  const lockIcon = document.getElementById("lock-status-icon");
+  const banner = document.getElementById("proctoring-hud-section");
+
+  if (state.isExamLocked) {
+    // Start session on backend
+    fetch(`${API_BASE}/api/proctoring/start`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        session_id: state.proctoringSessionId,
+        candidate_name: state.gapAnalysis ? state.gapAnalysis.cadre_title : "Official Candidate",
+        cadre_id: state.activeCadre
+      })
+    });
+
+    if (statusPill) statusPill.textContent = "● SECURE EXAM LOCKDOWN ACTIVE";
+    if (statusPill) statusPill.style.color = "#10B981";
+    if (lockIcon) lockIcon.textContent = "🔒";
+    if (banner) banner.style.display = "block";
+
+    // Request fullscreen
+    try {
+      if (document.documentElement.requestFullscreen) {
+        document.documentElement.requestFullscreen();
+      }
+    } catch (e) {
+      console.log("Fullscreen request:", e);
+    }
+
+    // Start Extension Scanner & Camera Stream
+    startExtensionDOMScanner();
+    initWebcamStream();
+    alert("🛡️ SECURE PROCTORING ACTIVATED:\n• Fullscreen lockdown enabled\n• F12 & DevTools blocked\n• Copy/Paste blocked\n• AI extension injection monitoring active\n• Computer vision gaze tracking enabled");
+  } else {
+    if (statusPill) statusPill.textContent = "○ Standard Mode (Unrestricted)";
+    if (statusPill) statusPill.style.color = "#94A3B8";
+    if (lockIcon) lockIcon.textContent = "🔓";
+    if (banner) banner.style.display = "none";
+  }
+}
+
+function setupBrowserLockdownListeners() {
+  // 1. Keystroke Trap: DevTools (F12), Inspect (Ctrl+Shift+I/J/C), View-Source (Ctrl+U), Copy/Paste (Ctrl+C/V/X)
+  document.addEventListener("keydown", (e) => {
+    if (!state.isExamLocked) return;
+
+    const isF12 = e.key === "F12";
+    const isDevTools = e.ctrlKey && e.shiftKey && ["I", "J", "C"].includes(e.key.toUpperCase());
+    const isViewSource = e.ctrlKey && e.key.toUpperCase() === "U";
+    const isClipboard = e.ctrlKey && ["C", "V", "X"].includes(e.key.toUpperCase());
+
+    if (isF12 || isDevTools || isViewSource || isClipboard) {
+      e.preventDefault();
+      e.stopPropagation();
+      const actionName = isF12 || isDevTools ? "DevTools / Inspector Access" : isViewSource ? "View Source Attempt" : "Clipboard Copy/Paste";
+      triggerProctoringViolation("SECURITY_KEYSTROKE_BLOCKED", `${actionName} (${e.ctrlKey ? 'Ctrl+' : ''}${e.key}) intercepted and blocked.`, "MEDIUM");
+      return false;
+    }
+  }, true);
+
+  // 2. Right-Click Context Menu Trap
+  document.addEventListener("contextmenu", (e) => {
+    if (!state.isExamLocked) return;
+    e.preventDefault();
+    triggerProctoringViolation("CONTEXT_MENU_BLOCKED", "Right-click context inspection attempt blocked by lockdown policy.", "LOW");
+    return false;
+  }, true);
+
+  // 3. Tab-Switching and Window Focus Loss
+  window.addEventListener("blur", () => {
+    if (!state.isExamLocked) return;
+    triggerProctoringViolation("TAB_SWITCH_OR_BLUR", "Browser window lost focus. Candidate switched applications or tabs.", "HIGH");
+  });
+
+  document.addEventListener("visibilitychange", () => {
+    if (!state.isExamLocked) return;
+    if (document.hidden) {
+      triggerProctoringViolation("PAGE_HIDDEN", "Document visibility changed to hidden (switched tabs or minimized).", "HIGH");
+    }
+  });
+
+  // 4. Fullscreen Exit Detection
+  document.addEventListener("fullscreenchange", () => {
+    if (!state.isExamLocked) return;
+    if (!document.fullscreenElement) {
+      triggerProctoringViolation("FULLSCREEN_EXIT", "Candidate exited fullscreen exam environment.", "HIGH");
+    }
+  });
+}
+
+function startExtensionDOMScanner() {
+  const extensionSignatures = [
+    '[id*="chatgpt"]', '[class*="monica"]', '[id*="merlin"]',
+    '[class*="sider"]', '[data-monica]', '[data-sider]', '.quillbot-extension',
+    '#__next_chatgpt', '#maxai-root', '.scispace-highlighter'
+  ];
+
+  // Periodic DOM sweep
+  setInterval(() => {
+    if (!state.isExamLocked) return;
+    for (const sig of extensionSignatures) {
+      const match = document.querySelector(sig);
+      if (match) {
+        match.remove();
+        triggerProctoringViolation("AI_EXTENSION_INTERCEPTED", `Unauthorized AI extension node detected (${sig}) and neutralized from DOM.`, "HIGH");
+      }
+    }
+  }, 1500);
+
+  // MutationObserver for instant neutralization
+  const observer = new MutationObserver((mutations) => {
+    if (!state.isExamLocked) return;
+    for (const m of mutations) {
+      for (const node of m.addedNodes) {
+        if (node.nodeType === 1) { // Element node
+          for (const sig of extensionSignatures) {
+            if (node.matches && node.matches(sig)) {
+              node.remove();
+              triggerProctoringViolation("AI_EXTENSION_INJECTION", `Real-time AI script injection (${sig}) neutralized by sandbox.`, "HIGH");
+            }
+          }
+        }
+      }
+    }
+  });
+
+  observer.observe(document.body, { childList: true, subtree: true });
+}
+
+function initWebcamStream() {
+  const video = document.getElementById("proctoring-video");
+  if (!video) return;
+
+  if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+    navigator.mediaDevices.getUserMedia({ video: true })
+      .then(stream => {
+        video.srcObject = stream;
+        video.play();
+      })
+      .catch(err => {
+        console.log("Webcam access optional/simulated:", err);
+      });
+  }
+}
+
+async function triggerProctoringViolation(type, details, severity) {
+  try {
+    const res = await fetch(`${API_BASE}/api/proctoring/log_event`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        session_id: state.proctoringSessionId,
+        incident_type: type,
+        details: details,
+        severity: severity
+      })
+    });
+    const data = await res.json();
+    state.trustScore = data.trust_score;
+    state.strikes = data.strike_count;
+
+    updateProctoringHUD(data);
+
+    if (data.is_frozen) {
+      showLockdownFreezeModal("ASSESSMENT FROZEN: MAXIMUM STRIKES REACHED (3/3)", "Multiple severe exam integrity violations were recorded. Assessment is locked for Cadre Board Review.");
+    } else if (severity === "HIGH") {
+      showLockdownFreezeModal(`EXAM VIOLATION (Strike ${data.strike_count} of 3)`, details);
+    }
+  } catch (err) {
+    console.error("Proctoring log failed:", err);
+  }
+}
+
+function updateProctoringHUD(data) {
+  const trustVal = document.getElementById("trust-score-val");
+  const trustFill = document.getElementById("trust-gauge-fill");
+  const strikesVal = document.getElementById("strikes-val");
+
+  if (trustVal) trustVal.textContent = `${data.trust_score}%`;
+  if (strikesVal) strikesVal.textContent = `${data.strike_count} / ${data.max_strikes}`;
+  
+  if (trustFill) {
+    trustFill.style.width = `${data.trust_score}%`;
+    if (data.trust_score < 40) {
+      trustFill.style.background = "#EF4444";
+      if (trustVal) trustVal.style.color = "#EF4444";
+    } else if (data.trust_score < 75) {
+      trustFill.style.background = "#F59E0B";
+      if (trustVal) trustVal.style.color = "#F59E0B";
+    } else {
+      trustFill.style.background = "linear-gradient(90deg, #10B981, #38BDF8)";
+      if (trustVal) trustVal.style.color = "#10B981";
+    }
+  }
+
+  // Add to incident table
+  const tbody = document.getElementById("incident-log-body");
+  if (tbody && data.logged_incident) {
+    const inc = data.logged_incident;
+    const tr = document.createElement("tr");
+    
+    let badgeBg = "rgba(16, 185, 129, 0.2)";
+    let badgeColor = "#10B981";
+    if (inc.severity === "HIGH") {
+      badgeBg = "rgba(239, 68, 68, 0.25)";
+      badgeColor = "#EF4444";
+    } else if (inc.severity === "MEDIUM") {
+      badgeBg = "rgba(245, 158, 11, 0.25)";
+      badgeColor = "#F59E0B";
+    }
+
+    tr.innerHTML = `
+      <td>${inc.timestamp}</td>
+      <td><span style="font-weight: 700; color: #FFFFFF;">${inc.type}</span></td>
+      <td><span style="background: ${badgeBg}; color: ${badgeColor}; font-size: 0.7rem; font-weight: 700; padding: 2px 6px; border-radius: 6px;">${inc.severity}</span></td>
+      <td style="color: #94A3B8;">${inc.details}</td>
+      <td style="color: #EF4444; font-weight: 700;">-${inc.penalty_applied}%</td>
+      <td style="color: #FFFFFF; font-weight: 700;">${inc.remaining_trust}%</td>
+    `;
+    tbody.prepend(tr);
+  }
+}
+
+function showLockdownFreezeModal(title, msg) {
+  const overlay = document.getElementById("lockdown-overlay");
+  const modalTitle = document.getElementById("lockdown-title");
+  const modalMsg = document.getElementById("lockdown-msg");
+
+  if (modalTitle) modalTitle.textContent = title;
+  if (modalMsg) modalMsg.textContent = msg;
+  if (overlay) overlay.classList.add("active");
+}
+

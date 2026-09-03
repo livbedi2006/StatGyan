@@ -553,3 +553,188 @@ body {
     align-items: flex-start;
   }
 }
+
+/* =========================================================
+   AI Proctoring & Secure Exam Lockdown Design System
+   ========================================================= */
+
+.proctoring-banner {
+  background: linear-gradient(90deg, rgba(16, 185, 129, 0.15), rgba(2, 132, 199, 0.15));
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.proctoring-hud {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  background: #020617;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(2, 132, 199, 0.2);
+}
+
+.webcam-stream-mock {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.85;
+}
+
+.hud-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.75rem;
+}
+
+.hud-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hud-pill {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.hud-face-box {
+  position: absolute;
+  top: 25%;
+  left: 32%;
+  width: 36%;
+  height: 50%;
+  border: 2px dashed #10B981;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.3);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 4px;
+  animation: scanBlink 3s infinite;
+}
+
+@keyframes scanBlink {
+  0%, 100% { border-color: #10B981; box-shadow: 0 0 15px rgba(16, 185, 129, 0.4); }
+  50% { border-color: #38BDF8; box-shadow: 0 0 20px rgba(56, 189, 248, 0.4); }
+}
+
+.hud-face-label {
+  background: rgba(16, 185, 129, 0.9);
+  color: #020617;
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 1px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.trust-gauge-container {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.trust-gauge-value {
+  font-family: var(--font-heading);
+  font-size: 2.75rem;
+  font-weight: 900;
+  color: #10B981;
+  letter-spacing: -0.02em;
+}
+
+.trust-gauge-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  margin: 0.75rem 0;
+  overflow: hidden;
+}
+
+.trust-gauge-fill {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, #10B981, #38BDF8);
+  transition: width 0.4s ease, background 0.4s ease;
+}
+
+/* Incident Log List */
+.incident-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+
+.incident-table th {
+  background: rgba(15, 23, 42, 0.8);
+  color: var(--text-secondary);
+  text-align: left;
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--border-card);
+}
+
+.incident-table td {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+/* Violation Overlay Modal */
+.lockdown-freeze-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(2, 6, 23, 0.96);
+  backdrop-filter: blur(16px);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 2rem;
+  animation: freezeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lockdown-freeze-overlay.active {
+  display: flex;
+}
+
+@keyframes freezeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.freeze-box {
+  max-width: 550px;
+  background: rgba(15, 23, 42, 0.95);
+  border: 2px solid #EF4444;
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: 0 0 50px rgba(239, 68, 68, 0.35);
+}
+

@@ -67,6 +67,17 @@ class DecaySimulateRequest(BaseModel):
 class LabEvaluateRequest(BaseModel):
     script_code: str
 
+class ProctoringStartRequest(BaseModel):
+    session_id: str = "SESSION-EXAM-001"
+    candidate_name: str = "Rajesh Kumar Sharma"
+    cadre_id: str = "jso"
+
+class ProctoringEventRequest(BaseModel):
+    session_id: str = "SESSION-EXAM-001"
+    incident_type: str = "TAB_SWITCH"
+    details: str = "Candidate switched window or lost browser focus"
+    severity: str = "HIGH"
+
 # ----------------- API Endpoints -----------------
 
 @app.get("/api/health")
@@ -80,7 +91,8 @@ def health_check():
             "BlendedPathwayRecommender (iGOT + NSSTA TPAC)",
             "SkillDecayModel (Exponential loss + Methodology Shock)",
             "PredictiveAnalyticsEngine (Divisional Heatmaps & Survey Forecaster)",
-            "VirtualLabEvaluator (Complex Multiplier Microdata Grader)"
+            "VirtualLabEvaluator (Complex Multiplier Microdata Grader)",
+            "ProctoringTrustEngine (Extension Blocker & Anti-Cheat AI)"
         ]
     }
 
@@ -153,6 +165,27 @@ def cadre_analytics():
 @app.post("/api/lab/evaluate")
 def evaluate_lab_code(req: LabEvaluateRequest):
     return lab_evaluator.evaluate_submission(req.script_code)
+
+@app.get("/api/proctoring/policy")
+def get_proctoring_policy():
+    return proctoring_engine.get_security_policy()
+
+@app.post("/api/proctoring/start")
+def start_proctoring_session(req: ProctoringStartRequest):
+    return proctoring_engine.start_session(req.session_id, req.candidate_name, req.cadre_id)
+
+@app.post("/api/proctoring/log_event")
+def log_proctoring_event(req: ProctoringEventRequest):
+    return proctoring_engine.log_incident(
+        session_id=req.session_id,
+        incident_type=req.incident_type,
+        details=req.details,
+        severity=req.severity
+    )
+
+@app.get("/api/proctoring/report")
+def get_proctoring_report(session_id: str = "SESSION-EXAM-001"):
+    return proctoring_engine.get_session_summary(session_id)
 
 @app.get("/api/graph")
 def get_knowledge_graph():
