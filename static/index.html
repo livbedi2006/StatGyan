@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StatGyan AI — MoSPI Competency-Based Learning & Assessment System</title>
+  
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Design System CSS -->
+  <link rel="stylesheet" href="/static/css/design-system.css">
+</head>
+<body>
+
+  <!-- Top App Header -->
+  <header class="app-header">
+    <div class="brand-section">
+      <div class="emblem-wrapper">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+        </svg>
+      </div>
+      <div class="brand-title">
+        <h1>StatGyan AI <span class="badge">MoSPI / DIID Prototype</span></h1>
+        <div class="brand-subtitle">AI-Enabled Competency Assessment & Blended Learning System • SIH ID 26101</div>
+      </div>
+    </div>
+
+    <div class="header-controls">
+      <div class="status-pill">
+        <div class="pulse-dot"></div>
+        <span>ML Engine: 6 Models Online</span>
+      </div>
+
+      <div class="role-switcher">
+        <span style="font-size: 0.75rem; color: #94A3B8;">Cadre View:</span>
+        <select id="cadre-select">
+          <!-- Populated dynamically via /api/cadres -->
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Tabs -->
+  <nav class="nav-tabs-wrapper">
+    <button class="nav-tab-btn active" data-tab="tab-learner">
+      <span>🎯</span> Learner Portal (Officer View)
+    </button>
+    <button class="nav-tab-btn" data-tab="tab-mcq">
+      <span>🧪</span> AI Grounded MCQ & QC Studio
+    </button>
+    <button class="nav-tab-btn" data-tab="tab-pathway">
+      <span>🛤️</span> Blended Pathway (iGOT + NSSTA)
+    </button>
+    <button class="nav-tab-btn" data-tab="tab-analytics">
+      <span>📊</span> Cadre Analytics & Forecaster
+    </button>
+    <button class="nav-tab-btn" data-tab="tab-lab">
+      <span>💻</span> Virtual Statistical Lab
+    </button>
+    <button class="nav-tab-btn" data-tab="tab-graph">
+      <span>🕸️</span> Knowledge Graph Explorer
+    </button>
+  </nav>
+
+  <!-- Main Content Body -->
+  <main class="main-container">
+
+    <!-- 1. LEARNER PORTAL TAB -->
+    <div id="tab-learner" class="tab-pane active">
+      
+      <!-- Skill Decay Alert Banner -->
+      <div id="decay-alerts-container">
+        <div class="alert-banner">
+          <div class="alert-icon-text">
+            <span class="alert-badge">METHODOLOGY DRIFT</span>
+            <div>
+              <div style="font-weight: 700; color: #FFFFFF;">National CPI Base Year Revision Triggered</div>
+              <div style="font-size: 0.8rem; color: #E2E8F0;">ESD transitioned to updated base weights. Your "Index Numbers" competency is flagged for mandatory refresher.</div>
+              <div style="font-size: 0.75rem; color: #FCA5A5; margin-top: 2px;">Impact: -38% retention depreciation • Action: 3-hour micro-module required</div>
+            </div>
+          </div>
+          <button class="btn btn-primary" style="padding: 0.4rem 0.9rem; font-size: 0.75rem; white-space: nowrap;" onclick="alert('Enrolling in priority CPI Refresher...')">
+            Launch Refresher
+          </button>
+        </div>
+      </div>
+
+      <!-- Quick Metrics Grid -->
+      <div class="grid-3" style="margin-bottom: 1.5rem;">
+        <div class="stat-box">
+          <div class="stat-label">Cadre Benchmark Readiness</div>
+          <div class="stat-value" id="officer-readiness-val">--%</div>
+          <div style="font-size: 0.75rem; color: #10B981; margin-top: 4px;">Evaluated for <span id="active-cadre-title">JSO</span></div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Average Competency Gap</div>
+          <div class="stat-value" id="avg-gap-val">-- pts</div>
+          <div style="font-size: 0.75rem; color: #94A3B8; margin-top: 4px;">Across 6 core official domains</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Critical Gaps (Delta &ge; 20)</div>
+          <div class="stat-value" id="critical-gaps-val" style="color: #F59E0B;">--</div>
+          <div style="font-size: 0.75rem; color: #F59E0B; margin-top: 4px;">Requires NSSTA In-Person Workshop</div>
+        </div>
+      </div>
+
+      <!-- Radar Chart & Gap Breakdown Grid -->
+      <div class="grid-1-2">
+        <!-- Radar Chart Card -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title"><span>📡</span> Competency Radar</div>
+              <div class="card-subtitle">Officer Proficiency vs. MoSPI Cadre Benchmark</div>
+            </div>
+          </div>
+          <div style="position: relative; height: 320px; width: 100%;">
+            <canvas id="competencyRadarChart"></canvas>
+          </div>
+        </div>
+
+        <!-- Domain Breakdown Card -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title"><span>📋</span> Domain Gap Analysis</div>
+              <div class="card-subtitle">Detailed scoring across MoSPI statistical functions</div>
+            </div>
+            <button class="btn btn-outline" style="padding: 0.35rem 0.75rem; font-size: 0.75rem;" onclick="triggerCompetencyAnalysis()">
+              Recalculate
+            </button>
+          </div>
+          <div id="domain-gap-list" style="margin-top: 0.5rem;">
+            <!-- Dynamically populated -->
+          </div>
+
+          <!-- NLP Inferencing Box -->
+          <div style="margin-top: 1.25rem; background: rgba(0,0,0,0.3); padding: 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-card);">
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--primary-sky); margin-bottom: 0.4rem;">
+              ✨ NLP Skill Extraction (from Job Profile / Self-Appraisal)
+            </div>
+            <textarea id="nlp-statement-input" style="width: 100%; height: 60px; background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; padding: 0.5rem; color: #FFFFFF; font-size: 0.8rem; outline: none;" placeholder="e.g. Conducted 45 field household scrutinies for PLFS using CAPI tablets, resolved CWS status discrepancies, and calculated basic sampling weights."></textarea>
+            <div style="display: flex; justify-content: flex-end; margin-top: 0.5rem;">
+              <button class="btn btn-secondary" style="padding: 0.35rem 0.85rem; font-size: 0.75rem;" onclick="inferFromNLP()">
+                Extract Competencies (TF-IDF & LSA)
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 2. AI MCQ & ASSESSMENT STUDIO TAB -->
+    <div id="tab-mcq" class="tab-pane">
+      <div class="card" style="margin-bottom: 1.5rem;">
+        <div class="card-header">
+          <div>
+            <div class="card-title"><span>⚙️</span> Grounded Assessment & Item Generation Studio</div>
+            <div class="card-subtitle">Generates Bloom's Taxonomy aligned assessments strictly grounded in official MoSPI manuals with automated Quality Control (QC).</div>
+          </div>
+          <div style="display: flex; gap: 0.5rem;">
+            <button id="btn-export-qti" class="btn btn-outline" style="font-size: 0.75rem;">Export QTI 2.1 (LMS)</button>
+            <button id="btn-export-moodle" class="btn btn-outline" style="font-size: 0.75rem;">Export Moodle XML</button>
+            <button id="btn-generate-mcq" class="btn btn-primary" style="font-size: 0.75rem;">Generate Grounded Set</button>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap; background: rgba(0,0,0,0.25); padding: 0.75rem; border-radius: var(--radius-sm);">
+          <div style="flex: 1; min-width: 200px;">
+            <label style="font-size: 0.75rem; color: #94A3B8; display: block; margin-bottom: 4px;">Source MoSPI Manual:</label>
+            <select id="filter-manual" style="width: 100%; background: #0F172A; border: 1px solid var(--border-card); color: #FFFFFF; padding: 0.4rem; border-radius: 4px; font-size: 0.8rem;">
+              <option value="">All Uploaded Manuals (PLFS, CPI, NAS, CAPI)</option>
+              <option value="plfs_manual_vol1">PLFS Field Operations Manual Vol. I</option>
+              <option value="cpi_compilation_guide">Compilation Guide for CPI</option>
+              <option value="nas_methodology">National Accounts Statistics (SNA 2008)</option>
+              <option value="data_analytics_tools">Statistical Software & CAPI Guidelines</option>
+            </select>
+          </div>
+
+          <div style="flex: 1; min-width: 200px;">
+            <label style="font-size: 0.75rem; color: #94A3B8; display: block; margin-bottom: 4px;">Bloom's Taxonomy Cognitive Level:</label>
+            <select id="filter-bloom" style="width: 100%; background: #0F172A; border: 1px solid var(--border-card); color: #FFFFFF; padding: 0.4rem; border-radius: 4px; font-size: 0.8rem;">
+              <option value="">All Cognitive Levels</option>
+              <option value="Level 1: Recall / Knowledge">Level 1: Recall / Knowledge</option>
+              <option value="Level 2: Conceptual Understanding">Level 2: Conceptual Understanding</option>
+              <option value="Level 3: Application / Calculation">Level 3: Application / Calculation</option>
+              <option value="Level 4: Analytical Evaluation">Level 4: Analytical Evaluation</option>
+            </select>
+          </div>
+
+          <div style="display: flex; align-items: flex-end;">
+            <span id="qc-pass-rate-display" style="font-size: 0.8rem; color: #10B981; font-weight: 700; padding: 0.4rem;">
+              QC Pass Rate: 100%
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Generated MCQs Display Area -->
+      <div id="mcq-container">
+        <!-- Dynamically rendered by app.js -->
+      </div>
+    </div>
+
+    <!-- 3. BLENDED PATHWAY TAB -->
+    <div id="tab-pathway" class="tab-pane">
+      <div class="card" style="margin-bottom: 1.5rem;">
+        <div class="card-header">
+          <div>
+            <div class="card-title"><span>🛤️</span> Blended Learning Pathway Engine (iGOT + NSSTA)</div>
+            <div class="card-subtitle">Couples self-paced digital foundational modules with high-impact physical academy laboratories at NSSTA, Greater Noida.</div>
+          </div>
+        </div>
+
+        <div class="grid-3" style="margin-bottom: 1rem; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+          <div class="stat-box">
+            <div class="stat-label">Total Progression Steps</div>
+            <div class="stat-value" id="total-path-steps">--</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">Online Digital Learning</div>
+            <div class="stat-value" id="total-online-hrs">-- hrs</div>
+            <div style="font-size: 0.75rem; color: #38BDF8;">Via iGOT Karmayogi Portal</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">In-Person Residential Labs</div>
+            <div class="stat-value" id="total-nssta-days">-- days</div>
+            <div style="font-size: 0.75rem; color: #C084FC;">At NSSTA Academy, Greater Noida</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">Total Karmayogi Credits</div>
+            <div class="stat-value" id="total-karmayogi-credits" style="color: var(--accent-gold);">--</div>
+            <div style="font-size: 0.75rem; color: var(--accent-gold);">Official Cadre Accreditation</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sequenced Timeline -->
+      <div class="card">
+        <div class="card-title" style="margin-bottom: 1.25rem;"><span>⏳</span> Recommended Progression Sequence</div>
+        <div id="pathway-timeline">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. CADRE MANAGEMENT & HR ANALYTICS TAB -->
+    <div id="tab-analytics" class="tab-pane">
+      <div class="card" style="margin-bottom: 1.5rem;">
+        <div class="card-header">
+          <div>
+            <div class="card-title"><span>📊</span> National Cadre Capability Heatmap</div>
+            <div class="card-subtitle">Aggregated competency levels across MoSPI Divisions and Regional Directorates</div>
+          </div>
+          <span style="font-size: 0.75rem; color: #10B981; font-weight: 700;">Live MoSPI Cadre Strength: 7,850 Personnel</span>
+        </div>
+
+        <div style="overflow-x: auto;">
+          <table class="heatmap-table">
+            <thead>
+              <tr>
+                <th>Division / Directorate</th>
+                <th>Staff Strength</th>
+                <th style="text-align: center;">Sampling Design</th>
+                <th style="text-align: center;">National Accounts</th>
+                <th style="text-align: center;">CPI & IIP</th>
+                <th style="text-align: center;">Analytics (R/Py)</th>
+                <th style="text-align: center;">CAPI Field Ops</th>
+                <th style="text-align: center;">Governance & QA</th>
+              </tr>
+            </thead>
+            <tbody id="divisional-heatmap-body">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Predictive Survey Readiness Forecasts -->
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title"><span>🔮</span> Predictive Survey Readiness Forecaster</div>
+            <div class="card-subtitle">Machine learning simulation of cadre deployment readiness for upcoming national surveys</div>
+          </div>
+        </div>
+
+        <div class="grid-3" id="survey-forecast-cards">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. VIRTUAL STATISTICAL LAB TAB -->
+    <div id="tab-lab" class="tab-pane">
+      <div class="card" style="margin-bottom: 1.5rem;">
+        <div class="card-header">
+          <div>
+            <div class="card-title"><span>💻</span> AI Virtual Statistical Lab Preview</div>
+            <div class="card-subtitle">In-browser code evaluation sandbox running against synthetic MoSPI survey microdata (PLFS Schedule 10.4).</div>
+          </div>
+          <button id="btn-run-code" class="btn btn-primary" style="font-size: 0.8rem;">
+            <span>▶</span> Execute on Microdata
+          </button>
+        </div>
+
+        <div style="background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.2); padding: 0.85rem; border-radius: var(--radius-sm); margin-bottom: 1rem; font-size: 0.85rem;">
+          <strong>Official Challenge:</strong> Write a Python routine to compute the <strong>Worker Population Ratio (WPR)</strong>, <strong>Labour Force Participation Rate (LFPR)</strong>, and <strong>Unemployment Rate (UR)</strong> applying sampling multipliers to Usual Principal Status (UPS) activity codes.
+        </div>
+
+        <div class="grid-2">
+          <!-- Code Editor -->
+          <div class="code-editor-container">
+            <div class="editor-header">
+              <span>solution.py (Python 3.11 / Pandas Survey Engine)</span>
+              <span>Synthetic PLFS (NSS 80th Round Sample)</span>
+            </div>
+            <textarea id="lab-code-input" class="code-textarea"># Official MoSPI Microdata Calculation
+# Available microdata records in `records`:
+# Fields: person_id, sector, age, gender, ups_code, multiplier
+
+def calculate_plfs_metrics(records):
+    # Sum total weighted population using sampling multipliers
+    tot_pop = sum(r['multiplier'] for r in records)
+    
+    # Identify employed persons: UPS activity codes 11, 31, 51
+    employed_pop = sum(r['multiplier'] for r in records if r['ups_code'] in [11, 31, 51])
+    
+    # Identify unemployed job seekers: UPS code 81
+    unemployed_pop = sum(r['multiplier'] for r in records if r['ups_code'] == 81)
+    
+    labour_force = employed_pop + unemployed_pop
+    
+    # Compute MoSPI Standard Indicators
+    wpr = (employed_pop / tot_pop) * 100.0
+    lfpr = (labour_force / tot_pop) * 100.0
+    ur = (unemployed_pop / labour_force) * 100.0
+    
+    return {"WPR": round(wpr, 2), "LFPR": round(lfpr, 2), "UR": round(ur, 2)}
+</textarea>
+          </div>
+
+          <!-- Execution Diagnostics Output -->
+          <div class="card" style="background: #0D1117; border-color: rgba(255,255,255,0.08);">
+            <div class="card-title" style="font-size: 0.95rem; margin-bottom: 0.75rem;">
+              <span>🧪</span> Auto-Grading & Test Execution Output
+            </div>
+            <div id="lab-output-display">
+              <div style="color: #94A3B8; font-size: 0.85rem; padding: 1rem 0;">
+                Click <strong>"Execute on Microdata"</strong> to run automated test suites, verify multiplier weighting adherence, and calculate benchmark indicators.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. KNOWLEDGE GRAPH EXPLORER TAB -->
+    <div id="tab-graph" class="tab-pane">
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title"><span>🕸️</span> MoSPI Official Statistics Knowledge Graph Explorer</div>
+            <div class="card-subtitle">Powered by Graphify: Traverses relationships across Cadres ↔ Competencies ↔ Official Manuals ↔ iGOT & NSSTA Modules.</div>
+          </div>
+          <button class="btn btn-outline" style="font-size: 0.75rem;" onclick="renderKnowledgeGraph()">Redraw Graph</button>
+        </div>
+
+        <div style="position: relative; width: 100%; height: 440px; background: rgba(0,0,0,0.4); border-radius: var(--radius-sm); overflow: hidden; display: flex; align-items: center; justify-content: center;">
+          <canvas id="graph-canvas"></canvas>
+        </div>
+
+        <div style="margin-top: 1rem; display: flex; gap: 1.5rem; font-size: 0.75rem; color: #94A3B8; justify-content: center;">
+          <span style="display: flex; align-items: center; gap: 0.35rem;"><span style="width: 10px; height: 10px; background: #1e3a8a; border-radius: 50%;"></span> Cadres</span>
+          <span style="display: flex; align-items: center; gap: 0.35rem;"><span style="width: 10px; height: 10px; background: #0284c7; border-radius: 50%;"></span> Competencies</span>
+          <span style="display: flex; align-items: center; gap: 0.35rem;"><span style="width: 10px; height: 10px; background: #059669; border-radius: 50%;"></span> MoSPI Manuals</span>
+          <span style="display: flex; align-items: center; gap: 0.35rem;"><span style="width: 10px; height: 10px; background: #d97706; border-radius: 50%;"></span> iGOT Courses</span>
+          <span style="display: flex; align-items: center; gap: 0.35rem;"><span style="width: 10px; height: 10px; background: #7c3aed; border-radius: 50%;"></span> NSSTA Workshops</span>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Client JavaScript -->
+  <script src="/static/js/app.js"></script>
+
+  <!-- Helper for NLP extraction -->
+  <script>
+    async function inferFromNLP() {
+      const text = document.getElementById("nlp-statement-input").value;
+      if (!text.trim()) {
+        alert("Please enter a self-appraisal or job statement to infer competencies.");
+        return;
+      }
+      try {
+        const res = await fetch("/api/competency/infer", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ cadre_id: state.activeCadre, self_statement: text })
+        });
+        const data = await res.json();
+        state.gapAnalysis = data;
+        renderCompetencyOverview(data);
+        renderRadarChart(data.radar_data);
+        renderDomainList(data.domain_breakdown);
+        alert("NLP extraction complete! Competency radar updated from profile description.");
+      } catch (err) {
+        alert("Extraction failed: " + err);
+      }
+    }
+  </script>
+</body>
+</html>

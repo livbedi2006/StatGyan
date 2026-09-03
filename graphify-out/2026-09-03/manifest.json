@@ -1,0 +1,14 @@
+{
+  ".agents/rules/graphify.md": {
+    "mtime": 1788439767.3442144,
+    "seen": 1788439935.7591987,
+    "ast_hash": "a0e4d192b9e2e17256124dbfc8e24e6a",
+    "semantic_hash": "a0e4d192b9e2e17256124dbfc8e24e6a"
+  },
+  ".agents/workflows/graphify.md": {
+    "mtime": 1788439767.3462145,
+    "seen": 1788439935.7591987,
+    "ast_hash": "a831cf3669f1e6ab85d8a80ebe655f99",
+    "semantic_hash": "a831cf3669f1e6ab85d8a80ebe655f99"
+  }
+}

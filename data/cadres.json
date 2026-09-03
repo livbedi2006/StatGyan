@@ -1,0 +1,120 @@
+{
+  "cadres": [
+    {
+      "id": "jso",
+      "title": "Junior Statistical Officer (JSO)",
+      "cadre_group": "Subordinate Statistical Service (SSS)",
+      "pay_level": "Level 6 / Level 7",
+      "description": "Frontline official statistician responsible for primary survey scrutiny, field data verification, schedule tabulation, and data consistency validation.",
+      "required_competencies": {
+        "Survey Methodology & Sampling": 85,
+        "National Accounts & GDP Estimation": 60,
+        "Index Numbers (CPI & IIP)": 75,
+        "Data Analytics & Programming": 70,
+        "Field Operations & CAPI Validation": 90,
+        "Official Statistics Governance & Quality": 65
+      },
+      "typical_officer_profile": {
+        "name": "Rajesh Kumar Sharma",
+        "designation": "Junior Statistical Officer",
+        "posting": "Regional Office, NSSO (FOD), Jaipur",
+        "experience_years": 3,
+        "assessed_competencies": {
+          "Survey Methodology & Sampling": 72,
+          "National Accounts & GDP Estimation": 45,
+          "Index Numbers (CPI & IIP)": 68,
+          "Data Analytics & Programming": 48,
+          "Field Operations & CAPI Validation": 88,
+          "Official Statistics Governance & Quality": 58
+        }
+      }
+    },
+    {
+      "id": "sso",
+      "title": "Senior Statistical Officer (SSO)",
+      "cadre_group": "Subordinate Statistical Service (SSS)",
+      "pay_level": "Level 7 / Level 8",
+      "description": "Senior technical officer overseeing complex survey round execution, preliminary report drafting, index compilation, and supervising JSO cadres.",
+      "required_competencies": {
+        "Survey Methodology & Sampling": 90,
+        "National Accounts & GDP Estimation": 75,
+        "Index Numbers (CPI & IIP)": 88,
+        "Data Analytics & Programming": 82,
+        "Field Operations & CAPI Validation": 92,
+        "Official Statistics Governance & Quality": 80
+      },
+      "typical_officer_profile": {
+        "name": "Priya V. Nair",
+        "designation": "Senior Statistical Officer",
+        "posting": "Data Informatics & Innovation Division (DIID), New Delhi",
+        "experience_years": 8,
+        "assessed_competencies": {
+          "Survey Methodology & Sampling": 84,
+          "National Accounts & GDP Estimation": 68,
+          "Index Numbers (CPI & IIP)": 82,
+          "Data Analytics & Programming": 62,
+          "Field Operations & CAPI Validation": 90,
+          "Official Statistics Governance & Quality": 76
+        }
+      }
+    },
+    {
+      "id": "iss_ad",
+      "title": "ISS Officer (Assistant / Deputy Director)",
+      "cadre_group": "Indian Statistical Service (Group A Central Service)",
+      "pay_level": "Level 10 / Level 11",
+      "description": "Policy and executive leadership responsible for sampling frame design, national accounts compilation, statistical release approvals, and international reporting.",
+      "required_competencies": {
+        "Survey Methodology & Sampling": 95,
+        "National Accounts & GDP Estimation": 95,
+        "Index Numbers (CPI & IIP)": 92,
+        "Data Analytics & Programming": 88,
+        "Field Operations & CAPI Validation": 80,
+        "Official Statistics Governance & Quality": 95
+      },
+      "typical_officer_profile": {
+        "name": "Dr. Anirban Sengupta, ISS",
+        "designation": "Deputy Director",
+        "posting": "National Accounts Division (NAD), MoSPI Hq, New Delhi",
+        "experience_years": 12,
+        "assessed_competencies": {
+          "Survey Methodology & Sampling": 92,
+          "National Accounts & GDP Estimation": 90,
+          "Index Numbers (CPI & IIP)": 85,
+          "Data Analytics & Programming": 72,
+          "Field Operations & CAPI Validation": 74,
+          "Official Statistics Governance & Quality": 94
+        }
+      }
+    },
+    {
+      "id": "field_investigator",
+      "title": "Field Investigator / Enumerator",
+      "cadre_group": "Field Operations Division Cadre",
+      "pay_level": "Level 4 / Level 5",
+      "description": "Grassroots data collector conducting household visits, enterprise interviews, GPS geo-referencing, and direct CAPI device data entry.",
+      "required_competencies": {
+        "Survey Methodology & Sampling": 70,
+        "National Accounts & GDP Estimation": 30,
+        "Index Numbers (CPI & IIP)": 60,
+        "Data Analytics & Programming": 45,
+        "Field Operations & CAPI Validation": 95,
+        "Official Statistics Governance & Quality": 60
+      },
+      "typical_officer_profile": {
+        "name": "Vikas Meena",
+        "designation": "Field Investigator",
+        "posting": "Sub-Regional Office, FOD, Udaipur",
+        "experience_years": 2,
+        "assessed_competencies": {
+          "Survey Methodology & Sampling": 62,
+          "National Accounts & GDP Estimation": 20,
+          "Index Numbers (CPI & IIP)": 50,
+          "Data Analytics & Programming": 35,
+          "Field Operations & CAPI Validation": 92,
+          "Official Statistics Governance & Quality": 50
+        }
+      }
+    }
+  ]
+}

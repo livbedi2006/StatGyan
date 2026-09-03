@@ -1,0 +1,106 @@
+{
+  "manuals": [
+    {
+      "id": "plfs_manual_vol1",
+      "title": "Periodic Labour Force Survey (PLFS) - Concepts, Definitions and Instructions",
+      "division": "Survey Design and Research Division (SDRD) / Field Operations Division (FOD)",
+      "edition": "Revised 2024",
+      "sections": [
+        {
+          "section_id": "plfs_sec_101",
+          "title": "Activity Status and Reference Periods",
+          "content": "The activity status of a person is determined on the basis of activities pursued by the person during a specified reference period. PLFS collects data using two primary reference periods: (a) Usual Status with a reference period of 365 days preceding the date of survey, and (b) Current Weekly Status (CWS) with a reference period of 7 days preceding the date of survey. A person is categorized as employed under Usual Principal Status (UPS) if they spent a relatively long time (major time criterion) pursuing economic activity during the 365-day reference period.",
+          "citation_ref": "PLFS Manual Vol. I, Section 2.14, p. 18",
+          "domain": "Survey Methodology & Sampling"
+        },
+        {
+          "section_id": "plfs_sec_102",
+          "title": "Labour Market Key Indicators",
+          "content": "The three cardinal indicators derived from PLFS are: 1. Labour Force Participation Rate (LFPR): Defined as the percentage of persons in the labour force (i.e. working or seeking/available for work) in the total population. 2. Worker Population Ratio (WPR): Defined as the percentage of employed persons in the total population. 3. Unemployment Rate (UR): Defined as the percentage of persons unemployed among the persons in the labour force. Mathematically, UR = (Unemployed Persons / Labour Force) * 100, NOT as a percentage of the total population.",
+          "citation_ref": "PLFS Manual Vol. I, Section 2.18, p. 24",
+          "domain": "Survey Methodology & Sampling"
+        },
+        {
+          "section_id": "plfs_sec_103",
+          "title": "Sampling Design and Multipliers",
+          "content": "A rotational panel sampling design is adopted in urban areas where each selected First Stage Unit (FSU) is visited four times (rotational panel scheme with 25% replacement). In rural areas, there is no revisit; each village is surveyed only once. Sampling weights (multipliers) must be applied to household responses to obtain unbiased population estimates. The sub-sample multiplier equals the reciprocal of the probability of selection of the sample household within the stratum.",
+          "citation_ref": "PLFS Manual Vol. I, Chapter 1, Section 1.8, p. 7",
+          "domain": "Survey Methodology & Sampling"
+        }
+      ]
+    },
+    {
+      "id": "cpi_compilation_guide",
+      "title": "Compilation Guide for Consumer Price Index (CPI) - Rural, Urban and Combined",
+      "division": "Economic Statistics Division (ESD)",
+      "edition": "Base Year 2012 Handbook (with Base Revision Technical Notes)",
+      "sections": [
+        {
+          "section_id": "cpi_sec_201",
+          "title": "Index Aggregation and Laspeyres Formulation",
+          "content": "The Consumer Price Index is compiled using a modified Laspeyres formula with fixed base-year expenditure weights obtained from the Consumer Expenditure Survey (CES). The elementary aggregate index for item i in month t is computed as the geometric mean or arithmetic ratio of price relatives: R_it = (P_it / P_i0) * 100, where P_it is current price and P_i0 is base price. The higher-level subgroup and group indices are obtained as weighted arithmetic averages using base-period expenditure weights w_i: I_t = sum(w_i * R_it) / sum(w_i).",
+          "citation_ref": "CPI Compilation Guidelines, Chapter 4, p. 32",
+          "domain": "Index Numbers (CPI & IIP)"
+        },
+        {
+          "section_id": "cpi_sec_202",
+          "title": "Imputation of Missing Quotations",
+          "content": "When a price quotation is temporarily unavailable in a given market, the quotation cannot be simply omitted, as omission implicitly assumes zero price change. Instead, price movement must be imputed using class-mean imputation: multiplying the previous month's price by the average price relative of other reporting varieties within the same item group and price collection center.",
+          "citation_ref": "CPI Compilation Guidelines, Section 5.3, p. 41",
+          "domain": "Index Numbers (CPI & IIP)"
+        },
+        {
+          "section_id": "cpi_sec_203",
+          "title": "Core Inflation Measurement",
+          "content": "Headline CPI measures overall inflation across all commodity groups. Core Inflation measures underlying long-term inflation by excluding volatile components: specifically Food & Beverages and Fuel & Light. MoSPI computes CPI Non-Food Non-Fuel (CPI-NF-NF) as the standard analytical proxy for core inflation to assist monetary policy analysis.",
+          "citation_ref": "CPI Technical Note Series No. 3, p. 11",
+          "domain": "Index Numbers (CPI & IIP)"
+        }
+      ]
+    },
+    {
+      "id": "nas_methodology",
+      "title": "National Accounts Statistics - Sources and Methods (SNA Framework)",
+      "division": "National Accounts Division (NAD)",
+      "edition": "System of National Accounts 2008 Compliant",
+      "sections": [
+        {
+          "section_id": "nas_sec_301",
+          "title": "Gross Value Added (GVA) vs Gross Domestic Product (GDP)",
+          "content": "Gross Value Added (GVA) at basic prices measures the output of economic sectors before product taxes and subsidies. The relationship between GVA and GDP is formally defined as: GDP at market prices = GVA at basic prices + Product Taxes - Product Subsidies. Basic price is the amount receivable by the producer from the purchaser for a unit of a good or service produced, excluding any taxes on products payable and including any subsidies on products receivable.",
+          "citation_ref": "NAS Sources & Methods, Chapter 2, p. 15",
+          "domain": "National Accounts & GDP Estimation"
+        },
+        {
+          "section_id": "nas_sec_302",
+          "title": "Financial Intermediation Services Indirectly Measured (FISIM)",
+          "content": "Financial intermediaries provide services for which they do not charge explicit fees, but instead pay lower interest rates to depositors and charge higher interest rates to borrowers. FISIM represents the implicit service charge, calculated as the difference between interest received on loans and interest paid on deposits relative to a reference risk-free rate of interest.",
+          "citation_ref": "NAS Sources & Methods, Chapter 14, p. 188",
+          "domain": "National Accounts & GDP Estimation"
+        }
+      ]
+    },
+    {
+      "id": "data_analytics_tools",
+      "title": "MoSPI Guidelines on Statistical Software & CAPI Field Processing",
+      "division": "Data Informatics & Innovation Division (DIID)",
+      "edition": "Technical Circular 2025/01",
+      "sections": [
+        {
+          "section_id": "tools_sec_401",
+          "title": "Computer-Assisted Personal Interviewing (CAPI) Validation",
+          "content": "Field data collection in MoSPI has migrated from PAPI (Pen-and-Paper) to tablet-based CAPI using CSPro and custom Android applications. Critical validation rules include range checks, consistency checks across roster members, and GPS bounding boxes. Data must undergo cryptographic hashing and sync validation before transmission to the central DIID data lake.",
+          "citation_ref": "DIID Technical Manual on CAPI Workflows, Section 3, p. 9",
+          "domain": "Field Operations & CAPI Validation"
+        },
+        {
+          "section_id": "tools_sec_402",
+          "title": "Statistical Scripting Standards in R and Python",
+          "content": "Official statistics compilation mandates reproducible data pipelines. Survey estimates must be produced using validated scripts in R (utilizing the 'survey' package for complex survey designs) or Python (Statsmodels, Pandas). Ad-hoc manual spreadsheet adjustments are prohibited to ensure complete reproducibility and audit traceability.",
+          "citation_ref": "DIID Standard Operating Procedures for Survey Processing, p. 22",
+          "domain": "Data Analytics & Programming"
+        }
+      ]
+    }
+  ]
+}

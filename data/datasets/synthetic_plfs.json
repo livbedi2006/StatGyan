@@ -1,0 +1,49 @@
+{
+  "dataset_meta": {
+    "title": "Synthetic MoSPI PLFS Microdata Sample (NSS 80th Round Format)",
+    "records_count": 20,
+    "domains": ["Rural", "Urban"],
+    "description": "Anonymized, synthetic sample records replicating PLFS Schedule 10.4 block 5.1 for calculating WPR, LFPR, and Unemployment Rate."
+  },
+  "records": [
+    {"person_id": "P1001", "sector": "Rural", "state": "Rajasthan", "age": 28, "gender": "Male", "ups_code": 11, "cws_code": 11, "multiplier": 142.5},
+    {"person_id": "P1002", "sector": "Rural", "state": "Rajasthan", "age": 26, "gender": "Female", "ups_code": 92, "cws_code": 92, "multiplier": 142.5},
+    {"person_id": "P1003", "sector": "Rural", "state": "Rajasthan", "age": 5, "gender": "Male", "ups_code": 97, "cws_code": 97, "multiplier": 142.5},
+    {"person_id": "P1004", "sector": "Rural", "state": "Rajasthan", "age": 34, "gender": "Male", "ups_code": 51, "cws_code": 51, "multiplier": 155.0},
+    {"person_id": "P1005", "sector": "Rural", "state": "Rajasthan", "age": 31, "gender": "Female", "ups_code": 51, "cws_code": 51, "multiplier": 155.0},
+    {"person_id": "P1006", "sector": "Rural", "state": "Rajasthan", "age": 22, "gender": "Male", "ups_code": 81, "cws_code": 81, "multiplier": 130.2},
+    {"person_id": "P1007", "sector": "Rural", "state": "Rajasthan", "age": 19, "gender": "Female", "ups_code": 91, "cws_code": 91, "multiplier": 130.2},
+    {"person_id": "P1008", "sector": "Rural", "state": "Rajasthan", "age": 45, "gender": "Male", "ups_code": 31, "cws_code": 31, "multiplier": 160.0},
+    {"person_id": "P1009", "sector": "Rural", "state": "Rajasthan", "age": 42, "gender": "Female", "ups_code": 92, "cws_code": 92, "multiplier": 160.0},
+    {"person_id": "P1010", "sector": "Rural", "state": "Rajasthan", "age": 68, "gender": "Male", "ups_code": 95, "cws_code": 95, "multiplier": 120.0},
+    {"person_id": "P2001", "sector": "Urban", "state": "Maharashtra", "age": 32, "gender": "Male", "ups_code": 31, "cws_code": 31, "multiplier": 210.4},
+    {"person_id": "P2002", "sector": "Urban", "state": "Maharashtra", "age": 29, "gender": "Female", "ups_code": 31, "cws_code": 31, "multiplier": 210.4},
+    {"person_id": "P2003", "sector": "Urban", "state": "Maharashtra", "age": 24, "gender": "Female", "ups_code": 81, "cws_code": 81, "multiplier": 195.0},
+    {"person_id": "P2004", "sector": "Urban", "state": "Maharashtra", "age": 40, "gender": "Male", "ups_code": 11, "cws_code": 11, "multiplier": 220.0},
+    {"person_id": "P2005", "sector": "Urban", "state": "Maharashtra", "age": 38, "gender": "Female", "ups_code": 92, "cws_code": 92, "multiplier": 220.0},
+    {"person_id": "P2006", "sector": "Urban", "state": "Maharashtra", "age": 21, "gender": "Male", "ups_code": 91, "cws_code": 91, "multiplier": 180.5},
+    {"person_id": "P2007", "sector": "Urban", "state": "Maharashtra", "age": 52, "gender": "Male", "ups_code": 31, "cws_code": 31, "multiplier": 205.0},
+    {"person_id": "P2008", "sector": "Urban", "state": "Maharashtra", "age": 48, "gender": "Female", "ups_code": 11, "cws_code": 11, "multiplier": 205.0},
+    {"person_id": "P2009", "sector": "Urban", "state": "Maharashtra", "age": 27, "gender": "Male", "ups_code": 81, "cws_code": 81, "multiplier": 190.0},
+    {"person_id": "P2010", "sector": "Urban", "state": "Maharashtra", "age": 71, "gender": "Female", "ups_code": 95, "cws_code": 95, "multiplier": 170.0}
+  ],
+  "code_definitions": {
+    "11": "Self-employed employer / Own account worker (Employed)",
+    "31": "Regular salaried / Wage employee (Employed)",
+    "51": "Casual labour in other types of work (Employed)",
+    "81": "Sought work or was available for work (Unemployed)",
+    "91": "Attended educational institutions (Out of labour force)",
+    "92": "Attended domestic duties only (Out of labour force)",
+    "95": "Rentiers, pensioners, remittance recipients (Out of labour force)",
+    "97": "Children up to 14 years not attending school (Out of labour force)"
+  },
+  "benchmark_metrics": {
+    "total_weighted_population": 3613.6,
+    "weighted_labour_force": 2077.6,
+    "weighted_employed": 1692.4,
+    "weighted_unemployed": 385.2,
+    "WPR": 46.83,
+    "LFPR": 57.50,
+    "UR": 18.54
+  }
+}

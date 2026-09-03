@@ -1,0 +1,131 @@
+{
+  "igot_courses": [
+    {
+      "id": "igot_stat_01",
+      "code": "IGOT-MOSPI-SAMPL-101",
+      "title": "Foundations of Official Sample Survey Design",
+      "provider": "iGOT Karmayogi / NSSTA Digital",
+      "format": "Online (Self-Paced)",
+      "duration_hours": 12,
+      "competency": "Survey Methodology & Sampling",
+      "target_level": "Foundational to Intermediate",
+      "description": "Comprehensive grounding in multi-stage stratified sampling, probability proportional to size (PPS), and sampling weight derivations.",
+      "credits": 2,
+      "prerequisites": []
+    },
+    {
+      "id": "igot_stat_02",
+      "code": "IGOT-MOSPI-CAPI-201",
+      "title": "Computer-Assisted Personal Interviewing (CAPI) & CSPro Validation",
+      "provider": "iGOT Karmayogi / DIID",
+      "format": "Online (Interactive Modules)",
+      "duration_hours": 8,
+      "competency": "Field Operations & CAPI Validation",
+      "target_level": "Intermediate",
+      "description": "Hands-on data scrutiny rules, roster validation logic, GPS polygon verification, and offline sync conflict resolution.",
+      "credits": 1.5,
+      "prerequisites": []
+    },
+    {
+      "id": "igot_stat_03",
+      "code": "IGOT-MOSPI-R-PROG-301",
+      "title": "Statistical Programming in R for Survey Analysis",
+      "provider": "iGOT Karmayogi / NIC",
+      "format": "Online (Coding Exercises)",
+      "duration_hours": 20,
+      "competency": "Data Analytics & Programming",
+      "target_level": "Intermediate to Advanced",
+      "description": "Reproducible survey workflows utilizing the R 'survey' package, tidyverse data wrangling, and automated bulletin tables.",
+      "credits": 3,
+      "prerequisites": ["IGOT-MOSPI-SAMPL-101"]
+    },
+    {
+      "id": "igot_stat_04",
+      "code": "IGOT-MOSPI-CPI-202",
+      "title": "Compilation of Consumer Price Indices & Hedonic Imputations",
+      "provider": "iGOT Karmayogi / ESD",
+      "format": "Online (Self-Paced)",
+      "duration_hours": 10,
+      "competency": "Index Numbers (CPI & IIP)",
+      "target_level": "Intermediate",
+      "description": "Laspeyres index aggregation, geometric mean price relatives, elementary aggregates, and missing quotation treatment.",
+      "credits": 2,
+      "prerequisites": []
+    },
+    {
+      "id": "igot_stat_05",
+      "code": "IGOT-MOSPI-NAS-401",
+      "title": "System of National Accounts 2008 & GVA Estimation",
+      "provider": "iGOT Karmayogi / NAD",
+      "format": "Online (Theory & Case Studies)",
+      "duration_hours": 16,
+      "competency": "National Accounts & GDP Estimation",
+      "target_level": "Advanced",
+      "description": "Sectoral GVA estimation, informal sector indicators, FISIM allocation, and product tax/subsidy accounting.",
+      "credits": 2.5,
+      "prerequisites": []
+    }
+  ],
+  "nssta_workshops": [
+    {
+      "id": "nssta_ws_01",
+      "code": "NSSTA-TPAC-2026-ADV-SAMPL",
+      "title": "Advanced Stratified Sampling & Small Area Estimation Lab",
+      "institution": "National Statistical Systems Training Academy (NSSTA)",
+      "location": "Plot No. 22, Knowledge Park-II, Greater Noida, UP",
+      "format": "Residential Workshop (In-Person Lab)",
+      "duration_days": 5,
+      "competency": "Survey Methodology & Sampling",
+      "batch_capacity": 30,
+      "next_dates": "12-16 Oct 2026",
+      "tpac_approval_ref": "TPAC/MoSPI/2026/S-14",
+      "prerequisite_igot_course": "IGOT-MOSPI-SAMPL-101",
+      "description": "Intensive hands-on lab on complex survey variance estimation, non-response weighting, and synthetic domain estimation."
+    },
+    {
+      "id": "nssta_ws_02",
+      "code": "NSSTA-TPAC-2026-R-PY-PROG",
+      "title": "Advanced R & Python Statistical Modeling for Official Publications",
+      "institution": "National Statistical Systems Training Academy (NSSTA)",
+      "location": "Computer Centre, NSSTA, Greater Noida",
+      "format": "Hands-on High-Performance Computing Lab",
+      "duration_days": 5,
+      "competency": "Data Analytics & Programming",
+      "batch_capacity": 25,
+      "next_dates": "02-06 Nov 2026",
+      "tpac_approval_ref": "TPAC/MoSPI/2026/IT-09",
+      "prerequisite_igot_course": "IGOT-MOSPI-R-PROG-301",
+      "description": "Productionizing official statistics scripts, high-dimensional microdata wrangling, and building reproducible Quarto/R-Markdown reports."
+    },
+    {
+      "id": "nssta_ws_03",
+      "code": "NSSTA-TPAC-2026-CPI-REVISION",
+      "title": "CPI Base Year Revision & Real-Time Price Monitoring Workshop",
+      "institution": "National Statistical Systems Training Academy (NSSTA)",
+      "location": "NSSTA, Greater Noida",
+      "format": "Physical Seminar & Lab",
+      "duration_days": 3,
+      "competency": "Index Numbers (CPI & IIP)",
+      "batch_capacity": 40,
+      "next_dates": "23-25 Nov 2026",
+      "tpac_approval_ref": "TPAC/MoSPI/2026/ESD-03",
+      "prerequisite_igot_course": "IGOT-MOSPI-CPI-202",
+      "description": "Transition protocol for shifting base years, web-scraping market prices, and dynamic chaining."
+    },
+    {
+      "id": "nssta_ws_04",
+      "code": "NSSTA-TPAC-2026-NAS-MACRO",
+      "title": "Macroeconomic Aggregates & Supply-Use Tables (SUT) Intensive",
+      "institution": "National Statistical Systems Training Academy (NSSTA)",
+      "location": "NSSTA, Greater Noida",
+      "format": "Advanced Residential Program",
+      "duration_days": 5,
+      "competency": "National Accounts & GDP Estimation",
+      "batch_capacity": 20,
+      "next_dates": "07-11 Dec 2026",
+      "tpac_approval_ref": "TPAC/MoSPI/2026/NAD-11",
+      "prerequisite_igot_course": "IGOT-MOSPI-NAS-401",
+      "description": "Balancing Supply and Use Tables (SUT), input-output matrices, and transition to updated SNA 2025 frameworks."
+    }
+  ]
+}
