@@ -35,8 +35,12 @@
     <div class="header-controls">
       <div class="status-pill">
         <div class="pulse-dot"></div>
-        <span>ML Engine: 6 Models Online</span>
+        <span>ML Engine: 7 Models Online</span>
       </div>
+
+      <button id="btn-toggle-proctoring" class="btn btn-outline" style="font-size: 0.75rem; border-color: #10B981; color: #10B981; padding: 0.35rem 0.85rem;">
+        <span id="lock-status-icon">🔓</span> <span id="proctoring-status-pill">Secure Lockdown Mode</span>
+      </button>
 
       <div class="role-switcher">
         <span style="font-size: 0.75rem; color: #94A3B8;">Cadre View:</span>
@@ -54,6 +58,9 @@
     </button>
     <button class="nav-tab-btn" data-tab="tab-mcq">
       <span>🧪</span> AI Grounded MCQ & QC Studio
+    </button>
+    <button class="nav-tab-btn" data-tab="tab-proctoring">
+      <span>🛡️</span> AI Proctoring & Anti-Cheat
     </button>
     <button class="nav-tab-btn" data-tab="tab-pathway">
       <span>🛤️</span> Blended Pathway (iGOT + NSSTA)
@@ -210,7 +217,209 @@
       </div>
     </div>
 
-    <!-- 3. BLENDED PATHWAY TAB -->
+    <!-- 3. AI PROCTORING & ANTI-CHEAT TAB -->
+    <div id="tab-proctoring" class="tab-pane">
+      
+      <!-- Top Status Banner -->
+      <div class="proctoring-banner">
+        <div class="alert-icon-text">
+          <span style="font-size: 1.5rem;">🛡️</span>
+          <div>
+            <div style="font-weight: 800; color: #FFFFFF; font-size: 1.05rem;">AI-Powered Proctoring & Restriction Engine</div>
+            <div style="font-size: 0.8rem; color: #E2E8F0;">Enforcing hardware lockdown, computer vision gaze telemetry, and anti-AI extension sandbox for official cadre assessments.</div>
+          </div>
+        </div>
+        <div style="display: flex; gap: 0.75rem; align-items: center;">
+          <span style="font-size: 0.75rem; font-weight: 700; color: #10B981; background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.3); padding: 4px 10px; border-radius: 20px;">
+            ● 7 Security Layers Active
+          </span>
+        </div>
+      </div>
+
+      <!-- Proctoring HUD & Trust Gauge Grid -->
+      <div class="grid-2" style="margin-bottom: 1.5rem;">
+        <!-- Camera HUD -->
+        <div class="card" style="padding: 1.25rem;">
+          <div class="card-header" style="margin-bottom: 0.75rem;">
+            <div>
+              <div class="card-title" style="font-size: 1rem;"><span>📷</span> Computer Vision Proctoring HUD</div>
+              <div class="card-subtitle">Real-time facial verification, gaze tracking & multiple face detection</div>
+            </div>
+          </div>
+
+          <div class="proctoring-hud">
+            <!-- Simulated or Live Camera Feed -->
+            <video id="proctoring-video" class="webcam-stream-mock" autoplay muted playsinline></video>
+            
+            <div class="hud-overlay">
+              <div class="hud-top">
+                <div class="hud-pill" style="color: #10B981;">
+                  <span class="pulse-dot" style="width: 6px; height: 6px;"></span> LIVE FEED
+                </div>
+                <div class="hud-pill" style="color: #38BDF8;">
+                  👁️ GAZE: CENTER (FOCUSED)
+                </div>
+              </div>
+
+              <!-- Facial Tracking Box -->
+              <div class="hud-face-box">
+                <span class="hud-face-label">FACE MATCH: VERIFIED CANDIDATE</span>
+              </div>
+
+              <div style="display: flex; justify-content: space-between; font-size: 0.7rem; color: #94A3B8;">
+                <span class="hud-pill">🎤 AUDIO: 22 dB (SILENT)</span>
+                <span class="hud-pill">FPS: 30 • 1080P</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trust Gauge & Incident Score -->
+        <div class="card" style="padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+          <div class="card-header" style="margin-bottom: 0.5rem;">
+            <div>
+              <div class="card-title" style="font-size: 1rem;"><span>⚖️</span> Candidate Integrity Trust Meter</div>
+              <div class="card-subtitle">Real-time AI behavioral compliance & risk assessment score</div>
+            </div>
+          </div>
+
+          <div class="trust-gauge-container">
+            <div class="stat-label">Integrity Trust Score</div>
+            <div id="trust-score-val" class="trust-gauge-value">100%</div>
+            <div class="trust-gauge-bar">
+              <div id="trust-gauge-fill" class="trust-gauge-fill" style="width: 100%;"></div>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: #94A3B8;">
+              <span>High Integrity (100-75%)</span>
+              <span>Review (74-40%)</span>
+              <span>Freeze (&lt;40%)</span>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+            <div class="stat-box" style="flex: 1; padding: 0.75rem;">
+              <div class="stat-label">Strikes Accumulated</div>
+              <div id="strikes-val" style="font-size: 1.25rem; font-weight: 800; color: #F59E0B; margin-top: 2px;">0 / 3</div>
+              <div style="font-size: 0.7rem; color: #64748B;">3 Strikes = Auto-Freeze</div>
+            </div>
+            <div class="stat-box" style="flex: 1; padding: 0.75rem;">
+              <div class="stat-label">Session ID</div>
+              <div style="font-size: 0.85rem; font-weight: 700; color: #38BDF8; font-family: var(--font-mono); margin-top: 4px;">MOSPI-2026-001</div>
+              <div style="font-size: 0.7rem; color: #64748B;">Cryptographically Logged</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Security Policies & AI Extension Restrictions Grid -->
+      <div class="grid-2" style="margin-bottom: 1.5rem;">
+        <!-- Browser Lockdown Rules -->
+        <div class="card">
+          <div class="card-title" style="font-size: 0.95rem; margin-bottom: 0.75rem;">
+            <span>🔒</span> Hardware & Browser Lockdown Enforcement
+          </div>
+          <div style="font-size: 0.8rem; color: #CBD5E1; line-height: 1.8;">
+            <div style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: #10B981;">✓</span> Fullscreen Lockdown Mode (exiting triggers immediate strike)</div>
+            <div style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: #10B981;">✓</span> DevTools & Inspect Element (F12, Ctrl+Shift+I) Blocked</div>
+            <div style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: #10B981;">✓</span> Right-Click Context Menu Inspection Disabled</div>
+            <div style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: #10B981;">✓</span> Clipboard Exploit Prevention (Copy/Cut/Paste disabled)</div>
+            <div style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: #10B981;">✓</span> Window Blur & Tab-Switching Telemetry Active</div>
+            <div style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: #10B981;">✓</span> Second Monitor & Virtual Machine (VM) Sandbox Guard</div>
+          </div>
+        </div>
+
+        <!-- Extension Blacklist -->
+        <div class="card">
+          <div class="card-title" style="font-size: 0.95rem; margin-bottom: 0.75rem;">
+            <span>🚫</span> Prohibited AI Extensions (Active Mutation Sweep)
+          </div>
+          <div style="font-size: 0.8rem; color: #CBD5E1;">
+            <div style="display: flex; justify-content: space-between; padding: 0.4rem 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
+              <span>ChatGPT / OpenAI Web Companion</span>
+              <span style="color: #EF4444; font-weight: 700;">BLOCKED / REMOVED</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding: 0.4rem 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
+              <span>Monica AI & Sider Copilots</span>
+              <span style="color: #EF4444; font-weight: 700;">BLOCKED / REMOVED</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding: 0.4rem 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
+              <span>Merlin AI & MaxAI Extensions</span>
+              <span style="color: #EF4444; font-weight: 700;">BLOCKED / REMOVED</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding: 0.4rem 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
+              <span>QuillBot & SciSpace Paraphrasers</span>
+              <span style="color: #EF4444; font-weight: 700;">BLOCKED / REMOVED</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Evaluator Stress Test Controls -->
+      <div class="card" style="margin-bottom: 1.5rem; background: rgba(30, 41, 59, 0.6); border: 1px dashed rgba(56, 189, 248, 0.3);">
+        <div class="card-header" style="margin-bottom: 0.75rem;">
+          <div>
+            <div class="card-title" style="font-size: 0.95rem; color: #38BDF8;">
+              <span>⚡</span> Evaluator Stress-Test Suite (Simulate Exam Violations)
+            </div>
+            <div class="card-subtitle">Test real-time AI reaction, trust score penalty, and lockdown freeze triggers</div>
+          </div>
+        </div>
+        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+          <button id="btn-sim-tab-switch" class="btn btn-secondary" style="font-size: 0.75rem;">
+            <span>🔀</span> Simulate Tab Switch (Alt+Tab)
+          </button>
+          <button id="btn-sim-extension" class="btn btn-secondary" style="font-size: 0.75rem;">
+            <span>🤖</span> Simulate AI Extension Injection
+          </button>
+          <button id="btn-sim-second-face" class="btn btn-secondary" style="font-size: 0.75rem;">
+            <span>👥</span> Simulate 2nd Person in Frame
+          </button>
+          <button id="btn-sim-offscreen" class="btn btn-secondary" style="font-size: 0.75rem;">
+            <span>📱</span> Simulate Off-Screen Gaze (Mobile)
+          </button>
+        </div>
+      </div>
+
+      <!-- Real-Time Incident Audit Log -->
+      <div class="card">
+        <div class="card-header" style="margin-bottom: 0.75rem;">
+          <div>
+            <div class="card-title" style="font-size: 0.95rem;">
+              <span>📜</span> Security Incident Audit Trail (Cryptographic Log)
+            </div>
+            <div class="card-subtitle">Permanent audit log submitted alongside examination results for Cadre Review Board</div>
+          </div>
+        </div>
+
+        <div style="overflow-x: auto;">
+          <table class="incident-table">
+            <thead>
+              <tr>
+                <th>Timestamp</th>
+                <th>Violation Type</th>
+                <th>Severity</th>
+                <th>Incident Details</th>
+                <th>Penalty</th>
+                <th>Remaining Trust</th>
+              </tr>
+            </thead>
+            <tbody id="incident-log-body">
+              <tr>
+                <td style="color: #64748B;">--:--:--</td>
+                <td style="color: #10B981; font-weight: 700;">SESSION_INITIALIZED</td>
+                <td><span style="background: rgba(16, 185, 129, 0.2); color: #10B981; font-size: 0.7rem; font-weight: 700; padding: 2px 6px; border-radius: 6px;">INFO</span></td>
+                <td style="color: #94A3B8;">Assessment environment initialized under MoSPI DIID security policy.</td>
+                <td style="color: #10B981;">0%</td>
+                <td style="color: #10B981; font-weight: 700;">100%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 4. BLENDED PATHWAY TAB -->
     <div id="tab-pathway" class="tab-pane">
       <div class="card" style="margin-bottom: 1.5rem;">
         <div class="card-header">
@@ -389,6 +598,24 @@ def calculate_plfs_metrics(records):
     </div>
 
   </main>
+
+  <!-- Fullscreen Lockdown Freeze Modal -->
+  <div id="lockdown-overlay" class="lockdown-freeze-overlay">
+    <div class="freeze-box">
+      <div style="font-size: 3rem; margin-bottom: 0.75rem;">⚠️</div>
+      <h2 id="lockdown-title" style="color: #EF4444; font-family: var(--font-heading); font-size: 1.35rem; font-weight: 800; margin-bottom: 0.75rem;">
+        EXAM SECURITY VIOLATION RECORDED
+      </h2>
+      <p id="lockdown-msg" style="color: #CBD5E1; font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem;">
+        Candidate switched windows or an unauthorized AI assistant injection was intercepted. Incident logged to Cadre Board audit trail.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 1rem;">
+        <button id="btn-dismiss-freeze" class="btn btn-primary" style="background: #EF4444; border: none; padding: 0.65rem 1.5rem;">
+          Acknowledge Violation & Resume
+        </button>
+      </div>
+    </div>
+  </div>
 
   <!-- Client JavaScript -->
   <script src="/static/js/app.js"></script>
