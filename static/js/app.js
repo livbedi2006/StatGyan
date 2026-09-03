@@ -1079,78 +1079,498 @@ function renderDecayResults(data) {
   });
 }
 
-// 9. Knowledge Graph Explorer (Canvas)
+// 9. Knowledge Graph Explorer (Multi-Lane Semantic Flow Architecture)
+let graphDataCache = null;
+let graphState = {
+  hoveredNodeId: null,
+  selectedNodeId: "cadre_jso",
+  focusFilter: "all",
+  nodeBoxes: {},
+  listenersAttached: false
+};
+
+const BUILTIN_GRAPH = {
+  nodes: [
+    // 1. Cadres
+    { id: "cadre_jso", label: "Junior Statistical Officer (JSO)", shortLabel: "JSO", type: "Cadre", color: "#2563EB", icon: "🏛️", desc: "Subordinate Statistical Service (SSS). Executive cadre for field survey operations, CAPI data collection, and scrutinies." },
+    { id: "cadre_sso", label: "Senior Statistical Officer (SSO)", shortLabel: "SSO", type: "Cadre", color: "#2563EB", icon: "🏛️", desc: "Subordinate Statistical Service supervisory cadre. Oversees regional data collection, primary audits, and sampling weights." },
+    { id: "cadre_iss_ad", label: "ISS Officer (AD / DD)", shortLabel: "ISS Officer", type: "Cadre", color: "#2563EB", icon: "🏛️", desc: "Indian Statistical Service Group A. Designs national survey schedules, formulates CPI/NAS methodologies, and leads publications." },
+    { id: "cadre_field_investigator", label: "Field Investigator / Enumerator", shortLabel: "Field Enumerator", type: "Cadre", color: "#2563EB", icon: "🏛️", desc: "Frontline data collection cadre operating across rural and urban sampling units with CAPI tablets." },
+
+    // 2. Competencies
+    { id: "dom_Survey Methodology & Sampling", label: "Survey Sampling & Multipliers", shortLabel: "Sampling & Surveys", type: "Competency", color: "#0284C7", icon: "🎯", desc: "Stratified multi-stage sampling designs, FSU/USU frame selection, household weighting, and sampling error estimation." },
+    { id: "dom_National Accounts & GDP Estimation", label: "National Accounts & GDP (SNA)", shortLabel: "National Accounts", type: "Competency", color: "#0284C7", icon: "🎯", desc: "System of National Accounts (SNA 2008), GVA at basic prices, GDP at market prices, and Supply-Use Tables." },
+    { id: "dom_Index Numbers (CPI & IIP)", label: "Index Numbers (CPI & IIP)", shortLabel: "CPI & Price Indices", type: "Competency", color: "#0284C7", icon: "🎯", desc: "Laspeyres price aggregation formula, base year revision, elementary price imputation, and consumer price indices." },
+    { id: "dom_Data Analytics & Programming", label: "Data Analytics & R/Python", shortLabel: "Analytics & R/Python", type: "Competency", color: "#0284C7", icon: "🎯", desc: "High-performance data cleaning, microdata tabulations, survey weighting scripts, and reproducible reporting in R." },
+    { id: "dom_Field Operations & CAPI Validation", label: "Field Operations & CAPI Validation", shortLabel: "Field CAPI Validation", type: "Competency", color: "#0284C7", icon: "🎯", desc: "CSPro tablet logic, household interview protocols, response error detection, and real-time field telemetry." },
+    { id: "dom_Official Statistics Governance & Quality", label: "Official Statistics Governance", shortLabel: "Quality & Governance", type: "Competency", color: "#0284C7", icon: "🎯", desc: "NSO Fundamental Principles of Official Statistics, data confidentiality, quality assurance guidelines, and metadata." },
+
+    // 3. Official MoSPI Manuals
+    { id: "man_plfs_manual_vol1", label: "PLFS Field Manual Vol. I", shortLabel: "PLFS Manual Vol. 1", type: "Manual", color: "#059669", icon: "📖", desc: "Official MoSPI publication prescribing Schedule 10.4 concepts, UPS/CWS criteria, and rotation schemes." },
+    { id: "man_cpi_compilation_guide", label: "Compilation Guide for CPI", shortLabel: "CPI Guidelines 2024", type: "Manual", color: "#059669", icon: "📖", desc: "Standard operating manual for price collection across 1,181 rural and 1,114 urban markets in India." },
+    { id: "man_nas_methodology", label: "National Accounts Statistics (SNA 2008)", shortLabel: "NAS Methodology", type: "Manual", color: "#059669", icon: "📖", desc: "MoSPI methodology document for macro aggregates, FISIM allocation, and institutional sector accounts." },
+    { id: "man_data_analytics_tools", label: "CAPI Guidelines & Survey Software", shortLabel: "CAPI Software Manual", type: "Manual", color: "#059669", icon: "📖", desc: "CSPro scripting rules, sync engine architecture, and automated validation bounds for field tablets." },
+
+    // 4. iGOT Digital Modules
+    { id: "igot_igot_plfs_sampling_101", label: "Foundations of Official Sample Survey Design", shortLabel: "Sampling 101 (iGOT)", type: "iGOT Course", color: "#D97706", icon: "💻", desc: "12-hour self-paced foundational module on sampling probability, multipliers, and non-response adjustment." },
+    { id: "igot_igot_cpi_201", label: "Consumer Price Index: Field Price Collection", shortLabel: "CPI Field Collection", type: "iGOT Course", color: "#D97706", icon: "💻", desc: "14-hour digital certification on web price portal, quotation validation, and outlier scrutiny." },
+    { id: "igot_igot_nas_401", label: "System of National Accounts 2008 & GVA", shortLabel: "SNA 2008 GVA (iGOT)", type: "iGOT Course", color: "#D97706", icon: "💻", desc: "16-hour digital course on basic price vs factor cost, production taxes, and institutional accounts." },
+    { id: "igot_igot_r_301", label: "Statistical Programming in R for Survey Analysis", shortLabel: "R Programming 301", type: "iGOT Course", color: "#D97706", icon: "💻", desc: "20-hour applied coding course using dplyr, survey package, and MoSPI synthetic microdata." },
+
+    // 5. NSSTA Applied Labs
+    { id: "nssta_nssta_adv_sampling_2026", label: "Advanced Stratified Sampling & Small Area Lab", shortLabel: "Sampling Lab (NSSTA)", type: "NSSTA Workshop", color: "#7C3AED", icon: "🏫", desc: "5-day residential laboratory at NSSTA Greater Noida on complex multi-stage variance estimation." },
+    { id: "nssta_nssta_cpi_base_rev", label: "CPI Base Year Revision & Index Aggregation", shortLabel: "CPI Revision Workshop", type: "NSSTA Workshop", color: "#7C3AED", icon: "🏫", desc: "3-day high-intensity residential workshop on geometric aggregation and chain-linked price relatives." },
+    { id: "nssta_nssta_nas_macro_2026", label: "Macroeconomic Aggregates & SUT Intensive", shortLabel: "Macro SUT Lab (NSSTA)", type: "NSSTA Workshop", color: "#7C3AED", icon: "🏫", desc: "5-day specialized laboratory for ISS officers on balancing Input-Output & Supply-Use Tables." },
+    { id: "nssta_nssta_r_py_modeling", label: "Advanced R & Python Statistical Modeling", shortLabel: "R & Python Modeling", type: "NSSTA Workshop", color: "#7C3AED", icon: "🏫", desc: "5-day high-performance computing lab at Computer Centre NSSTA for automated report compilation." }
+  ],
+  edges: [
+    // Cadre -> Competency
+    { from: "cadre_jso", to: "dom_Survey Methodology & Sampling", label: "Mandatory (85%)" },
+    { from: "cadre_jso", to: "dom_Field Operations & CAPI Validation", label: "Core Execution (90%)" },
+    { from: "cadre_jso", to: "dom_Index Numbers (CPI & IIP)", label: "Price Collection (75%)" },
+    { from: "cadre_jso", to: "dom_Data Analytics & Programming", label: "Tabulation (70%)" },
+
+    { from: "cadre_sso", to: "dom_Survey Methodology & Sampling", label: "Mandatory (90%)" },
+    { from: "cadre_sso", to: "dom_Field Operations & CAPI Validation", label: "Field Scrutiny (92%)" },
+    { from: "cadre_sso", to: "dom_Index Numbers (CPI & IIP)", label: "State Auditing (88%)" },
+    { from: "cadre_sso", to: "dom_Official Statistics Governance & Quality", label: "Governance (80%)" },
+
+    { from: "cadre_iss_ad", to: "dom_National Accounts & GDP Estimation", label: "Formulation (95%)" },
+    { from: "cadre_iss_ad", to: "dom_Survey Methodology & Sampling", label: "Survey Design (95%)" },
+    { from: "cadre_iss_ad", to: "dom_Index Numbers (CPI & IIP)", label: "Methodology (92%)" },
+    { from: "cadre_iss_ad", to: "dom_Official Statistics Governance & Quality", label: "National Policy (95%)" },
+
+    { from: "cadre_field_investigator", to: "dom_Field Operations & CAPI Validation", label: "Primary (95%)" },
+    { from: "cadre_field_investigator", to: "dom_Survey Methodology & Sampling", label: "Listing (70%)" },
+
+    // Competency -> Manual
+    { from: "dom_Survey Methodology & Sampling", to: "man_plfs_manual_vol1", label: "Governed by" },
+    { from: "dom_Field Operations & CAPI Validation", to: "man_plfs_manual_vol1", label: "Governed by" },
+    { from: "dom_Field Operations & CAPI Validation", to: "man_data_analytics_tools", label: "Technical Standard" },
+    { from: "dom_Index Numbers (CPI & IIP)", to: "man_cpi_compilation_guide", label: "Governed by" },
+    { from: "dom_National Accounts & GDP Estimation", to: "man_nas_methodology", label: "Governed by" },
+    { from: "dom_Data Analytics & Programming", to: "man_data_analytics_tools", label: "Standardized in" },
+
+    // Competency -> iGOT
+    { from: "dom_Survey Methodology & Sampling", to: "igot_igot_plfs_sampling_101", label: "Digital Foundation" },
+    { from: "dom_Index Numbers (CPI & IIP)", to: "igot_igot_cpi_201", label: "Digital Foundation" },
+    { from: "dom_National Accounts & GDP Estimation", to: "igot_igot_nas_401", label: "Digital Foundation" },
+    { from: "dom_Data Analytics & Programming", to: "igot_igot_r_301", label: "Digital Foundation" },
+
+    // Competency -> NSSTA
+    { from: "dom_Survey Methodology & Sampling", to: "nssta_nssta_adv_sampling_2026", label: "Physical Lab" },
+    { from: "dom_Index Numbers (CPI & IIP)", to: "nssta_nssta_cpi_base_rev", label: "Physical Workshop" },
+    { from: "dom_National Accounts & GDP Estimation", to: "nssta_nssta_nas_macro_2026", label: "Physical Lab" },
+    { from: "dom_Data Analytics & Programming", to: "nssta_nssta_r_py_modeling", label: "Physical Lab" }
+  ]
+};
+
 async function renderKnowledgeGraph() {
   const canvas = document.getElementById("graph-canvas");
   if (!canvas) return;
 
-  try {
-    const res = await fetch(`${API_BASE}/api/graph`);
-    const graph = await res.json();
+  if (!graphDataCache) {
+    try {
+      const res = await fetch(`${API_BASE}/api/graph`);
+      if (res.ok) {
+        const text = await res.text();
+        if (text && text.trim()) {
+          const apiGraph = JSON.parse(text);
+          if (apiGraph.nodes && apiGraph.nodes.length > 0) {
+            graphDataCache = apiGraph;
+          }
+        }
+      }
+    } catch (e) {
+      console.warn("API graph fetch error, using enriched MoSPI knowledge graph:", e);
+    }
+  }
 
-    const ctx = canvas.getContext("2d");
-    const width = canvas.parentElement.clientWidth;
-    canvas.width = width;
-    canvas.height = 420;
+  const graph = graphDataCache || BUILTIN_GRAPH;
+  drawMultiLaneGraph(canvas, graph);
 
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+  if (!graphState.listenersAttached) {
+    setupGraphEventListeners(canvas, graph);
+    graphState.listenersAttached = true;
+  }
+}
 
-    // Layout nodes along concentric circles
-    const centerX = canvas.width / 2;
-    const centerY = canvas.height / 2;
+function drawMultiLaneGraph(canvas, graph) {
+  const ctx = canvas.getContext("2d");
+  const parentWidth = canvas.parentElement.clientWidth || 980;
+  const parentHeight = 500;
+  
+  const dpr = window.devicePixelRatio || 1;
+  canvas.width = parentWidth * dpr;
+  canvas.height = parentHeight * dpr;
+  canvas.style.width = `${parentWidth}px`;
+  canvas.style.height = `${parentHeight}px`;
 
-    const nodePositions = {};
-    const totalNodes = graph.nodes.length;
+  ctx.scale(dpr, dpr);
+  ctx.clearRect(0, 0, parentWidth, parentHeight);
 
-    graph.nodes.forEach((node, i) => {
-      let radius = 140;
-      if (node.type === "Cadre") radius = 60;
-      else if (node.type === "Competency") radius = 120;
-      else radius = 175;
+  // 5 Lanes: Cadre (0), Competency (1), Manual (2), iGOT (3), NSSTA (4)
+  const lanes = [
+    { type: "Cadre", title: "MoSPI Cadres", x: parentWidth * 0.10, color: "#2563EB" },
+    { type: "Competency", title: "Competency Domains", x: parentWidth * 0.30, color: "#0284C7" },
+    { type: "Manual", title: "Official Manuals", x: parentWidth * 0.50, color: "#059669" },
+    { type: "iGOT Course", title: "Digital (iGOT)", x: parentWidth * 0.70, color: "#D97706" },
+    { type: "NSSTA Workshop", title: "Physical Labs (NSSTA)", x: parentWidth * 0.90, color: "#7C3AED" }
+  ];
 
-      const angle = (i / totalNodes) * 2 * Math.PI;
-      const x = centerX + radius * Math.cos(angle);
-      const y = centerY + radius * Math.sin(angle);
-      nodePositions[node.id] = { x, y, ...node };
+  const grouped = {
+    Cadre: graph.nodes.filter(n => n.type === "Cadre"),
+    Competency: graph.nodes.filter(n => n.type === "Competency"),
+    Manual: graph.nodes.filter(n => n.type === "Manual"),
+    "iGOT Course": graph.nodes.filter(n => n.type === "iGOT Course"),
+    "NSSTA Workshop": graph.nodes.filter(n => n.type === "NSSTA Workshop")
+  };
+
+  const nodeBoxes = {};
+  const cardWidth = Math.min(155, parentWidth * 0.18);
+  const cardHeight = 38;
+
+  // Calculate coordinates per lane
+  lanes.forEach((lane, laneIdx) => {
+    const nodesInLane = grouped[lane.type] || [];
+    const count = nodesInLane.length;
+    const verticalGap = (parentHeight - 70) / (count + 1);
+
+    nodesInLane.forEach((node, nodeIdx) => {
+      const cy = 40 + (nodeIdx + 1) * verticalGap;
+      const cx = lane.x;
+      const x = cx - cardWidth / 2;
+      const y = cy - cardHeight / 2;
+
+      nodeBoxes[node.id] = {
+        x, y, w: cardWidth, h: cardHeight, cx, cy,
+        laneIndex: laneIdx,
+        ...node
+      };
     });
+  });
 
-    // Draw Edges
-    ctx.strokeStyle = "rgba(255, 255, 255, 0.12)";
+  graphState.nodeBoxes = nodeBoxes;
+
+  // Compute Active Focus Connections
+  const activeFocus = graphState.focusFilter;
+  const hoveredId = graphState.hoveredNodeId;
+  const activeNodeId = (hoveredId) || (activeFocus !== "all" ? activeFocus : null);
+
+  const highlightedNodeIds = new Set();
+  const highlightedEdges = new Set();
+
+  if (activeNodeId && nodeBoxes[activeNodeId]) {
+    highlightedNodeIds.add(activeNodeId);
+    // Forward and Backward BFS
+    const queue = [activeNodeId];
+    const visited = new Set([activeNodeId]);
+
+    while (queue.length > 0) {
+      const curr = queue.shift();
+      graph.edges.forEach((edge, eIdx) => {
+        if (edge.from === curr) {
+          highlightedEdges.add(eIdx);
+          highlightedNodeIds.add(edge.to);
+          if (!visited.has(edge.to)) {
+            visited.add(edge.to);
+            queue.push(edge.to);
+          }
+        } else if (edge.to === curr) {
+          highlightedEdges.add(eIdx);
+          highlightedNodeIds.add(edge.from);
+          if (!visited.has(edge.from)) {
+            visited.add(edge.from);
+            queue.push(edge.from);
+          }
+        }
+      });
+    }
+  }
+
+  // Draw Vertical Subtle Lane Guides
+  lanes.forEach(lane => {
+    ctx.strokeStyle = "rgba(255, 255, 255, 0.04)";
     ctx.lineWidth = 1;
-    graph.edges.forEach(edge => {
-      const from = nodePositions[edge.from];
-      const to = nodePositions[edge.to];
-      if (from && to) {
-        ctx.beginPath();
-        ctx.moveTo(from.x, from.y);
-        ctx.lineTo(to.x, to.y);
-        ctx.stroke();
+    ctx.setLineDash([4, 4]);
+    ctx.beginPath();
+    ctx.moveTo(lane.x, 10);
+    ctx.lineTo(lane.x, parentHeight - 10);
+    ctx.stroke();
+    ctx.setLineDash([]);
+  });
+
+  // Draw Edges (Curved Ribbons)
+  graph.edges.forEach((edge, eIdx) => {
+    const fromBox = nodeBoxes[edge.from];
+    const toBox = nodeBoxes[edge.to];
+    if (!fromBox || !toBox) return;
+
+    const isHighlighted = highlightedEdges.has(eIdx);
+    const isDimmed = activeNodeId && !isHighlighted;
+
+    const startX = fromBox.x + fromBox.w;
+    const startY = fromBox.cy;
+    const endX = toBox.x;
+    const endY = toBox.cy;
+    const cpDist = Math.abs(endX - startX) * 0.5;
+
+    ctx.beginPath();
+    ctx.moveTo(startX, startY);
+    ctx.bezierCurveTo(startX + cpDist, startY, endX - cpDist, endY, endX, endY);
+
+    if (isHighlighted) {
+      ctx.strokeStyle = "#38BDF8";
+      ctx.lineWidth = 2.4;
+      ctx.shadowColor = "#38BDF8";
+      ctx.shadowBlur = 8;
+    } else {
+      ctx.shadowBlur = 0;
+      ctx.strokeStyle = isDimmed ? "rgba(255, 255, 255, 0.03)" : "rgba(255, 255, 255, 0.14)";
+      ctx.lineWidth = 1.2;
+    }
+
+    ctx.stroke();
+    ctx.shadowBlur = 0; // reset
+  });
+
+  // Draw Nodes (Structured Responsive Cards)
+  Object.values(nodeBoxes).forEach(box => {
+    const isHighlighted = !activeNodeId || highlightedNodeIds.has(box.id);
+    const isSelected = graphState.selectedNodeId === box.id;
+    const isHovered = graphState.hoveredNodeId === box.id;
+
+    ctx.save();
+    if (!isHighlighted) {
+      ctx.globalAlpha = 0.22;
+    }
+
+    // Card background
+    let bgFill = "rgba(15, 23, 42, 0.85)";
+    let borderColor = box.color;
+    if (box.type === "Cadre") bgFill = "rgba(30, 58, 138, 0.35)";
+    else if (box.type === "Competency") bgFill = "rgba(2, 132, 199, 0.3)";
+    else if (box.type === "Manual") bgFill = "rgba(5, 150, 105, 0.3)";
+    else if (box.type === "iGOT Course") bgFill = "rgba(217, 119, 6, 0.3)";
+    else if (box.type === "NSSTA Workshop") bgFill = "rgba(124, 58, 237, 0.3)";
+
+    if (isHovered || isSelected) {
+      borderColor = "#FFFFFF";
+      ctx.shadowColor = box.color;
+      ctx.shadowBlur = 12;
+    }
+
+    // Draw Rounded Rectangle
+    roundRect(ctx, box.x, box.y, box.w, box.h, 6, bgFill, borderColor, isSelected ? 2 : 1);
+    ctx.shadowBlur = 0;
+
+    // Node Type Icon / Indicator
+    const icon = box.icon || (box.type === "Cadre" ? "🏛️" : box.type === "Competency" ? "🎯" : box.type === "Manual" ? "📖" : box.type === "iGOT Course" ? "💻" : "🏫");
+    ctx.font = "11px Inter, sans-serif";
+    ctx.fillStyle = "#FFFFFF";
+    ctx.textAlign = "left";
+    ctx.textBaseline = "middle";
+    ctx.fillText(icon, box.x + 8, box.cy);
+
+    // Label Text (Cleanly wrapped or abbreviated)
+    const displayText = box.shortLabel || box.label;
+    ctx.font = isSelected ? "bold 10px Inter, sans-serif" : "10px Inter, sans-serif";
+    ctx.fillStyle = isHighlighted ? "#FFFFFF" : "#94A3B8";
+
+    // Text truncation if needed
+    let txt = displayText;
+    if (ctx.measureText(txt).width > box.w - 30) {
+      while (txt.length > 3 && ctx.measureText(txt + "…").width > box.w - 30) {
+        txt = txt.slice(0, -1);
+      }
+      txt += "…";
+    }
+
+    ctx.fillText(txt, box.x + 28, box.cy);
+
+    // Pin indicator dots on sides
+    ctx.fillStyle = borderColor;
+    ctx.beginPath();
+    ctx.arc(box.x, box.cy, 3, 0, Math.PI * 2);
+    ctx.arc(box.x + box.w, box.cy, 3, 0, Math.PI * 2);
+    ctx.fill();
+
+    ctx.restore();
+  });
+}
+
+function roundRect(ctx, x, y, width, height, radius, fill, stroke, strokeWidth) {
+  ctx.beginPath();
+  ctx.moveTo(x + radius, y);
+  ctx.lineTo(x + width - radius, y);
+  ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
+  ctx.lineTo(x + width, y + height - radius);
+  ctx.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+  ctx.lineTo(x + radius, y + height);
+  ctx.quadraticCurveTo(x, y + height, x, y + height - radius);
+  ctx.lineTo(x, y + radius);
+  ctx.quadraticCurveTo(x, y, x + radius, y);
+  ctx.closePath();
+  if (fill) {
+    ctx.fillStyle = fill;
+    ctx.fill();
+  }
+  if (stroke) {
+    ctx.strokeStyle = stroke;
+    ctx.lineWidth = strokeWidth || 1;
+    ctx.stroke();
+  }
+}
+
+function setupGraphEventListeners(canvas, graph) {
+  const tooltip = document.getElementById("graph-tooltip");
+  const focusSelect = document.getElementById("graph-focus-select");
+
+  if (focusSelect) {
+    focusSelect.addEventListener("change", (e) => {
+      graphState.focusFilter = e.target.value;
+      if (e.target.value !== "all") {
+        graphState.selectedNodeId = e.target.value;
+        updateInspectorPanel(e.target.value, graph);
+      }
+      drawMultiLaneGraph(canvas, graph);
+    });
+  }
+
+  canvas.addEventListener("mousemove", (e) => {
+    const rect = canvas.getBoundingClientRect();
+    const mx = e.clientX - rect.left;
+    const my = e.clientY - rect.top;
+
+    let foundNode = null;
+    for (const [id, box] of Object.entries(graphState.nodeBoxes)) {
+      if (mx >= box.x && mx <= box.x + box.w && my >= box.y && my <= box.y + box.h) {
+        foundNode = box;
+        break;
+      }
+    }
+
+    if (foundNode) {
+      canvas.style.cursor = "pointer";
+      if (graphState.hoveredNodeId !== foundNode.id) {
+        graphState.hoveredNodeId = foundNode.id;
+        drawMultiLaneGraph(canvas, graph);
+      }
+
+      if (tooltip) {
+        tooltip.style.display = "block";
+        tooltip.style.left = `${Math.min(mx + 15, rect.width - 290)}px`;
+        tooltip.style.top = `${Math.max(10, my - 20)}px`;
+        tooltip.innerHTML = `
+          <div style="font-weight: 700; color: #FFFFFF; font-size: 0.85rem; margin-bottom: 2px;">
+            ${foundNode.icon || '🎯'} ${foundNode.label}
+          </div>
+          <div style="font-size: 0.7rem; color: #38BDF8; font-weight: 600; margin-bottom: 4px;">
+            ${foundNode.type}
+          </div>
+          <div style="font-size: 0.72rem; color: #CBD5E1;">
+            ${foundNode.desc || 'Integral MoSPI statistical competency asset.'}
+          </div>
+        `;
+      }
+    } else {
+      canvas.style.cursor = "default";
+      if (tooltip) tooltip.style.display = "none";
+      if (graphState.hoveredNodeId !== null) {
+        graphState.hoveredNodeId = null;
+        drawMultiLaneGraph(canvas, graph);
+      }
+    }
+  });
+
+  canvas.addEventListener("mouseleave", () => {
+    if (tooltip) tooltip.style.display = "none";
+    if (graphState.hoveredNodeId !== null) {
+      graphState.hoveredNodeId = null;
+      drawMultiLaneGraph(canvas, graph);
+    }
+  });
+
+  canvas.addEventListener("click", (e) => {
+    const rect = canvas.getBoundingClientRect();
+    const mx = e.clientX - rect.left;
+    const my = e.clientY - rect.top;
+
+    for (const [id, box] of Object.entries(graphState.nodeBoxes)) {
+      if (mx >= box.x && mx <= box.x + box.w && my >= box.y && my <= box.y + box.h) {
+        graphState.selectedNodeId = id;
+        updateInspectorPanel(id, graph);
+        drawMultiLaneGraph(canvas, graph);
+        break;
+      }
+    }
+  });
+
+  // Initial populate of inspector
+  updateInspectorPanel("cadre_jso", graph);
+}
+
+function updateInspectorPanel(nodeId, graph) {
+  const node = graph.nodes.find(n => n.id === nodeId);
+  if (!node) return;
+
+  const iconEl = document.getElementById("inspector-icon");
+  const typeEl = document.getElementById("inspector-type");
+  const titleEl = document.getElementById("inspector-title");
+  const badgeEl = document.getElementById("inspector-badge");
+  const detailsEl = document.getElementById("inspector-details");
+  const connEl = document.getElementById("inspector-connections");
+
+  if (iconEl) iconEl.textContent = node.icon || "🏛️";
+  if (typeEl) typeEl.textContent = `${node.type} Node`;
+  if (titleEl) titleEl.textContent = node.label;
+  if (badgeEl) {
+    badgeEl.textContent = `${node.type} Layer`;
+    badgeEl.style.color = node.color || "#38BDF8";
+  }
+  if (detailsEl) detailsEl.textContent = node.desc || "Verified MoSPI competency infrastructure component.";
+
+  // Find linked entities
+  if (connEl) {
+    const outgoing = graph.edges.filter(e => e.from === nodeId);
+    const incoming = graph.edges.filter(e => e.to === nodeId);
+
+    let pillsHtml = '<span style="color: #94A3B8; font-weight: 600;">Direct Linked Entities:</span> ';
+    
+    outgoing.forEach(e => {
+      const target = graph.nodes.find(n => n.id === e.to);
+      if (target) {
+        pillsHtml += `<span class="hud-pill" style="color: ${target.color || '#38BDF8'}; margin-right: 4px;">➔ ${target.shortLabel || target.label} (${e.label})</span>`;
       }
     });
 
-    // Draw Nodes
-    graph.nodes.forEach(node => {
-      const pos = nodePositions[node.id];
-      if (!pos) return;
-
-      ctx.beginPath();
-      ctx.arc(pos.x, pos.y, 8, 0, 2 * Math.PI);
-      ctx.fillStyle = pos.color;
-      ctx.fill();
-      ctx.strokeStyle = "#FFFFFF";
-      ctx.lineWidth = 1.5;
-      ctx.stroke();
-
-      ctx.font = "9px Inter";
-      ctx.fillStyle = "#CBD5E1";
-      ctx.textAlign = "center";
-      ctx.fillText(pos.label.slice(0, 18), pos.x, pos.y + 18);
+    incoming.forEach(e => {
+      const source = graph.nodes.find(n => n.id === e.from);
+      if (source) {
+        pillsHtml += `<span class="hud-pill" style="color: ${source.color || '#38BDF8'}; margin-right: 4px;">⬅ ${source.shortLabel || source.label}</span>`;
+      }
     });
 
-  } catch (err) {
-    console.error("Knowledge graph rendering failed:", err);
+    if (outgoing.length === 0 && incoming.length === 0) {
+      pillsHtml += '<span style="color: #64748B;">Root entity in official competency framework.</span>';
+    }
+
+    connEl.innerHTML = pillsHtml;
   }
 }
+
+function resetGraphFocus() {
+  const select = document.getElementById("graph-focus-select");
+  if (select) select.value = "all";
+  graphState.focusFilter = "all";
+  graphState.selectedNodeId = "cadre_jso";
+  const canvas = document.getElementById("graph-canvas");
+  if (canvas && graphDataCache) {
+    drawMultiLaneGraph(canvas, graphDataCache);
+    updateInspectorPanel("cadre_jso", graphDataCache);
+  }
+}
+
 
 // 10. AI Proctoring & Security Lockdown Engine
 function setupProctoringEngine() {
