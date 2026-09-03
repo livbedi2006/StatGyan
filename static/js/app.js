@@ -353,6 +353,7 @@ function renderPathway(data) {
   if (elCredits) elCredits.textContent = data.total_karmayogi_credits;
 
   if (!container) return;
+  container.innerHTML = "";
   data.learning_pathway.forEach((step, idx) => {
     const isDigital = step.channel.includes("iGOT");
     const borderAccent = isDigital ? "#38BDF8" : "#8B5CF6";

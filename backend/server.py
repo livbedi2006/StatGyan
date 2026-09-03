@@ -19,6 +19,7 @@ from ml_engine.recommender_model import BlendedPathwayRecommender
 from ml_engine.decay_model import SkillDecayModel
 from ml_engine.predictive_analytics import PredictiveAnalyticsEngine
 from ml_engine.virtual_lab_evaluator import VirtualLabEvaluator
+from ml_engine.proctoring_model import ProctoringTrustEngine
 
 app = FastAPI(
     title="StatGyan AI - MoSPI Competency Platform",
@@ -41,6 +42,7 @@ pathway_engine = BlendedPathwayRecommender()
 decay_engine = SkillDecayModel()
 analytics_engine = PredictiveAnalyticsEngine()
 lab_evaluator = VirtualLabEvaluator()
+proctoring_engine = ProctoringTrustEngine()
 
 # Request Models
 class AnalyzeRequest(BaseModel):
