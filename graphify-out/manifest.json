@@ -264,9 +264,9 @@
     "semantic_hash": ""
   },
   "static/js/app.js": {
-    "mtime": 1788464689.7129073,
-    "seen": 1788464990.9497373,
-    "ast_hash": "249dd900b12ee637d390e14e3b6fc940",
+    "mtime": 1788465174.9296362,
+    "seen": 1788465660.8818324,
+    "ast_hash": "a356935ffe695b00234e6d6403a1744f",
     "semantic_hash": ""
   },
   "README.md": {
@@ -276,15 +276,21 @@
     "semantic_hash": ""
   },
   "static/index.html": {
-    "mtime": 1788464700.2802913,
-    "seen": 1788464990.9497373,
-    "ast_hash": "1503c77f6544ff4536a0b165622b71c5",
+    "mtime": 1788465135.6338506,
+    "seen": 1788465660.8818324,
+    "ast_hash": "dda1d95adfadf9837cf58ee44ad17876",
     "semantic_hash": ""
   },
   "ml_engine/proctoring_model.py": {
     "mtime": 1788463352.109361,
     "seen": 1788464109.297101,
     "ast_hash": "5d7d05935ccbec723fabdd6bb06bb20b",
+    "semantic_hash": ""
+  },
+  "index.html": {
+    "mtime": 1788465135.6338506,
+    "seen": 1788465660.8818324,
+    "ast_hash": "dda1d95adfadf9837cf58ee44ad17876",
     "semantic_hash": ""
   }
 }

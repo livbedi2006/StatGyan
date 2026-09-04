@@ -1,0 +1,738 @@
+{
+  "metadata": {
+    "title": "MoSPI Competency Self-Appraisal & Task Corpus",
+    "version": "1.0.0",
+    "description": "Curated dataset of 180 official statistical tasks across 6 domains for training and evaluating cadre competency NLP models without overfitting.",
+    "domains": [
+      "Survey Methodology & Sampling",
+      "National Accounts & GDP Estimation",
+      "Index Numbers (CPI & IIP)",
+      "Data Analytics & Programming",
+      "Field Operations & CAPI Validation",
+      "Official Statistics Governance & Quality"
+    ],
+    "total_samples": 180
+  },
+  "samples": [
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Designed two-stage stratified sampling frame selecting census villages as FSUs with probability proportional to size."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Computed sampling weights and household multipliers for PLFS rural sub-sample using inverse inclusion probabilities."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Calculated design effects and standard errors for labour force indicators across NSS socio-economic survey rounds."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Managed urban rotational panel replacement rules to maintain sample continuity across consecutive quarterly surveys."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Adjusted sampling weights for non-response and casualty households using post-stratification ratio adjustments."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Developed allocation matrix for circular systematic sampling across rural and urban statistical strata."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Reviewed FSU sample allocation across agro-climatic sub-zones in NSS 79th Round sampling design."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Estimated finite population variance and coefficient of variation for state-level monthly consumer expenditure estimates."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Standardized multiplier computation formulae across central and state sample matching allocations."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Implemented probability proportional to size with replacement for selecting large municipal wards in enterprise survey."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Analyzed rotational sampling attrition in urban PLFS panels across four consecutive quarters."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Derived Horvitz-Thompson estimators for total household domestic electricity consumption using auxiliary variables."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Prepared sampling documentation and sample identification files for field survey teams."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Evaluated multi-stage cluster sampling efficiency against simple random sampling for health morbidity indicators."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Calibrated sub-sample multipliers using projected district census population totals."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Configured systematic sampling intervals for listing enterprise units in secondary sampling stages."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Constructed primary sampling units frame from latest Economic Census directory for services sector enquiry."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Formulated domain-specific weighting schemes for migrant worker survey schedules."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Verified sample size adequacy using power calculations and target margin of error for periodic indicators."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Audited sampling multiplier discrepancies between central and state survey sample pools."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Structured sampling stratification criteria based on female literacy and male agricultural worker proportions."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Implemented synthetic estimation techniques for small area estimation of district unemployment rates."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Executed dual-frame sampling combining administrative tax registers with physical area frames."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Applied Jackknife and Bootstrap resampling methods to estimate variance under complex multi-stage designs."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Designed master sample frame for continuous socio-economic surveys across national statistical system."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Formulated probability sampling guidelines for unorganized manufacturing sector establishment surveys."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Computed sampling frame coverage ratios and documented under-coverage adjustments in rural hamlets."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Assessed sample attrition bias in longitudinal panel surveys of youth employment transitions."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Integrated GIS spatial layers with primary sampling units to prevent territorial boundary overlapping."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Trained regional statisticians on stratified random sampling and multiplier verification protocols."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Compiled annual Gross Value Added by economic activity using System of National Accounts 2008 standards."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Allocated Financial Intermediation Services Indirectly Measured across user sectors using bank deposit and credit data."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Constructed Supply and Use Tables balancing domestic output and imports with intermediate and final demand."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Deflated current price manufacturing output to constant prices using appropriate Wholesale Price Index sub-indices."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Estimated Gross Fixed Capital Formation across institutional sectors including government and non-financial corporations."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Calculated consumption of fixed capital using the Perpetual Inventory Method and asset service life models."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Compiled quarterly GDP estimates reconciling production and expenditure approaches."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Analyzed change in inventories and valuables across organized mining and manufacturing enterprises."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Adjusted unorganized sector gross value added using labour input method and enterprise survey benchmarks."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Reconciled Ministry of Corporate Affairs MCA-21 database financials with national accounts aggregates."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Calculated net primary income from abroad using Reserve Bank of India balance of payments figures."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Derived chained volume measures of real GDP to eliminate base period substitution bias."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Estimated output of non-market producers in general government using cost of production method."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Formulated satellite accounts for tourism and health in conformity with international national accounting guidelines."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Estimated informal sector compensation of employees and mixed income of self-employed enterprises."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Audited inter-industry transactions matrix for input-output coefficient stability analysis."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Calculated taxes less subsidies on products to transition from basic prices to market prices."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Compiled agricultural crop production value using state directorate of economics harvest price data."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Estimated dwelling services output using equivalent market rent and user cost approaches."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Conducted benchmark revision studies for national accounts base year updating."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Analyzed government final consumption expenditure disaggregated by COFOG functional classification."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Estimated export and import price deflators using unit value indices and international trade series."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Compiled regional domestic product estimates for state statistical bureaus adhering to central guidelines."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Modeled consumption of mineral assets and natural resource depletion for green national accounts."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Audited financial corporations balance sheets to estimate insurance service charges and pension funds output."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Reconciled trade and transport margins across commodity flows in national supply-use frameworks."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Formulated methodology for measuring digital economy transactions in value added statistics."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Evaluated holding gains and losses in inventory valuation adjustments during inflationary spikes."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Computed capital stock and capital-output ratios across formal and informal manufacturing divisions."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Trained junior statistical officers on SNA production boundaries and economic asset ownership definitions."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Aggregated monthly elementary price relatives into headline Consumer Price Index using Modified Laspeyres formula."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Calculated All-India CPI Combined inflation rates and analyzed commodity group contributions to monthly price movements."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Implemented geometric mean imputation for temporarily unavailable and seasonal fruit and vegetable quotes."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Compiled Index of Industrial Production monitoring manufacturing, mining, and electricity sectoral growth."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Adjusted CPI commodity weighting diagrams using latest Household Consumer Expenditure Survey data."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Monitored core inflation excluding volatile Food & Beverages and Fuel & Light commodity sub-groups."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Audited web-based price collection portal entries from 1,181 rural and 1,114 urban sample markets."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Conducted hedonic regression quality adjustment for consumer electronics items in urban CPI basket."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Prepared monthly press releases detailing year-on-year headline inflation and industrial output growth."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Calculated item-level price relatives comparing current quotes with base period prices across state centres."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Supervised revision of product specifications and quotation sources for selected industrial items in IIP."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Formulated outlier detection rules for sudden extreme price spikes in wholesale and retail quotes."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Compiled services sector producer price indices for telecommunications and postal services."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Managed chained index formulations to facilitate smooth transitions during national base year updates."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Audited price collection schedules submitted by regional field price collectors for data integrity."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Evaluated substitution bias in Laspeyres price indices using superlative Fisher and Tornqvist alternatives."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Constructed consumer price indices for specific socio-economic groups such as industrial and agricultural labourers."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Trained field staff on standardized product specification checklists to prevent specification drift."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Analyzed pass-through of international commodity price fluctuations into domestic consumer indices."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Automated price index aggregation workflows using statistical scripting to ensure timely release schedules."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Calculated seasonal factors and seasonally adjusted measures for core industrial production series."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Verified base year weight allocation across 299 item groups in rural and urban consumer baskets."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Resolved missing quotation issues through state-level average imputation and historical trends."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Conducted price consistency checks against state food and civil supplies administrative records."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Analyzed item basket churn and proposed emerging digital goods for inclusion in upcoming CPI revision."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Audited compilation of capital goods and consumer durables indices within use-based IIP classification."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Formulated price index aggregation protocols for newly bifurcated administrative territories and states."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Assessed impact of indirect tax revisions on monthly headline consumer price changes."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Computed diffusion indices measuring the spatial breadth of price pressures across geographic zones."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Drafted technical notes on methodological refinements in monthly price index compilation."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Developed automated Python ETL pipeline using pandas to wrangle complex raw NSS microdata text files."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Built reproducible statistical reports and interactive analytical dashboards using Quarto and R markdown."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Executed survey regression models using R survey library accounting for stratification and clustering."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Automated data validation rules and structural consistency checks across multi-table survey schemas in PostgreSQL."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Created optimized NumPy vector operations to compute weighted statistics across millions of survey records."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Implemented machine learning clustering models to segment manufacturing establishments by energy efficiency."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Designed database schemas and indexed SQL tables for National Data Warehouse microdata dissemination."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Wrote custom shell and python scripts to automate batch data extraction from CSPro dictionary formats."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Configured automated unit testing and continuous data quality integration scripts for statistical pipelines."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Containerized statistical microservices using Docker to ensure reproducible analytical environments."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Engineered features from longitudinal panel microdata to predict informal sector employment transitions."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Visualized geographic disparity in labour force participation using GeoPandas and spatial chloropleth maps."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Built automated API connectors to pull real-time administrative datasets from GSTN and MCA databases."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Conducted exploratory multivariate analysis and principal component analysis on socio-economic indicators."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Wrote high-performance multiprocessing scripts to process parallel survey blocks simultaneously."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Maintained git version control repositories and code documentation for institutional analytics teams."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Implemented anomaly detection algorithms to identify synthetic data fabrication and digit preference."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Designed interactive data visualization widgets in web dashboards using modern JavaScript libraries."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Automated extraction of price quotes from semi-structured web sources using web scraping and NLP parsers."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Authored open-source statistical utility packages tailored for Indian official survey formats."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Optimized big data queries and distributed analytical workflows on Apache Spark cluster."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Created automated code generation scripts for producing standard statistical tables from raw microdata."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Implemented Bayesian structural time series models for nowcasting quarterly regional GDP."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Documented data dictionaries, variable codebooks, and metadata schemas adhering to SDMX guidelines."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Conducted code reviews and refactoring passes to optimize legacy statistical calculation scripts."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Built interactive statistical simulation tools demonstrating Central Limit Theorem and sampling error."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Created automated email alerting systems for ETL pipeline validation failures and data discrepancies."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Standardized data pipeline logging and error tracing across internal data science infrastructure."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Migrated proprietary statistical codebases from SAS and Stata to open-source Python and R frameworks."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Mentored statistical officers in modern data science workflows, clean coding, and reproducible research."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Conducted field interviews and schedule canvassing using CAPI tablets for Periodic Labour Force Survey."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Validated household listing and boundary demarcation maps for assigned rural sample blocks and census enumeration areas."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Performed on-site supervisor scrutiny and concurrent re-interviews to verify primary data accuracy."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Inspected household roster and activity status entries in CAPI application before transmitting schedules to central server."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Verified GPS coordinates and geo-tagging stamps for surveyed agricultural holdings and industrial establishments."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Resolved non-contact and refusal cases through follow-up visits and community liaison in challenging field conditions."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Conducted scrutiny of Schedule 10.4 blocks ensuring consistency between principal and subsidiary activity statuses."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Monitored field investigator interview durations and keystroke audit logs to detect fraudulent submissions."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Organized field training workshops for contract enumerators on survey concepts, definitions, and tablet operation."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Audited village listing schedules to confirm complete coverage of newly developed hamlets and peri-urban areas."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Verified enterprise existence and physical operation against registered addresses during Annual Survey of Industries."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Coordinated regional field logistics and equipment distribution across remote rural zonal offices."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Reviewed validation warning logs on CAPI devices to rectify item-level entry inconsistencies before sync."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Inspected sample crop cutting experiments for yield estimation and grain weight moisture calibration."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Maintained daily field progress registers and survey schedule dispatch summaries for regional directors."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Conducted spot-check audits of price collection at designated rural weekly haats and urban retail markets."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Standardized local unit measurement conversions to metric equivalents during consumer expenditure interviews."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Enforced respondent confidentiality and informed consent protocols during sensitive household survey inquiries."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Rectified structural schedule errors identified during zonal computer centre pre-tabulation processing."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Investigated sample substitution requests and ensured strict adherence to official replacement rules."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Supervised special demographic enquiries in tribal belts and difficult-to-reach terrain."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Conducted post-enumeration checks to evaluate response error magnitude in seasonal employment schedules."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Managed CAPI tablet hardware maintenance, cryptographic key updates, and offline backup procedures."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Resolved classification ambiguities between regular wage workers and informal own-account operators in the field."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Monitored field investigator attrition and mobilized standby enumerator reserves to meet survey deadlines."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Audited enterprise balance sheet scrutinies and power consumption cross-checks in manufacturing schedules."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Coordinated with district administration for security clearances and enumerator logistics in sensitive regions."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Conducted briefing sessions on probing techniques for uncovering unrecorded female economic activity."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Evaluated enumerator performance using error rates, completion rates, and average interview durations."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Submitted comprehensive field inspection reports documenting local economic anomalies and survey challenges."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Conducted comprehensive data quality audit adhering to National Quality Assurance Framework guidelines."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Implemented statistical disclosure control protocols and cell suppression to protect respondent confidentiality."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Enforced legal protections and data security provisions under the Collection of Statistics Act 2008."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Audited microdata release files ensuring complete anonymization and removal of direct identifying variables."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Formulated institutional data governance policy for cross-ministry statistical data sharing."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Developed standardized metadata schemas conforming to Data Documentation Initiative and SDMX standards."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Evaluated statistical processes against United Nations Fundamental Principles of Official Statistics."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Conducted peer reviews of survey methodologies and estimation procedures across central line ministries."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Formulated institutional guidelines on data revisions, publication calendars, and public correction notices."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Monitored adherence to national code of statistical practice and professional ethical standards."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Maintained cryptographic audit logs and immutable access trails for sensitive administrative datasets."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Managed institutional response to statistical inquiries and parliamentary questions with verified figures."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Audited data dissemination portals to ensure equal access and timely release to academic and policy researchers."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Conducted privacy impact assessments on proposed linkage of survey data with administrative records."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Standardized statistical concepts, definitions, and classifications across central and state statistical agencies."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Formulated open data release licensing terms safeguarding intellectual property while promoting reuse."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Reviewed institutional capacity and training needs across state statistical apparatus for quality enhancement."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Audited survey archiving protocols and long-term digital preservation of historical national survey series."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Conducted transparency audits of statistical estimation algorithms and analytical documentation."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Coordinated inter-agency committees on statistical harmonization and data duplication reduction."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Formulated data quality indicator dashboards monitoring timeliness, accuracy, and completeness metrics."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Managed international data reporting commitments to UN Statistical Division, World Bank, and IMF."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Evaluated risks of re-identification in publicly available aggregate tables and synthetic datasets."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Conducted ethical reviews of new data collection instruments involving vulnerable socio-economic populations."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Drafted national data quality certification criteria for official survey outputs produced by line ministries."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Enforced protocol forbidding premature release or selective leakage of embargoed statistical indices."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Standardized error correction policies and transparent errata publication across official statistical portals."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Audited vendor compliance with data protection standards during contracted data entry and scanning projects."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Facilitated public consultation workshops on modernization of official statistics legislative frameworks."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Trained senior statistical officers on governance frameworks, legal compliance, and international statistical ethics."
+    }
+  ]
+}

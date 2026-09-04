@@ -108,6 +108,19 @@
       "source_location": "L52"
     },
     {
+      "id": "ml_engine_predictive_analytics_predictiveanalyticsengine",
+      "label": "PredictiveAnalyticsEngine",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "server.py",
+      "file_type": "code",
+      "norm_label": "predictiveanalyticsengine",
+      "source_file": "ml_engine/predictive_analytics.py",
+      "source_location": "L121"
+    },
+    {
       "id": "ml_engine_recommender_model_blendedpathwayrecommender",
       "label": "BlendedPathwayRecommender",
       "_callable": true,
@@ -171,19 +184,6 @@
       "norm_label": "virtuallabevaluator",
       "source_file": "ml_engine/virtual_lab_evaluator.py",
       "source_location": "L10"
-    },
-    {
-      "id": "ml_engine_predictive_analytics_predictiveanalyticsengine",
-      "label": "PredictiveAnalyticsEngine",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "PredictiveAnalyticsEngine",
-      "file_type": "code",
-      "norm_label": "predictiveanalyticsengine",
-      "source_file": "ml_engine/predictive_analytics.py",
-      "source_location": "L121"
     },
     {
       "id": "backend_server_analyze_competency",
@@ -414,6 +414,42 @@
       "source_location": "L53"
     },
     {
+      "id": "ml_engine_predictive_analytics_predictiveanalyticsengine_forecast_survey_readiness",
+      "label": ".forecast_survey_readiness()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "server.py",
+      "file_type": "code",
+      "norm_label": ".forecast_survey_readiness()",
+      "source_file": "ml_engine/predictive_analytics.py",
+      "source_location": "L144"
+    },
+    {
+      "id": "ml_engine_predictive_analytics_predictiveanalyticsengine_get_divisional_heatmap",
+      "label": ".get_divisional_heatmap()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "server.py",
+      "file_type": "code",
+      "norm_label": ".get_divisional_heatmap()",
+      "source_file": "ml_engine/predictive_analytics.py",
+      "source_location": "L126"
+    },
+    {
+      "id": "ml_engine_predictive_analytics_predictiveanalyticsengine_init",
+      "label": ".__init__()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "server.py",
+      "file_type": "code",
+      "norm_label": ".__init__()",
+      "source_file": "ml_engine/predictive_analytics.py",
+      "source_location": "L122"
+    },
+    {
       "id": "ml_engine_recommender_model_blendedpathwayrecommender_generate_pathway",
       "label": ".generate_pathway()",
       "_callable": true,
@@ -438,6 +474,30 @@
       "source_location": "L11"
     },
     {
+      "id": "static_js_app_computeclientsidegap",
+      "label": "computeClientSideGap()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "computeclientsidegap()",
+      "source_file": "static/js/app.js",
+      "source_location": "L244"
+    },
+    {
+      "id": "static_js_app_computeclientsideinference",
+      "label": "computeClientSideInference()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "computeclientsideinference()",
+      "source_file": "static/js/app.js",
+      "source_location": "L301"
+    },
+    {
       "id": "static_js_app_executelabcode",
       "label": "executeLabCode()",
       "_callable": true,
@@ -447,7 +507,7 @@
       "file_type": "code",
       "norm_label": "executelabcode()",
       "source_file": "static/js/app.js",
-      "source_location": "L780"
+      "source_location": "L991"
     },
     {
       "id": "static_js_app_handletabactivation",
@@ -459,7 +519,7 @@
       "file_type": "code",
       "norm_label": "handletabactivation()",
       "source_file": "static/js/app.js",
-      "source_location": "L58"
+      "source_location": "L157"
     },
     {
       "id": "static_js_app_initwebcamstream",
@@ -471,7 +531,7 @@
       "file_type": "code",
       "norm_label": "initwebcamstream()",
       "source_file": "static/js/app.js",
-      "source_location": "L1108"
+      "source_location": "L1319"
     },
     {
       "id": "static_js_app_loadcadreanalytics",
@@ -483,7 +543,7 @@
       "file_type": "code",
       "norm_label": "loadcadreanalytics()",
       "source_file": "static/js/app.js",
-      "source_location": "L686"
+      "source_location": "L897"
     },
     {
       "id": "static_js_app_loadcadres",
@@ -495,7 +555,7 @@
       "file_type": "code",
       "norm_label": "loadcadres()",
       "source_file": "static/js/app.js",
-      "source_location": "L69"
+      "source_location": "L181"
     },
     {
       "id": "static_js_app_loadpathway",
@@ -507,7 +567,7 @@
       "file_type": "code",
       "norm_label": "loadpathway()",
       "source_file": "static/js/app.js",
-      "source_location": "L460"
+      "source_location": "L671"
     },
     {
       "id": "static_js_app_loadsamplemcqs",
@@ -519,7 +579,7 @@
       "file_type": "code",
       "norm_label": "loadsamplemcqs()",
       "source_file": "static/js/app.js",
-      "source_location": "L314"
+      "source_location": "L525"
     },
     {
       "id": "static_js_app_loadsamplepathway",
@@ -531,7 +591,19 @@
       "file_type": "code",
       "norm_label": "loadsamplepathway()",
       "source_file": "static/js/app.js",
-      "source_location": "L527"
+      "source_location": "L738"
+    },
+    {
+      "id": "static_js_app_populatecadresdropdown",
+      "label": "populateCadresDropdown()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "populatecadresdropdown()",
+      "source_file": "static/js/app.js",
+      "source_location": "L168"
     },
     {
       "id": "static_js_app_rendercompetencyoverview",
@@ -543,7 +615,7 @@
       "file_type": "code",
       "norm_label": "rendercompetencyoverview()",
       "source_file": "static/js/app.js",
-      "source_location": "L118"
+      "source_location": "L329"
     },
     {
       "id": "static_js_app_renderdecayresults",
@@ -555,7 +627,7 @@
       "file_type": "code",
       "norm_label": "renderdecayresults()",
       "source_file": "static/js/app.js",
-      "source_location": "L846"
+      "source_location": "L1057"
     },
     {
       "id": "static_js_app_renderdivisionalheatmap",
@@ -567,7 +639,7 @@
       "file_type": "code",
       "norm_label": "renderdivisionalheatmap()",
       "source_file": "static/js/app.js",
-      "source_location": "L698"
+      "source_location": "L909"
     },
     {
       "id": "static_js_app_renderdomainlist",
@@ -579,7 +651,7 @@
       "file_type": "code",
       "norm_label": "renderdomainlist()",
       "source_file": "static/js/app.js",
-      "source_location": "L186"
+      "source_location": "L397"
     },
     {
       "id": "static_js_app_renderknowledgegraph",
@@ -591,7 +663,7 @@
       "file_type": "code",
       "norm_label": "renderknowledgegraph()",
       "source_file": "static/js/app.js",
-      "source_location": "L872"
+      "source_location": "L1083"
     },
     {
       "id": "static_js_app_rendermcqerror",
@@ -603,7 +675,7 @@
       "file_type": "code",
       "norm_label": "rendermcqerror()",
       "source_file": "static/js/app.js",
-      "source_location": "L293"
+      "source_location": "L504"
     },
     {
       "id": "static_js_app_rendermcqs",
@@ -615,7 +687,7 @@
       "file_type": "code",
       "norm_label": "rendermcqs()",
       "source_file": "static/js/app.js",
-      "source_location": "L397"
+      "source_location": "L608"
     },
     {
       "id": "static_js_app_renderpathway",
@@ -627,7 +699,7 @@
       "file_type": "code",
       "norm_label": "renderpathway()",
       "source_file": "static/js/app.js",
-      "source_location": "L628"
+      "source_location": "L839"
     },
     {
       "id": "static_js_app_renderpathwayerror",
@@ -639,7 +711,7 @@
       "file_type": "code",
       "norm_label": "renderpathwayerror()",
       "source_file": "static/js/app.js",
-      "source_location": "L506"
+      "source_location": "L717"
     },
     {
       "id": "static_js_app_renderradarchart",
@@ -651,7 +723,7 @@
       "file_type": "code",
       "norm_label": "renderradarchart()",
       "source_file": "static/js/app.js",
-      "source_location": "L125"
+      "source_location": "L336"
     },
     {
       "id": "static_js_app_renderreadinessforecasts",
@@ -663,7 +735,7 @@
       "file_type": "code",
       "norm_label": "renderreadinessforecasts()",
       "source_file": "static/js/app.js",
-      "source_location": "L737"
+      "source_location": "L948"
     },
     {
       "id": "static_js_app_runmcqgeneration",
@@ -675,7 +747,7 @@
       "file_type": "code",
       "norm_label": "runmcqgeneration()",
       "source_file": "static/js/app.js",
-      "source_location": "L241"
+      "source_location": "L452"
     },
     {
       "id": "static_js_app_setupassessmentfilters",
@@ -687,7 +759,7 @@
       "file_type": "code",
       "norm_label": "setupassessmentfilters()",
       "source_file": "static/js/app.js",
-      "source_location": "L221"
+      "source_location": "L432"
     },
     {
       "id": "static_js_app_setupbrowserlockdownlisteners",
@@ -699,7 +771,7 @@
       "file_type": "code",
       "norm_label": "setupbrowserlockdownlisteners()",
       "source_file": "static/js/app.js",
-      "source_location": "L1020"
+      "source_location": "L1231"
     },
     {
       "id": "static_js_app_setupdecaysimulator",
@@ -711,7 +783,7 @@
       "file_type": "code",
       "norm_label": "setupdecaysimulator()",
       "source_file": "static/js/app.js",
-      "source_location": "L826"
+      "source_location": "L1037"
     },
     {
       "id": "static_js_app_setupnavigation",
@@ -723,7 +795,7 @@
       "file_type": "code",
       "norm_label": "setupnavigation()",
       "source_file": "static/js/app.js",
-      "source_location": "L38"
+      "source_location": "L137"
     },
     {
       "id": "static_js_app_setupproctoringengine",
@@ -735,7 +807,7 @@
       "file_type": "code",
       "norm_label": "setupproctoringengine()",
       "source_file": "static/js/app.js",
-      "source_location": "L945"
+      "source_location": "L1156"
     },
     {
       "id": "static_js_app_setuproleswitcher",
@@ -747,7 +819,7 @@
       "file_type": "code",
       "norm_label": "setuproleswitcher()",
       "source_file": "static/js/app.js",
-      "source_location": "L91"
+      "source_location": "L202"
     },
     {
       "id": "static_js_app_setupvirtuallab",
@@ -759,7 +831,7 @@
       "file_type": "code",
       "norm_label": "setupvirtuallab()",
       "source_file": "static/js/app.js",
-      "source_location": "L773"
+      "source_location": "L984"
     },
     {
       "id": "static_js_app_showlockdownfreezemodal",
@@ -771,7 +843,7 @@
       "file_type": "code",
       "norm_label": "showlockdownfreezemodal()",
       "source_file": "static/js/app.js",
-      "source_location": "L1202"
+      "source_location": "L1413"
     },
     {
       "id": "static_js_app_startextensiondomscanner",
@@ -783,7 +855,7 @@
       "file_type": "code",
       "norm_label": "startextensiondomscanner()",
       "source_file": "static/js/app.js",
-      "source_location": "L1069"
+      "source_location": "L1280"
     },
     {
       "id": "static_js_app_toggleproctoringmode",
@@ -795,7 +867,7 @@
       "file_type": "code",
       "norm_label": "toggleproctoringmode()",
       "source_file": "static/js/app.js",
-      "source_location": "L976"
+      "source_location": "L1187"
     },
     {
       "id": "static_js_app_triggercompetencyanalysis",
@@ -807,7 +879,7 @@
       "file_type": "code",
       "norm_label": "triggercompetencyanalysis()",
       "source_file": "static/js/app.js",
-      "source_location": "L101"
+      "source_location": "L213"
     },
     {
       "id": "static_js_app_triggerproctoringviolation",
@@ -819,7 +891,7 @@
       "file_type": "code",
       "norm_label": "triggerproctoringviolation()",
       "source_file": "static/js/app.js",
-      "source_location": "L1124"
+      "source_location": "L1335"
     },
     {
       "id": "static_js_app_updateproctoringhud",
@@ -831,7 +903,7 @@
       "file_type": "code",
       "norm_label": "updateproctoringhud()",
       "source_file": "static/js/app.js",
-      "source_location": "L1152"
+      "source_location": "L1363"
     },
     {
       "id": "ml_engine_mcq_generator_groundedmcqgenerator_export_moodle_xml",
@@ -1048,42 +1120,6 @@
       "norm_label": ".run_benchmark_calculation()",
       "source_file": "ml_engine/virtual_lab_evaluator.py",
       "source_location": "L17"
-    },
-    {
-      "id": "ml_engine_predictive_analytics_predictiveanalyticsengine_forecast_survey_readiness",
-      "label": ".forecast_survey_readiness()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "PredictiveAnalyticsEngine",
-      "file_type": "code",
-      "norm_label": ".forecast_survey_readiness()",
-      "source_file": "ml_engine/predictive_analytics.py",
-      "source_location": "L144"
-    },
-    {
-      "id": "ml_engine_predictive_analytics_predictiveanalyticsengine_get_divisional_heatmap",
-      "label": ".get_divisional_heatmap()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "PredictiveAnalyticsEngine",
-      "file_type": "code",
-      "norm_label": ".get_divisional_heatmap()",
-      "source_file": "ml_engine/predictive_analytics.py",
-      "source_location": "L126"
-    },
-    {
-      "id": "ml_engine_predictive_analytics_predictiveanalyticsengine_init",
-      "label": ".__init__()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "PredictiveAnalyticsEngine",
-      "file_type": "code",
-      "norm_label": ".__init__()",
-      "source_file": "ml_engine/predictive_analytics.py",
-      "source_location": "L122"
     },
     {
       "id": "agents_skills_security_and_hardening_skill",
@@ -6515,6 +6551,28 @@
       "source_location": ""
     },
     {
+      "id": "ml_engine_predictive_analytics",
+      "label": "predictive_analytics.py",
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "server.py",
+      "file_type": "code",
+      "norm_label": "predictive_analytics.py",
+      "source_file": "ml_engine/predictive_analytics.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "ml_engine_predictive_analytics_py_any",
+      "label": "Any",
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "server.py",
+      "file_type": "code",
+      "norm_label": "any",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
       "id": "ml_engine_recommender_model",
       "label": "recommender_model.py",
       "_origin": "ast",
@@ -6592,6 +6650,39 @@
       "source_location": "L62"
     },
     {
+      "id": "ml_engine_predictive_analytics_rationale_1",
+      "label": "StatGyan AI - Cadre Readiness Forecaster & HR Heatmap Analytics Aggregates\u2026",
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "server.py",
+      "file_type": "rationale",
+      "norm_label": "statgyan ai - cadre readiness forecaster & hr heatmap analytics aggregates...",
+      "source_file": "ml_engine/predictive_analytics.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "ml_engine_predictive_analytics_rationale_127",
+      "label": "Returns divisional capability matrix for admin heatmaps.",
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "server.py",
+      "file_type": "rationale",
+      "norm_label": "returns divisional capability matrix for admin heatmaps.",
+      "source_file": "ml_engine/predictive_analytics.py",
+      "source_location": "L127"
+    },
+    {
+      "id": "ml_engine_predictive_analytics_rationale_145",
+      "label": "Simulates readiness & shortfall risk for upcoming official statistical surveys.",
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "server.py",
+      "file_type": "rationale",
+      "norm_label": "simulates readiness & shortfall risk for upcoming official statistical surveys.",
+      "source_file": "ml_engine/predictive_analytics.py",
+      "source_location": "L145"
+    },
+    {
       "id": "ml_engine_recommender_model_rationale_1",
       "label": "StatGyan AI - Blended Learning Pathway Recommender Bridges digital self-paced\u2026",
       "_origin": "ast",
@@ -6625,6 +6716,17 @@
       "source_location": "L1"
     },
     {
+      "id": "static_js_app_builtin_cadres",
+      "label": "BUILTIN_CADRES",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "builtin_cadres",
+      "source_file": "static/js/app.js",
+      "source_location": "L13"
+    },
+    {
       "id": "static_js_app_state",
       "label": "state",
       "_origin": "ast",
@@ -6633,7 +6735,7 @@
       "file_type": "code",
       "norm_label": "state",
       "source_file": "static/js/app.js",
-      "source_location": "L10"
+      "source_location": "L109"
     },
     {
       "id": "ml_engine_mcq_generator",
@@ -6877,61 +6979,6 @@
       "norm_label": "evaluates submitted script against test cases and survey multiplier rules.",
       "source_file": "ml_engine/virtual_lab_evaluator.py",
       "source_location": "L44"
-    },
-    {
-      "id": "ml_engine_predictive_analytics",
-      "label": "predictive_analytics.py",
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "PredictiveAnalyticsEngine",
-      "file_type": "code",
-      "norm_label": "predictive_analytics.py",
-      "source_file": "ml_engine/predictive_analytics.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "ml_engine_predictive_analytics_py_any",
-      "label": "Any",
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "PredictiveAnalyticsEngine",
-      "file_type": "code",
-      "norm_label": "any",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "ml_engine_predictive_analytics_rationale_1",
-      "label": "StatGyan AI - Cadre Readiness Forecaster & HR Heatmap Analytics Aggregates\u2026",
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "PredictiveAnalyticsEngine",
-      "file_type": "rationale",
-      "norm_label": "statgyan ai - cadre readiness forecaster & hr heatmap analytics aggregates...",
-      "source_file": "ml_engine/predictive_analytics.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "ml_engine_predictive_analytics_rationale_127",
-      "label": "Returns divisional capability matrix for admin heatmaps.",
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "PredictiveAnalyticsEngine",
-      "file_type": "rationale",
-      "norm_label": "returns divisional capability matrix for admin heatmaps.",
-      "source_file": "ml_engine/predictive_analytics.py",
-      "source_location": "L127"
-    },
-    {
-      "id": "ml_engine_predictive_analytics_rationale_145",
-      "label": "Simulates readiness & shortfall risk for upcoming official statistical surveys.",
-      "_origin": "ast",
-      "community": 37,
-      "community_name": "PredictiveAnalyticsEngine",
-      "file_type": "rationale",
-      "norm_label": "simulates readiness & shortfall risk for upcoming official statistical surveys.",
-      "source_file": "ml_engine/predictive_analytics.py",
-      "source_location": "L145"
     },
     {
       "id": "agents_skills_git_workflow_and_versioning_skill",
@@ -8877,6 +8924,18 @@
       "weight": 1.0
     },
     {
+      "source": "static_js_app_computeclientsideinference",
+      "target": "static_js_app_computeclientsidegap",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "static/js/app.js",
+      "source_location": "L326",
+      "weight": 1.0
+    },
+    {
       "source": "static_js_app_handletabactivation",
       "target": "static_js_app_loadpathway",
       "relation": "calls",
@@ -8885,7 +8944,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L60",
+      "source_location": "L159",
       "weight": 1.0
     },
     {
@@ -8897,7 +8956,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L62",
+      "source_location": "L161",
       "weight": 1.0
     },
     {
@@ -8909,7 +8968,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L64",
+      "source_location": "L163",
       "weight": 1.0
     },
     {
@@ -8921,7 +8980,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L691",
+      "source_location": "L902",
       "weight": 1.0
     },
     {
@@ -8933,7 +8992,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L692",
+      "source_location": "L903",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app_loadcadres",
+      "target": "static_js_app_populatecadresdropdown",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "static/js/app.js",
+      "source_location": "L182",
       "weight": 1.0
     },
     {
@@ -8945,7 +9016,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L85",
+      "source_location": "L199",
       "weight": 1.0
     },
     {
@@ -8957,7 +9028,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L494",
+      "source_location": "L705",
       "weight": 1.0
     },
     {
@@ -8969,7 +9040,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L502",
+      "source_location": "L713",
       "weight": 1.0
     },
     {
@@ -8981,7 +9052,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L394",
+      "source_location": "L605",
       "weight": 1.0
     },
     {
@@ -8993,7 +9064,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L625",
+      "source_location": "L836",
       "weight": 1.0
     },
     {
@@ -9005,7 +9076,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L281",
+      "source_location": "L492",
       "weight": 1.0
     },
     {
@@ -9017,7 +9088,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L289",
+      "source_location": "L500",
       "weight": 1.0
     },
     {
@@ -9029,7 +9100,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L1034",
+      "source_location": "L1245",
       "weight": 1.0
     },
     {
@@ -9041,7 +9112,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L838",
+      "source_location": "L1049",
       "weight": 1.0
     },
     {
@@ -9053,7 +9124,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L52",
+      "source_location": "L151",
       "weight": 1.0
     },
     {
@@ -9065,7 +9136,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L953",
+      "source_location": "L1164",
       "weight": 1.0
     },
     {
@@ -9077,7 +9148,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L973",
+      "source_location": "L1184",
       "weight": 1.0
     },
     {
@@ -9089,7 +9160,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L95",
+      "source_location": "L207",
       "weight": 1.0
     },
     {
@@ -9101,7 +9172,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L96",
+      "source_location": "L208",
       "weight": 1.0
     },
     {
@@ -9113,7 +9184,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L1083",
+      "source_location": "L1294",
       "weight": 1.0
     },
     {
@@ -9125,7 +9196,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L1009",
+      "source_location": "L1220",
       "weight": 1.0
     },
     {
@@ -9137,7 +9208,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L1010",
+      "source_location": "L1221",
       "weight": 1.0
     },
     {
@@ -9149,7 +9220,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L110",
+      "source_location": "L231",
       "weight": 1.0
     },
     {
@@ -9161,7 +9232,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L111",
+      "source_location": "L232",
       "weight": 1.0
     },
     {
@@ -9173,7 +9244,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L112",
+      "source_location": "L233",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app_triggercompetencyanalysis",
+      "target": "static_js_app_computeclientsidegap",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "static/js/app.js",
+      "source_location": "L236",
       "weight": 1.0
     },
     {
@@ -9185,7 +9268,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L1140",
+      "source_location": "L1351",
       "weight": 1.0
     },
     {
@@ -9197,7 +9280,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L1143",
+      "source_location": "L1354",
       "weight": 1.0
     },
     {
@@ -16361,321 +16444,13 @@
     },
     {
       "source": "static_js_app",
-      "target": "static_js_app_state",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "static/js/app.js",
-      "source_location": "L10",
-      "weight": 1.0
-    },
-    {
-      "source": "static_js_app",
-      "target": "static_js_app_triggercompetencyanalysis",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "static/js/app.js",
-      "source_location": "L101",
-      "weight": 1.0
-    },
-    {
-      "source": "static_js_app",
-      "target": "static_js_app_setupbrowserlockdownlisteners",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "static/js/app.js",
-      "source_location": "L1020",
-      "weight": 1.0
-    },
-    {
-      "source": "static_js_app",
-      "target": "static_js_app_startextensiondomscanner",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "static/js/app.js",
-      "source_location": "L1069",
-      "weight": 1.0
-    },
-    {
-      "source": "static_js_app",
-      "target": "static_js_app_initwebcamstream",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "static/js/app.js",
-      "source_location": "L1108",
-      "weight": 1.0
-    },
-    {
-      "source": "static_js_app",
-      "target": "static_js_app_triggerproctoringviolation",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "static/js/app.js",
-      "source_location": "L1124",
-      "weight": 1.0
-    },
-    {
-      "source": "static_js_app",
-      "target": "static_js_app_updateproctoringhud",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "static/js/app.js",
-      "source_location": "L1152",
-      "weight": 1.0
-    },
-    {
-      "source": "static_js_app",
-      "target": "static_js_app_rendercompetencyoverview",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "static/js/app.js",
-      "source_location": "L118",
-      "weight": 1.0
-    },
-    {
-      "source": "static_js_app",
-      "target": "static_js_app_showlockdownfreezemodal",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "static/js/app.js",
-      "source_location": "L1202",
-      "weight": 1.0
-    },
-    {
-      "source": "static_js_app",
-      "target": "static_js_app_renderradarchart",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "static/js/app.js",
-      "source_location": "L125",
-      "weight": 1.0
-    },
-    {
-      "source": "static_js_app",
-      "target": "static_js_app_renderdomainlist",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "static/js/app.js",
-      "source_location": "L186",
-      "weight": 1.0
-    },
-    {
-      "source": "static_js_app",
-      "target": "static_js_app_setupassessmentfilters",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "static/js/app.js",
-      "source_location": "L221",
-      "weight": 1.0
-    },
-    {
-      "source": "static_js_app",
-      "target": "static_js_app_runmcqgeneration",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "static/js/app.js",
-      "source_location": "L241",
-      "weight": 1.0
-    },
-    {
-      "source": "static_js_app",
-      "target": "static_js_app_rendermcqerror",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "static/js/app.js",
-      "source_location": "L293",
-      "weight": 1.0
-    },
-    {
-      "source": "static_js_app",
-      "target": "static_js_app_loadsamplemcqs",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "static/js/app.js",
-      "source_location": "L314",
-      "weight": 1.0
-    },
-    {
-      "source": "static_js_app",
-      "target": "static_js_app_setupnavigation",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "static/js/app.js",
-      "source_location": "L38",
-      "weight": 1.0
-    },
-    {
-      "source": "static_js_app",
-      "target": "static_js_app_rendermcqs",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "static/js/app.js",
-      "source_location": "L397",
-      "weight": 1.0
-    },
-    {
-      "source": "static_js_app",
-      "target": "static_js_app_loadpathway",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "static/js/app.js",
-      "source_location": "L460",
-      "weight": 1.0
-    },
-    {
-      "source": "static_js_app",
-      "target": "static_js_app_renderpathwayerror",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "static/js/app.js",
-      "source_location": "L506",
-      "weight": 1.0
-    },
-    {
-      "source": "static_js_app",
-      "target": "static_js_app_loadsamplepathway",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "static/js/app.js",
-      "source_location": "L527",
-      "weight": 1.0
-    },
-    {
-      "source": "static_js_app",
-      "target": "static_js_app_handletabactivation",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "static/js/app.js",
-      "source_location": "L58",
-      "weight": 1.0
-    },
-    {
-      "source": "static_js_app",
-      "target": "static_js_app_renderpathway",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "static/js/app.js",
-      "source_location": "L628",
-      "weight": 1.0
-    },
-    {
-      "source": "static_js_app",
-      "target": "static_js_app_loadcadreanalytics",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "static/js/app.js",
-      "source_location": "L686",
-      "weight": 1.0
-    },
-    {
-      "source": "static_js_app",
-      "target": "static_js_app_loadcadres",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "static/js/app.js",
-      "source_location": "L69",
-      "weight": 1.0
-    },
-    {
-      "source": "static_js_app",
-      "target": "static_js_app_renderdivisionalheatmap",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "static/js/app.js",
-      "source_location": "L698",
-      "weight": 1.0
-    },
-    {
-      "source": "static_js_app",
-      "target": "static_js_app_renderreadinessforecasts",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "static/js/app.js",
-      "source_location": "L737",
-      "weight": 1.0
-    },
-    {
-      "source": "static_js_app",
-      "target": "static_js_app_setupvirtuallab",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "static/js/app.js",
-      "source_location": "L773",
-      "weight": 1.0
-    },
-    {
-      "source": "static_js_app",
-      "target": "static_js_app_executelabcode",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "static/js/app.js",
-      "source_location": "L780",
-      "weight": 1.0
-    },
-    {
-      "source": "static_js_app",
       "target": "static_js_app_setupdecaysimulator",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L826",
+      "source_location": "L1037",
       "weight": 1.0
     },
     {
@@ -16686,7 +16461,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L846",
+      "source_location": "L1057",
       "weight": 1.0
     },
     {
@@ -16697,18 +16472,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L872",
+      "source_location": "L1083",
       "weight": 1.0
     },
     {
       "source": "static_js_app",
-      "target": "static_js_app_setuproleswitcher",
+      "target": "static_js_app_state",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L91",
+      "source_location": "L109",
       "weight": 1.0
     },
     {
@@ -16719,7 +16494,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L945",
+      "source_location": "L1156",
       "weight": 1.0
     },
     {
@@ -16730,7 +16505,359 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L976",
+      "source_location": "L1187",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_setupbrowserlockdownlisteners",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L1231",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_startextensiondomscanner",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L1280",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_builtin_cadres",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_initwebcamstream",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L1319",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_triggerproctoringviolation",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L1335",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_updateproctoringhud",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L1363",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_setupnavigation",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L137",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_showlockdownfreezemodal",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L1413",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_handletabactivation",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L157",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_populatecadresdropdown",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L168",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_loadcadres",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L181",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_setuproleswitcher",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L202",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_triggercompetencyanalysis",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L213",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_computeclientsidegap",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L244",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_computeclientsideinference",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L301",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_rendercompetencyoverview",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L329",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_renderradarchart",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L336",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_renderdomainlist",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L397",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_setupassessmentfilters",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L432",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_runmcqgeneration",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L452",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_rendermcqerror",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L504",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_loadsamplemcqs",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L525",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_rendermcqs",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L608",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_loadpathway",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L671",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_renderpathwayerror",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L717",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_loadsamplepathway",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L738",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_renderpathway",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L839",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_loadcadreanalytics",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L897",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_renderdivisionalheatmap",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L909",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_renderreadinessforecasts",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L948",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_setupvirtuallab",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L984",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_executelabcode",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L991",
       "weight": 1.0
     },
     {
@@ -17347,7 +17474,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "static/js/app.js",
-      "source_location": "L224",
+      "source_location": "L435",
       "weight": 1.0
     },
     {
@@ -17359,7 +17486,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "static/js/app.js",
-      "source_location": "L948",
+      "source_location": "L1159",
       "weight": 1.0
     },
     {
@@ -17371,7 +17498,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "static/js/app.js",
-      "source_location": "L776",
+      "source_location": "L987",
       "weight": 1.0
     },
     {

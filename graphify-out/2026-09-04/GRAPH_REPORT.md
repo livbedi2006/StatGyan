@@ -1,11 +1,11 @@
 # Graph Report - StatGyan AI  (2026-09-04)
 
 ## Corpus Check
-- 47 files · ~72,466 words
+- 47 files · ~73,376 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 727 nodes · 772 edges · 38 communities (36 shown, 1 thin omitted)
+- 731 nodes · 779 edges · 37 communities (35 shown, 1 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 3 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
@@ -51,7 +51,6 @@
 - CompetencyGapModel
 - ProctoringTrustEngine
 - VirtualLabEvaluator
-- PredictiveAnalyticsEngine
 
 ## God Nodes (most connected - your core abstractions)
 1. `Code Review and Quality` - 19 edges
@@ -72,7 +71,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (38 total, 1 thin omitted)
+## Communities (37 total, 1 thin omitted)
 
 ### Community 0 - "Graphify Knowledge Graph Rule"
 Cohesion: 0.67
@@ -191,12 +190,12 @@ Cohesion: 0.22
 Nodes (8): Analogous Inspiration, Constraint-Based Ideation, First Principles Thinking, How Might We (HMW), Ideation Frameworks Reference, Jobs to Be Done (JTBD), Pre-mortem, SCAMPER
 
 ### Community 30 - "server.py"
-Cohesion: 0.08
-Nodes (37): analyze_competency(), AnalyzeRequest, cadre_analytics(), DecaySimulateRequest, evaluate_lab_code(), export_moodle(), export_qti(), generate_assessment() (+29 more)
+Cohesion: 0.06
+Nodes (42): analyze_competency(), AnalyzeRequest, cadre_analytics(), DecaySimulateRequest, evaluate_lab_code(), export_moodle(), export_qti(), generate_assessment() (+34 more)
 
 ### Community 31 - "app.js"
-Cohesion: 0.11
-Nodes (34): executeLabCode(), handleTabActivation(), initWebcamStream(), loadCadreAnalytics(), loadCadres(), loadPathway(), loadSampleMCQs(), loadSamplePathway() (+26 more)
+Cohesion: 0.10
+Nodes (38): BUILTIN_CADRES, computeClientSideGap(), computeClientSideInference(), executeLabCode(), handleTabActivation(), initWebcamStream(), loadCadreAnalytics(), loadCadres() (+30 more)
 
 ### Community 32 - "GroundedMCQGenerator"
 Cohesion: 0.18
@@ -214,13 +213,9 @@ Nodes (3): ProctoringTrustEngine, Any, StatGyan AI - AI Proctoring & Restriction
 Cohesion: 0.25
 Nodes (5): Any, StatGyan AI - Virtual Statistical Lab Evaluator Auto-evaluates statistical…, Executes standard weighted MoSPI calculation over microdata records: - Employed…, Evaluates submitted script against test cases and survey multiplier rules., VirtualLabEvaluator
 
-### Community 37 - "PredictiveAnalyticsEngine"
-Cohesion: 0.25
-Nodes (5): PredictiveAnalyticsEngine, Any, StatGyan AI - Cadre Readiness Forecaster & HR Heatmap Analytics Aggregates…, Returns divisional capability matrix for admin heatmaps., Simulates readiness & shortfall risk for upcoming official statistical surveys.
-
 ## Knowledge Gaps
-- **469 isolated node(s):** `idea-refine.sh script`, `state`, `Overview`, `When to Use`, `Hyrum's Law` (+464 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 528 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **470 isolated node(s):** `idea-refine.sh script`, `BUILTIN_CADRES`, `state`, `Overview`, `When to Use` (+465 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 529 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **1 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
@@ -232,8 +227,8 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **Why does `ProctoringTrustEngine` connect `ProctoringTrustEngine` to `server.py`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
-- **What connects `idea-refine.sh script`, `state`, `Overview` to the rest of the system?**
-  _469 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `idea-refine.sh script`, `BUILTIN_CADRES`, `state` to the rest of the system?**
+  _470 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Security and Hardening` be split into smaller, more focused modules?**
   _Cohesion score 0.06451612903225806 - nodes in this community are weakly interconnected._
 - **Should `Code Review and Quality` be split into smaller, more focused modules?**

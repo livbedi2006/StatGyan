@@ -33,6 +33,14 @@
     </div>
 
     <div class="header-controls">
+      <button id="btn-start-tour" class="btn btn-primary" style="font-size: 0.75rem; background: linear-gradient(135deg, #10B981, #059669); border: none; padding: 0.35rem 0.8rem; font-weight: 700; display: flex; align-items: center; gap: 4px;">
+        <span>🎓</span> Jury Guided Tour
+      </button>
+
+      <button id="btn-open-sih-docket" class="btn btn-primary" style="font-size: 0.75rem; background: linear-gradient(135deg, #2563EB, #0284C7); border: none; padding: 0.35rem 0.85rem; font-weight: 700; display: flex; align-items: center; gap: 4px; box-shadow: 0 0 12px rgba(2, 132, 199, 0.4);">
+        <span>🏆</span> SIH 26101 Docket
+      </button>
+
       <div class="status-pill">
         <div class="pulse-dot"></div>
         <span>ML Engine: 7 Models Online</span>
@@ -50,6 +58,23 @@
       </div>
     </div>
   </header>
+
+  <!-- SIH Jury Guided Demo Tour Banner -->
+  <div id="sih-tour-banner" class="sih-tour-bar" style="display: none;">
+    <div style="display: flex; align-items: center; gap: 0.85rem;">
+      <span style="font-size: 1.5rem;" id="tour-step-icon">🎯</span>
+      <div>
+        <div style="font-weight: 800; color: #FFFFFF; font-size: 0.9rem;" id="tour-step-title">SIH Demo Step 1: Grounded Competency Model</div>
+        <div style="font-size: 0.75rem; color: #E0F2FE;" id="tour-step-desc">TF-IDF & Latent Semantic Analysis vector scoring maps self-appraisal against MoSPI cadre standards.</div>
+      </div>
+    </div>
+    <div style="display: flex; gap: 0.5rem; align-items: center;">
+      <span style="font-size: 0.75rem; color: #BAE6FD; font-weight: 700; margin-right: 0.5rem;" id="tour-step-counter">Engine 1 of 7</span>
+      <button id="btn-tour-prev" class="btn btn-secondary" style="padding: 0.3rem 0.65rem; font-size: 0.75rem;">◀ Prev</button>
+      <button id="btn-tour-next" class="btn btn-primary" style="padding: 0.3rem 0.85rem; font-size: 0.75rem; background: #38BDF8; color: #0F172A; font-weight: 700; border: none;">Next Engine ▶</button>
+      <button id="btn-tour-exit" class="btn btn-outline" style="padding: 0.3rem 0.6rem; font-size: 0.75rem; border-color: rgba(255,255,255,0.3); color: #FFFFFF;">✕ Close Tour</button>
+    </div>
+  </div>
 
   <!-- Navigation Tabs -->
   <nav class="nav-tabs-wrapper">
@@ -673,6 +698,91 @@ def calculate_plfs_metrics(records):
         <button id="btn-dismiss-freeze" class="btn btn-primary" style="background: #EF4444; border: none; padding: 0.65rem 1.5rem;">
           Acknowledge Violation & Resume
         </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SIH 26101 Solution Docket Modal -->
+  <div id="sih-modal-backdrop" class="sih-modal-backdrop">
+    <div class="sih-modal-container">
+      <div class="sih-modal-header">
+        <div style="display: flex; align-items: center; gap: 0.85rem;">
+          <span style="font-size: 2rem;">🏆</span>
+          <div>
+            <div style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: #FFFFFF;">
+              SIH 2026 Solution Docket • Problem Statement ID 26101
+            </div>
+            <div style="font-size: 0.75rem; color: #38BDF8;">
+              Ministry of Statistics & Programme Implementation (MoSPI) • Data Informatics & Innovation Division (DIID)
+            </div>
+          </div>
+        </div>
+        <button id="btn-close-sih-docket" class="btn btn-outline" style="border-color: rgba(255,255,255,0.2); color: #FFFFFF; font-size: 1rem; padding: 0.3rem 0.75rem;">✕</button>
+      </div>
+
+      <div class="sih-modal-body">
+        <!-- 1. Executive Summary -->
+        <div style="margin-bottom: 1.5rem;">
+          <div style="font-size: 0.8rem; text-transform: uppercase; color: #38BDF8; font-weight: 700; margin-bottom: 4px;">1. The Core Innovation</div>
+          <p style="margin: 0; color: #E2E8F0; font-size: 0.9rem;">
+            <strong>StatGyan AI</strong> is an end-to-end, privacy-first AI platform engineered specifically for the official statistical apparatus of India (SSS, ISS, and FOD cadres). It closes the structural gap between static textbook assessments and dynamic field realities through <strong>7 interoperable ML/DL engines</strong> grounded exclusively in official MoSPI publication corpora.
+          </p>
+        </div>
+
+        <!-- 2. The 7 ML Engines Grid -->
+        <div style="margin-bottom: 1.5rem;">
+          <div style="font-size: 0.8rem; text-transform: uppercase; color: #38BDF8; font-weight: 700; margin-bottom: 8px;">2. The 7 Custom AI/ML Models Built for MoSPI</div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0.75rem;">
+            <div class="sih-feature-card">
+              <div style="font-weight: 700; color: #38BDF8; font-size: 0.85rem;">🎯 1. Competency Gap Analyzer</div>
+              <div style="font-size: 0.75rem; color: #94A3B8; margin-top: 2px;">TF-IDF n-grams + LSA (SVD) vector scoring against official MoSPI cadre competency matrices across 6 domains.</div>
+            </div>
+            <div class="sih-feature-card">
+              <div style="font-weight: 700; color: #10B981; font-size: 0.85rem;">🧪 2. Grounded Item & 3-Stage QC</div>
+              <div style="font-size: 0.75rem; color: #94A3B8; margin-top: 2px;">Bloom's Taxonomy L1-L4 generator with zero-hallucination citation verification, distractor vector spread, and QTI 2.1 LMS export.</div>
+            </div>
+            <div class="sih-feature-card">
+              <div style="font-weight: 700; color: #EF4444; font-size: 0.85rem;">🛡️ 3. Proctoring Trust Engine</div>
+              <div style="font-size: 0.75rem; color: #94A3B8; margin-top: 2px;">Computer vision gaze/face telemetry, real-time DOM mutation blocker for AI extensions (ChatGPT, Monica, Sider), and 3-strike freeze.</div>
+            </div>
+            <div class="sih-feature-card">
+              <div style="font-weight: 700; color: #F59E0B; font-size: 0.85rem;">🛤️ 4. Blended Learning Pathway</div>
+              <div style="font-size: 0.75rem; color: #94A3B8; margin-top: 2px;">Constraint-satisfaction recommender harmonizing digital iGOT Karmayogi modules with physical NSSTA Greater Noida labs.</div>
+            </div>
+            <div class="sih-feature-card">
+              <div style="font-weight: 700; color: #A78BFA; font-size: 0.85rem;">⚡ 5. Retention Decay & Shock Forecaster</div>
+              <div style="font-size: 0.75rem; color: #94A3B8; margin-top: 2px;">Exponential skill decay S(t) = S0*e^(-λt) coupled with methodology drift shock alerts (e.g. CPI Base Year 2024 revision).</div>
+            </div>
+            <div class="sih-feature-card">
+              <div style="font-weight: 700; color: #38BDF8; font-size: 0.85rem;">📊 6. Divisional Capability Forecaster</div>
+              <div style="font-size: 0.75rem; color: #94A3B8; margin-top: 2px;">Divisional heatmaps across FOD, SDRD, NAD, ESD, and DIID predicting workforce readiness for upcoming national surveys.</div>
+            </div>
+            <div class="sih-feature-card" style="grid-column: 1 / -1;">
+              <div style="font-weight: 700; color: #10B981; font-size: 0.85rem;">💻 7. Virtual Statistical Lab on PLFS Microdata</div>
+              <div style="font-size: 0.75rem; color: #94A3B8; margin-top: 2px;">In-browser Python survey computing engine auto-grading PLFS Schedule 10.4 indicator derivations (WPR, LFPR, UR) on synthetic NSS 80th Round microdata.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Government Architecture Alignment -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
+          <div style="background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 6px; border-left: 3px solid #10B981;">
+            <div style="font-weight: 700; color: #FFFFFF; font-size: 0.85rem;">Mission Karmayogi Compliance</div>
+            <div style="font-size: 0.78rem; color: #94A3B8; margin-top: 4px;">Direct API interoperability with iGOT Karmayogi course IDs and credit units, enabling automated training nomination and promotion credentialing.</div>
+          </div>
+          <div style="background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 6px; border-left: 3px solid #38BDF8;">
+            <div style="font-weight: 700; color: #FFFFFF; font-size: 0.85rem;">Air-Gapped Privacy & Integrity</div>
+            <div style="font-size: 0.78rem; color: #94A3B8; margin-top: 4px;">Zero reliance on external proprietary APIs. All embeddings, NLP vectorizations, and proctoring run locally on secure government infrastructure.</div>
+          </div>
+        </div>
+
+        <!-- Action Bar -->
+        <div style="display: flex; justify-content: flex-end; gap: 0.75rem;">
+          <button class="btn btn-secondary" onclick="document.getElementById('sih-modal-backdrop').classList.remove('active')">Close Docket</button>
+          <button class="btn btn-primary" onclick="document.getElementById('sih-modal-backdrop').classList.remove('active'); startJuryTour();">
+            <span>🚀</span> Launch Interactive Jury Tour
+          </button>
+        </div>
       </div>
     </div>
   </div>

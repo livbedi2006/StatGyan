@@ -131,6 +131,8 @@ document.addEventListener("DOMContentLoaded", () => {
   setupVirtualLab();
   setupDecaySimulator();
   setupProctoringEngine();
+  setupSIHTour();
+  setupSIHDocketModal();
 });
 
 // 1. Navigation Tabs
@@ -1839,4 +1841,141 @@ function showLockdownFreezeModal(title, msg) {
   if (modalMsg) modalMsg.textContent = msg;
   if (overlay) overlay.classList.add("active");
 }
+
+// 11. SIH Jury Guided Demo Tour Controller
+const TOUR_STEPS = [
+  {
+    step: 1,
+    tab: "tab-learner",
+    icon: "🎯",
+    title: "1/7: Competency Gap Radar (TF-IDF & LSA)",
+    desc: "Evaluates officer self-appraisals or assessment logs against MoSPI cadre standards across 6 core statistical domains with dynamic gap delta calculation."
+  },
+  {
+    step: 2,
+    tab: "tab-mcq",
+    icon: "🧪",
+    title: "2/7: Bloom's Assessment Engine & 3-Stage QC",
+    desc: "Extracts grounded evaluation items from MoSPI manuals (PLFS, CPI, NAS) with 100% citation verification, distractor plausibility check, and QTI 2.1 export."
+  },
+  {
+    step: 3,
+    tab: "tab-proctoring",
+    icon: "🛡️",
+    title: "3/7: AI Proctoring & Anti-Cheat Restrictions",
+    desc: "Computer vision face/gaze telemetry, fullscreen/DevTools lockdown, real-time DOM mutation blocker for AI extensions (ChatGPT, Monica), and 3-strike freeze."
+  },
+  {
+    step: 4,
+    tab: "tab-pathway",
+    icon: "🛤️",
+    title: "4/7: Blended Learning Pathways (iGOT + NSSTA)",
+    desc: "Constraint-satisfaction recommender harmonizing digital iGOT Karmayogi modules with in-person high-impact labs at NSSTA Greater Noida."
+  },
+  {
+    step: 5,
+    tab: "tab-analytics",
+    icon: "📊",
+    title: "5/7: Divisional Capability Forecaster & Shock Predictor",
+    desc: "Heatmaps across FOD, SDRD, NAD, ESD, and DIID tracking workforce deployment readiness and modeling methodology shock alerts (e.g. CPI 2024 Base Year)."
+  },
+  {
+    step: 6,
+    tab: "tab-lab",
+    icon: "💻",
+    title: "6/7: Virtual Statistical Lab on PLFS Microdata",
+    desc: "In-browser Python survey computing sandbox executing complex multiplier formulas on synthetic NSS 80th Round microdata (WPR, LFPR, UR) with automated grading."
+  },
+  {
+    step: 7,
+    tab: "tab-graph",
+    icon: "🕸️",
+    title: "7/7: 5-Lane Official Statistics Knowledge Graph",
+    desc: "Structured semantic ontology connecting Cadres ➔ Competencies ➔ Official Manuals ➔ iGOT Modules ➔ NSSTA Labs with active pathway illumination."
+  }
+];
+
+let currentTourIndex = 0;
+
+function setupSIHTour() {
+  document.getElementById("btn-start-tour")?.addEventListener("click", startJuryTour);
+  document.getElementById("btn-tour-next")?.addEventListener("click", nextTourStep);
+  document.getElementById("btn-tour-prev")?.addEventListener("click", prevTourStep);
+  document.getElementById("btn-tour-exit")?.addEventListener("click", exitTour);
+}
+
+function startJuryTour() {
+  currentTourIndex = 0;
+  const banner = document.getElementById("sih-tour-banner");
+  if (banner) banner.style.display = "flex";
+  applyTourStep(0);
+}
+
+function applyTourStep(idx) {
+  const step = TOUR_STEPS[idx];
+  if (!step) return;
+
+  // Switch tab
+  const tabBtn = document.querySelector(`.nav-tab-btn[data-tab="${step.tab}"]`);
+  if (tabBtn) tabBtn.click();
+
+  // Update banner
+  const iconEl = document.getElementById("tour-step-icon");
+  const titleEl = document.getElementById("tour-step-title");
+  const descEl = document.getElementById("tour-step-desc");
+  const counterEl = document.getElementById("tour-step-counter");
+
+  if (iconEl) iconEl.textContent = step.icon;
+  if (titleEl) titleEl.textContent = `SIH Evaluation Tour • ${step.title}`;
+  if (descEl) descEl.textContent = step.desc;
+  if (counterEl) counterEl.textContent = `Engine ${step.step} of 7`;
+
+  // Update button states
+  const prevBtn = document.getElementById("btn-tour-prev");
+  const nextBtn = document.getElementById("btn-tour-next");
+  if (prevBtn) prevBtn.disabled = (idx === 0);
+  if (nextBtn) nextBtn.textContent = (idx === TOUR_STEPS.length - 1) ? "Finish Tour ✓" : "Next Engine ▶";
+}
+
+function nextTourStep() {
+  if (currentTourIndex < TOUR_STEPS.length - 1) {
+    currentTourIndex++;
+    applyTourStep(currentTourIndex);
+  } else {
+    exitTour();
+    alert("🏆 SIH Tour Complete!\nAll 7 AI/ML engines demonstrated successfully. Click 'SIH 26101 Docket' anytime to view the architecture.");
+  }
+}
+
+function prevTourStep() {
+  if (currentTourIndex > 0) {
+    currentTourIndex--;
+    applyTourStep(currentTourIndex);
+  }
+}
+
+function exitTour() {
+  const banner = document.getElementById("sih-tour-banner");
+  if (banner) banner.style.display = "none";
+}
+
+// 12. SIH Solution Docket Modal Controller
+function setupSIHDocketModal() {
+  const openBtn = document.getElementById("btn-open-sih-docket");
+  const closeBtn = document.getElementById("btn-close-sih-docket");
+  const modal = document.getElementById("sih-modal-backdrop");
+
+  if (openBtn && modal) {
+    openBtn.addEventListener("click", () => modal.classList.add("active"));
+  }
+  if (closeBtn && modal) {
+    closeBtn.addEventListener("click", () => modal.classList.remove("active"));
+  }
+  if (modal) {
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) modal.classList.remove("active");
+    });
+  }
+}
+
 
