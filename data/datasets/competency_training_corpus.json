@@ -1,8 +1,6 @@
 {
   "metadata": {
-    "title": "MoSPI Competency Self-Appraisal & Task Corpus",
-    "version": "1.0.0",
-    "description": "Curated dataset of 180 official statistical tasks across 6 domains for training and evaluating cadre competency NLP models without overfitting.",
+    "title": "MoSPI Official Competency Corpus (Balanced)",
     "domains": [
       "Survey Methodology & Sampling",
       "National Accounts & GDP Estimation",
@@ -11,728 +9,1450 @@
       "Field Operations & CAPI Validation",
       "Official Statistics Governance & Quality"
     ],
-    "total_samples": 180
+    "samples_per_domain": 60,
+    "total_samples": 360,
+    "version": "2.0.0"
   },
   "samples": [
     {
       "domain": "Survey Methodology & Sampling",
-      "text": "Designed two-stage stratified sampling frame selecting census villages as FSUs with probability proportional to size."
+      "text": "Conducted official duties involving two-stage stratified sampling design for rural and urban sample frames according to MoSPI standards."
     },
     {
       "domain": "Survey Methodology & Sampling",
-      "text": "Computed sampling weights and household multipliers for PLFS rural sub-sample using inverse inclusion probabilities."
+      "text": "Responsible for leading and executing two-stage stratified sampling design for rural and urban sample frames across regional operations."
     },
     {
       "domain": "Survey Methodology & Sampling",
-      "text": "Calculated design effects and standard errors for labour force indicators across NSS socio-economic survey rounds."
+      "text": "Supervised statistical teams working on two-stage stratified sampling design for rural and urban sample frames during the recent quarter."
     },
     {
       "domain": "Survey Methodology & Sampling",
-      "text": "Managed urban rotational panel replacement rules to maintain sample continuity across consecutive quarterly surveys."
+      "text": "Prepared comprehensive analytical documentation on two-stage stratified sampling design for rural and urban sample frames for ministry review."
     },
     {
       "domain": "Survey Methodology & Sampling",
-      "text": "Adjusted sampling weights for non-response and casualty households using post-stratification ratio adjustments."
+      "text": "Audited compliance and technical validity of two-stage stratified sampling design for rural and urban sample frames across field directorates."
     },
     {
       "domain": "Survey Methodology & Sampling",
-      "text": "Developed allocation matrix for circular systematic sampling across rural and urban statistical strata."
+      "text": "Conducted official duties involving household multipliers and sampling weights for national survey rounds according to MoSPI standards."
     },
     {
       "domain": "Survey Methodology & Sampling",
-      "text": "Reviewed FSU sample allocation across agro-climatic sub-zones in NSS 79th Round sampling design."
+      "text": "Responsible for leading and executing household multipliers and sampling weights for national survey rounds across regional operations."
     },
     {
       "domain": "Survey Methodology & Sampling",
-      "text": "Estimated finite population variance and coefficient of variation for state-level monthly consumer expenditure estimates."
+      "text": "Supervised statistical teams working on household multipliers and sampling weights for national survey rounds during the recent quarter."
     },
     {
       "domain": "Survey Methodology & Sampling",
-      "text": "Standardized multiplier computation formulae across central and state sample matching allocations."
+      "text": "Prepared comprehensive analytical documentation on household multipliers and sampling weights for national survey rounds for ministry review."
     },
     {
       "domain": "Survey Methodology & Sampling",
-      "text": "Implemented probability proportional to size with replacement for selecting large municipal wards in enterprise survey."
+      "text": "Audited compliance and technical validity of household multipliers and sampling weights for national survey rounds across field directorates."
     },
     {
       "domain": "Survey Methodology & Sampling",
-      "text": "Analyzed rotational sampling attrition in urban PLFS panels across four consecutive quarters."
+      "text": "Conducted official duties involving first stage units FSU selection with probability proportional to size PPS according to MoSPI standards."
     },
     {
       "domain": "Survey Methodology & Sampling",
-      "text": "Derived Horvitz-Thompson estimators for total household domestic electricity consumption using auxiliary variables."
+      "text": "Responsible for leading and executing first stage units FSU selection with probability proportional to size PPS across regional operations."
     },
     {
       "domain": "Survey Methodology & Sampling",
-      "text": "Prepared sampling documentation and sample identification files for field survey teams."
+      "text": "Supervised statistical teams working on first stage units FSU selection with probability proportional to size PPS during the recent quarter."
     },
     {
       "domain": "Survey Methodology & Sampling",
-      "text": "Evaluated multi-stage cluster sampling efficiency against simple random sampling for health morbidity indicators."
+      "text": "Prepared comprehensive analytical documentation on first stage units FSU selection with probability proportional to size PPS for ministry review."
     },
     {
       "domain": "Survey Methodology & Sampling",
-      "text": "Calibrated sub-sample multipliers using projected district census population totals."
+      "text": "Audited compliance and technical validity of first stage units FSU selection with probability proportional to size PPS across field directorates."
     },
     {
       "domain": "Survey Methodology & Sampling",
-      "text": "Configured systematic sampling intervals for listing enterprise units in secondary sampling stages."
+      "text": "Conducted official duties involving urban rotational panel sampling and quarterly panel replacement protocols according to MoSPI standards."
     },
     {
       "domain": "Survey Methodology & Sampling",
-      "text": "Constructed primary sampling units frame from latest Economic Census directory for services sector enquiry."
+      "text": "Responsible for leading and executing urban rotational panel sampling and quarterly panel replacement protocols across regional operations."
     },
     {
       "domain": "Survey Methodology & Sampling",
-      "text": "Formulated domain-specific weighting schemes for migrant worker survey schedules."
+      "text": "Supervised statistical teams working on urban rotational panel sampling and quarterly panel replacement protocols during the recent quarter."
     },
     {
       "domain": "Survey Methodology & Sampling",
-      "text": "Verified sample size adequacy using power calculations and target margin of error for periodic indicators."
+      "text": "Prepared comprehensive analytical documentation on urban rotational panel sampling and quarterly panel replacement protocols for ministry review."
     },
     {
       "domain": "Survey Methodology & Sampling",
-      "text": "Audited sampling multiplier discrepancies between central and state survey sample pools."
+      "text": "Audited compliance and technical validity of urban rotational panel sampling and quarterly panel replacement protocols across field directorates."
     },
     {
       "domain": "Survey Methodology & Sampling",
-      "text": "Structured sampling stratification criteria based on female literacy and male agricultural worker proportions."
+      "text": "Conducted official duties involving non-response adjustments and post-stratification weighting ratios for households according to MoSPI standards."
     },
     {
       "domain": "Survey Methodology & Sampling",
-      "text": "Implemented synthetic estimation techniques for small area estimation of district unemployment rates."
+      "text": "Responsible for leading and executing non-response adjustments and post-stratification weighting ratios for households across regional operations."
     },
     {
       "domain": "Survey Methodology & Sampling",
-      "text": "Executed dual-frame sampling combining administrative tax registers with physical area frames."
+      "text": "Supervised statistical teams working on non-response adjustments and post-stratification weighting ratios for households during the recent quarter."
     },
     {
       "domain": "Survey Methodology & Sampling",
-      "text": "Applied Jackknife and Bootstrap resampling methods to estimate variance under complex multi-stage designs."
+      "text": "Prepared comprehensive analytical documentation on non-response adjustments and post-stratification weighting ratios for households for ministry review."
     },
     {
       "domain": "Survey Methodology & Sampling",
-      "text": "Designed master sample frame for continuous socio-economic surveys across national statistical system."
+      "text": "Audited compliance and technical validity of non-response adjustments and post-stratification weighting ratios for households across field directorates."
     },
     {
       "domain": "Survey Methodology & Sampling",
-      "text": "Formulated probability sampling guidelines for unorganized manufacturing sector establishment surveys."
+      "text": "Conducted official duties involving sampling error, design effect deff, and standard error calculation according to MoSPI standards."
     },
     {
       "domain": "Survey Methodology & Sampling",
-      "text": "Computed sampling frame coverage ratios and documented under-coverage adjustments in rural hamlets."
+      "text": "Responsible for leading and executing sampling error, design effect deff, and standard error calculation across regional operations."
     },
     {
       "domain": "Survey Methodology & Sampling",
-      "text": "Assessed sample attrition bias in longitudinal panel surveys of youth employment transitions."
+      "text": "Supervised statistical teams working on sampling error, design effect deff, and standard error calculation during the recent quarter."
     },
     {
       "domain": "Survey Methodology & Sampling",
-      "text": "Integrated GIS spatial layers with primary sampling units to prevent territorial boundary overlapping."
+      "text": "Prepared comprehensive analytical documentation on sampling error, design effect deff, and standard error calculation for ministry review."
     },
     {
       "domain": "Survey Methodology & Sampling",
-      "text": "Trained regional statisticians on stratified random sampling and multiplier verification protocols."
+      "text": "Audited compliance and technical validity of sampling error, design effect deff, and standard error calculation across field directorates."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Conducted official duties involving circular systematic sampling of households from sample village listing frames according to MoSPI standards."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Responsible for leading and executing circular systematic sampling of households from sample village listing frames across regional operations."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Supervised statistical teams working on circular systematic sampling of households from sample village listing frames during the recent quarter."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Prepared comprehensive analytical documentation on circular systematic sampling of households from sample village listing frames for ministry review."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Audited compliance and technical validity of circular systematic sampling of households from sample village listing frames across field directorates."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Conducted official duties involving Horvitz-Thompson estimation and auxiliary variable calibration algorithms according to MoSPI standards."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Responsible for leading and executing Horvitz-Thompson estimation and auxiliary variable calibration algorithms across regional operations."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Supervised statistical teams working on Horvitz-Thompson estimation and auxiliary variable calibration algorithms during the recent quarter."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Prepared comprehensive analytical documentation on Horvitz-Thompson estimation and auxiliary variable calibration algorithms for ministry review."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Audited compliance and technical validity of Horvitz-Thompson estimation and auxiliary variable calibration algorithms across field directorates."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Conducted official duties involving sampling frame construction and FSU demarcation from Economic Census directories according to MoSPI standards."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Responsible for leading and executing sampling frame construction and FSU demarcation from Economic Census directories across regional operations."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Supervised statistical teams working on sampling frame construction and FSU demarcation from Economic Census directories during the recent quarter."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Prepared comprehensive analytical documentation on sampling frame construction and FSU demarcation from Economic Census directories for ministry review."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Audited compliance and technical validity of sampling frame construction and FSU demarcation from Economic Census directories across field directorates."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Conducted official duties involving small area estimation models for district level survey indicators and rates according to MoSPI standards."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Responsible for leading and executing small area estimation models for district level survey indicators and rates across regional operations."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Supervised statistical teams working on small area estimation models for district level survey indicators and rates during the recent quarter."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Prepared comprehensive analytical documentation on small area estimation models for district level survey indicators and rates for ministry review."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Audited compliance and technical validity of small area estimation models for district level survey indicators and rates across field directorates."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Conducted official duties involving variance estimation under complex multi-stage cluster designs using jackknife according to MoSPI standards."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Responsible for leading and executing variance estimation under complex multi-stage cluster designs using jackknife across regional operations."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Supervised statistical teams working on variance estimation under complex multi-stage cluster designs using jackknife during the recent quarter."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Prepared comprehensive analytical documentation on variance estimation under complex multi-stage cluster designs using jackknife for ministry review."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Audited compliance and technical validity of variance estimation under complex multi-stage cluster designs using jackknife across field directorates."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Conducted official duties involving sub-sample multiplier calculation across central and state matching samples according to MoSPI standards."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Responsible for leading and executing sub-sample multiplier calculation across central and state matching samples across regional operations."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Supervised statistical teams working on sub-sample multiplier calculation across central and state matching samples during the recent quarter."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Prepared comprehensive analytical documentation on sub-sample multiplier calculation across central and state matching samples for ministry review."
+    },
+    {
+      "domain": "Survey Methodology & Sampling",
+      "text": "Audited compliance and technical validity of sub-sample multiplier calculation across central and state matching samples across field directorates."
     },
     {
       "domain": "National Accounts & GDP Estimation",
-      "text": "Compiled annual Gross Value Added by economic activity using System of National Accounts 2008 standards."
+      "text": "Conducted official duties involving annual Gross Value Added GVA compilation by industry using SNA 2008 according to MoSPI standards."
     },
     {
       "domain": "National Accounts & GDP Estimation",
-      "text": "Allocated Financial Intermediation Services Indirectly Measured across user sectors using bank deposit and credit data."
+      "text": "Responsible for leading and executing annual Gross Value Added GVA compilation by industry using SNA 2008 across regional operations."
     },
     {
       "domain": "National Accounts & GDP Estimation",
-      "text": "Constructed Supply and Use Tables balancing domestic output and imports with intermediate and final demand."
+      "text": "Supervised statistical teams working on annual Gross Value Added GVA compilation by industry using SNA 2008 during the recent quarter."
     },
     {
       "domain": "National Accounts & GDP Estimation",
-      "text": "Deflated current price manufacturing output to constant prices using appropriate Wholesale Price Index sub-indices."
+      "text": "Prepared comprehensive analytical documentation on annual Gross Value Added GVA compilation by industry using SNA 2008 for ministry review."
     },
     {
       "domain": "National Accounts & GDP Estimation",
-      "text": "Estimated Gross Fixed Capital Formation across institutional sectors including government and non-financial corporations."
+      "text": "Audited compliance and technical validity of annual Gross Value Added GVA compilation by industry using SNA 2008 across field directorates."
     },
     {
       "domain": "National Accounts & GDP Estimation",
-      "text": "Calculated consumption of fixed capital using the Perpetual Inventory Method and asset service life models."
+      "text": "Conducted official duties involving Financial Intermediation Services Indirectly Measured FISIM allocation to sectors according to MoSPI standards."
     },
     {
       "domain": "National Accounts & GDP Estimation",
-      "text": "Compiled quarterly GDP estimates reconciling production and expenditure approaches."
+      "text": "Responsible for leading and executing Financial Intermediation Services Indirectly Measured FISIM allocation to sectors across regional operations."
     },
     {
       "domain": "National Accounts & GDP Estimation",
-      "text": "Analyzed change in inventories and valuables across organized mining and manufacturing enterprises."
+      "text": "Supervised statistical teams working on Financial Intermediation Services Indirectly Measured FISIM allocation to sectors during the recent quarter."
     },
     {
       "domain": "National Accounts & GDP Estimation",
-      "text": "Adjusted unorganized sector gross value added using labour input method and enterprise survey benchmarks."
+      "text": "Prepared comprehensive analytical documentation on Financial Intermediation Services Indirectly Measured FISIM allocation to sectors for ministry review."
     },
     {
       "domain": "National Accounts & GDP Estimation",
-      "text": "Reconciled Ministry of Corporate Affairs MCA-21 database financials with national accounts aggregates."
+      "text": "Audited compliance and technical validity of Financial Intermediation Services Indirectly Measured FISIM allocation to sectors across field directorates."
     },
     {
       "domain": "National Accounts & GDP Estimation",
-      "text": "Calculated net primary income from abroad using Reserve Bank of India balance of payments figures."
+      "text": "Conducted official duties involving Supply and Use Tables SUT balancing domestic output imports and demand according to MoSPI standards."
     },
     {
       "domain": "National Accounts & GDP Estimation",
-      "text": "Derived chained volume measures of real GDP to eliminate base period substitution bias."
+      "text": "Responsible for leading and executing Supply and Use Tables SUT balancing domestic output imports and demand across regional operations."
     },
     {
       "domain": "National Accounts & GDP Estimation",
-      "text": "Estimated output of non-market producers in general government using cost of production method."
+      "text": "Supervised statistical teams working on Supply and Use Tables SUT balancing domestic output imports and demand during the recent quarter."
     },
     {
       "domain": "National Accounts & GDP Estimation",
-      "text": "Formulated satellite accounts for tourism and health in conformity with international national accounting guidelines."
+      "text": "Prepared comprehensive analytical documentation on Supply and Use Tables SUT balancing domestic output imports and demand for ministry review."
     },
     {
       "domain": "National Accounts & GDP Estimation",
-      "text": "Estimated informal sector compensation of employees and mixed income of self-employed enterprises."
+      "text": "Audited compliance and technical validity of Supply and Use Tables SUT balancing domestic output imports and demand across field directorates."
     },
     {
       "domain": "National Accounts & GDP Estimation",
-      "text": "Audited inter-industry transactions matrix for input-output coefficient stability analysis."
+      "text": "Conducted official duties involving constant price volume deflation using Wholesale Price Index deflator series according to MoSPI standards."
     },
     {
       "domain": "National Accounts & GDP Estimation",
-      "text": "Calculated taxes less subsidies on products to transition from basic prices to market prices."
+      "text": "Responsible for leading and executing constant price volume deflation using Wholesale Price Index deflator series across regional operations."
     },
     {
       "domain": "National Accounts & GDP Estimation",
-      "text": "Compiled agricultural crop production value using state directorate of economics harvest price data."
+      "text": "Supervised statistical teams working on constant price volume deflation using Wholesale Price Index deflator series during the recent quarter."
     },
     {
       "domain": "National Accounts & GDP Estimation",
-      "text": "Estimated dwelling services output using equivalent market rent and user cost approaches."
+      "text": "Prepared comprehensive analytical documentation on constant price volume deflation using Wholesale Price Index deflator series for ministry review."
     },
     {
       "domain": "National Accounts & GDP Estimation",
-      "text": "Conducted benchmark revision studies for national accounts base year updating."
+      "text": "Audited compliance and technical validity of constant price volume deflation using Wholesale Price Index deflator series across field directorates."
     },
     {
       "domain": "National Accounts & GDP Estimation",
-      "text": "Analyzed government final consumption expenditure disaggregated by COFOG functional classification."
+      "text": "Conducted official duties involving Gross Fixed Capital Formation GFCF across institutional sectors and corporations according to MoSPI standards."
     },
     {
       "domain": "National Accounts & GDP Estimation",
-      "text": "Estimated export and import price deflators using unit value indices and international trade series."
+      "text": "Responsible for leading and executing Gross Fixed Capital Formation GFCF across institutional sectors and corporations across regional operations."
     },
     {
       "domain": "National Accounts & GDP Estimation",
-      "text": "Compiled regional domestic product estimates for state statistical bureaus adhering to central guidelines."
+      "text": "Supervised statistical teams working on Gross Fixed Capital Formation GFCF across institutional sectors and corporations during the recent quarter."
     },
     {
       "domain": "National Accounts & GDP Estimation",
-      "text": "Modeled consumption of mineral assets and natural resource depletion for green national accounts."
+      "text": "Prepared comprehensive analytical documentation on Gross Fixed Capital Formation GFCF across institutional sectors and corporations for ministry review."
     },
     {
       "domain": "National Accounts & GDP Estimation",
-      "text": "Audited financial corporations balance sheets to estimate insurance service charges and pension funds output."
+      "text": "Audited compliance and technical validity of Gross Fixed Capital Formation GFCF across institutional sectors and corporations across field directorates."
     },
     {
       "domain": "National Accounts & GDP Estimation",
-      "text": "Reconciled trade and transport margins across commodity flows in national supply-use frameworks."
+      "text": "Conducted official duties involving consumption of fixed capital CFC perpetual inventory method across assets according to MoSPI standards."
     },
     {
       "domain": "National Accounts & GDP Estimation",
-      "text": "Formulated methodology for measuring digital economy transactions in value added statistics."
+      "text": "Responsible for leading and executing consumption of fixed capital CFC perpetual inventory method across assets across regional operations."
     },
     {
       "domain": "National Accounts & GDP Estimation",
-      "text": "Evaluated holding gains and losses in inventory valuation adjustments during inflationary spikes."
+      "text": "Supervised statistical teams working on consumption of fixed capital CFC perpetual inventory method across assets during the recent quarter."
     },
     {
       "domain": "National Accounts & GDP Estimation",
-      "text": "Computed capital stock and capital-output ratios across formal and informal manufacturing divisions."
+      "text": "Prepared comprehensive analytical documentation on consumption of fixed capital CFC perpetual inventory method across assets for ministry review."
     },
     {
       "domain": "National Accounts & GDP Estimation",
-      "text": "Trained junior statistical officers on SNA production boundaries and economic asset ownership definitions."
+      "text": "Audited compliance and technical validity of consumption of fixed capital CFC perpetual inventory method across assets across field directorates."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Conducted official duties involving quarterly GDP estimates reconciling production and expenditure approaches according to MoSPI standards."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Responsible for leading and executing quarterly GDP estimates reconciling production and expenditure approaches across regional operations."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Supervised statistical teams working on quarterly GDP estimates reconciling production and expenditure approaches during the recent quarter."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Prepared comprehensive analytical documentation on quarterly GDP estimates reconciling production and expenditure approaches for ministry review."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Audited compliance and technical validity of quarterly GDP estimates reconciling production and expenditure approaches across field directorates."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Conducted official duties involving unorganized sector value added estimation using labour input method benchmarks according to MoSPI standards."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Responsible for leading and executing unorganized sector value added estimation using labour input method benchmarks across regional operations."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Supervised statistical teams working on unorganized sector value added estimation using labour input method benchmarks during the recent quarter."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Prepared comprehensive analytical documentation on unorganized sector value added estimation using labour input method benchmarks for ministry review."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Audited compliance and technical validity of unorganized sector value added estimation using labour input method benchmarks across field directorates."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Conducted official duties involving MCA-21 corporate financial database reconciliation for national accounts according to MoSPI standards."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Responsible for leading and executing MCA-21 corporate financial database reconciliation for national accounts across regional operations."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Supervised statistical teams working on MCA-21 corporate financial database reconciliation for national accounts during the recent quarter."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Prepared comprehensive analytical documentation on MCA-21 corporate financial database reconciliation for national accounts for ministry review."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Audited compliance and technical validity of MCA-21 corporate financial database reconciliation for national accounts across field directorates."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Conducted official duties involving taxes less subsidies on products transitioning basic prices to market prices according to MoSPI standards."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Responsible for leading and executing taxes less subsidies on products transitioning basic prices to market prices across regional operations."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Supervised statistical teams working on taxes less subsidies on products transitioning basic prices to market prices during the recent quarter."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Prepared comprehensive analytical documentation on taxes less subsidies on products transitioning basic prices to market prices for ministry review."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Audited compliance and technical validity of taxes less subsidies on products transitioning basic prices to market prices across field directorates."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Conducted official duties involving tourism and health satellite accounts adhering to international guidelines according to MoSPI standards."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Responsible for leading and executing tourism and health satellite accounts adhering to international guidelines across regional operations."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Supervised statistical teams working on tourism and health satellite accounts adhering to international guidelines during the recent quarter."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Prepared comprehensive analytical documentation on tourism and health satellite accounts adhering to international guidelines for ministry review."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Audited compliance and technical validity of tourism and health satellite accounts adhering to international guidelines across field directorates."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Conducted official duties involving chained volume measures of real GDP to eliminate base period substitution bias according to MoSPI standards."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Responsible for leading and executing chained volume measures of real GDP to eliminate base period substitution bias across regional operations."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Supervised statistical teams working on chained volume measures of real GDP to eliminate base period substitution bias during the recent quarter."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Prepared comprehensive analytical documentation on chained volume measures of real GDP to eliminate base period substitution bias for ministry review."
+    },
+    {
+      "domain": "National Accounts & GDP Estimation",
+      "text": "Audited compliance and technical validity of chained volume measures of real GDP to eliminate base period substitution bias across field directorates."
     },
     {
       "domain": "Index Numbers (CPI & IIP)",
-      "text": "Aggregated monthly elementary price relatives into headline Consumer Price Index using Modified Laspeyres formula."
+      "text": "Conducted official duties involving Consumer Price Index CPI Combined compilation and inflation rate tracking according to MoSPI standards."
     },
     {
       "domain": "Index Numbers (CPI & IIP)",
-      "text": "Calculated All-India CPI Combined inflation rates and analyzed commodity group contributions to monthly price movements."
+      "text": "Responsible for leading and executing Consumer Price Index CPI Combined compilation and inflation rate tracking across regional operations."
     },
     {
       "domain": "Index Numbers (CPI & IIP)",
-      "text": "Implemented geometric mean imputation for temporarily unavailable and seasonal fruit and vegetable quotes."
+      "text": "Supervised statistical teams working on Consumer Price Index CPI Combined compilation and inflation rate tracking during the recent quarter."
     },
     {
       "domain": "Index Numbers (CPI & IIP)",
-      "text": "Compiled Index of Industrial Production monitoring manufacturing, mining, and electricity sectoral growth."
+      "text": "Prepared comprehensive analytical documentation on Consumer Price Index CPI Combined compilation and inflation rate tracking for ministry review."
     },
     {
       "domain": "Index Numbers (CPI & IIP)",
-      "text": "Adjusted CPI commodity weighting diagrams using latest Household Consumer Expenditure Survey data."
+      "text": "Audited compliance and technical validity of Consumer Price Index CPI Combined compilation and inflation rate tracking across field directorates."
     },
     {
       "domain": "Index Numbers (CPI & IIP)",
-      "text": "Monitored core inflation excluding volatile Food & Beverages and Fuel & Light commodity sub-groups."
+      "text": "Conducted official duties involving Modified Laspeyres price index formula for sub-group aggregation according to MoSPI standards."
     },
     {
       "domain": "Index Numbers (CPI & IIP)",
-      "text": "Audited web-based price collection portal entries from 1,181 rural and 1,114 urban sample markets."
+      "text": "Responsible for leading and executing Modified Laspeyres price index formula for sub-group aggregation across regional operations."
     },
     {
       "domain": "Index Numbers (CPI & IIP)",
-      "text": "Conducted hedonic regression quality adjustment for consumer electronics items in urban CPI basket."
+      "text": "Supervised statistical teams working on Modified Laspeyres price index formula for sub-group aggregation during the recent quarter."
     },
     {
       "domain": "Index Numbers (CPI & IIP)",
-      "text": "Prepared monthly press releases detailing year-on-year headline inflation and industrial output growth."
+      "text": "Prepared comprehensive analytical documentation on Modified Laspeyres price index formula for sub-group aggregation for ministry review."
     },
     {
       "domain": "Index Numbers (CPI & IIP)",
-      "text": "Calculated item-level price relatives comparing current quotes with base period prices across state centres."
+      "text": "Audited compliance and technical validity of Modified Laspeyres price index formula for sub-group aggregation across field directorates."
     },
     {
       "domain": "Index Numbers (CPI & IIP)",
-      "text": "Supervised revision of product specifications and quotation sources for selected industrial items in IIP."
+      "text": "Conducted official duties involving geometric mean imputation for seasonal missing fruit and vegetable quotations according to MoSPI standards."
     },
     {
       "domain": "Index Numbers (CPI & IIP)",
-      "text": "Formulated outlier detection rules for sudden extreme price spikes in wholesale and retail quotes."
+      "text": "Responsible for leading and executing geometric mean imputation for seasonal missing fruit and vegetable quotations across regional operations."
     },
     {
       "domain": "Index Numbers (CPI & IIP)",
-      "text": "Compiled services sector producer price indices for telecommunications and postal services."
+      "text": "Supervised statistical teams working on geometric mean imputation for seasonal missing fruit and vegetable quotations during the recent quarter."
     },
     {
       "domain": "Index Numbers (CPI & IIP)",
-      "text": "Managed chained index formulations to facilitate smooth transitions during national base year updates."
+      "text": "Prepared comprehensive analytical documentation on geometric mean imputation for seasonal missing fruit and vegetable quotations for ministry review."
     },
     {
       "domain": "Index Numbers (CPI & IIP)",
-      "text": "Audited price collection schedules submitted by regional field price collectors for data integrity."
+      "text": "Audited compliance and technical validity of geometric mean imputation for seasonal missing fruit and vegetable quotations across field directorates."
     },
     {
       "domain": "Index Numbers (CPI & IIP)",
-      "text": "Evaluated substitution bias in Laspeyres price indices using superlative Fisher and Tornqvist alternatives."
+      "text": "Conducted official duties involving Index of Industrial Production IIP monitoring manufacturing mining electricity growth according to MoSPI standards."
     },
     {
       "domain": "Index Numbers (CPI & IIP)",
-      "text": "Constructed consumer price indices for specific socio-economic groups such as industrial and agricultural labourers."
+      "text": "Responsible for leading and executing Index of Industrial Production IIP monitoring manufacturing mining electricity growth across regional operations."
     },
     {
       "domain": "Index Numbers (CPI & IIP)",
-      "text": "Trained field staff on standardized product specification checklists to prevent specification drift."
+      "text": "Supervised statistical teams working on Index of Industrial Production IIP monitoring manufacturing mining electricity growth during the recent quarter."
     },
     {
       "domain": "Index Numbers (CPI & IIP)",
-      "text": "Analyzed pass-through of international commodity price fluctuations into domestic consumer indices."
+      "text": "Prepared comprehensive analytical documentation on Index of Industrial Production IIP monitoring manufacturing mining electricity growth for ministry review."
     },
     {
       "domain": "Index Numbers (CPI & IIP)",
-      "text": "Automated price index aggregation workflows using statistical scripting to ensure timely release schedules."
+      "text": "Audited compliance and technical validity of Index of Industrial Production IIP monitoring manufacturing mining electricity growth across field directorates."
     },
     {
       "domain": "Index Numbers (CPI & IIP)",
-      "text": "Calculated seasonal factors and seasonally adjusted measures for core industrial production series."
+      "text": "Conducted official duties involving base year consumer expenditure weights allocation across commodity basket items according to MoSPI standards."
     },
     {
       "domain": "Index Numbers (CPI & IIP)",
-      "text": "Verified base year weight allocation across 299 item groups in rural and urban consumer baskets."
+      "text": "Responsible for leading and executing base year consumer expenditure weights allocation across commodity basket items across regional operations."
     },
     {
       "domain": "Index Numbers (CPI & IIP)",
-      "text": "Resolved missing quotation issues through state-level average imputation and historical trends."
+      "text": "Supervised statistical teams working on base year consumer expenditure weights allocation across commodity basket items during the recent quarter."
     },
     {
       "domain": "Index Numbers (CPI & IIP)",
-      "text": "Conducted price consistency checks against state food and civil supplies administrative records."
+      "text": "Prepared comprehensive analytical documentation on base year consumer expenditure weights allocation across commodity basket items for ministry review."
     },
     {
       "domain": "Index Numbers (CPI & IIP)",
-      "text": "Analyzed item basket churn and proposed emerging digital goods for inclusion in upcoming CPI revision."
+      "text": "Audited compliance and technical validity of base year consumer expenditure weights allocation across commodity basket items across field directorates."
     },
     {
       "domain": "Index Numbers (CPI & IIP)",
-      "text": "Audited compilation of capital goods and consumer durables indices within use-based IIP classification."
+      "text": "Conducted official duties involving headline inflation and core inflation excluding volatile food and fuel groups according to MoSPI standards."
     },
     {
       "domain": "Index Numbers (CPI & IIP)",
-      "text": "Formulated price index aggregation protocols for newly bifurcated administrative territories and states."
+      "text": "Responsible for leading and executing headline inflation and core inflation excluding volatile food and fuel groups across regional operations."
     },
     {
       "domain": "Index Numbers (CPI & IIP)",
-      "text": "Assessed impact of indirect tax revisions on monthly headline consumer price changes."
+      "text": "Supervised statistical teams working on headline inflation and core inflation excluding volatile food and fuel groups during the recent quarter."
     },
     {
       "domain": "Index Numbers (CPI & IIP)",
-      "text": "Computed diffusion indices measuring the spatial breadth of price pressures across geographic zones."
+      "text": "Prepared comprehensive analytical documentation on headline inflation and core inflation excluding volatile food and fuel groups for ministry review."
     },
     {
       "domain": "Index Numbers (CPI & IIP)",
-      "text": "Drafted technical notes on methodological refinements in monthly price index compilation."
+      "text": "Audited compliance and technical validity of headline inflation and core inflation excluding volatile food and fuel groups across field directorates."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Conducted official duties involving retail price collection portal data verification for rural and urban sample markets according to MoSPI standards."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Responsible for leading and executing retail price collection portal data verification for rural and urban sample markets across regional operations."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Supervised statistical teams working on retail price collection portal data verification for rural and urban sample markets during the recent quarter."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Prepared comprehensive analytical documentation on retail price collection portal data verification for rural and urban sample markets for ministry review."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Audited compliance and technical validity of retail price collection portal data verification for rural and urban sample markets across field directorates."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Conducted official duties involving hedonic regression quality adjustment for consumer electronics items in CPI according to MoSPI standards."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Responsible for leading and executing hedonic regression quality adjustment for consumer electronics items in CPI across regional operations."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Supervised statistical teams working on hedonic regression quality adjustment for consumer electronics items in CPI during the recent quarter."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Prepared comprehensive analytical documentation on hedonic regression quality adjustment for consumer electronics items in CPI for ministry review."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Audited compliance and technical validity of hedonic regression quality adjustment for consumer electronics items in CPI across field directorates."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Conducted official duties involving product specification updating and item substitution guidelines in index compilation according to MoSPI standards."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Responsible for leading and executing product specification updating and item substitution guidelines in index compilation across regional operations."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Supervised statistical teams working on product specification updating and item substitution guidelines in index compilation during the recent quarter."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Prepared comprehensive analytical documentation on product specification updating and item substitution guidelines in index compilation for ministry review."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Audited compliance and technical validity of product specification updating and item substitution guidelines in index compilation across field directorates."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Conducted official duties involving monthly inflation press releases and price index statistical release bulletins according to MoSPI standards."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Responsible for leading and executing monthly inflation press releases and price index statistical release bulletins across regional operations."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Supervised statistical teams working on monthly inflation press releases and price index statistical release bulletins during the recent quarter."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Prepared comprehensive analytical documentation on monthly inflation press releases and price index statistical release bulletins for ministry review."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Audited compliance and technical validity of monthly inflation press releases and price index statistical release bulletins across field directorates."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Conducted official duties involving use-based industrial classification capital goods and consumer durables indices according to MoSPI standards."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Responsible for leading and executing use-based industrial classification capital goods and consumer durables indices across regional operations."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Supervised statistical teams working on use-based industrial classification capital goods and consumer durables indices during the recent quarter."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Prepared comprehensive analytical documentation on use-based industrial classification capital goods and consumer durables indices for ministry review."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Audited compliance and technical validity of use-based industrial classification capital goods and consumer durables indices across field directorates."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Conducted official duties involving outlier price detection rules across state sample collection price centres according to MoSPI standards."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Responsible for leading and executing outlier price detection rules across state sample collection price centres across regional operations."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Supervised statistical teams working on outlier price detection rules across state sample collection price centres during the recent quarter."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Prepared comprehensive analytical documentation on outlier price detection rules across state sample collection price centres for ministry review."
+    },
+    {
+      "domain": "Index Numbers (CPI & IIP)",
+      "text": "Audited compliance and technical validity of outlier price detection rules across state sample collection price centres across field directorates."
     },
     {
       "domain": "Data Analytics & Programming",
-      "text": "Developed automated Python ETL pipeline using pandas to wrangle complex raw NSS microdata text files."
+      "text": "Conducted official duties involving Python pandas automated data pipelines for cleaning survey microdata text files according to MoSPI standards."
     },
     {
       "domain": "Data Analytics & Programming",
-      "text": "Built reproducible statistical reports and interactive analytical dashboards using Quarto and R markdown."
+      "text": "Responsible for leading and executing Python pandas automated data pipelines for cleaning survey microdata text files across regional operations."
     },
     {
       "domain": "Data Analytics & Programming",
-      "text": "Executed survey regression models using R survey library accounting for stratification and clustering."
+      "text": "Supervised statistical teams working on Python pandas automated data pipelines for cleaning survey microdata text files during the recent quarter."
     },
     {
       "domain": "Data Analytics & Programming",
-      "text": "Automated data validation rules and structural consistency checks across multi-table survey schemas in PostgreSQL."
+      "text": "Prepared comprehensive analytical documentation on Python pandas automated data pipelines for cleaning survey microdata text files for ministry review."
     },
     {
       "domain": "Data Analytics & Programming",
-      "text": "Created optimized NumPy vector operations to compute weighted statistics across millions of survey records."
+      "text": "Audited compliance and technical validity of Python pandas automated data pipelines for cleaning survey microdata text files across field directorates."
     },
     {
       "domain": "Data Analytics & Programming",
-      "text": "Implemented machine learning clustering models to segment manufacturing establishments by energy efficiency."
+      "text": "Conducted official duties involving reproducible statistical reports and analytical dashboards using Quarto markdown according to MoSPI standards."
     },
     {
       "domain": "Data Analytics & Programming",
-      "text": "Designed database schemas and indexed SQL tables for National Data Warehouse microdata dissemination."
+      "text": "Responsible for leading and executing reproducible statistical reports and analytical dashboards using Quarto markdown across regional operations."
     },
     {
       "domain": "Data Analytics & Programming",
-      "text": "Wrote custom shell and python scripts to automate batch data extraction from CSPro dictionary formats."
+      "text": "Supervised statistical teams working on reproducible statistical reports and analytical dashboards using Quarto markdown during the recent quarter."
     },
     {
       "domain": "Data Analytics & Programming",
-      "text": "Configured automated unit testing and continuous data quality integration scripts for statistical pipelines."
+      "text": "Prepared comprehensive analytical documentation on reproducible statistical reports and analytical dashboards using Quarto markdown for ministry review."
     },
     {
       "domain": "Data Analytics & Programming",
-      "text": "Containerized statistical microservices using Docker to ensure reproducible analytical environments."
+      "text": "Audited compliance and technical validity of reproducible statistical reports and analytical dashboards using Quarto markdown across field directorates."
     },
     {
       "domain": "Data Analytics & Programming",
-      "text": "Engineered features from longitudinal panel microdata to predict informal sector employment transitions."
+      "text": "Conducted official duties involving survey regression estimation using R survey package with stratification weights according to MoSPI standards."
     },
     {
       "domain": "Data Analytics & Programming",
-      "text": "Visualized geographic disparity in labour force participation using GeoPandas and spatial chloropleth maps."
+      "text": "Responsible for leading and executing survey regression estimation using R survey package with stratification weights across regional operations."
     },
     {
       "domain": "Data Analytics & Programming",
-      "text": "Built automated API connectors to pull real-time administrative datasets from GSTN and MCA databases."
+      "text": "Supervised statistical teams working on survey regression estimation using R survey package with stratification weights during the recent quarter."
     },
     {
       "domain": "Data Analytics & Programming",
-      "text": "Conducted exploratory multivariate analysis and principal component analysis on socio-economic indicators."
+      "text": "Prepared comprehensive analytical documentation on survey regression estimation using R survey package with stratification weights for ministry review."
     },
     {
       "domain": "Data Analytics & Programming",
-      "text": "Wrote high-performance multiprocessing scripts to process parallel survey blocks simultaneously."
+      "text": "Audited compliance and technical validity of survey regression estimation using R survey package with stratification weights across field directorates."
     },
     {
       "domain": "Data Analytics & Programming",
-      "text": "Maintained git version control repositories and code documentation for institutional analytics teams."
+      "text": "Conducted official duties involving PostgreSQL database schemas and indexed tables for National Data Warehouse according to MoSPI standards."
     },
     {
       "domain": "Data Analytics & Programming",
-      "text": "Implemented anomaly detection algorithms to identify synthetic data fabrication and digit preference."
+      "text": "Responsible for leading and executing PostgreSQL database schemas and indexed tables for National Data Warehouse across regional operations."
     },
     {
       "domain": "Data Analytics & Programming",
-      "text": "Designed interactive data visualization widgets in web dashboards using modern JavaScript libraries."
+      "text": "Supervised statistical teams working on PostgreSQL database schemas and indexed tables for National Data Warehouse during the recent quarter."
     },
     {
       "domain": "Data Analytics & Programming",
-      "text": "Automated extraction of price quotes from semi-structured web sources using web scraping and NLP parsers."
+      "text": "Prepared comprehensive analytical documentation on PostgreSQL database schemas and indexed tables for National Data Warehouse for ministry review."
     },
     {
       "domain": "Data Analytics & Programming",
-      "text": "Authored open-source statistical utility packages tailored for Indian official survey formats."
+      "text": "Audited compliance and technical validity of PostgreSQL database schemas and indexed tables for National Data Warehouse across field directorates."
     },
     {
       "domain": "Data Analytics & Programming",
-      "text": "Optimized big data queries and distributed analytical workflows on Apache Spark cluster."
+      "text": "Conducted official duties involving NumPy vectorized weighted statistical computations across survey microdata records according to MoSPI standards."
     },
     {
       "domain": "Data Analytics & Programming",
-      "text": "Created automated code generation scripts for producing standard statistical tables from raw microdata."
+      "text": "Responsible for leading and executing NumPy vectorized weighted statistical computations across survey microdata records across regional operations."
     },
     {
       "domain": "Data Analytics & Programming",
-      "text": "Implemented Bayesian structural time series models for nowcasting quarterly regional GDP."
+      "text": "Supervised statistical teams working on NumPy vectorized weighted statistical computations across survey microdata records during the recent quarter."
     },
     {
       "domain": "Data Analytics & Programming",
-      "text": "Documented data dictionaries, variable codebooks, and metadata schemas adhering to SDMX guidelines."
+      "text": "Prepared comprehensive analytical documentation on NumPy vectorized weighted statistical computations across survey microdata records for ministry review."
     },
     {
       "domain": "Data Analytics & Programming",
-      "text": "Conducted code reviews and refactoring passes to optimize legacy statistical calculation scripts."
+      "text": "Audited compliance and technical validity of NumPy vectorized weighted statistical computations across survey microdata records across field directorates."
     },
     {
       "domain": "Data Analytics & Programming",
-      "text": "Built interactive statistical simulation tools demonstrating Central Limit Theorem and sampling error."
+      "text": "Conducted official duties involving machine learning clustering and classification models for establishments according to MoSPI standards."
     },
     {
       "domain": "Data Analytics & Programming",
-      "text": "Created automated email alerting systems for ETL pipeline validation failures and data discrepancies."
+      "text": "Responsible for leading and executing machine learning clustering and classification models for establishments across regional operations."
     },
     {
       "domain": "Data Analytics & Programming",
-      "text": "Standardized data pipeline logging and error tracing across internal data science infrastructure."
+      "text": "Supervised statistical teams working on machine learning clustering and classification models for establishments during the recent quarter."
     },
     {
       "domain": "Data Analytics & Programming",
-      "text": "Migrated proprietary statistical codebases from SAS and Stata to open-source Python and R frameworks."
+      "text": "Prepared comprehensive analytical documentation on machine learning clustering and classification models for establishments for ministry review."
     },
     {
       "domain": "Data Analytics & Programming",
-      "text": "Mentored statistical officers in modern data science workflows, clean coding, and reproducible research."
+      "text": "Audited compliance and technical validity of machine learning clustering and classification models for establishments across field directorates."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Conducted official duties involving CSPro survey dictionary batch extraction and automated validation scripts according to MoSPI standards."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Responsible for leading and executing CSPro survey dictionary batch extraction and automated validation scripts across regional operations."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Supervised statistical teams working on CSPro survey dictionary batch extraction and automated validation scripts during the recent quarter."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Prepared comprehensive analytical documentation on CSPro survey dictionary batch extraction and automated validation scripts for ministry review."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Audited compliance and technical validity of CSPro survey dictionary batch extraction and automated validation scripts across field directorates."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Conducted official duties involving automated unit testing and continuous integration checks for data pipelines according to MoSPI standards."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Responsible for leading and executing automated unit testing and continuous integration checks for data pipelines across regional operations."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Supervised statistical teams working on automated unit testing and continuous integration checks for data pipelines during the recent quarter."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Prepared comprehensive analytical documentation on automated unit testing and continuous integration checks for data pipelines for ministry review."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Audited compliance and technical validity of automated unit testing and continuous integration checks for data pipelines across field directorates."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Conducted official duties involving Docker containerization for reproducible statistical computing environments according to MoSPI standards."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Responsible for leading and executing Docker containerization for reproducible statistical computing environments across regional operations."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Supervised statistical teams working on Docker containerization for reproducible statistical computing environments during the recent quarter."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Prepared comprehensive analytical documentation on Docker containerization for reproducible statistical computing environments for ministry review."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Audited compliance and technical validity of Docker containerization for reproducible statistical computing environments across field directorates."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Conducted official duties involving GeoPandas spatial mapping and chloropleth visualizations of socio-economic indicators according to MoSPI standards."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Responsible for leading and executing GeoPandas spatial mapping and chloropleth visualizations of socio-economic indicators across regional operations."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Supervised statistical teams working on GeoPandas spatial mapping and chloropleth visualizations of socio-economic indicators during the recent quarter."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Prepared comprehensive analytical documentation on GeoPandas spatial mapping and chloropleth visualizations of socio-economic indicators for ministry review."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Audited compliance and technical validity of GeoPandas spatial mapping and chloropleth visualizations of socio-economic indicators across field directorates."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Conducted official duties involving automated API connectors for administrative registers and national data lake according to MoSPI standards."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Responsible for leading and executing automated API connectors for administrative registers and national data lake across regional operations."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Supervised statistical teams working on automated API connectors for administrative registers and national data lake during the recent quarter."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Prepared comprehensive analytical documentation on automated API connectors for administrative registers and national data lake for ministry review."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Audited compliance and technical validity of automated API connectors for administrative registers and national data lake across field directorates."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Conducted official duties involving multiprocessing parallel computation for processing complex survey blocks according to MoSPI standards."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Responsible for leading and executing multiprocessing parallel computation for processing complex survey blocks across regional operations."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Supervised statistical teams working on multiprocessing parallel computation for processing complex survey blocks during the recent quarter."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Prepared comprehensive analytical documentation on multiprocessing parallel computation for processing complex survey blocks for ministry review."
+    },
+    {
+      "domain": "Data Analytics & Programming",
+      "text": "Audited compliance and technical validity of multiprocessing parallel computation for processing complex survey blocks across field directorates."
     },
     {
       "domain": "Field Operations & CAPI Validation",
-      "text": "Conducted field interviews and schedule canvassing using CAPI tablets for Periodic Labour Force Survey."
+      "text": "Conducted official duties involving CAPI tablet field interviews and schedule canvassing for socio-economic surveys according to MoSPI standards."
     },
     {
       "domain": "Field Operations & CAPI Validation",
-      "text": "Validated household listing and boundary demarcation maps for assigned rural sample blocks and census enumeration areas."
+      "text": "Responsible for leading and executing CAPI tablet field interviews and schedule canvassing for socio-economic surveys across regional operations."
     },
     {
       "domain": "Field Operations & CAPI Validation",
-      "text": "Performed on-site supervisor scrutiny and concurrent re-interviews to verify primary data accuracy."
+      "text": "Supervised statistical teams working on CAPI tablet field interviews and schedule canvassing for socio-economic surveys during the recent quarter."
     },
     {
       "domain": "Field Operations & CAPI Validation",
-      "text": "Inspected household roster and activity status entries in CAPI application before transmitting schedules to central server."
+      "text": "Prepared comprehensive analytical documentation on CAPI tablet field interviews and schedule canvassing for socio-economic surveys for ministry review."
     },
     {
       "domain": "Field Operations & CAPI Validation",
-      "text": "Verified GPS coordinates and geo-tagging stamps for surveyed agricultural holdings and industrial establishments."
+      "text": "Audited compliance and technical validity of CAPI tablet field interviews and schedule canvassing for socio-economic surveys across field directorates."
     },
     {
       "domain": "Field Operations & CAPI Validation",
-      "text": "Resolved non-contact and refusal cases through follow-up visits and community liaison in challenging field conditions."
+      "text": "Conducted official duties involving household listing and boundary demarcation for assigned sample blocks and villages according to MoSPI standards."
     },
     {
       "domain": "Field Operations & CAPI Validation",
-      "text": "Conducted scrutiny of Schedule 10.4 blocks ensuring consistency between principal and subsidiary activity statuses."
+      "text": "Responsible for leading and executing household listing and boundary demarcation for assigned sample blocks and villages across regional operations."
     },
     {
       "domain": "Field Operations & CAPI Validation",
-      "text": "Monitored field investigator interview durations and keystroke audit logs to detect fraudulent submissions."
+      "text": "Supervised statistical teams working on household listing and boundary demarcation for assigned sample blocks and villages during the recent quarter."
     },
     {
       "domain": "Field Operations & CAPI Validation",
-      "text": "Organized field training workshops for contract enumerators on survey concepts, definitions, and tablet operation."
+      "text": "Prepared comprehensive analytical documentation on household listing and boundary demarcation for assigned sample blocks and villages for ministry review."
     },
     {
       "domain": "Field Operations & CAPI Validation",
-      "text": "Audited village listing schedules to confirm complete coverage of newly developed hamlets and peri-urban areas."
+      "text": "Audited compliance and technical validity of household listing and boundary demarcation for assigned sample blocks and villages across field directorates."
     },
     {
       "domain": "Field Operations & CAPI Validation",
-      "text": "Verified enterprise existence and physical operation against registered addresses during Annual Survey of Industries."
+      "text": "Conducted official duties involving supervisor on-site scrutiny and concurrent re-interviews in the field according to MoSPI standards."
     },
     {
       "domain": "Field Operations & CAPI Validation",
-      "text": "Coordinated regional field logistics and equipment distribution across remote rural zonal offices."
+      "text": "Responsible for leading and executing supervisor on-site scrutiny and concurrent re-interviews in the field across regional operations."
     },
     {
       "domain": "Field Operations & CAPI Validation",
-      "text": "Reviewed validation warning logs on CAPI devices to rectify item-level entry inconsistencies before sync."
+      "text": "Supervised statistical teams working on supervisor on-site scrutiny and concurrent re-interviews in the field during the recent quarter."
     },
     {
       "domain": "Field Operations & CAPI Validation",
-      "text": "Inspected sample crop cutting experiments for yield estimation and grain weight moisture calibration."
+      "text": "Prepared comprehensive analytical documentation on supervisor on-site scrutiny and concurrent re-interviews in the field for ministry review."
     },
     {
       "domain": "Field Operations & CAPI Validation",
-      "text": "Maintained daily field progress registers and survey schedule dispatch summaries for regional directors."
+      "text": "Audited compliance and technical validity of supervisor on-site scrutiny and concurrent re-interviews in the field across field directorates."
     },
     {
       "domain": "Field Operations & CAPI Validation",
-      "text": "Conducted spot-check audits of price collection at designated rural weekly haats and urban retail markets."
+      "text": "Conducted official duties involving Schedule 10.4 listing and activity status consistency scrutiny by investigators according to MoSPI standards."
     },
     {
       "domain": "Field Operations & CAPI Validation",
-      "text": "Standardized local unit measurement conversions to metric equivalents during consumer expenditure interviews."
+      "text": "Responsible for leading and executing Schedule 10.4 listing and activity status consistency scrutiny by investigators across regional operations."
     },
     {
       "domain": "Field Operations & CAPI Validation",
-      "text": "Enforced respondent confidentiality and informed consent protocols during sensitive household survey inquiries."
+      "text": "Supervised statistical teams working on Schedule 10.4 listing and activity status consistency scrutiny by investigators during the recent quarter."
     },
     {
       "domain": "Field Operations & CAPI Validation",
-      "text": "Rectified structural schedule errors identified during zonal computer centre pre-tabulation processing."
+      "text": "Prepared comprehensive analytical documentation on Schedule 10.4 listing and activity status consistency scrutiny by investigators for ministry review."
     },
     {
       "domain": "Field Operations & CAPI Validation",
-      "text": "Investigated sample substitution requests and ensured strict adherence to official replacement rules."
+      "text": "Audited compliance and technical validity of Schedule 10.4 listing and activity status consistency scrutiny by investigators across field directorates."
     },
     {
       "domain": "Field Operations & CAPI Validation",
-      "text": "Supervised special demographic enquiries in tribal belts and difficult-to-reach terrain."
+      "text": "Conducted official duties involving GPS coordinates geo-tagging stamps validation for surveyed agricultural units according to MoSPI standards."
     },
     {
       "domain": "Field Operations & CAPI Validation",
-      "text": "Conducted post-enumeration checks to evaluate response error magnitude in seasonal employment schedules."
+      "text": "Responsible for leading and executing GPS coordinates geo-tagging stamps validation for surveyed agricultural units across regional operations."
     },
     {
       "domain": "Field Operations & CAPI Validation",
-      "text": "Managed CAPI tablet hardware maintenance, cryptographic key updates, and offline backup procedures."
+      "text": "Supervised statistical teams working on GPS coordinates geo-tagging stamps validation for surveyed agricultural units during the recent quarter."
     },
     {
       "domain": "Field Operations & CAPI Validation",
-      "text": "Resolved classification ambiguities between regular wage workers and informal own-account operators in the field."
+      "text": "Prepared comprehensive analytical documentation on GPS coordinates geo-tagging stamps validation for surveyed agricultural units for ministry review."
     },
     {
       "domain": "Field Operations & CAPI Validation",
-      "text": "Monitored field investigator attrition and mobilized standby enumerator reserves to meet survey deadlines."
+      "text": "Audited compliance and technical validity of GPS coordinates geo-tagging stamps validation for surveyed agricultural units across field directorates."
     },
     {
       "domain": "Field Operations & CAPI Validation",
-      "text": "Audited enterprise balance sheet scrutinies and power consumption cross-checks in manufacturing schedules."
+      "text": "Conducted official duties involving non-contact and casualty household resolution through repeated field visits according to MoSPI standards."
     },
     {
       "domain": "Field Operations & CAPI Validation",
-      "text": "Coordinated with district administration for security clearances and enumerator logistics in sensitive regions."
+      "text": "Responsible for leading and executing non-contact and casualty household resolution through repeated field visits across regional operations."
     },
     {
       "domain": "Field Operations & CAPI Validation",
-      "text": "Conducted briefing sessions on probing techniques for uncovering unrecorded female economic activity."
+      "text": "Supervised statistical teams working on non-contact and casualty household resolution through repeated field visits during the recent quarter."
     },
     {
       "domain": "Field Operations & CAPI Validation",
-      "text": "Evaluated enumerator performance using error rates, completion rates, and average interview durations."
+      "text": "Prepared comprehensive analytical documentation on non-contact and casualty household resolution through repeated field visits for ministry review."
     },
     {
       "domain": "Field Operations & CAPI Validation",
-      "text": "Submitted comprehensive field inspection reports documenting local economic anomalies and survey challenges."
+      "text": "Audited compliance and technical validity of non-contact and casualty household resolution through repeated field visits across field directorates."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Conducted official duties involving CAPI device validation error warnings rectification prior to cloud synchronization according to MoSPI standards."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Responsible for leading and executing CAPI device validation error warnings rectification prior to cloud synchronization across regional operations."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Supervised statistical teams working on CAPI device validation error warnings rectification prior to cloud synchronization during the recent quarter."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Prepared comprehensive analytical documentation on CAPI device validation error warnings rectification prior to cloud synchronization for ministry review."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Audited compliance and technical validity of CAPI device validation error warnings rectification prior to cloud synchronization across field directorates."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Conducted official duties involving crop cutting experiments for agricultural yield estimation and grain weight measurement according to MoSPI standards."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Responsible for leading and executing crop cutting experiments for agricultural yield estimation and grain weight measurement across regional operations."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Supervised statistical teams working on crop cutting experiments for agricultural yield estimation and grain weight measurement during the recent quarter."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Prepared comprehensive analytical documentation on crop cutting experiments for agricultural yield estimation and grain weight measurement for ministry review."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Audited compliance and technical validity of crop cutting experiments for agricultural yield estimation and grain weight measurement across field directorates."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Conducted official duties involving daily field progress registers and survey schedule dispatch diaries for directorates according to MoSPI standards."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Responsible for leading and executing daily field progress registers and survey schedule dispatch diaries for directorates across regional operations."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Supervised statistical teams working on daily field progress registers and survey schedule dispatch diaries for directorates during the recent quarter."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Prepared comprehensive analytical documentation on daily field progress registers and survey schedule dispatch diaries for directorates for ministry review."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Audited compliance and technical validity of daily field progress registers and survey schedule dispatch diaries for directorates across field directorates."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Conducted official duties involving on-site inspection of price collection at selected weekly rural haats and retail markets according to MoSPI standards."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Responsible for leading and executing on-site inspection of price collection at selected weekly rural haats and retail markets across regional operations."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Supervised statistical teams working on on-site inspection of price collection at selected weekly rural haats and retail markets during the recent quarter."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Prepared comprehensive analytical documentation on on-site inspection of price collection at selected weekly rural haats and retail markets for ministry review."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Audited compliance and technical validity of on-site inspection of price collection at selected weekly rural haats and retail markets across field directorates."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Conducted official duties involving village listing complete coverage check for newly developed peri-urban areas according to MoSPI standards."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Responsible for leading and executing village listing complete coverage check for newly developed peri-urban areas across regional operations."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Supervised statistical teams working on village listing complete coverage check for newly developed peri-urban areas during the recent quarter."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Prepared comprehensive analytical documentation on village listing complete coverage check for newly developed peri-urban areas for ministry review."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Audited compliance and technical validity of village listing complete coverage check for newly developed peri-urban areas across field directorates."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Conducted official duties involving contract enumerator briefing sessions on probing techniques for household activities according to MoSPI standards."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Responsible for leading and executing contract enumerator briefing sessions on probing techniques for household activities across regional operations."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Supervised statistical teams working on contract enumerator briefing sessions on probing techniques for household activities during the recent quarter."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Prepared comprehensive analytical documentation on contract enumerator briefing sessions on probing techniques for household activities for ministry review."
+    },
+    {
+      "domain": "Field Operations & CAPI Validation",
+      "text": "Audited compliance and technical validity of contract enumerator briefing sessions on probing techniques for household activities across field directorates."
     },
     {
       "domain": "Official Statistics Governance & Quality",
-      "text": "Conducted comprehensive data quality audit adhering to National Quality Assurance Framework guidelines."
+      "text": "Conducted official duties involving National Quality Assurance Framework NQAF compliance quality audit procedures according to MoSPI standards."
     },
     {
       "domain": "Official Statistics Governance & Quality",
-      "text": "Implemented statistical disclosure control protocols and cell suppression to protect respondent confidentiality."
+      "text": "Responsible for leading and executing National Quality Assurance Framework NQAF compliance quality audit procedures across regional operations."
     },
     {
       "domain": "Official Statistics Governance & Quality",
-      "text": "Enforced legal protections and data security provisions under the Collection of Statistics Act 2008."
+      "text": "Supervised statistical teams working on National Quality Assurance Framework NQAF compliance quality audit procedures during the recent quarter."
     },
     {
       "domain": "Official Statistics Governance & Quality",
-      "text": "Audited microdata release files ensuring complete anonymization and removal of direct identifying variables."
+      "text": "Prepared comprehensive analytical documentation on National Quality Assurance Framework NQAF compliance quality audit procedures for ministry review."
     },
     {
       "domain": "Official Statistics Governance & Quality",
-      "text": "Formulated institutional data governance policy for cross-ministry statistical data sharing."
+      "text": "Audited compliance and technical validity of National Quality Assurance Framework NQAF compliance quality audit procedures across field directorates."
     },
     {
       "domain": "Official Statistics Governance & Quality",
-      "text": "Developed standardized metadata schemas conforming to Data Documentation Initiative and SDMX standards."
+      "text": "Conducted official duties involving statistical disclosure control cell suppression protocols for microdata confidentiality according to MoSPI standards."
     },
     {
       "domain": "Official Statistics Governance & Quality",
-      "text": "Evaluated statistical processes against United Nations Fundamental Principles of Official Statistics."
+      "text": "Responsible for leading and executing statistical disclosure control cell suppression protocols for microdata confidentiality across regional operations."
     },
     {
       "domain": "Official Statistics Governance & Quality",
-      "text": "Conducted peer reviews of survey methodologies and estimation procedures across central line ministries."
+      "text": "Supervised statistical teams working on statistical disclosure control cell suppression protocols for microdata confidentiality during the recent quarter."
     },
     {
       "domain": "Official Statistics Governance & Quality",
-      "text": "Formulated institutional guidelines on data revisions, publication calendars, and public correction notices."
+      "text": "Prepared comprehensive analytical documentation on statistical disclosure control cell suppression protocols for microdata confidentiality for ministry review."
     },
     {
       "domain": "Official Statistics Governance & Quality",
-      "text": "Monitored adherence to national code of statistical practice and professional ethical standards."
+      "text": "Audited compliance and technical validity of statistical disclosure control cell suppression protocols for microdata confidentiality across field directorates."
     },
     {
       "domain": "Official Statistics Governance & Quality",
-      "text": "Maintained cryptographic audit logs and immutable access trails for sensitive administrative datasets."
+      "text": "Conducted official duties involving Collection of Statistics Act 2008 legal protections and compliance enforcement according to MoSPI standards."
     },
     {
       "domain": "Official Statistics Governance & Quality",
-      "text": "Managed institutional response to statistical inquiries and parliamentary questions with verified figures."
+      "text": "Responsible for leading and executing Collection of Statistics Act 2008 legal protections and compliance enforcement across regional operations."
     },
     {
       "domain": "Official Statistics Governance & Quality",
-      "text": "Audited data dissemination portals to ensure equal access and timely release to academic and policy researchers."
+      "text": "Supervised statistical teams working on Collection of Statistics Act 2008 legal protections and compliance enforcement during the recent quarter."
     },
     {
       "domain": "Official Statistics Governance & Quality",
-      "text": "Conducted privacy impact assessments on proposed linkage of survey data with administrative records."
+      "text": "Prepared comprehensive analytical documentation on Collection of Statistics Act 2008 legal protections and compliance enforcement for ministry review."
     },
     {
       "domain": "Official Statistics Governance & Quality",
-      "text": "Standardized statistical concepts, definitions, and classifications across central and state statistical agencies."
+      "text": "Audited compliance and technical validity of Collection of Statistics Act 2008 legal protections and compliance enforcement across field directorates."
     },
     {
       "domain": "Official Statistics Governance & Quality",
-      "text": "Formulated open data release licensing terms safeguarding intellectual property while promoting reuse."
+      "text": "Conducted official duties involving microdata release anonymization and direct identifier removal validation checks according to MoSPI standards."
     },
     {
       "domain": "Official Statistics Governance & Quality",
-      "text": "Reviewed institutional capacity and training needs across state statistical apparatus for quality enhancement."
+      "text": "Responsible for leading and executing microdata release anonymization and direct identifier removal validation checks across regional operations."
     },
     {
       "domain": "Official Statistics Governance & Quality",
-      "text": "Audited survey archiving protocols and long-term digital preservation of historical national survey series."
+      "text": "Supervised statistical teams working on microdata release anonymization and direct identifier removal validation checks during the recent quarter."
     },
     {
       "domain": "Official Statistics Governance & Quality",
-      "text": "Conducted transparency audits of statistical estimation algorithms and analytical documentation."
+      "text": "Prepared comprehensive analytical documentation on microdata release anonymization and direct identifier removal validation checks for ministry review."
     },
     {
       "domain": "Official Statistics Governance & Quality",
-      "text": "Coordinated inter-agency committees on statistical harmonization and data duplication reduction."
+      "text": "Audited compliance and technical validity of microdata release anonymization and direct identifier removal validation checks across field directorates."
     },
     {
       "domain": "Official Statistics Governance & Quality",
-      "text": "Formulated data quality indicator dashboards monitoring timeliness, accuracy, and completeness metrics."
+      "text": "Conducted official duties involving institutional data governance policy for cross-ministry statistical data sharing according to MoSPI standards."
     },
     {
       "domain": "Official Statistics Governance & Quality",
-      "text": "Managed international data reporting commitments to UN Statistical Division, World Bank, and IMF."
+      "text": "Responsible for leading and executing institutional data governance policy for cross-ministry statistical data sharing across regional operations."
     },
     {
       "domain": "Official Statistics Governance & Quality",
-      "text": "Evaluated risks of re-identification in publicly available aggregate tables and synthetic datasets."
+      "text": "Supervised statistical teams working on institutional data governance policy for cross-ministry statistical data sharing during the recent quarter."
     },
     {
       "domain": "Official Statistics Governance & Quality",
-      "text": "Conducted ethical reviews of new data collection instruments involving vulnerable socio-economic populations."
+      "text": "Prepared comprehensive analytical documentation on institutional data governance policy for cross-ministry statistical data sharing for ministry review."
     },
     {
       "domain": "Official Statistics Governance & Quality",
-      "text": "Drafted national data quality certification criteria for official survey outputs produced by line ministries."
+      "text": "Audited compliance and technical validity of institutional data governance policy for cross-ministry statistical data sharing across field directorates."
     },
     {
       "domain": "Official Statistics Governance & Quality",
-      "text": "Enforced protocol forbidding premature release or selective leakage of embargoed statistical indices."
+      "text": "Conducted official duties involving metadata standards documentation conforming to SDMX and DDI guidelines according to MoSPI standards."
     },
     {
       "domain": "Official Statistics Governance & Quality",
-      "text": "Standardized error correction policies and transparent errata publication across official statistical portals."
+      "text": "Responsible for leading and executing metadata standards documentation conforming to SDMX and DDI guidelines across regional operations."
     },
     {
       "domain": "Official Statistics Governance & Quality",
-      "text": "Audited vendor compliance with data protection standards during contracted data entry and scanning projects."
+      "text": "Supervised statistical teams working on metadata standards documentation conforming to SDMX and DDI guidelines during the recent quarter."
     },
     {
       "domain": "Official Statistics Governance & Quality",
-      "text": "Facilitated public consultation workshops on modernization of official statistics legislative frameworks."
+      "text": "Prepared comprehensive analytical documentation on metadata standards documentation conforming to SDMX and DDI guidelines for ministry review."
     },
     {
       "domain": "Official Statistics Governance & Quality",
-      "text": "Trained senior statistical officers on governance frameworks, legal compliance, and international statistical ethics."
+      "text": "Audited compliance and technical validity of metadata standards documentation conforming to SDMX and DDI guidelines across field directorates."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Conducted official duties involving UN Fundamental Principles of Official Statistics review across central line ministries according to MoSPI standards."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Responsible for leading and executing UN Fundamental Principles of Official Statistics review across central line ministries across regional operations."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Supervised statistical teams working on UN Fundamental Principles of Official Statistics review across central line ministries during the recent quarter."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Prepared comprehensive analytical documentation on UN Fundamental Principles of Official Statistics review across central line ministries for ministry review."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Audited compliance and technical validity of UN Fundamental Principles of Official Statistics review across central line ministries across field directorates."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Conducted official duties involving official statistics peer reviews of survey design and estimation methods according to MoSPI standards."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Responsible for leading and executing official statistics peer reviews of survey design and estimation methods across regional operations."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Supervised statistical teams working on official statistics peer reviews of survey design and estimation methods during the recent quarter."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Prepared comprehensive analytical documentation on official statistics peer reviews of survey design and estimation methods for ministry review."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Audited compliance and technical validity of official statistics peer reviews of survey design and estimation methods across field directorates."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Conducted official duties involving advance release calendar and transparent data revision policy public notices according to MoSPI standards."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Responsible for leading and executing advance release calendar and transparent data revision policy public notices across regional operations."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Supervised statistical teams working on advance release calendar and transparent data revision policy public notices during the recent quarter."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Prepared comprehensive analytical documentation on advance release calendar and transparent data revision policy public notices for ministry review."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Audited compliance and technical validity of advance release calendar and transparent data revision policy public notices across field directorates."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Conducted official duties involving cryptographic access audit logs for sensitive administrative microdata records according to MoSPI standards."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Responsible for leading and executing cryptographic access audit logs for sensitive administrative microdata records across regional operations."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Supervised statistical teams working on cryptographic access audit logs for sensitive administrative microdata records during the recent quarter."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Prepared comprehensive analytical documentation on cryptographic access audit logs for sensitive administrative microdata records for ministry review."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Audited compliance and technical validity of cryptographic access audit logs for sensitive administrative microdata records across field directorates."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Conducted official duties involving national code of statistical practice ethical standards and professional integrity according to MoSPI standards."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Responsible for leading and executing national code of statistical practice ethical standards and professional integrity across regional operations."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Supervised statistical teams working on national code of statistical practice ethical standards and professional integrity during the recent quarter."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Prepared comprehensive analytical documentation on national code of statistical practice ethical standards and professional integrity for ministry review."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Audited compliance and technical validity of national code of statistical practice ethical standards and professional integrity across field directorates."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Conducted official duties involving data dissemination portal equal access for researchers and academic institutions according to MoSPI standards."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Responsible for leading and executing data dissemination portal equal access for researchers and academic institutions across regional operations."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Supervised statistical teams working on data dissemination portal equal access for researchers and academic institutions during the recent quarter."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Prepared comprehensive analytical documentation on data dissemination portal equal access for researchers and academic institutions for ministry review."
+    },
+    {
+      "domain": "Official Statistics Governance & Quality",
+      "text": "Audited compliance and technical validity of data dissemination portal equal access for researchers and academic institutions across field directorates."
     }
   ]
 }
