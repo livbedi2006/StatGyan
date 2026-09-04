@@ -1,16 +1,16 @@
 # Graph Report - StatGyan AI  (2026-09-04)
 
 ## Corpus Check
-- 47 files · ~79,596 words
+- 56 files · ~95,936 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 738 nodes · 793 edges · 37 communities (35 shown, 1 thin omitted)
-- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 3 edges (avg confidence: 0.85)
+- 834 nodes · 945 edges · 46 communities (41 shown, 4 thin omitted)
+- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 21 edges (avg confidence: 0.92)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `878a2259`
+- Built from commit: `b5c611a0`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -50,28 +50,45 @@
 - GroundedMCQGenerator
 - CompetencyGapModel
 - ProctoringTrustEngine
-- VirtualLabEvaluator
+- TestMLModelAccuracyAndGeneralization
+- SurveyMicrodataMLModel
+- lifespan
+- SkillDecayModel
+- Spec: SIH 2026 Presentation & Model Readiness (Problem Statement ID 26101)
+- Tasks Breakdown
+- test_ml_accuracy.py
+- CAPABILITY_MAP.md
+- todo.md
+- __init__.py
 
 ## God Nodes (most connected - your core abstractions)
-1. `Code Review and Quality` - 19 edges
-2. `Security and Hardening` - 17 edges
-3. `Git Workflow and Versioning` - 15 edges
-4. `Test-Driven Development` - 15 edges
-5. `Browser Testing with DevTools` - 13 edges
-6. `CI/CD and Automation` - 13 edges
-7. `Frontend UI Engineering` - 13 edges
-8. `Debugging and Error Recovery` - 12 edges
-9. `Deprecation and Migration` - 12 edges
-10. `Documentation and ADRs` - 12 edges
+1. `CompetencyGapModel` - 19 edges
+2. `Code Review and Quality` - 19 edges
+3. `Security and Hardening` - 17 edges
+4. `Git Workflow and Versioning` - 15 edges
+5. `Test-Driven Development` - 15 edges
+6. `Browser Testing with DevTools` - 13 edges
+7. `CI/CD and Automation` - 13 edges
+8. `Frontend UI Engineering` - 13 edges
+9. `Debugging and Error Recovery` - 12 edges
+10. `Deprecation and Migration` - 12 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `Graphify Workflow` --references--> `Graphify Knowledge Graph Rule`  [EXTRACTED]
-  .agents/workflows/graphify.md → .agents/rules/graphify.md
+- `lifespan()` --uses--> `CompetencyGapModel`  [INFERRED]
+  backend/server.py → ml_engine/competency_model.py
+- `lifespan()` --uses--> `SkillDecayModel`  [INFERRED]
+  backend/server.py → ml_engine/decay_model.py
+- `lifespan()` --uses--> `GroundedMCQGenerator`  [INFERRED]
+  backend/server.py → ml_engine/mcq_generator.py
+- `lifespan()` --uses--> `PredictiveAnalyticsEngine`  [INFERRED]
+  backend/server.py → ml_engine/predictive_analytics.py
+- `lifespan()` --uses--> `ProctoringTrustEngine`  [INFERRED]
+  backend/server.py → ml_engine/proctoring_model.py
 
 ## Import Cycles
 - None detected.
 
-## Communities (37 total, 1 thin omitted)
+## Communities (46 total, 4 thin omitted)
 
 ### Community 0 - "Graphify Knowledge Graph Rule"
 Cohesion: 0.67
@@ -190,45 +207,69 @@ Cohesion: 0.22
 Nodes (8): Analogous Inspiration, Constraint-Based Ideation, First Principles Thinking, How Might We (HMW), Ideation Frameworks Reference, Jobs to Be Done (JTBD), Pre-mortem, SCAMPER
 
 ### Community 30 - "server.py"
-Cohesion: 0.06
-Nodes (42): analyze_competency(), AnalyzeRequest, cadre_analytics(), DecaySimulateRequest, evaluate_lab_code(), export_moodle(), export_qti(), generate_assessment() (+34 more)
+Cohesion: 0.08
+Nodes (39): analyze_competency(), AnalyzeRequest, cadre_analytics(), DecaySimulateRequest, evaluate_lab_code(), export_moodle(), export_qti(), generate_assessment() (+31 more)
 
 ### Community 31 - "app.js"
-Cohesion: 0.08
-Nodes (45): BUILTIN_CADRES, BUILTIN_GRAPH, computeClientSideGap(), computeClientSideInference(), drawMultiLaneGraph(), executeLabCode(), graphState, handleTabActivation() (+37 more)
+Cohesion: 0.07
+Nodes (54): applyTourStep(), BUILTIN_CADRES, BUILTIN_GRAPH, checkFastAPIConnection(), computeClientSideGap(), computeClientSideInference(), drawMultiLaneGraph(), executeLabCode() (+46 more)
 
 ### Community 32 - "GroundedMCQGenerator"
 Cohesion: 0.18
 Nodes (8): GroundedMCQGenerator, Any, StatGyan AI - Grounded Question (MCQ) & Assessment Generator with QC Pipeline…, Selects and validates grounded MCQs passing full QC inspection., Automated 3-Stage QC Audit: 1. Grounding Citation Check 2. Distractor…, Exports assessment items to QTI 2.1 standard XML format for LMS/Karmayogi…, Exports assessment to standard Moodle XML., Grounded pre-verified MoSPI technical item bank mapped to exact manual…
 
 ### Community 33 - "CompetencyGapModel"
-Cohesion: 0.22
-Nodes (5): CompetencyGapModel, Any, StatGyan AI - Competency Assessment & Skill Gap Model Uses TF-IDF, Latent…, Uses TF-IDF cosine similarity to infer domain affinities from officer self-…, Evaluates competency gap against cadre benchmark.
+Cohesion: 0.20
+Nodes (8): CompetencyGapModel, Any, Uses the trained ML classifier to infer probabilistic competency affinities…, Evaluates competency gaps between assessed scores and cadre requirements., Alias for evaluate_gap, Infers scores from officer text using the ML engine, then evaluates gap against…, Trains L2-regularized classifier on official MoSPI task corpus. L2…, Evaluates the model on an independent train/test split and 5-fold cross-…
 
 ### Community 35 - "ProctoringTrustEngine"
-Cohesion: 0.33
-Nodes (3): ProctoringTrustEngine, Any, StatGyan AI - AI Proctoring & Restriction Engine Integrates anti-cheating…
+Cohesion: 0.07
+Nodes (18): ProctoringTrustEngine, Any, StatGyan AI - AI Proctoring & Restriction Engine Integrates anti-cheating…, Any, StatGyan AI - Virtual Statistical Lab Evaluator Auto-evaluates statistical…, Alias for evaluate_submission., Executes standard weighted MoSPI calculation over microdata records: - Employed…, Evaluates submitted script against test cases and survey multiplier rules. (+10 more)
 
-### Community 36 - "VirtualLabEvaluator"
+### Community 36 - "TestMLModelAccuracyAndGeneralization"
+Cohesion: 0.17
+Nodes (6): Verifies individual predictions match MoSPI empirical demographic expectations., Asserts Competency NLP Model achieves high accuracy on dataset. Requirement:…, Explicitly verifies that the Competency Model does NOT overfit. Guarantees that…, Evaluates the Competency Model on completely novel out-of-sample statements.…, Tests the statistical survey demographic classifier for PLFS labour force…, TestMLModelAccuracyAndGeneralization
+
+### Community 37 - "SurveyMicrodataMLModel"
+Cohesion: 0.24
+Nodes (6): Any, Predicts labour force participation probability for a demographic profile., Loads base synthetic PLFS records and augments with statistically calibrated…, Trains L2-regularized logistic regression to predict labour force status.…, Validates the model with held-out test split and 5-fold cross-validation.…, SurveyMicrodataMLModel
+
+### Community 38 - "lifespan"
+Cohesion: 0.20
+Nodes (7): lifespan(), Pre-warms all 7 custom ML models and caches vector representations at boot.…, FastAPI, BlendedPathwayRecommender, Any, StatGyan AI - Blended Learning Pathway Recommender Bridges digital self-paced…, Builds a sequenced blended pathway based on identified competency gaps. Accepts…
+
+### Community 39 - "SkillDecayModel"
+Cohesion: 0.28
+Nodes (5): Any, StatGyan AI - Skill Decay & Methodology Drift Predictor Models skill retention…, Simulates skill decay for a specific cadre, returning decay_curve and drift…, Calculates decayed competency levels and flags critical drift alerts., SkillDecayModel
+
+### Community 40 - "Spec: SIH 2026 Presentation & Model Readiness (Problem Statement ID 26101)"
 Cohesion: 0.25
-Nodes (5): Any, StatGyan AI - Virtual Statistical Lab Evaluator Auto-evaluates statistical…, Executes standard weighted MoSPI calculation over microdata records: - Employed…, Evaluates submitted script against test cases and survey multiplier rules., VirtualLabEvaluator
+Nodes (7): Boundaries, Commands, Objective, Project Structure, Spec: SIH 2026 Presentation & Model Readiness (Problem Statement ID 26101), Success Criteria, Tech Stack
+
+### Community 41 - "Tasks Breakdown"
+Cohesion: 0.25
+Nodes (7): Implementation Plan: SIH Presentation & Evaluation Readiness, Objective, Phase A: SIH Jury Presentation Tour Mode, Phase B: SIH Solution Architecture & Pitch Deck Modal, Phase C: Automated Test Suite for All 7 Engines, Phase D: End-to-End Browser Subagent Verification, Tasks Breakdown
+
+### Community 42 - "test_ml_accuracy.py"
+Cohesion: 0.33
+Nodes (3): StatGyan AI - Competency Assessment & Machine Learning Skill Gap Model Trained…, StatGyan AI - Survey Microdata Machine Learning Classifier Trained on official…, StatGyan AI - Machine Learning Model Accuracy & Anti-Overfitting Test Suite…
 
 ## Knowledge Gaps
-- **472 isolated node(s):** `idea-refine.sh script`, `BUILTIN_CADRES`, `state`, `graphState`, `BUILTIN_GRAPH` (+467 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 531 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **1 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **486 isolated node(s):** `idea-refine.sh script`, `BUILTIN_CADRES`, `state`, `graphState`, `BUILTIN_GRAPH` (+481 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 577 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **4 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `GroundedMCQGenerator` connect `GroundedMCQGenerator` to `server.py`?**
-  _High betweenness centrality (0.004) - this node is a cross-community bridge._
-- **Why does `CompetencyGapModel` connect `CompetencyGapModel` to `server.py`?**
-  _High betweenness centrality (0.002) - this node is a cross-community bridge._
-- **Why does `ProctoringTrustEngine` connect `ProctoringTrustEngine` to `server.py`?**
-  _High betweenness centrality (0.002) - this node is a cross-community bridge._
+- **Why does `CompetencyGapModel` connect `CompetencyGapModel` to `TestMLModelAccuracyAndGeneralization`, `lifespan`, `SkillDecayModel`, `test_ml_accuracy.py`, `server.py`?**
+  _High betweenness centrality (0.010) - this node is a cross-community bridge._
+- **Why does `SurveyMicrodataMLModel` connect `SurveyMicrodataMLModel` to `lifespan`, `test_ml_accuracy.py`, `TestMLModelAccuracyAndGeneralization`, `server.py`?**
+  _High betweenness centrality (0.006) - this node is a cross-community bridge._
+- **Are the 4 inferred relationships involving `CompetencyGapModel` (e.g. with `lifespan()` and `SkillDecayModel`) actually correct?**
+  _`CompetencyGapModel` has 4 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `idea-refine.sh script`, `BUILTIN_CADRES`, `state` to the rest of the system?**
-  _472 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _486 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Security and Hardening` be split into smaller, more focused modules?**
   _Cohesion score 0.06451612903225806 - nodes in this community are weakly interconnected._
 - **Should `Code Review and Quality` be split into smaller, more focused modules?**

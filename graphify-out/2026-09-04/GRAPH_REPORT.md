@@ -1,16 +1,16 @@
 # Graph Report - StatGyan AI  (2026-09-04)
 
 ## Corpus Check
-- 47 files · ~73,376 words
+- 47 files · ~79,596 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 731 nodes · 779 edges · 37 communities (35 shown, 1 thin omitted)
+- 738 nodes · 793 edges · 37 communities (35 shown, 1 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 3 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `af25a577`
+- Built from commit: `878a2259`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -194,8 +194,8 @@ Cohesion: 0.06
 Nodes (42): analyze_competency(), AnalyzeRequest, cadre_analytics(), DecaySimulateRequest, evaluate_lab_code(), export_moodle(), export_qti(), generate_assessment() (+34 more)
 
 ### Community 31 - "app.js"
-Cohesion: 0.10
-Nodes (38): BUILTIN_CADRES, computeClientSideGap(), computeClientSideInference(), executeLabCode(), handleTabActivation(), initWebcamStream(), loadCadreAnalytics(), loadCadres() (+30 more)
+Cohesion: 0.08
+Nodes (45): BUILTIN_CADRES, BUILTIN_GRAPH, computeClientSideGap(), computeClientSideInference(), drawMultiLaneGraph(), executeLabCode(), graphState, handleTabActivation() (+37 more)
 
 ### Community 32 - "GroundedMCQGenerator"
 Cohesion: 0.18
@@ -214,8 +214,8 @@ Cohesion: 0.25
 Nodes (5): Any, StatGyan AI - Virtual Statistical Lab Evaluator Auto-evaluates statistical…, Executes standard weighted MoSPI calculation over microdata records: - Employed…, Evaluates submitted script against test cases and survey multiplier rules., VirtualLabEvaluator
 
 ## Knowledge Gaps
-- **470 isolated node(s):** `idea-refine.sh script`, `BUILTIN_CADRES`, `state`, `Overview`, `When to Use` (+465 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 529 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **472 isolated node(s):** `idea-refine.sh script`, `BUILTIN_CADRES`, `state`, `graphState`, `BUILTIN_GRAPH` (+467 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 531 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **1 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
@@ -228,7 +228,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `ProctoringTrustEngine` connect `ProctoringTrustEngine` to `server.py`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **What connects `idea-refine.sh script`, `BUILTIN_CADRES`, `state` to the rest of the system?**
-  _470 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _472 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Security and Hardening` be split into smaller, more focused modules?**
   _Cohesion score 0.06451612903225806 - nodes in this community are weakly interconnected._
 - **Should `Code Review and Quality` be split into smaller, more focused modules?**

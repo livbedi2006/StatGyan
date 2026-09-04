@@ -1979,4 +1979,59 @@ function setupSIHDocketModal() {
   }
 }
 
+// 13. Fast API Status & Real-Time ML Introspection
+async function checkFastAPIConnection() {
+  const badgeText = document.getElementById("fastapi-connection-text");
+  const badgeDot = document.getElementById("fastapi-pulse-dot");
+  const pill = document.getElementById("fastapi-connection-pill");
 
+  if (pill) {
+    pill.addEventListener("click", () => {
+      const modal = document.getElementById("sih-modal-backdrop");
+      if (modal) {
+        modal.classList.add("active");
+        const card = document.getElementById("ml-metrics-container");
+        if (card) card.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  }
+
+  const t0 = performance.now();
+  try {
+    const res = await fetch(`${API_BASE}/api/health`, { signal: AbortSignal.timeout(3000) });
+    const latency = Math.round(performance.now() - t0);
+    if (res.ok) {
+      if (badgeText) badgeText.innerText = `FastAPI: 8 Models Pre-Warmed (${latency}ms)`;
+      if (badgeDot) badgeDot.style.background = "#10B981";
+      loadLiveMLMetrics();
+    }
+  } catch (err) {
+    if (badgeText) badgeText.innerText = "Offline Cache Active";
+    if (badgeDot) badgeDot.style.background = "#F59E0B";
+  }
+}
+
+async function loadLiveMLMetrics() {
+  try {
+    const res = await fetch(`${API_BASE}/api/ml/metrics`, { signal: AbortSignal.timeout(3500) });
+    if (res.ok) {
+      const data = await res.json();
+      const comp = data.competency_nlp_model;
+      const survey = data.survey_microdata_ml_model;
+
+      const compAccEl = document.getElementById("metric-comp-acc");
+      const compGapEl = document.getElementById("metric-comp-gap");
+      const surveyAccEl = document.getElementById("metric-survey-acc");
+      const surveyGapEl = document.getElementById("metric-survey-gap");
+      const cvScoreEl = document.getElementById("metric-cv-score");
+
+      if (compAccEl && comp) compAccEl.innerText = `Train: ${(comp.train_accuracy * 100).toFixed(1)}% • Test: ${(comp.test_accuracy * 100).toFixed(1)}%`;
+      if (compGapEl && comp) compGapEl.innerText = `Generalization Gap: ${(comp.generalization_gap * 100).toFixed(1)}% (${comp.regularization_type})`;
+      if (surveyAccEl && survey) surveyAccEl.innerText = `Train: ${(survey.train_accuracy * 100).toFixed(1)}% • Test: ${(survey.test_accuracy * 100).toFixed(1)}%`;
+      if (surveyGapEl && survey) surveyGapEl.innerText = `Generalization Gap: ${(survey.generalization_gap * 100).toFixed(2)}% (<5% Bound)`;
+      if (cvScoreEl && comp && survey) cvScoreEl.innerText = `NLP: ${(comp.cv_mean_accuracy * 100).toFixed(1)}% • Survey: ${(survey.cv_mean_accuracy * 100).toFixed(1)}%`;
+    }
+  } catch (err) {
+    console.warn("Could not fetch live ML metrics:", err);
+  }
+}

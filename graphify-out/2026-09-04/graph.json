@@ -498,6 +498,18 @@
       "source_location": "L301"
     },
     {
+      "id": "static_js_app_drawmultilanegraph",
+      "label": "drawMultiLaneGraph()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "drawmultilanegraph()",
+      "source_file": "static/js/app.js",
+      "source_location": "L1198"
+    },
+    {
       "id": "static_js_app_executelabcode",
       "label": "executeLabCode()",
       "_callable": true,
@@ -531,7 +543,7 @@
       "file_type": "code",
       "norm_label": "initwebcamstream()",
       "source_file": "static/js/app.js",
-      "source_location": "L1319"
+      "source_location": "L1739"
     },
     {
       "id": "static_js_app_loadcadreanalytics",
@@ -663,7 +675,7 @@
       "file_type": "code",
       "norm_label": "renderknowledgegraph()",
       "source_file": "static/js/app.js",
-      "source_location": "L1083"
+      "source_location": "L1168"
     },
     {
       "id": "static_js_app_rendermcqerror",
@@ -738,6 +750,30 @@
       "source_location": "L948"
     },
     {
+      "id": "static_js_app_resetgraphfocus",
+      "label": "resetGraphFocus()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "resetgraphfocus()",
+      "source_file": "static/js/app.js",
+      "source_location": "L1562"
+    },
+    {
+      "id": "static_js_app_roundrect",
+      "label": "roundRect()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "roundrect()",
+      "source_file": "static/js/app.js",
+      "source_location": "L1402"
+    },
+    {
       "id": "static_js_app_runmcqgeneration",
       "label": "runMCQGeneration()",
       "_callable": true,
@@ -771,7 +807,7 @@
       "file_type": "code",
       "norm_label": "setupbrowserlockdownlisteners()",
       "source_file": "static/js/app.js",
-      "source_location": "L1231"
+      "source_location": "L1651"
     },
     {
       "id": "static_js_app_setupdecaysimulator",
@@ -784,6 +820,18 @@
       "norm_label": "setupdecaysimulator()",
       "source_file": "static/js/app.js",
       "source_location": "L1037"
+    },
+    {
+      "id": "static_js_app_setupgrapheventlisteners",
+      "label": "setupGraphEventListeners()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "setupgrapheventlisteners()",
+      "source_file": "static/js/app.js",
+      "source_location": "L1425"
     },
     {
       "id": "static_js_app_setupnavigation",
@@ -807,7 +855,7 @@
       "file_type": "code",
       "norm_label": "setupproctoringengine()",
       "source_file": "static/js/app.js",
-      "source_location": "L1156"
+      "source_location": "L1576"
     },
     {
       "id": "static_js_app_setuproleswitcher",
@@ -843,7 +891,7 @@
       "file_type": "code",
       "norm_label": "showlockdownfreezemodal()",
       "source_file": "static/js/app.js",
-      "source_location": "L1413"
+      "source_location": "L1833"
     },
     {
       "id": "static_js_app_startextensiondomscanner",
@@ -855,7 +903,7 @@
       "file_type": "code",
       "norm_label": "startextensiondomscanner()",
       "source_file": "static/js/app.js",
-      "source_location": "L1280"
+      "source_location": "L1700"
     },
     {
       "id": "static_js_app_toggleproctoringmode",
@@ -867,7 +915,7 @@
       "file_type": "code",
       "norm_label": "toggleproctoringmode()",
       "source_file": "static/js/app.js",
-      "source_location": "L1187"
+      "source_location": "L1607"
     },
     {
       "id": "static_js_app_triggercompetencyanalysis",
@@ -891,7 +939,19 @@
       "file_type": "code",
       "norm_label": "triggerproctoringviolation()",
       "source_file": "static/js/app.js",
-      "source_location": "L1335"
+      "source_location": "L1755"
+    },
+    {
+      "id": "static_js_app_updateinspectorpanel",
+      "label": "updateInspectorPanel()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "updateinspectorpanel()",
+      "source_file": "static/js/app.js",
+      "source_location": "L1513"
     },
     {
       "id": "static_js_app_updateproctoringhud",
@@ -903,7 +963,7 @@
       "file_type": "code",
       "norm_label": "updateproctoringhud()",
       "source_file": "static/js/app.js",
-      "source_location": "L1363"
+      "source_location": "L1783"
     },
     {
       "id": "ml_engine_mcq_generator_groundedmcqgenerator_export_moodle_xml",
@@ -6727,6 +6787,28 @@
       "source_location": "L13"
     },
     {
+      "id": "static_js_app_builtin_graph",
+      "label": "BUILTIN_GRAPH",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "builtin_graph",
+      "source_file": "static/js/app.js",
+      "source_location": "L1092"
+    },
+    {
+      "id": "static_js_app_graphstate",
+      "label": "graphState",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "graphstate",
+      "source_file": "static/js/app.js",
+      "source_location": "L1084"
+    },
+    {
       "id": "static_js_app_state",
       "label": "state",
       "_origin": "ast",
@@ -8936,6 +9018,18 @@
       "weight": 1.0
     },
     {
+      "source": "static_js_app_drawmultilanegraph",
+      "target": "static_js_app_roundrect",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "static/js/app.js",
+      "source_location": "L1364",
+      "weight": 1.0
+    },
+    {
       "source": "static_js_app_handletabactivation",
       "target": "static_js_app_loadpathway",
       "relation": "calls",
@@ -9068,6 +9162,54 @@
       "weight": 1.0
     },
     {
+      "source": "static_js_app_renderknowledgegraph",
+      "target": "static_js_app_drawmultilanegraph",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "static/js/app.js",
+      "source_location": "L1190",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app_renderknowledgegraph",
+      "target": "static_js_app_setupgrapheventlisteners",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "static/js/app.js",
+      "source_location": "L1193",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app_resetgraphfocus",
+      "target": "static_js_app_drawmultilanegraph",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "static/js/app.js",
+      "source_location": "L1569",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app_resetgraphfocus",
+      "target": "static_js_app_updateinspectorpanel",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "static/js/app.js",
+      "source_location": "L1570",
+      "weight": 1.0
+    },
+    {
       "source": "static_js_app_runmcqgeneration",
       "target": "static_js_app_rendermcqs",
       "relation": "calls",
@@ -9100,7 +9242,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L1245",
+      "source_location": "L1665",
       "weight": 1.0
     },
     {
@@ -9113,6 +9255,30 @@
       "context": "call",
       "source_file": "static/js/app.js",
       "source_location": "L1049",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app_setupgrapheventlisteners",
+      "target": "static_js_app_updateinspectorpanel",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "static/js/app.js",
+      "source_location": "L1434",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app_setupgrapheventlisteners",
+      "target": "static_js_app_drawmultilanegraph",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "static/js/app.js",
+      "source_location": "L1436",
       "weight": 1.0
     },
     {
@@ -9136,7 +9302,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L1164",
+      "source_location": "L1584",
       "weight": 1.0
     },
     {
@@ -9148,7 +9314,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L1184",
+      "source_location": "L1604",
       "weight": 1.0
     },
     {
@@ -9184,7 +9350,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L1294",
+      "source_location": "L1714",
       "weight": 1.0
     },
     {
@@ -9196,7 +9362,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L1220",
+      "source_location": "L1640",
       "weight": 1.0
     },
     {
@@ -9208,7 +9374,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L1221",
+      "source_location": "L1641",
       "weight": 1.0
     },
     {
@@ -9268,7 +9434,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L1351",
+      "source_location": "L1771",
       "weight": 1.0
     },
     {
@@ -9280,7 +9446,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L1354",
+      "source_location": "L1774",
       "weight": 1.0
     },
     {
@@ -16466,13 +16632,13 @@
     },
     {
       "source": "static_js_app",
-      "target": "static_js_app_renderknowledgegraph",
+      "target": "static_js_app_graphstate",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L1083",
+      "source_location": "L1084",
       "weight": 1.0
     },
     {
@@ -16488,46 +16654,35 @@
     },
     {
       "source": "static_js_app",
-      "target": "static_js_app_setupproctoringengine",
+      "target": "static_js_app_builtin_graph",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L1156",
+      "source_location": "L1092",
       "weight": 1.0
     },
     {
       "source": "static_js_app",
-      "target": "static_js_app_toggleproctoringmode",
+      "target": "static_js_app_renderknowledgegraph",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L1187",
+      "source_location": "L1168",
       "weight": 1.0
     },
     {
       "source": "static_js_app",
-      "target": "static_js_app_setupbrowserlockdownlisteners",
+      "target": "static_js_app_drawmultilanegraph",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L1231",
-      "weight": 1.0
-    },
-    {
-      "source": "static_js_app",
-      "target": "static_js_app_startextensiondomscanner",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "static/js/app.js",
-      "source_location": "L1280",
+      "source_location": "L1198",
       "weight": 1.0
     },
     {
@@ -16543,39 +16698,6 @@
     },
     {
       "source": "static_js_app",
-      "target": "static_js_app_initwebcamstream",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "static/js/app.js",
-      "source_location": "L1319",
-      "weight": 1.0
-    },
-    {
-      "source": "static_js_app",
-      "target": "static_js_app_triggerproctoringviolation",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "static/js/app.js",
-      "source_location": "L1335",
-      "weight": 1.0
-    },
-    {
-      "source": "static_js_app",
-      "target": "static_js_app_updateproctoringhud",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "static/js/app.js",
-      "source_location": "L1363",
-      "weight": 1.0
-    },
-    {
-      "source": "static_js_app",
       "target": "static_js_app_setupnavigation",
       "relation": "contains",
       "_origin": "ast",
@@ -16587,13 +16709,46 @@
     },
     {
       "source": "static_js_app",
-      "target": "static_js_app_showlockdownfreezemodal",
+      "target": "static_js_app_roundrect",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L1413",
+      "source_location": "L1402",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_setupgrapheventlisteners",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L1425",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_updateinspectorpanel",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L1513",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_resetgraphfocus",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L1562",
       "weight": 1.0
     },
     {
@@ -16609,6 +16764,39 @@
     },
     {
       "source": "static_js_app",
+      "target": "static_js_app_setupproctoringengine",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L1576",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_toggleproctoringmode",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L1607",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_setupbrowserlockdownlisteners",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L1651",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
       "target": "static_js_app_populatecadresdropdown",
       "relation": "contains",
       "_origin": "ast",
@@ -16620,6 +16808,50 @@
     },
     {
       "source": "static_js_app",
+      "target": "static_js_app_startextensiondomscanner",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L1700",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_initwebcamstream",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L1739",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_triggerproctoringviolation",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L1755",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_updateproctoringhud",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L1783",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
       "target": "static_js_app_loadcadres",
       "relation": "contains",
       "_origin": "ast",
@@ -16627,6 +16859,17 @@
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
       "source_location": "L181",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_showlockdownfreezemodal",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L1833",
       "weight": 1.0
     },
     {
@@ -17486,7 +17729,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "static/js/app.js",
-      "source_location": "L1159",
+      "source_location": "L1579",
       "weight": 1.0
     },
     {
@@ -17525,5 +17768,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "af25a5772e8e086238a43eb768462351468d0122"
+  "built_at_commit": "878a22594697051166d98474e7b4b974e60f0332"
 }

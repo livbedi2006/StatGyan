@@ -14,7 +14,7 @@
       "file_type": "code",
       "norm_label": "analyzerequest",
       "source_file": "backend/server.py",
-      "source_location": "L48"
+      "source_location": "L77"
     },
     {
       "id": "backend_server_decaysimulaterequest",
@@ -27,7 +27,7 @@
       "file_type": "code",
       "norm_label": "decaysimulaterequest",
       "source_file": "backend/server.py",
-      "source_location": "L62"
+      "source_location": "L91"
     },
     {
       "id": "backend_server_generatemcqrequest",
@@ -40,7 +40,7 @@
       "file_type": "code",
       "norm_label": "generatemcqrequest",
       "source_file": "backend/server.py",
-      "source_location": "L56"
+      "source_location": "L85"
     },
     {
       "id": "backend_server_inferrequest",
@@ -53,7 +53,7 @@
       "file_type": "code",
       "norm_label": "inferrequest",
       "source_file": "backend/server.py",
-      "source_location": "L52"
+      "source_location": "L81"
     },
     {
       "id": "backend_server_labevaluaterequest",
@@ -66,7 +66,7 @@
       "file_type": "code",
       "norm_label": "labevaluaterequest",
       "source_file": "backend/server.py",
-      "source_location": "L67"
+      "source_location": "L96"
     },
     {
       "id": "backend_server_proctoringeventrequest",
@@ -79,7 +79,7 @@
       "file_type": "code",
       "norm_label": "proctoringeventrequest",
       "source_file": "backend/server.py",
-      "source_location": "L75"
+      "source_location": "L104"
     },
     {
       "id": "backend_server_proctoringstartrequest",
@@ -92,20 +92,20 @@
       "file_type": "code",
       "norm_label": "proctoringstartrequest",
       "source_file": "backend/server.py",
-      "source_location": "L70"
+      "source_location": "L99"
     },
     {
-      "id": "ml_engine_decay_model_skilldecaymodel",
-      "label": "SkillDecayModel",
+      "id": "backend_server_surveypredictrequest",
+      "label": "SurveyPredictRequest",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 30,
       "community_name": "server.py",
       "file_type": "code",
-      "norm_label": "skilldecaymodel",
-      "source_file": "ml_engine/decay_model.py",
-      "source_location": "L52"
+      "norm_label": "surveypredictrequest",
+      "source_file": "backend/server.py",
+      "source_location": "L110"
     },
     {
       "id": "ml_engine_predictive_analytics_predictiveanalyticsengine",
@@ -119,19 +119,6 @@
       "norm_label": "predictiveanalyticsengine",
       "source_file": "ml_engine/predictive_analytics.py",
       "source_location": "L121"
-    },
-    {
-      "id": "ml_engine_recommender_model_blendedpathwayrecommender",
-      "label": "BlendedPathwayRecommender",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 30,
-      "community_name": "server.py",
-      "file_type": "code",
-      "norm_label": "blendedpathwayrecommender",
-      "source_file": "ml_engine/recommender_model.py",
-      "source_location": "L10"
     },
     {
       "id": "ml_engine_mcq_generator_groundedmcqgenerator",
@@ -157,7 +144,7 @@
       "file_type": "code",
       "norm_label": "competencygapmodel",
       "source_file": "ml_engine/competency_model.py",
-      "source_location": "L31"
+      "source_location": "L29"
     },
     {
       "id": "ml_engine_proctoring_model_proctoringtrustengine",
@@ -178,12 +165,77 @@
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 36,
-      "community_name": "VirtualLabEvaluator",
+      "community": 35,
+      "community_name": "ProctoringTrustEngine",
       "file_type": "code",
       "norm_label": "virtuallabevaluator",
       "source_file": "ml_engine/virtual_lab_evaluator.py",
       "source_location": "L10"
+    },
+    {
+      "id": "tests_test_all_models_teststatgyanaimodels",
+      "label": "TestStatGyanAIModels",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "ProctoringTrustEngine",
+      "file_type": "code",
+      "norm_label": "teststatgyanaimodels",
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L22"
+    },
+    {
+      "id": "tests_test_ml_accuracy_testmlmodelaccuracyandgeneralization",
+      "label": "TestMLModelAccuracyAndGeneralization",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "TestMLModelAccuracyAndGeneralization",
+      "file_type": "code",
+      "norm_label": "testmlmodelaccuracyandgeneralization",
+      "source_file": "tests/test_ml_accuracy.py",
+      "source_location": "L17"
+    },
+    {
+      "id": "ml_engine_survey_ml_model_surveymicrodatamlmodel",
+      "label": "SurveyMicrodataMLModel",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "SurveyMicrodataMLModel",
+      "file_type": "code",
+      "norm_label": "surveymicrodatamlmodel",
+      "source_file": "ml_engine/survey_ml_model.py",
+      "source_location": "L17"
+    },
+    {
+      "id": "ml_engine_recommender_model_blendedpathwayrecommender",
+      "label": "BlendedPathwayRecommender",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "lifespan",
+      "file_type": "code",
+      "norm_label": "blendedpathwayrecommender",
+      "source_file": "ml_engine/recommender_model.py",
+      "source_location": "L10"
+    },
+    {
+      "id": "ml_engine_decay_model_skilldecaymodel",
+      "label": "SkillDecayModel",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "SkillDecayModel",
+      "file_type": "code",
+      "norm_label": "skilldecaymodel",
+      "source_file": "ml_engine/decay_model.py",
+      "source_location": "L52"
     },
     {
       "id": "backend_server_analyze_competency",
@@ -195,7 +247,7 @@
       "file_type": "code",
       "norm_label": "analyze_competency()",
       "source_file": "backend/server.py",
-      "source_location": "L104"
+      "source_location": "L165"
     },
     {
       "id": "backend_server_cadre_analytics",
@@ -207,7 +259,7 @@
       "file_type": "code",
       "norm_label": "cadre_analytics()",
       "source_file": "backend/server.py",
-      "source_location": "L157"
+      "source_location": "L225"
     },
     {
       "id": "backend_server_evaluate_lab_code",
@@ -219,7 +271,7 @@
       "file_type": "code",
       "norm_label": "evaluate_lab_code()",
       "source_file": "backend/server.py",
-      "source_location": "L166"
+      "source_location": "L234"
     },
     {
       "id": "backend_server_export_moodle",
@@ -231,7 +283,7 @@
       "file_type": "code",
       "norm_label": "export_moodle()",
       "source_file": "backend/server.py",
-      "source_location": "L131"
+      "source_location": "L202"
     },
     {
       "id": "backend_server_export_qti",
@@ -243,7 +295,7 @@
       "file_type": "code",
       "norm_label": "export_qti()",
       "source_file": "backend/server.py",
-      "source_location": "L125"
+      "source_location": "L196"
     },
     {
       "id": "backend_server_generate_assessment",
@@ -255,7 +307,7 @@
       "file_type": "code",
       "norm_label": "generate_assessment()",
       "source_file": "backend/server.py",
-      "source_location": "L116"
+      "source_location": "L186"
     },
     {
       "id": "backend_server_get_cadres",
@@ -267,7 +319,7 @@
       "file_type": "code",
       "norm_label": "get_cadres()",
       "source_file": "backend/server.py",
-      "source_location": "L100"
+      "source_location": "L161"
     },
     {
       "id": "backend_server_get_knowledge_graph",
@@ -279,7 +331,19 @@
       "file_type": "code",
       "norm_label": "get_knowledge_graph()",
       "source_file": "backend/server.py",
-      "source_location": "L191"
+      "source_location": "L259"
+    },
+    {
+      "id": "backend_server_get_ml_metrics",
+      "label": "get_ml_metrics()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "server.py",
+      "file_type": "code",
+      "norm_label": "get_ml_metrics()",
+      "source_file": "backend/server.py",
+      "source_location": "L136"
     },
     {
       "id": "backend_server_get_proctoring_policy",
@@ -291,7 +355,7 @@
       "file_type": "code",
       "norm_label": "get_proctoring_policy()",
       "source_file": "backend/server.py",
-      "source_location": "L170"
+      "source_location": "L238"
     },
     {
       "id": "backend_server_get_proctoring_report",
@@ -303,7 +367,7 @@
       "file_type": "code",
       "norm_label": "get_proctoring_report()",
       "source_file": "backend/server.py",
-      "source_location": "L187"
+      "source_location": "L255"
     },
     {
       "id": "backend_server_health_check",
@@ -315,7 +379,7 @@
       "file_type": "code",
       "norm_label": "health_check()",
       "source_file": "backend/server.py",
-      "source_location": "L84"
+      "source_location": "L118"
     },
     {
       "id": "backend_server_infer_competency",
@@ -327,7 +391,7 @@
       "file_type": "code",
       "norm_label": "infer_competency()",
       "source_file": "backend/server.py",
-      "source_location": "L109"
+      "source_location": "L173"
     },
     {
       "id": "backend_server_log_proctoring_event",
@@ -339,7 +403,19 @@
       "file_type": "code",
       "norm_label": "log_proctoring_event()",
       "source_file": "backend/server.py",
-      "source_location": "L178"
+      "source_location": "L246"
+    },
+    {
+      "id": "backend_server_predict_survey_demographics",
+      "label": "predict_survey_demographics()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "server.py",
+      "file_type": "code",
+      "norm_label": "predict_survey_demographics()",
+      "source_file": "backend/server.py",
+      "source_location": "L151"
     },
     {
       "id": "backend_server_recommend_pathway",
@@ -351,7 +427,7 @@
       "file_type": "code",
       "norm_label": "recommend_pathway()",
       "source_file": "backend/server.py",
-      "source_location": "L137"
+      "source_location": "L208"
     },
     {
       "id": "backend_server_serve_index",
@@ -363,7 +439,7 @@
       "file_type": "code",
       "norm_label": "serve_index()",
       "source_file": "backend/server.py",
-      "source_location": "L249"
+      "source_location": "L310"
     },
     {
       "id": "backend_server_simulate_decay",
@@ -375,7 +451,7 @@
       "file_type": "code",
       "norm_label": "simulate_decay()",
       "source_file": "backend/server.py",
-      "source_location": "L142"
+      "source_location": "L216"
     },
     {
       "id": "backend_server_start_proctoring_session",
@@ -387,31 +463,7 @@
       "file_type": "code",
       "norm_label": "start_proctoring_session()",
       "source_file": "backend/server.py",
-      "source_location": "L174"
-    },
-    {
-      "id": "ml_engine_decay_model_skilldecaymodel_compute_decay",
-      "label": ".compute_decay()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 30,
-      "community_name": "server.py",
-      "file_type": "code",
-      "norm_label": ".compute_decay()",
-      "source_file": "ml_engine/decay_model.py",
-      "source_location": "L56"
-    },
-    {
-      "id": "ml_engine_decay_model_skilldecaymodel_init",
-      "label": ".__init__()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 30,
-      "community_name": "server.py",
-      "file_type": "code",
-      "norm_label": ".__init__()",
-      "source_file": "ml_engine/decay_model.py",
-      "source_location": "L53"
+      "source_location": "L242"
     },
     {
       "id": "ml_engine_predictive_analytics_predictiveanalyticsengine_forecast_survey_readiness",
@@ -450,28 +502,28 @@
       "source_location": "L122"
     },
     {
-      "id": "ml_engine_recommender_model_blendedpathwayrecommender_generate_pathway",
-      "label": ".generate_pathway()",
+      "id": "static_js_app_applytourstep",
+      "label": "applyTourStep()",
       "_callable": true,
       "_origin": "ast",
-      "community": 30,
-      "community_name": "server.py",
+      "community": 31,
+      "community_name": "app.js",
       "file_type": "code",
-      "norm_label": ".generate_pathway()",
-      "source_file": "ml_engine/recommender_model.py",
-      "source_location": "L27"
+      "norm_label": "applytourstep()",
+      "source_file": "static/js/app.js",
+      "source_location": "L1915"
     },
     {
-      "id": "ml_engine_recommender_model_blendedpathwayrecommender_init",
-      "label": ".__init__()",
+      "id": "static_js_app_checkfastapiconnection",
+      "label": "checkFastAPIConnection()",
       "_callable": true,
       "_origin": "ast",
-      "community": 30,
-      "community_name": "server.py",
+      "community": 31,
+      "community_name": "app.js",
       "file_type": "code",
-      "norm_label": ".__init__()",
-      "source_file": "ml_engine/recommender_model.py",
-      "source_location": "L11"
+      "norm_label": "checkfastapiconnection()",
+      "source_file": "static/js/app.js",
+      "source_location": "L1983"
     },
     {
       "id": "static_js_app_computeclientsidegap",
@@ -483,7 +535,7 @@
       "file_type": "code",
       "norm_label": "computeclientsidegap()",
       "source_file": "static/js/app.js",
-      "source_location": "L244"
+      "source_location": "L247"
     },
     {
       "id": "static_js_app_computeclientsideinference",
@@ -495,7 +547,7 @@
       "file_type": "code",
       "norm_label": "computeclientsideinference()",
       "source_file": "static/js/app.js",
-      "source_location": "L301"
+      "source_location": "L304"
     },
     {
       "id": "static_js_app_drawmultilanegraph",
@@ -507,7 +559,7 @@
       "file_type": "code",
       "norm_label": "drawmultilanegraph()",
       "source_file": "static/js/app.js",
-      "source_location": "L1198"
+      "source_location": "L1201"
     },
     {
       "id": "static_js_app_executelabcode",
@@ -519,7 +571,19 @@
       "file_type": "code",
       "norm_label": "executelabcode()",
       "source_file": "static/js/app.js",
-      "source_location": "L991"
+      "source_location": "L994"
+    },
+    {
+      "id": "static_js_app_exittour",
+      "label": "exitTour()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "exittour()",
+      "source_file": "static/js/app.js",
+      "source_location": "L1958"
     },
     {
       "id": "static_js_app_handletabactivation",
@@ -531,7 +595,7 @@
       "file_type": "code",
       "norm_label": "handletabactivation()",
       "source_file": "static/js/app.js",
-      "source_location": "L157"
+      "source_location": "L160"
     },
     {
       "id": "static_js_app_initwebcamstream",
@@ -543,7 +607,7 @@
       "file_type": "code",
       "norm_label": "initwebcamstream()",
       "source_file": "static/js/app.js",
-      "source_location": "L1739"
+      "source_location": "L1742"
     },
     {
       "id": "static_js_app_loadcadreanalytics",
@@ -555,7 +619,7 @@
       "file_type": "code",
       "norm_label": "loadcadreanalytics()",
       "source_file": "static/js/app.js",
-      "source_location": "L897"
+      "source_location": "L900"
     },
     {
       "id": "static_js_app_loadcadres",
@@ -567,7 +631,19 @@
       "file_type": "code",
       "norm_label": "loadcadres()",
       "source_file": "static/js/app.js",
-      "source_location": "L181"
+      "source_location": "L184"
+    },
+    {
+      "id": "static_js_app_loadlivemlmetrics",
+      "label": "loadLiveMLMetrics()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "loadlivemlmetrics()",
+      "source_file": "static/js/app.js",
+      "source_location": "L2014"
     },
     {
       "id": "static_js_app_loadpathway",
@@ -579,7 +655,7 @@
       "file_type": "code",
       "norm_label": "loadpathway()",
       "source_file": "static/js/app.js",
-      "source_location": "L671"
+      "source_location": "L674"
     },
     {
       "id": "static_js_app_loadsamplemcqs",
@@ -591,7 +667,7 @@
       "file_type": "code",
       "norm_label": "loadsamplemcqs()",
       "source_file": "static/js/app.js",
-      "source_location": "L525"
+      "source_location": "L528"
     },
     {
       "id": "static_js_app_loadsamplepathway",
@@ -603,7 +679,19 @@
       "file_type": "code",
       "norm_label": "loadsamplepathway()",
       "source_file": "static/js/app.js",
-      "source_location": "L738"
+      "source_location": "L741"
+    },
+    {
+      "id": "static_js_app_nexttourstep",
+      "label": "nextTourStep()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "nexttourstep()",
+      "source_file": "static/js/app.js",
+      "source_location": "L1941"
     },
     {
       "id": "static_js_app_populatecadresdropdown",
@@ -615,7 +703,19 @@
       "file_type": "code",
       "norm_label": "populatecadresdropdown()",
       "source_file": "static/js/app.js",
-      "source_location": "L168"
+      "source_location": "L171"
+    },
+    {
+      "id": "static_js_app_prevtourstep",
+      "label": "prevTourStep()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "prevtourstep()",
+      "source_file": "static/js/app.js",
+      "source_location": "L1951"
     },
     {
       "id": "static_js_app_rendercompetencyoverview",
@@ -627,7 +727,7 @@
       "file_type": "code",
       "norm_label": "rendercompetencyoverview()",
       "source_file": "static/js/app.js",
-      "source_location": "L329"
+      "source_location": "L332"
     },
     {
       "id": "static_js_app_renderdecayresults",
@@ -639,7 +739,7 @@
       "file_type": "code",
       "norm_label": "renderdecayresults()",
       "source_file": "static/js/app.js",
-      "source_location": "L1057"
+      "source_location": "L1060"
     },
     {
       "id": "static_js_app_renderdivisionalheatmap",
@@ -651,7 +751,7 @@
       "file_type": "code",
       "norm_label": "renderdivisionalheatmap()",
       "source_file": "static/js/app.js",
-      "source_location": "L909"
+      "source_location": "L912"
     },
     {
       "id": "static_js_app_renderdomainlist",
@@ -663,7 +763,7 @@
       "file_type": "code",
       "norm_label": "renderdomainlist()",
       "source_file": "static/js/app.js",
-      "source_location": "L397"
+      "source_location": "L400"
     },
     {
       "id": "static_js_app_renderknowledgegraph",
@@ -675,7 +775,7 @@
       "file_type": "code",
       "norm_label": "renderknowledgegraph()",
       "source_file": "static/js/app.js",
-      "source_location": "L1168"
+      "source_location": "L1171"
     },
     {
       "id": "static_js_app_rendermcqerror",
@@ -687,7 +787,7 @@
       "file_type": "code",
       "norm_label": "rendermcqerror()",
       "source_file": "static/js/app.js",
-      "source_location": "L504"
+      "source_location": "L507"
     },
     {
       "id": "static_js_app_rendermcqs",
@@ -699,7 +799,7 @@
       "file_type": "code",
       "norm_label": "rendermcqs()",
       "source_file": "static/js/app.js",
-      "source_location": "L608"
+      "source_location": "L611"
     },
     {
       "id": "static_js_app_renderpathway",
@@ -711,7 +811,7 @@
       "file_type": "code",
       "norm_label": "renderpathway()",
       "source_file": "static/js/app.js",
-      "source_location": "L839"
+      "source_location": "L842"
     },
     {
       "id": "static_js_app_renderpathwayerror",
@@ -723,7 +823,7 @@
       "file_type": "code",
       "norm_label": "renderpathwayerror()",
       "source_file": "static/js/app.js",
-      "source_location": "L717"
+      "source_location": "L720"
     },
     {
       "id": "static_js_app_renderradarchart",
@@ -735,7 +835,7 @@
       "file_type": "code",
       "norm_label": "renderradarchart()",
       "source_file": "static/js/app.js",
-      "source_location": "L336"
+      "source_location": "L339"
     },
     {
       "id": "static_js_app_renderreadinessforecasts",
@@ -747,7 +847,7 @@
       "file_type": "code",
       "norm_label": "renderreadinessforecasts()",
       "source_file": "static/js/app.js",
-      "source_location": "L948"
+      "source_location": "L951"
     },
     {
       "id": "static_js_app_resetgraphfocus",
@@ -759,7 +859,7 @@
       "file_type": "code",
       "norm_label": "resetgraphfocus()",
       "source_file": "static/js/app.js",
-      "source_location": "L1562"
+      "source_location": "L1565"
     },
     {
       "id": "static_js_app_roundrect",
@@ -771,7 +871,7 @@
       "file_type": "code",
       "norm_label": "roundrect()",
       "source_file": "static/js/app.js",
-      "source_location": "L1402"
+      "source_location": "L1405"
     },
     {
       "id": "static_js_app_runmcqgeneration",
@@ -783,7 +883,7 @@
       "file_type": "code",
       "norm_label": "runmcqgeneration()",
       "source_file": "static/js/app.js",
-      "source_location": "L452"
+      "source_location": "L455"
     },
     {
       "id": "static_js_app_setupassessmentfilters",
@@ -795,7 +895,7 @@
       "file_type": "code",
       "norm_label": "setupassessmentfilters()",
       "source_file": "static/js/app.js",
-      "source_location": "L432"
+      "source_location": "L435"
     },
     {
       "id": "static_js_app_setupbrowserlockdownlisteners",
@@ -807,7 +907,7 @@
       "file_type": "code",
       "norm_label": "setupbrowserlockdownlisteners()",
       "source_file": "static/js/app.js",
-      "source_location": "L1651"
+      "source_location": "L1654"
     },
     {
       "id": "static_js_app_setupdecaysimulator",
@@ -819,7 +919,7 @@
       "file_type": "code",
       "norm_label": "setupdecaysimulator()",
       "source_file": "static/js/app.js",
-      "source_location": "L1037"
+      "source_location": "L1040"
     },
     {
       "id": "static_js_app_setupgrapheventlisteners",
@@ -831,7 +931,7 @@
       "file_type": "code",
       "norm_label": "setupgrapheventlisteners()",
       "source_file": "static/js/app.js",
-      "source_location": "L1425"
+      "source_location": "L1428"
     },
     {
       "id": "static_js_app_setupnavigation",
@@ -843,7 +943,7 @@
       "file_type": "code",
       "norm_label": "setupnavigation()",
       "source_file": "static/js/app.js",
-      "source_location": "L137"
+      "source_location": "L140"
     },
     {
       "id": "static_js_app_setupproctoringengine",
@@ -855,7 +955,7 @@
       "file_type": "code",
       "norm_label": "setupproctoringengine()",
       "source_file": "static/js/app.js",
-      "source_location": "L1576"
+      "source_location": "L1579"
     },
     {
       "id": "static_js_app_setuproleswitcher",
@@ -867,7 +967,31 @@
       "file_type": "code",
       "norm_label": "setuproleswitcher()",
       "source_file": "static/js/app.js",
-      "source_location": "L202"
+      "source_location": "L205"
+    },
+    {
+      "id": "static_js_app_setupsihdocketmodal",
+      "label": "setupSIHDocketModal()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "setupsihdocketmodal()",
+      "source_file": "static/js/app.js",
+      "source_location": "L1964"
+    },
+    {
+      "id": "static_js_app_setupsihtour",
+      "label": "setupSIHTour()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "setupsihtour()",
+      "source_file": "static/js/app.js",
+      "source_location": "L1901"
     },
     {
       "id": "static_js_app_setupvirtuallab",
@@ -879,7 +1003,7 @@
       "file_type": "code",
       "norm_label": "setupvirtuallab()",
       "source_file": "static/js/app.js",
-      "source_location": "L984"
+      "source_location": "L987"
     },
     {
       "id": "static_js_app_showlockdownfreezemodal",
@@ -891,7 +1015,7 @@
       "file_type": "code",
       "norm_label": "showlockdownfreezemodal()",
       "source_file": "static/js/app.js",
-      "source_location": "L1833"
+      "source_location": "L1836"
     },
     {
       "id": "static_js_app_startextensiondomscanner",
@@ -903,7 +1027,19 @@
       "file_type": "code",
       "norm_label": "startextensiondomscanner()",
       "source_file": "static/js/app.js",
-      "source_location": "L1700"
+      "source_location": "L1703"
+    },
+    {
+      "id": "static_js_app_startjurytour",
+      "label": "startJuryTour()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "startjurytour()",
+      "source_file": "static/js/app.js",
+      "source_location": "L1908"
     },
     {
       "id": "static_js_app_toggleproctoringmode",
@@ -915,7 +1051,7 @@
       "file_type": "code",
       "norm_label": "toggleproctoringmode()",
       "source_file": "static/js/app.js",
-      "source_location": "L1607"
+      "source_location": "L1610"
     },
     {
       "id": "static_js_app_triggercompetencyanalysis",
@@ -927,7 +1063,7 @@
       "file_type": "code",
       "norm_label": "triggercompetencyanalysis()",
       "source_file": "static/js/app.js",
-      "source_location": "L213"
+      "source_location": "L216"
     },
     {
       "id": "static_js_app_triggerproctoringviolation",
@@ -939,7 +1075,7 @@
       "file_type": "code",
       "norm_label": "triggerproctoringviolation()",
       "source_file": "static/js/app.js",
-      "source_location": "L1755"
+      "source_location": "L1758"
     },
     {
       "id": "static_js_app_updateinspectorpanel",
@@ -951,7 +1087,7 @@
       "file_type": "code",
       "norm_label": "updateinspectorpanel()",
       "source_file": "static/js/app.js",
-      "source_location": "L1513"
+      "source_location": "L1516"
     },
     {
       "id": "static_js_app_updateproctoringhud",
@@ -963,7 +1099,7 @@
       "file_type": "code",
       "norm_label": "updateproctoringhud()",
       "source_file": "static/js/app.js",
-      "source_location": "L1783"
+      "source_location": "L1786"
     },
     {
       "id": "ml_engine_mcq_generator_groundedmcqgenerator_export_moodle_xml",
@@ -975,7 +1111,7 @@
       "file_type": "code",
       "norm_label": ".export_moodle_xml()",
       "source_file": "ml_engine/mcq_generator.py",
-      "source_location": "L298"
+      "source_location": "L297"
     },
     {
       "id": "ml_engine_mcq_generator_groundedmcqgenerator_export_qti",
@@ -987,7 +1123,7 @@
       "file_type": "code",
       "norm_label": ".export_qti()",
       "source_file": "ml_engine/mcq_generator.py",
-      "source_location": "L276"
+      "source_location": "L274"
     },
     {
       "id": "ml_engine_mcq_generator_groundedmcqgenerator_generate_assessment",
@@ -1038,6 +1174,18 @@
       "source_location": "L215"
     },
     {
+      "id": "ml_engine_competency_model_competencygapmodel_analyze_gap",
+      "label": ".analyze_gap()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "CompetencyGapModel",
+      "file_type": "code",
+      "norm_label": ".analyze_gap()",
+      "source_file": "ml_engine/competency_model.py",
+      "source_location": "L226"
+    },
+    {
       "id": "ml_engine_competency_model_competencygapmodel_evaluate_gap",
       "label": ".evaluate_gap()",
       "_callable": true,
@@ -1047,7 +1195,19 @@
       "file_type": "code",
       "norm_label": ".evaluate_gap()",
       "source_file": "ml_engine/competency_model.py",
-      "source_location": "L43"
+      "source_location": "L157"
+    },
+    {
+      "id": "ml_engine_competency_model_competencygapmodel_evaluate_model_accuracy",
+      "label": ".evaluate_model_accuracy()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "CompetencyGapModel",
+      "file_type": "code",
+      "norm_label": ".evaluate_model_accuracy()",
+      "source_file": "ml_engine/competency_model.py",
+      "source_location": "L82"
     },
     {
       "id": "ml_engine_competency_model_competencygapmodel_infer_competency_from_text",
@@ -1059,7 +1219,19 @@
       "file_type": "code",
       "norm_label": ".infer_competency_from_text()",
       "source_file": "ml_engine/competency_model.py",
-      "source_location": "L107"
+      "source_location": "L130"
+    },
+    {
+      "id": "ml_engine_competency_model_competencygapmodel_infer_from_text",
+      "label": ".infer_from_text()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "CompetencyGapModel",
+      "file_type": "code",
+      "norm_label": ".infer_from_text()",
+      "source_file": "ml_engine/competency_model.py",
+      "source_location": "L234"
     },
     {
       "id": "ml_engine_competency_model_competencygapmodel_init",
@@ -1071,19 +1243,19 @@
       "file_type": "code",
       "norm_label": ".__init__()",
       "source_file": "ml_engine/competency_model.py",
-      "source_location": "L32"
+      "source_location": "L30"
     },
     {
-      "id": "ml_engine_competency_model_competencygapmodel_init_vectorizer",
-      "label": "._init_vectorizer()",
+      "id": "ml_engine_competency_model_competencygapmodel_init_and_train_model",
+      "label": "._init_and_train_model()",
       "_callable": true,
       "_origin": "ast",
       "community": 33,
       "community_name": "CompetencyGapModel",
       "file_type": "code",
-      "norm_label": "._init_vectorizer()",
+      "norm_label": "._init_and_train_model()",
       "source_file": "ml_engine/competency_model.py",
-      "source_location": "L38"
+      "source_location": "L41"
     },
     {
       "id": "ml_engine_proctoring_model_proctoringtrustengine_get_security_policy",
@@ -1146,12 +1318,24 @@
       "source_location": "L25"
     },
     {
+      "id": "ml_engine_virtual_lab_evaluator_virtuallabevaluator_evaluate_code",
+      "label": ".evaluate_code()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "ProctoringTrustEngine",
+      "file_type": "code",
+      "norm_label": ".evaluate_code()",
+      "source_file": "ml_engine/virtual_lab_evaluator.py",
+      "source_location": "L106"
+    },
+    {
       "id": "ml_engine_virtual_lab_evaluator_virtuallabevaluator_evaluate_submission",
       "label": ".evaluate_submission()",
       "_callable": true,
       "_origin": "ast",
-      "community": 36,
-      "community_name": "VirtualLabEvaluator",
+      "community": 35,
+      "community_name": "ProctoringTrustEngine",
       "file_type": "code",
       "norm_label": ".evaluate_submission()",
       "source_file": "ml_engine/virtual_lab_evaluator.py",
@@ -1162,8 +1346,8 @@
       "label": ".__init__()",
       "_callable": true,
       "_origin": "ast",
-      "community": 36,
-      "community_name": "VirtualLabEvaluator",
+      "community": 35,
+      "community_name": "ProctoringTrustEngine",
       "file_type": "code",
       "norm_label": ".__init__()",
       "source_file": "ml_engine/virtual_lab_evaluator.py",
@@ -1174,12 +1358,312 @@
       "label": ".run_benchmark_calculation()",
       "_callable": true,
       "_origin": "ast",
-      "community": 36,
-      "community_name": "VirtualLabEvaluator",
+      "community": 35,
+      "community_name": "ProctoringTrustEngine",
       "file_type": "code",
       "norm_label": ".run_benchmark_calculation()",
       "source_file": "ml_engine/virtual_lab_evaluator.py",
       "source_location": "L17"
+    },
+    {
+      "id": "tests_test_all_models_teststatgyanaimodels_setupclass",
+      "label": ".setUpClass()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "ProctoringTrustEngine",
+      "file_type": "code",
+      "norm_label": ".setupclass()",
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L25"
+    },
+    {
+      "id": "tests_test_all_models_teststatgyanaimodels_test_01_competency_gap_engine",
+      "label": ".test_01_competency_gap_engine()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "ProctoringTrustEngine",
+      "file_type": "code",
+      "norm_label": ".test_01_competency_gap_engine()",
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L34"
+    },
+    {
+      "id": "tests_test_all_models_teststatgyanaimodels_test_02_grounded_mcq_and_qc",
+      "label": ".test_02_grounded_mcq_and_qc()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "ProctoringTrustEngine",
+      "file_type": "code",
+      "norm_label": ".test_02_grounded_mcq_and_qc()",
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L49"
+    },
+    {
+      "id": "tests_test_all_models_teststatgyanaimodels_test_03_proctoring_trust_engine",
+      "label": ".test_03_proctoring_trust_engine()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "ProctoringTrustEngine",
+      "file_type": "code",
+      "norm_label": ".test_03_proctoring_trust_engine()",
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L67"
+    },
+    {
+      "id": "tests_test_all_models_teststatgyanaimodels_test_04_blended_pathway_recommender",
+      "label": ".test_04_blended_pathway_recommender()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "ProctoringTrustEngine",
+      "file_type": "code",
+      "norm_label": ".test_04_blended_pathway_recommender()",
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L91"
+    },
+    {
+      "id": "tests_test_all_models_teststatgyanaimodels_test_05_decay_and_drift_model",
+      "label": ".test_05_decay_and_drift_model()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "ProctoringTrustEngine",
+      "file_type": "code",
+      "norm_label": ".test_05_decay_and_drift_model()",
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L107"
+    },
+    {
+      "id": "tests_test_all_models_teststatgyanaimodels_test_06_predictive_divisional_analytics",
+      "label": ".test_06_predictive_divisional_analytics()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "ProctoringTrustEngine",
+      "file_type": "code",
+      "norm_label": ".test_06_predictive_divisional_analytics()",
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L117"
+    },
+    {
+      "id": "tests_test_all_models_teststatgyanaimodels_test_07_virtual_statistical_lab",
+      "label": ".test_07_virtual_statistical_lab()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "ProctoringTrustEngine",
+      "file_type": "code",
+      "norm_label": ".test_07_virtual_statistical_lab()",
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L129"
+    },
+    {
+      "id": "tests_test_ml_accuracy_testmlmodelaccuracyandgeneralization_setupclass",
+      "label": ".setUpClass()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "TestMLModelAccuracyAndGeneralization",
+      "file_type": "code",
+      "norm_label": ".setupclass()",
+      "source_file": "tests/test_ml_accuracy.py",
+      "source_location": "L20"
+    },
+    {
+      "id": "tests_test_ml_accuracy_testmlmodelaccuracyandgeneralization_test_01_competency_model_high_accuracy",
+      "label": ".test_01_competency_model_high_accuracy()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "TestMLModelAccuracyAndGeneralization",
+      "file_type": "code",
+      "norm_label": ".test_01_competency_model_high_accuracy()",
+      "source_file": "tests/test_ml_accuracy.py",
+      "source_location": "L24"
+    },
+    {
+      "id": "tests_test_ml_accuracy_testmlmodelaccuracyandgeneralization_test_02_competency_model_no_overfitting",
+      "label": ".test_02_competency_model_no_overfitting()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "TestMLModelAccuracyAndGeneralization",
+      "file_type": "code",
+      "norm_label": ".test_02_competency_model_no_overfitting()",
+      "source_file": "tests/test_ml_accuracy.py",
+      "source_location": "L44"
+    },
+    {
+      "id": "tests_test_ml_accuracy_testmlmodelaccuracyandgeneralization_test_03_competency_model_unseen_task_generalization",
+      "label": ".test_03_competency_model_unseen_task_generalization()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "TestMLModelAccuracyAndGeneralization",
+      "file_type": "code",
+      "norm_label": ".test_03_competency_model_unseen_task_generalization()",
+      "source_file": "tests/test_ml_accuracy.py",
+      "source_location": "L59"
+    },
+    {
+      "id": "tests_test_ml_accuracy_testmlmodelaccuracyandgeneralization_test_04_survey_microdata_ml_model_anti_overfitting",
+      "label": ".test_04_survey_microdata_ml_model_anti_overfitting()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "TestMLModelAccuracyAndGeneralization",
+      "file_type": "code",
+      "norm_label": ".test_04_survey_microdata_ml_model_anti_overfitting()",
+      "source_file": "tests/test_ml_accuracy.py",
+      "source_location": "L97"
+    },
+    {
+      "id": "tests_test_ml_accuracy_testmlmodelaccuracyandgeneralization_test_05_survey_microdata_predictions",
+      "label": ".test_05_survey_microdata_predictions()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "TestMLModelAccuracyAndGeneralization",
+      "file_type": "code",
+      "norm_label": ".test_05_survey_microdata_predictions()",
+      "source_file": "tests/test_ml_accuracy.py",
+      "source_location": "L113"
+    },
+    {
+      "id": "ml_engine_survey_ml_model_surveymicrodatamlmodel_evaluate_model_accuracy",
+      "label": ".evaluate_model_accuracy()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "SurveyMicrodataMLModel",
+      "file_type": "code",
+      "norm_label": ".evaluate_model_accuracy()",
+      "source_file": "ml_engine/survey_ml_model.py",
+      "source_location": "L87"
+    },
+    {
+      "id": "ml_engine_survey_ml_model_surveymicrodatamlmodel_init",
+      "label": ".__init__()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "SurveyMicrodataMLModel",
+      "file_type": "code",
+      "norm_label": ".__init__()",
+      "source_file": "ml_engine/survey_ml_model.py",
+      "source_location": "L18"
+    },
+    {
+      "id": "ml_engine_survey_ml_model_surveymicrodatamlmodel_load_and_augment_data",
+      "label": "._load_and_augment_data()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "SurveyMicrodataMLModel",
+      "file_type": "code",
+      "norm_label": "._load_and_augment_data()",
+      "source_file": "ml_engine/survey_ml_model.py",
+      "source_location": "L23"
+    },
+    {
+      "id": "ml_engine_survey_ml_model_surveymicrodatamlmodel_predict_status",
+      "label": ".predict_status()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "SurveyMicrodataMLModel",
+      "file_type": "code",
+      "norm_label": ".predict_status()",
+      "source_file": "ml_engine/survey_ml_model.py",
+      "source_location": "L127"
+    },
+    {
+      "id": "ml_engine_survey_ml_model_surveymicrodatamlmodel_train_model",
+      "label": "._train_model()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "SurveyMicrodataMLModel",
+      "file_type": "code",
+      "norm_label": "._train_model()",
+      "source_file": "ml_engine/survey_ml_model.py",
+      "source_location": "L74"
+    },
+    {
+      "id": "backend_server_lifespan",
+      "label": "lifespan()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "lifespan",
+      "file_type": "code",
+      "norm_label": "lifespan()",
+      "source_file": "backend/server.py",
+      "source_location": "L39"
+    },
+    {
+      "id": "ml_engine_recommender_model_blendedpathwayrecommender_generate_pathway",
+      "label": ".generate_pathway()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "lifespan",
+      "file_type": "code",
+      "norm_label": ".generate_pathway()",
+      "source_file": "ml_engine/recommender_model.py",
+      "source_location": "L27"
+    },
+    {
+      "id": "ml_engine_recommender_model_blendedpathwayrecommender_init",
+      "label": ".__init__()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "lifespan",
+      "file_type": "code",
+      "norm_label": ".__init__()",
+      "source_file": "ml_engine/recommender_model.py",
+      "source_location": "L11"
+    },
+    {
+      "id": "ml_engine_decay_model_skilldecaymodel_compute_decay",
+      "label": ".compute_decay()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "SkillDecayModel",
+      "file_type": "code",
+      "norm_label": ".compute_decay()",
+      "source_file": "ml_engine/decay_model.py",
+      "source_location": "L56"
+    },
+    {
+      "id": "ml_engine_decay_model_skilldecaymodel_init",
+      "label": ".__init__()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "SkillDecayModel",
+      "file_type": "code",
+      "norm_label": ".__init__()",
+      "source_file": "ml_engine/decay_model.py",
+      "source_location": "L53"
+    },
+    {
+      "id": "ml_engine_decay_model_skilldecaymodel_simulate_decay",
+      "label": ".simulate_decay()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "SkillDecayModel",
+      "file_type": "code",
+      "norm_label": ".simulate_decay()",
+      "source_file": "ml_engine/decay_model.py",
+      "source_location": "L110"
     },
     {
       "id": "agents_skills_security_and_hardening_skill",
@@ -6589,28 +7073,6 @@
       "source_location": ""
     },
     {
-      "id": "ml_engine_decay_model",
-      "label": "decay_model.py",
-      "_origin": "ast",
-      "community": 30,
-      "community_name": "server.py",
-      "file_type": "code",
-      "norm_label": "decay_model.py",
-      "source_file": "ml_engine/decay_model.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "ml_engine_decay_model_py_any",
-      "label": "Any",
-      "_origin": "ast",
-      "community": 30,
-      "community_name": "server.py",
-      "file_type": "code",
-      "norm_label": "any",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "ml_engine_predictive_analytics",
       "label": "predictive_analytics.py",
       "_origin": "ast",
@@ -6633,28 +7095,6 @@
       "source_location": ""
     },
     {
-      "id": "ml_engine_recommender_model",
-      "label": "recommender_model.py",
-      "_origin": "ast",
-      "community": 30,
-      "community_name": "server.py",
-      "file_type": "code",
-      "norm_label": "recommender_model.py",
-      "source_file": "ml_engine/recommender_model.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "ml_engine_recommender_model_py_any",
-      "label": "Any",
-      "_origin": "ast",
-      "community": 30,
-      "community_name": "server.py",
-      "file_type": "code",
-      "norm_label": "any",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "post",
       "label": "post",
       "_origin": "ast",
@@ -6667,17 +7107,39 @@
     },
     {
       "id": "backend_server_rationale_1",
-      "label": "StatGyan AI - Core FastAPI Server Integrates all Machine Learning and Deep\u2026",
+      "label": "StatGyan AI - Core High-Speed FastAPI Server Integrates all Machine Learning\u2026",
       "_origin": "ast",
       "community": 30,
       "community_name": "server.py",
       "file_type": "rationale",
-      "norm_label": "statgyan ai - core fastapi server integrates all machine learning and deep...",
+      "norm_label": "statgyan ai - core high-speed fastapi server integrates all machine learning...",
       "source_file": "backend/server.py",
       "source_location": "L1"
     },
     {
-      "id": "backend_server_rationale_192",
+      "id": "backend_server_rationale_137",
+      "label": "Exposes real-time model accuracy and anti-overfitting validation metrics.\u2026",
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "server.py",
+      "file_type": "rationale",
+      "norm_label": "exposes real-time model accuracy and anti-overfitting validation metrics....",
+      "source_file": "backend/server.py",
+      "source_location": "L137"
+    },
+    {
+      "id": "backend_server_rationale_152",
+      "label": "Fast demographic ML inference on PLFS survey microdata.",
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "server.py",
+      "file_type": "rationale",
+      "norm_label": "fast demographic ml inference on plfs survey microdata.",
+      "source_file": "backend/server.py",
+      "source_location": "L152"
+    },
+    {
+      "id": "backend_server_rationale_260",
       "label": "Returns nodes and edges connecting Cadres, Competencies, Manuals, and Courses.",
       "_origin": "ast",
       "community": 30,
@@ -6685,29 +7147,7 @@
       "file_type": "rationale",
       "norm_label": "returns nodes and edges connecting cadres, competencies, manuals, and courses.",
       "source_file": "backend/server.py",
-      "source_location": "L192"
-    },
-    {
-      "id": "ml_engine_decay_model_rationale_1",
-      "label": "StatGyan AI - Skill Decay & Methodology Drift Predictor Models skill retention\u2026",
-      "_origin": "ast",
-      "community": 30,
-      "community_name": "server.py",
-      "file_type": "rationale",
-      "norm_label": "statgyan ai - skill decay & methodology drift predictor models skill retention...",
-      "source_file": "ml_engine/decay_model.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "ml_engine_decay_model_rationale_62",
-      "label": "Calculates decayed competency levels and flags critical drift alerts.",
-      "_origin": "ast",
-      "community": 30,
-      "community_name": "server.py",
-      "file_type": "rationale",
-      "norm_label": "calculates decayed competency levels and flags critical drift alerts.",
-      "source_file": "ml_engine/decay_model.py",
-      "source_location": "L62"
+      "source_location": "L260"
     },
     {
       "id": "ml_engine_predictive_analytics_rationale_1",
@@ -6743,28 +7183,6 @@
       "source_location": "L145"
     },
     {
-      "id": "ml_engine_recommender_model_rationale_1",
-      "label": "StatGyan AI - Blended Learning Pathway Recommender Bridges digital self-paced\u2026",
-      "_origin": "ast",
-      "community": 30,
-      "community_name": "server.py",
-      "file_type": "rationale",
-      "norm_label": "statgyan ai - blended learning pathway recommender bridges digital self-paced...",
-      "source_file": "ml_engine/recommender_model.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "ml_engine_recommender_model_rationale_28",
-      "label": "Builds a sequenced blended pathway based on identified competency gaps.",
-      "_origin": "ast",
-      "community": 30,
-      "community_name": "server.py",
-      "file_type": "rationale",
-      "norm_label": "builds a sequenced blended pathway based on identified competency gaps.",
-      "source_file": "ml_engine/recommender_model.py",
-      "source_location": "L28"
-    },
-    {
       "id": "static_js_app",
       "label": "app.js",
       "_origin": "ast",
@@ -6795,7 +7213,7 @@
       "file_type": "code",
       "norm_label": "builtin_graph",
       "source_file": "static/js/app.js",
-      "source_location": "L1092"
+      "source_location": "L1095"
     },
     {
       "id": "static_js_app_graphstate",
@@ -6806,7 +7224,7 @@
       "file_type": "code",
       "norm_label": "graphstate",
       "source_file": "static/js/app.js",
-      "source_location": "L1084"
+      "source_location": "L1087"
     },
     {
       "id": "static_js_app_state",
@@ -6818,6 +7236,17 @@
       "norm_label": "state",
       "source_file": "static/js/app.js",
       "source_location": "L109"
+    },
+    {
+      "id": "static_js_app_tour_steps",
+      "label": "TOUR_STEPS",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "tour_steps",
+      "source_file": "static/js/app.js",
+      "source_location": "L1847"
     },
     {
       "id": "ml_engine_mcq_generator",
@@ -6875,7 +7304,7 @@
       "source_location": "L216"
     },
     {
-      "id": "ml_engine_mcq_generator_rationale_277",
+      "id": "ml_engine_mcq_generator_rationale_275",
       "label": "Exports assessment items to QTI 2.1 standard XML format for LMS/Karmayogi\u2026",
       "_origin": "ast",
       "community": 32,
@@ -6883,10 +7312,10 @@
       "file_type": "rationale",
       "norm_label": "exports assessment items to qti 2.1 standard xml format for lms/karmayogi...",
       "source_file": "ml_engine/mcq_generator.py",
-      "source_location": "L277"
+      "source_location": "L275"
     },
     {
-      "id": "ml_engine_mcq_generator_rationale_299",
+      "id": "ml_engine_mcq_generator_rationale_298",
       "label": "Exports assessment to standard Moodle XML.",
       "_origin": "ast",
       "community": 32,
@@ -6894,7 +7323,7 @@
       "file_type": "rationale",
       "norm_label": "exports assessment to standard moodle xml.",
       "source_file": "ml_engine/mcq_generator.py",
-      "source_location": "L299"
+      "source_location": "L298"
     },
     {
       "id": "ml_engine_mcq_generator_rationale_35",
@@ -6908,17 +7337,6 @@
       "source_location": "L35"
     },
     {
-      "id": "ml_engine_competency_model",
-      "label": "competency_model.py",
-      "_origin": "ast",
-      "community": 33,
-      "community_name": "CompetencyGapModel",
-      "file_type": "code",
-      "norm_label": "competency_model.py",
-      "source_file": "ml_engine/competency_model.py",
-      "source_location": "L1"
-    },
-    {
       "id": "ml_engine_competency_model_py_any",
       "label": "Any",
       "_origin": "ast",
@@ -6930,37 +7348,70 @@
       "source_location": ""
     },
     {
-      "id": "ml_engine_competency_model_rationale_1",
-      "label": "StatGyan AI - Competency Assessment & Skill Gap Model Uses TF-IDF, Latent\u2026",
+      "id": "ml_engine_competency_model_rationale_131",
+      "label": "Uses the trained ML classifier to infer probabilistic competency affinities\u2026",
       "_origin": "ast",
       "community": 33,
       "community_name": "CompetencyGapModel",
       "file_type": "rationale",
-      "norm_label": "statgyan ai - competency assessment & skill gap model uses tf-idf, latent...",
+      "norm_label": "uses the trained ml classifier to infer probabilistic competency affinities...",
       "source_file": "ml_engine/competency_model.py",
-      "source_location": "L1"
+      "source_location": "L131"
     },
     {
-      "id": "ml_engine_competency_model_rationale_108",
-      "label": "Uses TF-IDF cosine similarity to infer domain affinities from officer self-\u2026",
+      "id": "ml_engine_competency_model_rationale_162",
+      "label": "Evaluates competency gaps between assessed scores and cadre requirements.",
       "_origin": "ast",
       "community": 33,
       "community_name": "CompetencyGapModel",
       "file_type": "rationale",
-      "norm_label": "uses tf-idf cosine similarity to infer domain affinities from officer self-...",
+      "norm_label": "evaluates competency gaps between assessed scores and cadre requirements.",
       "source_file": "ml_engine/competency_model.py",
-      "source_location": "L108"
+      "source_location": "L162"
     },
     {
-      "id": "ml_engine_competency_model_rationale_44",
-      "label": "Evaluates competency gap against cadre benchmark.",
+      "id": "ml_engine_competency_model_rationale_231",
+      "label": "Alias for evaluate_gap",
       "_origin": "ast",
       "community": 33,
       "community_name": "CompetencyGapModel",
       "file_type": "rationale",
-      "norm_label": "evaluates competency gap against cadre benchmark.",
+      "norm_label": "alias for evaluate_gap",
       "source_file": "ml_engine/competency_model.py",
-      "source_location": "L44"
+      "source_location": "L231"
+    },
+    {
+      "id": "ml_engine_competency_model_rationale_235",
+      "label": "Infers scores from officer text using the ML engine, then evaluates gap against\u2026",
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "CompetencyGapModel",
+      "file_type": "rationale",
+      "norm_label": "infers scores from officer text using the ml engine, then evaluates gap against...",
+      "source_file": "ml_engine/competency_model.py",
+      "source_location": "L235"
+    },
+    {
+      "id": "ml_engine_competency_model_rationale_42",
+      "label": "Trains L2-regularized classifier on official MoSPI task corpus. L2\u2026",
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "CompetencyGapModel",
+      "file_type": "rationale",
+      "norm_label": "trains l2-regularized classifier on official mospi task corpus. l2...",
+      "source_file": "ml_engine/competency_model.py",
+      "source_location": "L42"
+    },
+    {
+      "id": "ml_engine_competency_model_rationale_83",
+      "label": "Evaluates the model on an independent train/test split and 5-fold cross-\u2026",
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "CompetencyGapModel",
+      "file_type": "rationale",
+      "norm_label": "evaluates the model on an independent train/test split and 5-fold cross-...",
+      "source_file": "ml_engine/competency_model.py",
+      "source_location": "L83"
     },
     {
       "id": "readme",
@@ -6997,6 +7448,39 @@
       "source_location": ""
     },
     {
+      "id": "ml_engine_virtual_lab_evaluator",
+      "label": "virtual_lab_evaluator.py",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "ProctoringTrustEngine",
+      "file_type": "code",
+      "norm_label": "virtual_lab_evaluator.py",
+      "source_file": "ml_engine/virtual_lab_evaluator.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "ml_engine_virtual_lab_evaluator_py_any",
+      "label": "Any",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "ProctoringTrustEngine",
+      "file_type": "code",
+      "norm_label": "any",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "tests_test_all_models",
+      "label": "test_all_models.py",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "ProctoringTrustEngine",
+      "file_type": "code",
+      "norm_label": "test_all_models.py",
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L1"
+    },
+    {
       "id": "ml_engine_proctoring_model_rationale_1",
       "label": "StatGyan AI - AI Proctoring & Restriction Engine Integrates anti-cheating\u2026",
       "_origin": "ast",
@@ -7008,44 +7492,33 @@
       "source_location": "L1"
     },
     {
-      "id": "ml_engine_virtual_lab_evaluator",
-      "label": "virtual_lab_evaluator.py",
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "VirtualLabEvaluator",
-      "file_type": "code",
-      "norm_label": "virtual_lab_evaluator.py",
-      "source_file": "ml_engine/virtual_lab_evaluator.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "ml_engine_virtual_lab_evaluator_py_any",
-      "label": "Any",
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "VirtualLabEvaluator",
-      "file_type": "code",
-      "norm_label": "any",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "ml_engine_virtual_lab_evaluator_rationale_1",
       "label": "StatGyan AI - Virtual Statistical Lab Evaluator Auto-evaluates statistical\u2026",
       "_origin": "ast",
-      "community": 36,
-      "community_name": "VirtualLabEvaluator",
+      "community": 35,
+      "community_name": "ProctoringTrustEngine",
       "file_type": "rationale",
       "norm_label": "statgyan ai - virtual statistical lab evaluator auto-evaluates statistical...",
       "source_file": "ml_engine/virtual_lab_evaluator.py",
       "source_location": "L1"
     },
     {
+      "id": "ml_engine_virtual_lab_evaluator_rationale_107",
+      "label": "Alias for evaluate_submission.",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "ProctoringTrustEngine",
+      "file_type": "rationale",
+      "norm_label": "alias for evaluate_submission.",
+      "source_file": "ml_engine/virtual_lab_evaluator.py",
+      "source_location": "L107"
+    },
+    {
       "id": "ml_engine_virtual_lab_evaluator_rationale_18",
       "label": "Executes standard weighted MoSPI calculation over microdata records: - Employed\u2026",
       "_origin": "ast",
-      "community": 36,
-      "community_name": "VirtualLabEvaluator",
+      "community": 35,
+      "community_name": "ProctoringTrustEngine",
       "file_type": "rationale",
       "norm_label": "executes standard weighted mospi calculation over microdata records: - employed...",
       "source_file": "ml_engine/virtual_lab_evaluator.py",
@@ -7055,12 +7528,331 @@
       "id": "ml_engine_virtual_lab_evaluator_rationale_44",
       "label": "Evaluates submitted script against test cases and survey multiplier rules.",
       "_origin": "ast",
-      "community": 36,
-      "community_name": "VirtualLabEvaluator",
+      "community": 35,
+      "community_name": "ProctoringTrustEngine",
       "file_type": "rationale",
       "norm_label": "evaluates submitted script against test cases and survey multiplier rules.",
       "source_file": "ml_engine/virtual_lab_evaluator.py",
       "source_location": "L44"
+    },
+    {
+      "id": "tests_test_all_models_rationale_1",
+      "label": "StatGyan AI - Master SIH 26101 Model Verification Suite Tests all 7 custom\u2026",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "ProctoringTrustEngine",
+      "file_type": "rationale",
+      "norm_label": "statgyan ai - master sih 26101 model verification suite tests all 7 custom...",
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_test_all_models_rationale_108",
+      "label": "Engine 5: Skill Decay & Methodology Shock Forecaster",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "ProctoringTrustEngine",
+      "file_type": "rationale",
+      "norm_label": "engine 5: skill decay & methodology shock forecaster",
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L108"
+    },
+    {
+      "id": "tests_test_all_models_rationale_118",
+      "label": "Engine 6: Divisional Capability Heatmaps & Survey Readiness",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "ProctoringTrustEngine",
+      "file_type": "rationale",
+      "norm_label": "engine 6: divisional capability heatmaps & survey readiness",
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L118"
+    },
+    {
+      "id": "tests_test_all_models_rationale_130",
+      "label": "Engine 7: Virtual Statistical Lab on Synthetic PLFS Microdata",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "ProctoringTrustEngine",
+      "file_type": "rationale",
+      "norm_label": "engine 7: virtual statistical lab on synthetic plfs microdata",
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L130"
+    },
+    {
+      "id": "tests_test_all_models_rationale_35",
+      "label": "Engine 1: Competency Model (TF-IDF & LSA Vector Gap Scoring)",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "ProctoringTrustEngine",
+      "file_type": "rationale",
+      "norm_label": "engine 1: competency model (tf-idf & lsa vector gap scoring)",
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L35"
+    },
+    {
+      "id": "tests_test_all_models_rationale_50",
+      "label": "Engine 2: Grounded Bloom's MCQ Generator & 3-Stage QC",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "ProctoringTrustEngine",
+      "file_type": "rationale",
+      "norm_label": "engine 2: grounded bloom's mcq generator & 3-stage qc",
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L50"
+    },
+    {
+      "id": "tests_test_all_models_rationale_68",
+      "label": "Engine 3: AI Proctoring & Restriction Engine",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "ProctoringTrustEngine",
+      "file_type": "rationale",
+      "norm_label": "engine 3: ai proctoring & restriction engine",
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L68"
+    },
+    {
+      "id": "tests_test_all_models_rationale_92",
+      "label": "Engine 4: Blended Learning Pathway (iGOT + NSSTA)",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "ProctoringTrustEngine",
+      "file_type": "rationale",
+      "norm_label": "engine 4: blended learning pathway (igot + nssta)",
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L92"
+    },
+    {
+      "id": "tests_test_ml_accuracy_rationale_114",
+      "label": "Verifies individual predictions match MoSPI empirical demographic expectations.",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "TestMLModelAccuracyAndGeneralization",
+      "file_type": "rationale",
+      "norm_label": "verifies individual predictions match mospi empirical demographic expectations.",
+      "source_file": "tests/test_ml_accuracy.py",
+      "source_location": "L114"
+    },
+    {
+      "id": "tests_test_ml_accuracy_rationale_25",
+      "label": "Asserts Competency NLP Model achieves high accuracy on dataset. Requirement:\u2026",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "TestMLModelAccuracyAndGeneralization",
+      "file_type": "rationale",
+      "norm_label": "asserts competency nlp model achieves high accuracy on dataset. requirement:...",
+      "source_file": "tests/test_ml_accuracy.py",
+      "source_location": "L25"
+    },
+    {
+      "id": "tests_test_ml_accuracy_rationale_45",
+      "label": "Explicitly verifies that the Competency Model does NOT overfit. Guarantees that\u2026",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "TestMLModelAccuracyAndGeneralization",
+      "file_type": "rationale",
+      "norm_label": "explicitly verifies that the competency model does not overfit. guarantees that...",
+      "source_file": "tests/test_ml_accuracy.py",
+      "source_location": "L45"
+    },
+    {
+      "id": "tests_test_ml_accuracy_rationale_60",
+      "label": "Evaluates the Competency Model on completely novel out-of-sample statements.\u2026",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "TestMLModelAccuracyAndGeneralization",
+      "file_type": "rationale",
+      "norm_label": "evaluates the competency model on completely novel out-of-sample statements....",
+      "source_file": "tests/test_ml_accuracy.py",
+      "source_location": "L60"
+    },
+    {
+      "id": "tests_test_ml_accuracy_rationale_98",
+      "label": "Tests the statistical survey demographic classifier for PLFS labour force\u2026",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "TestMLModelAccuracyAndGeneralization",
+      "file_type": "rationale",
+      "norm_label": "tests the statistical survey demographic classifier for plfs labour force...",
+      "source_file": "tests/test_ml_accuracy.py",
+      "source_location": "L98"
+    },
+    {
+      "id": "ml_engine_survey_ml_model_py_any",
+      "label": "Any",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "SurveyMicrodataMLModel",
+      "file_type": "code",
+      "norm_label": "any",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "ml_engine_survey_ml_model_rationale_128",
+      "label": "Predicts labour force participation probability for a demographic profile.",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "SurveyMicrodataMLModel",
+      "file_type": "rationale",
+      "norm_label": "predicts labour force participation probability for a demographic profile.",
+      "source_file": "ml_engine/survey_ml_model.py",
+      "source_location": "L128"
+    },
+    {
+      "id": "ml_engine_survey_ml_model_rationale_24",
+      "label": "Loads base synthetic PLFS records and augments with statistically calibrated\u2026",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "SurveyMicrodataMLModel",
+      "file_type": "rationale",
+      "norm_label": "loads base synthetic plfs records and augments with statistically calibrated...",
+      "source_file": "ml_engine/survey_ml_model.py",
+      "source_location": "L24"
+    },
+    {
+      "id": "ml_engine_survey_ml_model_rationale_75",
+      "label": "Trains L2-regularized logistic regression to predict labour force status.\u2026",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "SurveyMicrodataMLModel",
+      "file_type": "rationale",
+      "norm_label": "trains l2-regularized logistic regression to predict labour force status....",
+      "source_file": "ml_engine/survey_ml_model.py",
+      "source_location": "L75"
+    },
+    {
+      "id": "ml_engine_survey_ml_model_rationale_88",
+      "label": "Validates the model with held-out test split and 5-fold cross-validation.\u2026",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "SurveyMicrodataMLModel",
+      "file_type": "rationale",
+      "norm_label": "validates the model with held-out test split and 5-fold cross-validation....",
+      "source_file": "ml_engine/survey_ml_model.py",
+      "source_location": "L88"
+    },
+    {
+      "id": "fastapi",
+      "label": "FastAPI",
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "lifespan",
+      "file_type": "code",
+      "norm_label": "fastapi",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "ml_engine_recommender_model",
+      "label": "recommender_model.py",
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "lifespan",
+      "file_type": "code",
+      "norm_label": "recommender_model.py",
+      "source_file": "ml_engine/recommender_model.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "ml_engine_recommender_model_py_any",
+      "label": "Any",
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "lifespan",
+      "file_type": "code",
+      "norm_label": "any",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "backend_server_rationale_40",
+      "label": "Pre-warms all 7 custom ML models and caches vector representations at boot.\u2026",
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "lifespan",
+      "file_type": "rationale",
+      "norm_label": "pre-warms all 7 custom ml models and caches vector representations at boot....",
+      "source_file": "backend/server.py",
+      "source_location": "L40"
+    },
+    {
+      "id": "ml_engine_recommender_model_rationale_1",
+      "label": "StatGyan AI - Blended Learning Pathway Recommender Bridges digital self-paced\u2026",
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "lifespan",
+      "file_type": "rationale",
+      "norm_label": "statgyan ai - blended learning pathway recommender bridges digital self-paced...",
+      "source_file": "ml_engine/recommender_model.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "ml_engine_recommender_model_rationale_28",
+      "label": "Builds a sequenced blended pathway based on identified competency gaps. Accepts\u2026",
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "lifespan",
+      "file_type": "rationale",
+      "norm_label": "builds a sequenced blended pathway based on identified competency gaps. accepts...",
+      "source_file": "ml_engine/recommender_model.py",
+      "source_location": "L28"
+    },
+    {
+      "id": "ml_engine_decay_model",
+      "label": "decay_model.py",
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "SkillDecayModel",
+      "file_type": "code",
+      "norm_label": "decay_model.py",
+      "source_file": "ml_engine/decay_model.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "ml_engine_decay_model_py_any",
+      "label": "Any",
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "SkillDecayModel",
+      "file_type": "code",
+      "norm_label": "any",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "ml_engine_decay_model_rationale_1",
+      "label": "StatGyan AI - Skill Decay & Methodology Drift Predictor Models skill retention\u2026",
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "SkillDecayModel",
+      "file_type": "rationale",
+      "norm_label": "statgyan ai - skill decay & methodology drift predictor models skill retention...",
+      "source_file": "ml_engine/decay_model.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "ml_engine_decay_model_rationale_116",
+      "label": "Simulates skill decay for a specific cadre, returning decay_curve and drift\u2026",
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "SkillDecayModel",
+      "file_type": "rationale",
+      "norm_label": "simulates skill decay for a specific cadre, returning decay_curve and drift...",
+      "source_file": "ml_engine/decay_model.py",
+      "source_location": "L116"
+    },
+    {
+      "id": "ml_engine_decay_model_rationale_62",
+      "label": "Calculates decayed competency levels and flags critical drift alerts.",
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "SkillDecayModel",
+      "file_type": "rationale",
+      "norm_label": "calculates decayed competency levels and flags critical drift alerts.",
+      "source_file": "ml_engine/decay_model.py",
+      "source_location": "L62"
     },
     {
       "id": "agents_skills_git_workflow_and_versioning_skill",
@@ -7389,6 +8181,334 @@
       "norm_label": "working with worktrees",
       "source_file": ".agents/skills/git-workflow-and-versioning/SKILL.md",
       "source_location": "L147"
+    },
+    {
+      "id": "spec_sih_presentation_readiness",
+      "label": "SPEC-sih-presentation-readiness.md",
+      "_origin": "ast",
+      "community": 40,
+      "community_name": "Spec: SIH 2026 Presentation & Model Readiness (Problem Statement ID 26101)",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "spec-sih-presentation-readiness.md",
+      "source_file": "SPEC-sih-presentation-readiness.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "spec_sih_presentation_readiness_boundaries",
+      "label": "Boundaries",
+      "_origin": "ast",
+      "community": 40,
+      "community_name": "Spec: SIH 2026 Presentation & Model Readiness (Problem Statement ID 26101)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "boundaries",
+      "source_file": "SPEC-sih-presentation-readiness.md",
+      "source_location": "L65"
+    },
+    {
+      "id": "spec_sih_presentation_readiness_commands",
+      "label": "Commands",
+      "_origin": "ast",
+      "community": 40,
+      "community_name": "Spec: SIH 2026 Presentation & Model Readiness (Problem Statement ID 26101)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "commands",
+      "source_file": "SPEC-sih-presentation-readiness.md",
+      "source_location": "L22"
+    },
+    {
+      "id": "spec_sih_presentation_readiness_objective",
+      "label": "Objective",
+      "_origin": "ast",
+      "community": 40,
+      "community_name": "Spec: SIH 2026 Presentation & Model Readiness (Problem Statement ID 26101)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "objective",
+      "source_file": "SPEC-sih-presentation-readiness.md",
+      "source_location": "L3"
+    },
+    {
+      "id": "spec_sih_presentation_readiness_project_structure",
+      "label": "Project Structure",
+      "_origin": "ast",
+      "community": 40,
+      "community_name": "Spec: SIH 2026 Presentation & Model Readiness (Problem Statement ID 26101)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "project structure",
+      "source_file": "SPEC-sih-presentation-readiness.md",
+      "source_location": "L37"
+    },
+    {
+      "id": "spec_sih_presentation_readiness_spec_sih_2026_presentation_model_readiness_problem_statement_id_26101",
+      "label": "Spec: SIH 2026 Presentation & Model Readiness (Problem Statement ID 26101)",
+      "_origin": "ast",
+      "community": 40,
+      "community_name": "Spec: SIH 2026 Presentation & Model Readiness (Problem Statement ID 26101)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "spec: sih 2026 presentation & model readiness (problem statement id 26101)",
+      "source_file": "SPEC-sih-presentation-readiness.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "spec_sih_presentation_readiness_success_criteria",
+      "label": "Success Criteria",
+      "_origin": "ast",
+      "community": 40,
+      "community_name": "Spec: SIH 2026 Presentation & Model Readiness (Problem Statement ID 26101)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "success criteria",
+      "source_file": "SPEC-sih-presentation-readiness.md",
+      "source_location": "L77"
+    },
+    {
+      "id": "spec_sih_presentation_readiness_tech_stack",
+      "label": "Tech Stack",
+      "_origin": "ast",
+      "community": 40,
+      "community_name": "Spec: SIH 2026 Presentation & Model Readiness (Problem Statement ID 26101)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "tech stack",
+      "source_file": "SPEC-sih-presentation-readiness.md",
+      "source_location": "L16"
+    },
+    {
+      "id": "tasks_plan",
+      "label": "plan.md",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "Tasks Breakdown",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "plan.md",
+      "source_file": "tasks/plan.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "tasks_plan_implementation_plan_sih_presentation_evaluation_readiness",
+      "label": "Implementation Plan: SIH Presentation & Evaluation Readiness",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "Tasks Breakdown",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "implementation plan: sih presentation & evaluation readiness",
+      "source_file": "tasks/plan.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "tasks_plan_objective",
+      "label": "Objective",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "Tasks Breakdown",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "objective",
+      "source_file": "tasks/plan.md",
+      "source_location": "L3"
+    },
+    {
+      "id": "tasks_plan_phase_a_sih_jury_presentation_tour_mode",
+      "label": "Phase A: SIH Jury Presentation Tour Mode",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "Tasks Breakdown",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "phase a: sih jury presentation tour mode",
+      "source_file": "tasks/plan.md",
+      "source_location": "L8"
+    },
+    {
+      "id": "tasks_plan_phase_b_sih_solution_architecture_pitch_deck_modal",
+      "label": "Phase B: SIH Solution Architecture & Pitch Deck Modal",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "Tasks Breakdown",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "phase b: sih solution architecture & pitch deck modal",
+      "source_file": "tasks/plan.md",
+      "source_location": "L20"
+    },
+    {
+      "id": "tasks_plan_phase_c_automated_test_suite_for_all_7_engines",
+      "label": "Phase C: Automated Test Suite for All 7 Engines",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "Tasks Breakdown",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "phase c: automated test suite for all 7 engines",
+      "source_file": "tasks/plan.md",
+      "source_location": "L29"
+    },
+    {
+      "id": "tasks_plan_phase_d_end_to_end_browser_subagent_verification",
+      "label": "Phase D: End-to-End Browser Subagent Verification",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "Tasks Breakdown",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "phase d: end-to-end browser subagent verification",
+      "source_file": "tasks/plan.md",
+      "source_location": "L40"
+    },
+    {
+      "id": "tasks_plan_tasks_breakdown",
+      "label": "Tasks Breakdown",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "Tasks Breakdown",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "tasks breakdown",
+      "source_file": "tasks/plan.md",
+      "source_location": "L6"
+    },
+    {
+      "id": "ml_engine_competency_model",
+      "label": "competency_model.py",
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "test_ml_accuracy.py",
+      "file_type": "code",
+      "norm_label": "competency_model.py",
+      "source_file": "ml_engine/competency_model.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "ml_engine_survey_ml_model",
+      "label": "survey_ml_model.py",
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "test_ml_accuracy.py",
+      "file_type": "code",
+      "norm_label": "survey_ml_model.py",
+      "source_file": "ml_engine/survey_ml_model.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_test_ml_accuracy",
+      "label": "test_ml_accuracy.py",
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "test_ml_accuracy.py",
+      "file_type": "code",
+      "norm_label": "test_ml_accuracy.py",
+      "source_file": "tests/test_ml_accuracy.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "ml_engine_competency_model_rationale_1",
+      "label": "StatGyan AI - Competency Assessment & Machine Learning Skill Gap Model Trained\u2026",
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "test_ml_accuracy.py",
+      "file_type": "rationale",
+      "norm_label": "statgyan ai - competency assessment & machine learning skill gap model trained...",
+      "source_file": "ml_engine/competency_model.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "ml_engine_survey_ml_model_rationale_1",
+      "label": "StatGyan AI - Survey Microdata Machine Learning Classifier Trained on official\u2026",
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "test_ml_accuracy.py",
+      "file_type": "rationale",
+      "norm_label": "statgyan ai - survey microdata machine learning classifier trained on official...",
+      "source_file": "ml_engine/survey_ml_model.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_test_ml_accuracy_rationale_1",
+      "label": "StatGyan AI - Machine Learning Model Accuracy & Anti-Overfitting Test Suite\u2026",
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "test_ml_accuracy.py",
+      "file_type": "rationale",
+      "norm_label": "statgyan ai - machine learning model accuracy & anti-overfitting test suite...",
+      "source_file": "tests/test_ml_accuracy.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "capability_map",
+      "label": "CAPABILITY_MAP.md",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "CAPABILITY_MAP.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "capability_map.md",
+      "source_file": "CAPABILITY_MAP.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "capability_map_capability_map_sih_2026_mospi_competency_ai_platform_id_26101",
+      "label": "Capability Map: SIH 2026 MoSPI Competency AI Platform (ID 26101)",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "CAPABILITY_MAP.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "capability map: sih 2026 mospi competency ai platform (id 26101)",
+      "source_file": "CAPABILITY_MAP.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "tasks_todo",
+      "label": "todo.md",
+      "_origin": "ast",
+      "community": 44,
+      "community_name": "todo.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "todo.md",
+      "source_file": "tasks/todo.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "tasks_todo_task_list_high_accuracy_ml_models_overfitting_validation_sih_prototype_polish",
+      "label": "Task List: High-Accuracy ML Models, Overfitting Validation & SIH Prototype Polish",
+      "_origin": "ast",
+      "community": 44,
+      "community_name": "todo.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task list: high-accuracy ml models, overfitting validation & sih prototype polish",
+      "source_file": "tasks/todo.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_init",
+      "label": "__init__.py",
+      "_origin": "ast",
+      "community": 45,
+      "community_name": "__init__.py",
+      "file_type": "code",
+      "norm_label": "__init__.py",
+      "source_file": "tests/__init__.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_init_rationale_1",
+      "label": "StatGyan AI Tests Package",
+      "_origin": "ast",
+      "community": 45,
+      "community_name": "__init__.py",
+      "file_type": "rationale",
+      "norm_label": "statgyan ai tests package",
+      "source_file": "tests/__init__.py",
+      "source_location": "L1"
     },
     {
       "id": "agents_skills_api_and_interface_design_skill",
@@ -8946,15 +10066,75 @@
   ],
   "links": [
     {
-      "source": "ml_engine_competency_model_competencygapmodel_init",
-      "target": "ml_engine_competency_model_competencygapmodel_init_vectorizer",
+      "source": "ml_engine_competency_model_competencygapmodel_analyze_gap",
+      "target": "ml_engine_competency_model_competencygapmodel_evaluate_gap",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "ml_engine/competency_model.py",
-      "source_location": "L36",
+      "source_location": "L232",
+      "weight": 1.0
+    },
+    {
+      "source": "ml_engine_competency_model_competencygapmodel_infer_from_text",
+      "target": "ml_engine_competency_model_competencygapmodel_infer_competency_from_text",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "ml_engine/competency_model.py",
+      "source_location": "L238",
+      "weight": 1.0
+    },
+    {
+      "source": "ml_engine_competency_model_competencygapmodel_infer_from_text",
+      "target": "ml_engine_competency_model_competencygapmodel_evaluate_gap",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "ml_engine/competency_model.py",
+      "source_location": "L239",
+      "weight": 1.0
+    },
+    {
+      "source": "ml_engine_competency_model_competencygapmodel_init",
+      "target": "ml_engine_competency_model_competencygapmodel_init_and_train_model",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "ml_engine/competency_model.py",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "ml_engine_decay_model_skilldecaymodel_simulate_decay",
+      "target": "ml_engine_competency_model_competencygapmodel",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "ml_engine/decay_model.py",
+      "source_location": "L120",
+      "weight": 1.0
+    },
+    {
+      "source": "ml_engine_decay_model_skilldecaymodel_simulate_decay",
+      "target": "ml_engine_decay_model_skilldecaymodel_compute_decay",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "ml_engine/decay_model.py",
+      "source_location": "L127",
       "weight": 1.0
     },
     {
@@ -8994,6 +10174,54 @@
       "weight": 1.0
     },
     {
+      "source": "ml_engine_recommender_model_blendedpathwayrecommender_generate_pathway",
+      "target": "ml_engine_competency_model_competencygapmodel",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "ml_engine/recommender_model.py",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "ml_engine_survey_ml_model_surveymicrodatamlmodel_init",
+      "target": "ml_engine_survey_ml_model_surveymicrodatamlmodel_load_and_augment_data",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "ml_engine/survey_ml_model.py",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "ml_engine_survey_ml_model_surveymicrodatamlmodel_init",
+      "target": "ml_engine_survey_ml_model_surveymicrodatamlmodel_train_model",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "ml_engine/survey_ml_model.py",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "ml_engine_virtual_lab_evaluator_virtuallabevaluator_evaluate_code",
+      "target": "ml_engine_virtual_lab_evaluator_virtuallabevaluator_evaluate_submission",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "ml_engine/virtual_lab_evaluator.py",
+      "source_location": "L110",
+      "weight": 1.0
+    },
+    {
       "source": "ml_engine_virtual_lab_evaluator_virtuallabevaluator_evaluate_submission",
       "target": "ml_engine_virtual_lab_evaluator_virtuallabevaluator_run_benchmark_calculation",
       "relation": "calls",
@@ -9006,6 +10234,18 @@
       "weight": 1.0
     },
     {
+      "source": "static_js_app_checkfastapiconnection",
+      "target": "static_js_app_loadlivemlmetrics",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "static/js/app.js",
+      "source_location": "L2006",
+      "weight": 1.0
+    },
+    {
       "source": "static_js_app_computeclientsideinference",
       "target": "static_js_app_computeclientsidegap",
       "relation": "calls",
@@ -9014,7 +10254,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L326",
+      "source_location": "L329",
       "weight": 1.0
     },
     {
@@ -9026,7 +10266,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L1364",
+      "source_location": "L1367",
       "weight": 1.0
     },
     {
@@ -9038,7 +10278,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L159",
+      "source_location": "L162",
       "weight": 1.0
     },
     {
@@ -9050,7 +10290,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L161",
+      "source_location": "L164",
       "weight": 1.0
     },
     {
@@ -9062,7 +10302,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L163",
+      "source_location": "L166",
       "weight": 1.0
     },
     {
@@ -9074,7 +10314,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L902",
+      "source_location": "L905",
       "weight": 1.0
     },
     {
@@ -9086,7 +10326,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L903",
+      "source_location": "L906",
       "weight": 1.0
     },
     {
@@ -9098,7 +10338,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L182",
+      "source_location": "L185",
       "weight": 1.0
     },
     {
@@ -9110,7 +10350,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L199",
+      "source_location": "L202",
       "weight": 1.0
     },
     {
@@ -9122,7 +10362,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L705",
+      "source_location": "L708",
       "weight": 1.0
     },
     {
@@ -9134,7 +10374,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L713",
+      "source_location": "L716",
       "weight": 1.0
     },
     {
@@ -9146,7 +10386,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L605",
+      "source_location": "L608",
       "weight": 1.0
     },
     {
@@ -9158,7 +10398,43 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L836",
+      "source_location": "L839",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app_nexttourstep",
+      "target": "static_js_app_applytourstep",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "static/js/app.js",
+      "source_location": "L1944",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app_nexttourstep",
+      "target": "static_js_app_exittour",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "static/js/app.js",
+      "source_location": "L1946",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app_prevtourstep",
+      "target": "static_js_app_applytourstep",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "static/js/app.js",
+      "source_location": "L1954",
       "weight": 1.0
     },
     {
@@ -9170,7 +10446,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L1190",
+      "source_location": "L1193",
       "weight": 1.0
     },
     {
@@ -9182,7 +10458,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L1193",
+      "source_location": "L1196",
       "weight": 1.0
     },
     {
@@ -9194,7 +10470,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L1569",
+      "source_location": "L1572",
       "weight": 1.0
     },
     {
@@ -9206,7 +10482,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L1570",
+      "source_location": "L1573",
       "weight": 1.0
     },
     {
@@ -9218,7 +10494,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L492",
+      "source_location": "L495",
       "weight": 1.0
     },
     {
@@ -9230,7 +10506,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L500",
+      "source_location": "L503",
       "weight": 1.0
     },
     {
@@ -9242,7 +10518,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L1665",
+      "source_location": "L1668",
       "weight": 1.0
     },
     {
@@ -9254,7 +10530,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L1049",
+      "source_location": "L1052",
       "weight": 1.0
     },
     {
@@ -9266,7 +10542,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L1434",
+      "source_location": "L1437",
       "weight": 1.0
     },
     {
@@ -9278,7 +10554,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L1436",
+      "source_location": "L1439",
       "weight": 1.0
     },
     {
@@ -9290,7 +10566,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L151",
+      "source_location": "L154",
       "weight": 1.0
     },
     {
@@ -9302,7 +10578,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L1584",
+      "source_location": "L1587",
       "weight": 1.0
     },
     {
@@ -9314,7 +10590,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L1604",
+      "source_location": "L1607",
       "weight": 1.0
     },
     {
@@ -9326,7 +10602,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L207",
+      "source_location": "L210",
       "weight": 1.0
     },
     {
@@ -9338,7 +10614,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L208",
+      "source_location": "L211",
       "weight": 1.0
     },
     {
@@ -9350,7 +10626,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L1714",
+      "source_location": "L1717",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app_startjurytour",
+      "target": "static_js_app_applytourstep",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "static/js/app.js",
+      "source_location": "L1912",
       "weight": 1.0
     },
     {
@@ -9362,7 +10650,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L1640",
+      "source_location": "L1643",
       "weight": 1.0
     },
     {
@@ -9374,7 +10662,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L1641",
+      "source_location": "L1644",
       "weight": 1.0
     },
     {
@@ -9386,7 +10674,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L231",
+      "source_location": "L234",
       "weight": 1.0
     },
     {
@@ -9398,7 +10686,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L232",
+      "source_location": "L235",
       "weight": 1.0
     },
     {
@@ -9410,7 +10698,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L233",
+      "source_location": "L236",
       "weight": 1.0
     },
     {
@@ -9422,7 +10710,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L236",
+      "source_location": "L239",
       "weight": 1.0
     },
     {
@@ -9434,7 +10722,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L1771",
+      "source_location": "L1774",
       "weight": 1.0
     },
     {
@@ -9446,7 +10734,55 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "static/js/app.js",
-      "source_location": "L1774",
+      "source_location": "L1777",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_all_models_teststatgyanaimodels_setupclass",
+      "target": "ml_engine_virtual_lab_evaluator_virtuallabevaluator",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_all_models_teststatgyanaimodels_setupclass",
+      "target": "ml_engine_proctoring_model_proctoringtrustengine",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_ml_accuracy_testmlmodelaccuracyandgeneralization_setupclass",
+      "target": "ml_engine_competency_model_competencygapmodel",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "tests/test_ml_accuracy.py",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_ml_accuracy_testmlmodelaccuracyandgeneralization_setupclass",
+      "target": "ml_engine_survey_ml_model_surveymicrodatamlmodel",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "tests/test_ml_accuracy.py",
+      "source_location": "L22",
       "weight": 1.0
     },
     {
@@ -9458,7 +10794,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "backend/server.py",
-      "source_location": "L103",
+      "source_location": "L164",
       "weight": 1.0
     },
     {
@@ -9470,7 +10806,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "backend/server.py",
-      "source_location": "L156",
+      "source_location": "L224",
       "weight": 1.0
     },
     {
@@ -9482,7 +10818,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "backend/server.py",
-      "source_location": "L165",
+      "source_location": "L233",
       "weight": 1.0
     },
     {
@@ -9494,7 +10830,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "backend/server.py",
-      "source_location": "L130",
+      "source_location": "L201",
       "weight": 1.0
     },
     {
@@ -9506,7 +10842,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "backend/server.py",
-      "source_location": "L124",
+      "source_location": "L195",
       "weight": 1.0
     },
     {
@@ -9518,7 +10854,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "backend/server.py",
-      "source_location": "L115",
+      "source_location": "L185",
       "weight": 1.0
     },
     {
@@ -9530,7 +10866,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "backend/server.py",
-      "source_location": "L99",
+      "source_location": "L160",
       "weight": 1.0
     },
     {
@@ -9542,7 +10878,19 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "backend/server.py",
-      "source_location": "L190",
+      "source_location": "L258",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server_get_ml_metrics",
+      "target": "get",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "decorator",
+      "source_file": "backend/server.py",
+      "source_location": "L135",
       "weight": 1.0
     },
     {
@@ -9554,7 +10902,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "backend/server.py",
-      "source_location": "L169",
+      "source_location": "L237",
       "weight": 1.0
     },
     {
@@ -9566,7 +10914,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "backend/server.py",
-      "source_location": "L186",
+      "source_location": "L254",
       "weight": 1.0
     },
     {
@@ -9578,7 +10926,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "backend/server.py",
-      "source_location": "L83",
+      "source_location": "L117",
       "weight": 1.0
     },
     {
@@ -9590,7 +10938,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "backend/server.py",
-      "source_location": "L108",
+      "source_location": "L172",
       "weight": 1.0
     },
     {
@@ -9602,7 +10950,19 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "backend/server.py",
-      "source_location": "L177",
+      "source_location": "L245",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server_predict_survey_demographics",
+      "target": "post",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "decorator",
+      "source_file": "backend/server.py",
+      "source_location": "L150",
       "weight": 1.0
     },
     {
@@ -9614,7 +10974,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "backend/server.py",
-      "source_location": "L136",
+      "source_location": "L207",
       "weight": 1.0
     },
     {
@@ -9626,7 +10986,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "backend/server.py",
-      "source_location": "L248",
+      "source_location": "L309",
       "weight": 1.0
     },
     {
@@ -9638,7 +10998,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "backend/server.py",
-      "source_location": "L141",
+      "source_location": "L215",
       "weight": 1.0
     },
     {
@@ -9650,7 +11010,19 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "backend/server.py",
-      "source_location": "L173",
+      "source_location": "L241",
+      "weight": 1.0
+    },
+    {
+      "source": "ml_engine_competency_model_competencygapmodel_analyze_gap",
+      "target": "ml_engine_competency_model_py_any",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "source_file": "ml_engine/competency_model.py",
+      "source_location": "L226",
       "weight": 1.0
     },
     {
@@ -9662,7 +11034,31 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "ml_engine/competency_model.py",
-      "source_location": "L43",
+      "source_location": "L157",
+      "weight": 1.0
+    },
+    {
+      "source": "ml_engine_competency_model_competencygapmodel_evaluate_model_accuracy",
+      "target": "ml_engine_competency_model_py_any",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "source_file": "ml_engine/competency_model.py",
+      "source_location": "L82",
+      "weight": 1.0
+    },
+    {
+      "source": "ml_engine_competency_model_competencygapmodel_infer_from_text",
+      "target": "ml_engine_competency_model_py_any",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "source_file": "ml_engine/competency_model.py",
+      "source_location": "L234",
       "weight": 1.0
     },
     {
@@ -9678,27 +11074,15 @@
       "weight": 1.0
     },
     {
-      "source": "ml_engine_mcq_generator_groundedmcqgenerator_export_moodle_xml",
-      "target": "ml_engine_mcq_generator_py_any",
+      "source": "ml_engine_decay_model_skilldecaymodel_simulate_decay",
+      "target": "ml_engine_decay_model_py_any",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "generic_arg",
-      "source_file": "ml_engine/mcq_generator.py",
-      "source_location": "L298",
-      "weight": 1.0
-    },
-    {
-      "source": "ml_engine_mcq_generator_groundedmcqgenerator_export_qti",
-      "target": "ml_engine_mcq_generator_py_any",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "generic_arg",
-      "source_file": "ml_engine/mcq_generator.py",
-      "source_location": "L276",
+      "source_file": "ml_engine/decay_model.py",
+      "source_location": "L110",
       "weight": 1.0
     },
     {
@@ -9810,6 +11194,42 @@
       "weight": 1.0
     },
     {
+      "source": "ml_engine_survey_ml_model_surveymicrodatamlmodel_evaluate_model_accuracy",
+      "target": "ml_engine_survey_ml_model_py_any",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "source_file": "ml_engine/survey_ml_model.py",
+      "source_location": "L87",
+      "weight": 1.0
+    },
+    {
+      "source": "ml_engine_survey_ml_model_surveymicrodatamlmodel_predict_status",
+      "target": "ml_engine_survey_ml_model_py_any",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "source_file": "ml_engine/survey_ml_model.py",
+      "source_location": "L127",
+      "weight": 1.0
+    },
+    {
+      "source": "ml_engine_virtual_lab_evaluator_virtuallabevaluator_evaluate_code",
+      "target": "ml_engine_virtual_lab_evaluator_py_any",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "source_file": "ml_engine/virtual_lab_evaluator.py",
+      "source_location": "L106",
+      "weight": 1.0
+    },
+    {
       "source": "ml_engine_virtual_lab_evaluator_virtuallabevaluator_evaluate_submission",
       "target": "ml_engine_virtual_lab_evaluator_py_any",
       "relation": "references",
@@ -9830,7 +11250,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "backend/server.py",
-      "source_location": "L16",
+      "source_location": "L26",
       "weight": 1.0
     },
     {
@@ -9842,7 +11262,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "backend/server.py",
-      "source_location": "L17",
+      "source_location": "L27",
       "weight": 1.0
     },
     {
@@ -9854,7 +11274,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "backend/server.py",
-      "source_location": "L18",
+      "source_location": "L28",
       "weight": 1.0
     },
     {
@@ -9866,7 +11286,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "backend/server.py",
-      "source_location": "L19",
+      "source_location": "L29",
       "weight": 1.0
     },
     {
@@ -9878,7 +11298,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "backend/server.py",
-      "source_location": "L20",
+      "source_location": "L30",
       "weight": 1.0
     },
     {
@@ -9890,7 +11310,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "backend/server.py",
-      "source_location": "L21",
+      "source_location": "L31",
       "weight": 1.0
     },
     {
@@ -9902,36 +11322,96 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "backend/server.py",
-      "source_location": "L22",
+      "source_location": "L32",
       "weight": 1.0
     },
     {
       "source": "backend_server",
-      "target": "ml_engine_competency_model",
-      "relation": "imports_from",
+      "target": "ml_engine_survey_ml_model_surveymicrodatamlmodel",
+      "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "backend/server.py",
-      "source_location": "L16",
+      "source_location": "L33",
       "weight": 1.0
     },
     {
-      "source": "backend_server",
-      "target": "ml_engine_mcq_generator",
-      "relation": "imports_from",
+      "source": "ml_engine_decay_model",
+      "target": "ml_engine_competency_model_competencygapmodel",
+      "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "import",
-      "source_file": "backend/server.py",
-      "source_location": "L17",
+      "source_file": "ml_engine/decay_model.py",
+      "source_location": "L119",
+      "weight": 1.0
+    },
+    {
+      "source": "ml_engine_recommender_model",
+      "target": "ml_engine_competency_model_competencygapmodel",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "ml_engine/recommender_model.py",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_all_models",
+      "target": "ml_engine_virtual_lab_evaluator_virtuallabevaluator",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_all_models",
+      "target": "ml_engine_proctoring_model_proctoringtrustengine",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_ml_accuracy",
+      "target": "ml_engine_competency_model_competencygapmodel",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "tests/test_ml_accuracy.py",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_ml_accuracy",
+      "target": "ml_engine_survey_ml_model_surveymicrodatamlmodel",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "tests/test_ml_accuracy.py",
+      "source_location": "L14",
       "weight": 1.0
     },
     {
       "source": "backend_server",
-      "target": "ml_engine_recommender_model",
+      "target": "fastapi",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -9943,6 +11423,42 @@
     },
     {
       "source": "backend_server",
+      "target": "ml_engine_competency_model",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend/server.py",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "ml_engine_mcq_generator",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend/server.py",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "ml_engine_recommender_model",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend/server.py",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
       "target": "ml_engine_decay_model",
       "relation": "imports_from",
       "_origin": "ast",
@@ -9950,7 +11466,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "backend/server.py",
-      "source_location": "L19",
+      "source_location": "L29",
       "weight": 1.0
     },
     {
@@ -9962,7 +11478,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "backend/server.py",
-      "source_location": "L20",
+      "source_location": "L30",
       "weight": 1.0
     },
     {
@@ -9974,7 +11490,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "backend/server.py",
-      "source_location": "L21",
+      "source_location": "L31",
       "weight": 1.0
     },
     {
@@ -9986,7 +11502,127 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "backend/server.py",
-      "source_location": "L22",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "ml_engine_survey_ml_model",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend/server.py",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_all_models",
+      "target": "ml_engine_competency_model",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_all_models",
+      "target": "ml_engine_mcq_generator",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_all_models",
+      "target": "ml_engine_recommender_model",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_all_models",
+      "target": "ml_engine_decay_model",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_all_models",
+      "target": "ml_engine_predictive_analytics",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_all_models",
+      "target": "ml_engine_virtual_lab_evaluator",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_all_models",
+      "target": "ml_engine_proctoring_model",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_ml_accuracy",
+      "target": "ml_engine_competency_model",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "tests/test_ml_accuracy.py",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_ml_accuracy",
+      "target": "ml_engine_survey_ml_model",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "tests/test_ml_accuracy.py",
+      "source_location": "L14",
       "weight": 1.0
     },
     {
@@ -9998,7 +11634,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "backend/server.py",
-      "source_location": "L104",
+      "source_location": "L165",
       "weight": 1.0
     },
     {
@@ -10010,7 +11646,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "backend/server.py",
-      "source_location": "L166",
+      "source_location": "L234",
       "weight": 1.0
     },
     {
@@ -10022,7 +11658,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "backend/server.py",
-      "source_location": "L116",
+      "source_location": "L186",
       "weight": 1.0
     },
     {
@@ -10034,7 +11670,19 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "backend/server.py",
-      "source_location": "L109",
+      "source_location": "L173",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server_lifespan",
+      "target": "fastapi",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "backend/server.py",
+      "source_location": "L39",
       "weight": 1.0
     },
     {
@@ -10046,7 +11694,19 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "backend/server.py",
-      "source_location": "L178",
+      "source_location": "L246",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server_predict_survey_demographics",
+      "target": "backend_server_surveypredictrequest",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "backend/server.py",
+      "source_location": "L151",
       "weight": 1.0
     },
     {
@@ -10058,7 +11718,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "backend/server.py",
-      "source_location": "L137",
+      "source_location": "L208",
       "weight": 1.0
     },
     {
@@ -10070,7 +11730,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "backend/server.py",
-      "source_location": "L142",
+      "source_location": "L216",
       "weight": 1.0
     },
     {
@@ -10082,7 +11742,31 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "backend/server.py",
-      "source_location": "L174",
+      "source_location": "L242",
+      "weight": 1.0
+    },
+    {
+      "source": "ml_engine_mcq_generator_groundedmcqgenerator_export_moodle_xml",
+      "target": "ml_engine_mcq_generator_py_any",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "ml_engine/mcq_generator.py",
+      "source_location": "L297",
+      "weight": 1.0
+    },
+    {
+      "source": "ml_engine_mcq_generator_groundedmcqgenerator_export_qti",
+      "target": "ml_engine_mcq_generator_py_any",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "ml_engine/mcq_generator.py",
+      "source_location": "L274",
       "weight": 1.0
     },
     {
@@ -16269,18 +17953,7 @@
     },
     {
       "source": "backend_server",
-      "target": "backend_server_get_cadres",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/server.py",
-      "source_location": "L100",
-      "weight": 1.0
-    },
-    {
-      "source": "backend_server",
-      "target": "backend_server_analyze_competency",
+      "target": "backend_server_proctoringeventrequest",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -16291,233 +17964,13 @@
     },
     {
       "source": "backend_server",
-      "target": "backend_server_infer_competency",
+      "target": "backend_server_surveypredictrequest",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "backend/server.py",
-      "source_location": "L109",
-      "weight": 1.0
-    },
-    {
-      "source": "backend_server",
-      "target": "backend_server_generate_assessment",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/server.py",
-      "source_location": "L116",
-      "weight": 1.0
-    },
-    {
-      "source": "backend_server",
-      "target": "backend_server_export_qti",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/server.py",
-      "source_location": "L125",
-      "weight": 1.0
-    },
-    {
-      "source": "backend_server",
-      "target": "backend_server_export_moodle",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/server.py",
-      "source_location": "L131",
-      "weight": 1.0
-    },
-    {
-      "source": "backend_server",
-      "target": "backend_server_recommend_pathway",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/server.py",
-      "source_location": "L137",
-      "weight": 1.0
-    },
-    {
-      "source": "backend_server",
-      "target": "backend_server_simulate_decay",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/server.py",
-      "source_location": "L142",
-      "weight": 1.0
-    },
-    {
-      "source": "backend_server",
-      "target": "backend_server_cadre_analytics",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/server.py",
-      "source_location": "L157",
-      "weight": 1.0
-    },
-    {
-      "source": "backend_server",
-      "target": "backend_server_evaluate_lab_code",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/server.py",
-      "source_location": "L166",
-      "weight": 1.0
-    },
-    {
-      "source": "backend_server",
-      "target": "backend_server_get_proctoring_policy",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/server.py",
-      "source_location": "L170",
-      "weight": 1.0
-    },
-    {
-      "source": "backend_server",
-      "target": "backend_server_start_proctoring_session",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/server.py",
-      "source_location": "L174",
-      "weight": 1.0
-    },
-    {
-      "source": "backend_server",
-      "target": "backend_server_log_proctoring_event",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/server.py",
-      "source_location": "L178",
-      "weight": 1.0
-    },
-    {
-      "source": "backend_server",
-      "target": "backend_server_get_proctoring_report",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/server.py",
-      "source_location": "L187",
-      "weight": 1.0
-    },
-    {
-      "source": "backend_server",
-      "target": "backend_server_get_knowledge_graph",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/server.py",
-      "source_location": "L191",
-      "weight": 1.0
-    },
-    {
-      "source": "backend_server",
-      "target": "backend_server_serve_index",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/server.py",
-      "source_location": "L249",
-      "weight": 1.0
-    },
-    {
-      "source": "backend_server",
-      "target": "backend_server_analyzerequest",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/server.py",
-      "source_location": "L48",
-      "weight": 1.0
-    },
-    {
-      "source": "backend_server",
-      "target": "backend_server_inferrequest",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/server.py",
-      "source_location": "L52",
-      "weight": 1.0
-    },
-    {
-      "source": "backend_server",
-      "target": "backend_server_generatemcqrequest",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/server.py",
-      "source_location": "L56",
-      "weight": 1.0
-    },
-    {
-      "source": "backend_server",
-      "target": "backend_server_decaysimulaterequest",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/server.py",
-      "source_location": "L62",
-      "weight": 1.0
-    },
-    {
-      "source": "backend_server",
-      "target": "backend_server_labevaluaterequest",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/server.py",
-      "source_location": "L67",
-      "weight": 1.0
-    },
-    {
-      "source": "backend_server",
-      "target": "backend_server_proctoringstartrequest",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/server.py",
-      "source_location": "L70",
-      "weight": 1.0
-    },
-    {
-      "source": "backend_server",
-      "target": "backend_server_proctoringeventrequest",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/server.py",
-      "source_location": "L75",
+      "source_location": "L110",
       "weight": 1.0
     },
     {
@@ -16528,7 +17981,293 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "backend/server.py",
-      "source_location": "L84",
+      "source_location": "L118",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_get_ml_metrics",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L136",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_predict_survey_demographics",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L151",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_get_cadres",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L161",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_analyze_competency",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L165",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_infer_competency",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L173",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_generate_assessment",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L186",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_export_qti",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L196",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_export_moodle",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L202",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_recommend_pathway",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L208",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_simulate_decay",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L216",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_cadre_analytics",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L225",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_evaluate_lab_code",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L234",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_get_proctoring_policy",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L238",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_start_proctoring_session",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L242",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_log_proctoring_event",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L246",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_get_proctoring_report",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L255",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_get_knowledge_graph",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L259",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_serve_index",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L310",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_lifespan",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_analyzerequest",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L77",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_inferrequest",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L81",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_generatemcqrequest",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L85",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_decaysimulaterequest",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L91",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_labevaluaterequest",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L96",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server",
+      "target": "backend_server_proctoringstartrequest",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L99",
+      "weight": 1.0
+    },
+    {
+      "source": "capability_map",
+      "target": "capability_map_capability_map_sih_2026_mospi_competency_ai_platform_id_26101",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CAPABILITY_MAP.md",
+      "source_location": "L1",
       "weight": 1.0
     },
     {
@@ -16539,7 +18278,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "ml_engine/competency_model.py",
-      "source_location": "L31",
+      "source_location": "L29",
       "weight": 1.0
     },
     {
@@ -16598,6 +18337,17 @@
       "weight": 1.0
     },
     {
+      "source": "ml_engine_survey_ml_model",
+      "target": "ml_engine_survey_ml_model_surveymicrodatamlmodel",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ml_engine/survey_ml_model.py",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
       "source": "ml_engine_virtual_lab_evaluator",
       "target": "ml_engine_virtual_lab_evaluator_virtuallabevaluator",
       "relation": "contains",
@@ -16609,6 +18359,83 @@
       "weight": 1.0
     },
     {
+      "source": "spec_sih_presentation_readiness",
+      "target": "spec_sih_presentation_readiness_spec_sih_2026_presentation_model_readiness_problem_statement_id_26101",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "SPEC-sih-presentation-readiness.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "spec_sih_presentation_readiness_spec_sih_2026_presentation_model_readiness_problem_statement_id_26101",
+      "target": "spec_sih_presentation_readiness_tech_stack",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "SPEC-sih-presentation-readiness.md",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "spec_sih_presentation_readiness_spec_sih_2026_presentation_model_readiness_problem_statement_id_26101",
+      "target": "spec_sih_presentation_readiness_commands",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "SPEC-sih-presentation-readiness.md",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "spec_sih_presentation_readiness_spec_sih_2026_presentation_model_readiness_problem_statement_id_26101",
+      "target": "spec_sih_presentation_readiness_objective",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "SPEC-sih-presentation-readiness.md",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "spec_sih_presentation_readiness_spec_sih_2026_presentation_model_readiness_problem_statement_id_26101",
+      "target": "spec_sih_presentation_readiness_project_structure",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "SPEC-sih-presentation-readiness.md",
+      "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "spec_sih_presentation_readiness_spec_sih_2026_presentation_model_readiness_problem_statement_id_26101",
+      "target": "spec_sih_presentation_readiness_boundaries",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "SPEC-sih-presentation-readiness.md",
+      "source_location": "L65",
+      "weight": 1.0
+    },
+    {
+      "source": "spec_sih_presentation_readiness_spec_sih_2026_presentation_model_readiness_problem_statement_id_26101",
+      "target": "spec_sih_presentation_readiness_success_criteria",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "SPEC-sih-presentation-readiness.md",
+      "source_location": "L77",
+      "weight": 1.0
+    },
+    {
       "source": "static_js_app",
       "target": "static_js_app_setupdecaysimulator",
       "relation": "contains",
@@ -16616,7 +18443,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L1037",
+      "source_location": "L1040",
       "weight": 1.0
     },
     {
@@ -16627,7 +18454,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L1057",
+      "source_location": "L1060",
       "weight": 1.0
     },
     {
@@ -16638,7 +18465,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L1084",
+      "source_location": "L1087",
       "weight": 1.0
     },
     {
@@ -16660,7 +18487,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L1092",
+      "source_location": "L1095",
       "weight": 1.0
     },
     {
@@ -16671,7 +18498,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L1168",
+      "source_location": "L1171",
       "weight": 1.0
     },
     {
@@ -16682,7 +18509,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L1198",
+      "source_location": "L1201",
       "weight": 1.0
     },
     {
@@ -16704,7 +18531,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L137",
+      "source_location": "L140",
       "weight": 1.0
     },
     {
@@ -16715,7 +18542,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L1402",
+      "source_location": "L1405",
       "weight": 1.0
     },
     {
@@ -16726,7 +18553,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L1425",
+      "source_location": "L1428",
       "weight": 1.0
     },
     {
@@ -16737,7 +18564,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L1513",
+      "source_location": "L1516",
       "weight": 1.0
     },
     {
@@ -16748,18 +18575,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L1562",
-      "weight": 1.0
-    },
-    {
-      "source": "static_js_app",
-      "target": "static_js_app_handletabactivation",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "static/js/app.js",
-      "source_location": "L157",
+      "source_location": "L1565",
       "weight": 1.0
     },
     {
@@ -16770,7 +18586,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L1576",
+      "source_location": "L1579",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_handletabactivation",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L160",
       "weight": 1.0
     },
     {
@@ -16781,7 +18608,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L1607",
+      "source_location": "L1610",
       "weight": 1.0
     },
     {
@@ -16792,18 +18619,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L1651",
-      "weight": 1.0
-    },
-    {
-      "source": "static_js_app",
-      "target": "static_js_app_populatecadresdropdown",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "static/js/app.js",
-      "source_location": "L168",
+      "source_location": "L1654",
       "weight": 1.0
     },
     {
@@ -16814,7 +18630,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L1700",
+      "source_location": "L1703",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_populatecadresdropdown",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L171",
       "weight": 1.0
     },
     {
@@ -16825,7 +18652,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L1739",
+      "source_location": "L1742",
       "weight": 1.0
     },
     {
@@ -16836,7 +18663,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L1755",
+      "source_location": "L1758",
       "weight": 1.0
     },
     {
@@ -16847,18 +18674,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L1783",
-      "weight": 1.0
-    },
-    {
-      "source": "static_js_app",
-      "target": "static_js_app_loadcadres",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "static/js/app.js",
-      "source_location": "L181",
+      "source_location": "L1786",
       "weight": 1.0
     },
     {
@@ -16869,7 +18685,128 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L1833",
+      "source_location": "L1836",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_loadcadres",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L184",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_tour_steps",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L1847",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_setupsihtour",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L1901",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_startjurytour",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L1908",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_applytourstep",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L1915",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_nexttourstep",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L1941",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_prevtourstep",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L1951",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_exittour",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L1958",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_setupsihdocketmodal",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L1964",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_checkfastapiconnection",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L1983",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app",
+      "target": "static_js_app_loadlivemlmetrics",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "static/js/app.js",
+      "source_location": "L2014",
       "weight": 1.0
     },
     {
@@ -16880,7 +18817,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L202",
+      "source_location": "L205",
       "weight": 1.0
     },
     {
@@ -16891,7 +18828,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L213",
+      "source_location": "L216",
       "weight": 1.0
     },
     {
@@ -16902,7 +18839,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L244",
+      "source_location": "L247",
       "weight": 1.0
     },
     {
@@ -16913,7 +18850,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L301",
+      "source_location": "L304",
       "weight": 1.0
     },
     {
@@ -16924,7 +18861,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L329",
+      "source_location": "L332",
       "weight": 1.0
     },
     {
@@ -16935,7 +18872,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L336",
+      "source_location": "L339",
       "weight": 1.0
     },
     {
@@ -16946,7 +18883,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L397",
+      "source_location": "L400",
       "weight": 1.0
     },
     {
@@ -16957,7 +18894,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L432",
+      "source_location": "L435",
       "weight": 1.0
     },
     {
@@ -16968,7 +18905,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L452",
+      "source_location": "L455",
       "weight": 1.0
     },
     {
@@ -16979,7 +18916,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L504",
+      "source_location": "L507",
       "weight": 1.0
     },
     {
@@ -16990,7 +18927,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L525",
+      "source_location": "L528",
       "weight": 1.0
     },
     {
@@ -17001,7 +18938,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L608",
+      "source_location": "L611",
       "weight": 1.0
     },
     {
@@ -17012,7 +18949,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L671",
+      "source_location": "L674",
       "weight": 1.0
     },
     {
@@ -17023,7 +18960,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L717",
+      "source_location": "L720",
       "weight": 1.0
     },
     {
@@ -17034,7 +18971,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L738",
+      "source_location": "L741",
       "weight": 1.0
     },
     {
@@ -17045,7 +18982,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L839",
+      "source_location": "L842",
       "weight": 1.0
     },
     {
@@ -17056,7 +18993,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L897",
+      "source_location": "L900",
       "weight": 1.0
     },
     {
@@ -17067,7 +19004,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L909",
+      "source_location": "L912",
       "weight": 1.0
     },
     {
@@ -17078,7 +19015,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L948",
+      "source_location": "L951",
       "weight": 1.0
     },
     {
@@ -17089,7 +19026,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L984",
+      "source_location": "L987",
       "weight": 1.0
     },
     {
@@ -17100,7 +19037,117 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "static/js/app.js",
-      "source_location": "L991",
+      "source_location": "L994",
+      "weight": 1.0
+    },
+    {
+      "source": "tasks_plan",
+      "target": "tasks_plan_implementation_plan_sih_presentation_evaluation_readiness",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tasks/plan.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "tasks_plan_implementation_plan_sih_presentation_evaluation_readiness",
+      "target": "tasks_plan_objective",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tasks/plan.md",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "tasks_plan_implementation_plan_sih_presentation_evaluation_readiness",
+      "target": "tasks_plan_tasks_breakdown",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tasks/plan.md",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "tasks_plan_tasks_breakdown",
+      "target": "tasks_plan_phase_b_sih_solution_architecture_pitch_deck_modal",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tasks/plan.md",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "tasks_plan_tasks_breakdown",
+      "target": "tasks_plan_phase_c_automated_test_suite_for_all_7_engines",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tasks/plan.md",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "tasks_plan_tasks_breakdown",
+      "target": "tasks_plan_phase_d_end_to_end_browser_subagent_verification",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tasks/plan.md",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "tasks_plan_tasks_breakdown",
+      "target": "tasks_plan_phase_a_sih_jury_presentation_tour_mode",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tasks/plan.md",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "tasks_todo",
+      "target": "tasks_todo_task_list_high_accuracy_ml_models_overfitting_validation_sih_prototype_polish",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tasks/todo.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_all_models",
+      "target": "tests_test_all_models_teststatgyanaimodels",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_ml_accuracy",
+      "target": "tests_test_ml_accuracy_testmlmodelaccuracyandgeneralization",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_ml_accuracy.py",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
@@ -17111,7 +19158,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "backend/server.py",
-      "source_location": "L48",
+      "source_location": "L77",
       "weight": 1.0
     },
     {
@@ -17122,7 +19169,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "backend/server.py",
-      "source_location": "L62",
+      "source_location": "L91",
       "weight": 1.0
     },
     {
@@ -17133,7 +19180,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "backend/server.py",
-      "source_location": "L56",
+      "source_location": "L85",
       "weight": 1.0
     },
     {
@@ -17144,7 +19191,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "backend/server.py",
-      "source_location": "L52",
+      "source_location": "L81",
       "weight": 1.0
     },
     {
@@ -17155,7 +19202,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "backend/server.py",
-      "source_location": "L67",
+      "source_location": "L96",
       "weight": 1.0
     },
     {
@@ -17166,7 +19213,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "backend/server.py",
-      "source_location": "L75",
+      "source_location": "L104",
       "weight": 1.0
     },
     {
@@ -17177,7 +19224,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "backend/server.py",
-      "source_location": "L70",
+      "source_location": "L99",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server_surveypredictrequest",
+      "target": "basemodel",
+      "relation": "inherits",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L110",
       "weight": 1.0
     },
     {
@@ -17188,29 +19246,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "ml_engine/competency_model.py",
-      "source_location": "L107",
-      "weight": 1.0
-    },
-    {
-      "source": "ml_engine_competency_model_competencygapmodel",
-      "target": "ml_engine_competency_model_competencygapmodel_init",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "ml_engine/competency_model.py",
-      "source_location": "L32",
-      "weight": 1.0
-    },
-    {
-      "source": "ml_engine_competency_model_competencygapmodel",
-      "target": "ml_engine_competency_model_competencygapmodel_init_vectorizer",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "ml_engine/competency_model.py",
-      "source_location": "L38",
+      "source_location": "L130",
       "weight": 1.0
     },
     {
@@ -17221,7 +19257,73 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "ml_engine/competency_model.py",
-      "source_location": "L43",
+      "source_location": "L157",
+      "weight": 1.0
+    },
+    {
+      "source": "ml_engine_competency_model_competencygapmodel",
+      "target": "ml_engine_competency_model_competencygapmodel_analyze_gap",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ml_engine/competency_model.py",
+      "source_location": "L226",
+      "weight": 1.0
+    },
+    {
+      "source": "ml_engine_competency_model_competencygapmodel",
+      "target": "ml_engine_competency_model_competencygapmodel_infer_from_text",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ml_engine/competency_model.py",
+      "source_location": "L234",
+      "weight": 1.0
+    },
+    {
+      "source": "ml_engine_competency_model_competencygapmodel",
+      "target": "ml_engine_competency_model_competencygapmodel_init",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ml_engine/competency_model.py",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "ml_engine_competency_model_competencygapmodel",
+      "target": "ml_engine_competency_model_competencygapmodel_init_and_train_model",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ml_engine/competency_model.py",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "ml_engine_competency_model_competencygapmodel",
+      "target": "ml_engine_competency_model_competencygapmodel_evaluate_model_accuracy",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ml_engine/competency_model.py",
+      "source_location": "L82",
+      "weight": 1.0
+    },
+    {
+      "source": "ml_engine_decay_model_skilldecaymodel",
+      "target": "ml_engine_decay_model_skilldecaymodel_simulate_decay",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ml_engine/decay_model.py",
+      "source_location": "L110",
       "weight": 1.0
     },
     {
@@ -17287,7 +19389,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "ml_engine/mcq_generator.py",
-      "source_location": "L276",
+      "source_location": "L274",
       "weight": 1.0
     },
     {
@@ -17298,7 +19400,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "ml_engine/mcq_generator.py",
-      "source_location": "L298",
+      "source_location": "L297",
       "weight": 1.0
     },
     {
@@ -17423,6 +19525,72 @@
       "weight": 1.0
     },
     {
+      "source": "ml_engine_survey_ml_model_surveymicrodatamlmodel",
+      "target": "ml_engine_survey_ml_model_surveymicrodatamlmodel_predict_status",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ml_engine/survey_ml_model.py",
+      "source_location": "L127",
+      "weight": 1.0
+    },
+    {
+      "source": "ml_engine_survey_ml_model_surveymicrodatamlmodel",
+      "target": "ml_engine_survey_ml_model_surveymicrodatamlmodel_init",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ml_engine/survey_ml_model.py",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "ml_engine_survey_ml_model_surveymicrodatamlmodel",
+      "target": "ml_engine_survey_ml_model_surveymicrodatamlmodel_load_and_augment_data",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ml_engine/survey_ml_model.py",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "ml_engine_survey_ml_model_surveymicrodatamlmodel",
+      "target": "ml_engine_survey_ml_model_surveymicrodatamlmodel_train_model",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ml_engine/survey_ml_model.py",
+      "source_location": "L74",
+      "weight": 1.0
+    },
+    {
+      "source": "ml_engine_survey_ml_model_surveymicrodatamlmodel",
+      "target": "ml_engine_survey_ml_model_surveymicrodatamlmodel_evaluate_model_accuracy",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ml_engine/survey_ml_model.py",
+      "source_location": "L87",
+      "weight": 1.0
+    },
+    {
+      "source": "ml_engine_virtual_lab_evaluator_virtuallabevaluator",
+      "target": "ml_engine_virtual_lab_evaluator_virtuallabevaluator_evaluate_code",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ml_engine/virtual_lab_evaluator.py",
+      "source_location": "L106",
+      "weight": 1.0
+    },
+    {
       "source": "ml_engine_virtual_lab_evaluator_virtuallabevaluator",
       "target": "ml_engine_virtual_lab_evaluator_virtuallabevaluator_init",
       "relation": "method",
@@ -17456,6 +19624,160 @@
       "weight": 1.0
     },
     {
+      "source": "tests_test_all_models_teststatgyanaimodels",
+      "target": "tests_test_all_models_teststatgyanaimodels_test_05_decay_and_drift_model",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L107",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_all_models_teststatgyanaimodels",
+      "target": "tests_test_all_models_teststatgyanaimodels_test_06_predictive_divisional_analytics",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L117",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_all_models_teststatgyanaimodels",
+      "target": "tests_test_all_models_teststatgyanaimodels_test_07_virtual_statistical_lab",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L129",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_all_models_teststatgyanaimodels",
+      "target": "tests_test_all_models_teststatgyanaimodels_setupclass",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_all_models_teststatgyanaimodels",
+      "target": "tests_test_all_models_teststatgyanaimodels_test_01_competency_gap_engine",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_all_models_teststatgyanaimodels",
+      "target": "tests_test_all_models_teststatgyanaimodels_test_02_grounded_mcq_and_qc",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L49",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_all_models_teststatgyanaimodels",
+      "target": "tests_test_all_models_teststatgyanaimodels_test_03_proctoring_trust_engine",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L67",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_all_models_teststatgyanaimodels",
+      "target": "tests_test_all_models_teststatgyanaimodels_test_04_blended_pathway_recommender",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L91",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_ml_accuracy_testmlmodelaccuracyandgeneralization",
+      "target": "tests_test_ml_accuracy_testmlmodelaccuracyandgeneralization_test_05_survey_microdata_predictions",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_ml_accuracy.py",
+      "source_location": "L113",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_ml_accuracy_testmlmodelaccuracyandgeneralization",
+      "target": "tests_test_ml_accuracy_testmlmodelaccuracyandgeneralization_setupclass",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_ml_accuracy.py",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_ml_accuracy_testmlmodelaccuracyandgeneralization",
+      "target": "tests_test_ml_accuracy_testmlmodelaccuracyandgeneralization_test_01_competency_model_high_accuracy",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_ml_accuracy.py",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_ml_accuracy_testmlmodelaccuracyandgeneralization",
+      "target": "tests_test_ml_accuracy_testmlmodelaccuracyandgeneralization_test_02_competency_model_no_overfitting",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_ml_accuracy.py",
+      "source_location": "L44",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_ml_accuracy_testmlmodelaccuracyandgeneralization",
+      "target": "tests_test_ml_accuracy_testmlmodelaccuracyandgeneralization_test_03_competency_model_unseen_task_generalization",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_ml_accuracy.py",
+      "source_location": "L59",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_ml_accuracy_testmlmodelaccuracyandgeneralization",
+      "target": "tests_test_ml_accuracy_testmlmodelaccuracyandgeneralization_test_04_survey_microdata_ml_model_anti_overfitting",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_ml_accuracy.py",
+      "source_location": "L97",
+      "weight": 1.0
+    },
+    {
       "source": "backend_server_rationale_1",
       "target": "backend_server",
       "relation": "rationale_for",
@@ -17467,14 +19789,47 @@
       "weight": 1.0
     },
     {
-      "source": "backend_server_rationale_192",
+      "source": "backend_server_rationale_137",
+      "target": "backend_server_get_ml_metrics",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L137",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server_rationale_152",
+      "target": "backend_server_predict_survey_demographics",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L152",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server_rationale_260",
       "target": "backend_server_get_knowledge_graph",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "backend/server.py",
-      "source_location": "L192",
+      "source_location": "L260",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_server_rationale_40",
+      "target": "backend_server_lifespan",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/server.py",
+      "source_location": "L40",
       "weight": 1.0
     },
     {
@@ -17489,25 +19844,69 @@
       "weight": 1.0
     },
     {
-      "source": "ml_engine_competency_model_rationale_108",
+      "source": "ml_engine_competency_model_rationale_131",
       "target": "ml_engine_competency_model_competencygapmodel_infer_competency_from_text",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "ml_engine/competency_model.py",
-      "source_location": "L108",
+      "source_location": "L131",
       "weight": 1.0
     },
     {
-      "source": "ml_engine_competency_model_rationale_44",
+      "source": "ml_engine_competency_model_rationale_162",
       "target": "ml_engine_competency_model_competencygapmodel_evaluate_gap",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "ml_engine/competency_model.py",
-      "source_location": "L44",
+      "source_location": "L162",
+      "weight": 1.0
+    },
+    {
+      "source": "ml_engine_competency_model_rationale_231",
+      "target": "ml_engine_competency_model_competencygapmodel_analyze_gap",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ml_engine/competency_model.py",
+      "source_location": "L231",
+      "weight": 1.0
+    },
+    {
+      "source": "ml_engine_competency_model_rationale_235",
+      "target": "ml_engine_competency_model_competencygapmodel_infer_from_text",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ml_engine/competency_model.py",
+      "source_location": "L235",
+      "weight": 1.0
+    },
+    {
+      "source": "ml_engine_competency_model_rationale_42",
+      "target": "ml_engine_competency_model_competencygapmodel_init_and_train_model",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ml_engine/competency_model.py",
+      "source_location": "L42",
+      "weight": 1.0
+    },
+    {
+      "source": "ml_engine_competency_model_rationale_83",
+      "target": "ml_engine_competency_model_competencygapmodel_evaluate_model_accuracy",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ml_engine/competency_model.py",
+      "source_location": "L83",
       "weight": 1.0
     },
     {
@@ -17519,6 +19918,17 @@
       "confidence_score": 1.0,
       "source_file": "ml_engine/decay_model.py",
       "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "ml_engine_decay_model_rationale_116",
+      "target": "ml_engine_decay_model_skilldecaymodel_simulate_decay",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ml_engine/decay_model.py",
+      "source_location": "L116",
       "weight": 1.0
     },
     {
@@ -17566,25 +19976,25 @@
       "weight": 1.0
     },
     {
-      "source": "ml_engine_mcq_generator_rationale_277",
+      "source": "ml_engine_mcq_generator_rationale_275",
       "target": "ml_engine_mcq_generator_groundedmcqgenerator_export_qti",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "ml_engine/mcq_generator.py",
-      "source_location": "L277",
+      "source_location": "L275",
       "weight": 1.0
     },
     {
-      "source": "ml_engine_mcq_generator_rationale_299",
+      "source": "ml_engine_mcq_generator_rationale_298",
       "target": "ml_engine_mcq_generator_groundedmcqgenerator_export_moodle_xml",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "ml_engine/mcq_generator.py",
-      "source_location": "L299",
+      "source_location": "L298",
       "weight": 1.0
     },
     {
@@ -17665,6 +20075,61 @@
       "weight": 1.0
     },
     {
+      "source": "ml_engine_survey_ml_model_rationale_1",
+      "target": "ml_engine_survey_ml_model",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ml_engine/survey_ml_model.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "ml_engine_survey_ml_model_rationale_128",
+      "target": "ml_engine_survey_ml_model_surveymicrodatamlmodel_predict_status",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ml_engine/survey_ml_model.py",
+      "source_location": "L128",
+      "weight": 1.0
+    },
+    {
+      "source": "ml_engine_survey_ml_model_rationale_24",
+      "target": "ml_engine_survey_ml_model_surveymicrodatamlmodel_load_and_augment_data",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ml_engine/survey_ml_model.py",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "ml_engine_survey_ml_model_rationale_75",
+      "target": "ml_engine_survey_ml_model_surveymicrodatamlmodel_train_model",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ml_engine/survey_ml_model.py",
+      "source_location": "L75",
+      "weight": 1.0
+    },
+    {
+      "source": "ml_engine_survey_ml_model_rationale_88",
+      "target": "ml_engine_survey_ml_model_surveymicrodatamlmodel_evaluate_model_accuracy",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ml_engine/survey_ml_model.py",
+      "source_location": "L88",
+      "weight": 1.0
+    },
+    {
       "source": "ml_engine_virtual_lab_evaluator_rationale_1",
       "target": "ml_engine_virtual_lab_evaluator",
       "relation": "rationale_for",
@@ -17673,6 +20138,17 @@
       "confidence_score": 1.0,
       "source_file": "ml_engine/virtual_lab_evaluator.py",
       "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "ml_engine_virtual_lab_evaluator_rationale_107",
+      "target": "ml_engine_virtual_lab_evaluator_virtuallabevaluator_evaluate_code",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ml_engine/virtual_lab_evaluator.py",
+      "source_location": "L107",
       "weight": 1.0
     },
     {
@@ -17698,6 +20174,171 @@
       "weight": 1.0
     },
     {
+      "source": "tests_init_rationale_1",
+      "target": "tests_init",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/__init__.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_all_models_rationale_1",
+      "target": "tests_test_all_models",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_all_models_rationale_108",
+      "target": "tests_test_all_models_teststatgyanaimodels_test_05_decay_and_drift_model",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L108",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_all_models_rationale_118",
+      "target": "tests_test_all_models_teststatgyanaimodels_test_06_predictive_divisional_analytics",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L118",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_all_models_rationale_130",
+      "target": "tests_test_all_models_teststatgyanaimodels_test_07_virtual_statistical_lab",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L130",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_all_models_rationale_35",
+      "target": "tests_test_all_models_teststatgyanaimodels_test_01_competency_gap_engine",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_all_models_rationale_50",
+      "target": "tests_test_all_models_teststatgyanaimodels_test_02_grounded_mcq_and_qc",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L50",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_all_models_rationale_68",
+      "target": "tests_test_all_models_teststatgyanaimodels_test_03_proctoring_trust_engine",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L68",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_all_models_rationale_92",
+      "target": "tests_test_all_models_teststatgyanaimodels_test_04_blended_pathway_recommender",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L92",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_ml_accuracy_rationale_1",
+      "target": "tests_test_ml_accuracy",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_ml_accuracy.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_ml_accuracy_rationale_114",
+      "target": "tests_test_ml_accuracy_testmlmodelaccuracyandgeneralization_test_05_survey_microdata_predictions",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_ml_accuracy.py",
+      "source_location": "L114",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_ml_accuracy_rationale_25",
+      "target": "tests_test_ml_accuracy_testmlmodelaccuracyandgeneralization_test_01_competency_model_high_accuracy",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_ml_accuracy.py",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_ml_accuracy_rationale_45",
+      "target": "tests_test_ml_accuracy_testmlmodelaccuracyandgeneralization_test_02_competency_model_no_overfitting",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_ml_accuracy.py",
+      "source_location": "L45",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_ml_accuracy_rationale_60",
+      "target": "tests_test_ml_accuracy_testmlmodelaccuracyandgeneralization_test_03_competency_model_unseen_task_generalization",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_ml_accuracy.py",
+      "source_location": "L60",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_ml_accuracy_rationale_98",
+      "target": "tests_test_ml_accuracy_testmlmodelaccuracyandgeneralization_test_04_survey_microdata_ml_model_anti_overfitting",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_ml_accuracy.py",
+      "source_location": "L98",
+      "weight": 1.0
+    },
+    {
       "source": "agents_skills_constraint_driven_development_skill",
       "target": "agents_skills_constraint_driven_development_references_floor_guard",
       "relation": "references",
@@ -17717,7 +20358,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "static/js/app.js",
-      "source_location": "L435",
+      "source_location": "L438",
       "weight": 1.0
     },
     {
@@ -17729,7 +20370,55 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "static/js/app.js",
-      "source_location": "L1579",
+      "source_location": "L1582",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app_setupsihtour",
+      "target": "static_js_app_startjurytour",
+      "relation": "indirect_call",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "argument",
+      "source_file": "static/js/app.js",
+      "source_location": "L1902",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app_setupsihtour",
+      "target": "static_js_app_nexttourstep",
+      "relation": "indirect_call",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "argument",
+      "source_file": "static/js/app.js",
+      "source_location": "L1903",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app_setupsihtour",
+      "target": "static_js_app_prevtourstep",
+      "relation": "indirect_call",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "argument",
+      "source_file": "static/js/app.js",
+      "source_location": "L1904",
+      "weight": 1.0
+    },
+    {
+      "source": "static_js_app_setupsihtour",
+      "target": "static_js_app_exittour",
+      "relation": "indirect_call",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "argument",
+      "source_file": "static/js/app.js",
+      "source_location": "L1905",
       "weight": 1.0
     },
     {
@@ -17741,8 +20430,162 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "static/js/app.js",
-      "source_location": "L987",
+      "source_location": "L990",
       "weight": 1.0
+    },
+    {
+      "source": "backend_server_lifespan",
+      "target": "ml_engine_competency_model_competencygapmodel",
+      "relation": "uses",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "backend/server.py",
+      "source_location": "L45",
+      "weight": 0.8
+    },
+    {
+      "source": "backend_server_lifespan",
+      "target": "ml_engine_mcq_generator_groundedmcqgenerator",
+      "relation": "uses",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "backend/server.py",
+      "source_location": "L46",
+      "weight": 0.8
+    },
+    {
+      "source": "backend_server_lifespan",
+      "target": "ml_engine_recommender_model_blendedpathwayrecommender",
+      "relation": "uses",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "backend/server.py",
+      "source_location": "L47",
+      "weight": 0.8
+    },
+    {
+      "source": "backend_server_lifespan",
+      "target": "ml_engine_decay_model_skilldecaymodel",
+      "relation": "uses",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "backend/server.py",
+      "source_location": "L48",
+      "weight": 0.8
+    },
+    {
+      "source": "backend_server_lifespan",
+      "target": "ml_engine_predictive_analytics_predictiveanalyticsengine",
+      "relation": "uses",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "backend/server.py",
+      "source_location": "L49",
+      "weight": 0.8
+    },
+    {
+      "source": "backend_server_lifespan",
+      "target": "ml_engine_virtual_lab_evaluator_virtuallabevaluator",
+      "relation": "uses",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "backend/server.py",
+      "source_location": "L50",
+      "weight": 0.8
+    },
+    {
+      "source": "backend_server_lifespan",
+      "target": "ml_engine_proctoring_model_proctoringtrustengine",
+      "relation": "uses",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "backend/server.py",
+      "source_location": "L51",
+      "weight": 0.8
+    },
+    {
+      "source": "backend_server_lifespan",
+      "target": "ml_engine_survey_ml_model_surveymicrodatamlmodel",
+      "relation": "uses",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "backend/server.py",
+      "source_location": "L52",
+      "weight": 0.8
+    },
+    {
+      "source": "ml_engine_decay_model_skilldecaymodel",
+      "target": "ml_engine_competency_model_competencygapmodel",
+      "relation": "uses",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "ml_engine/decay_model.py",
+      "source_location": "L120",
+      "weight": 0.8
+    },
+    {
+      "source": "ml_engine_recommender_model_blendedpathwayrecommender",
+      "target": "ml_engine_competency_model_competencygapmodel",
+      "relation": "uses",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "ml_engine/recommender_model.py",
+      "source_location": "L34",
+      "weight": 0.8
+    },
+    {
+      "source": "tests_test_all_models_teststatgyanaimodels",
+      "target": "ml_engine_virtual_lab_evaluator_virtuallabevaluator",
+      "relation": "uses",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L31",
+      "weight": 0.8
+    },
+    {
+      "source": "tests_test_all_models_teststatgyanaimodels",
+      "target": "ml_engine_proctoring_model_proctoringtrustengine",
+      "relation": "uses",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "tests/test_all_models.py",
+      "source_location": "L32",
+      "weight": 0.8
+    },
+    {
+      "source": "tests_test_ml_accuracy_testmlmodelaccuracyandgeneralization",
+      "target": "ml_engine_competency_model_competencygapmodel",
+      "relation": "uses",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "tests/test_ml_accuracy.py",
+      "source_location": "L21",
+      "weight": 0.8
+    },
+    {
+      "source": "tests_test_ml_accuracy_testmlmodelaccuracyandgeneralization",
+      "target": "ml_engine_survey_ml_model_surveymicrodatamlmodel",
+      "relation": "uses",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "tests/test_ml_accuracy.py",
+      "source_location": "L22",
+      "weight": 0.8
     },
     {
       "source": "_agents_rules_graphify_knowledge_graph",
@@ -17768,5 +20611,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "878a22594697051166d98474e7b4b974e60f0332"
+  "built_at_commit": "b5c611a0e6fa96311877cf99a216af1e353de552"
 }
