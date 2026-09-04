@@ -273,34 +273,36 @@ class GroundedMCQGenerator:
             "qc_status": "VERIFIED_GROUNDED" if passed else "FLAGGED_FOR_REVIEW"
         }
 
-    def export_qti(self, assessment_data: Dict[str, Any]) -> str:
+    def export_qti(self, assessment_data: Any) -> str:
         """
         Exports assessment items to QTI 2.1 standard XML format for LMS/Karmayogi ingestion.
         """
-        root = ET.Element("qti-assessment-test", {
-            "xmlns": "http://www.imsglobal.org/xsd/imsqti_v2p1",
-            "identifier": "STATGYAN-MOSPI-ASSESSMENT-2026",
-            "title": "MoSPI Competency Assessment"
-        })
+        items = assessment_data if isinstance(assessment_data, list) else assessment_data.get("items", [])
+        lines = [
+            '<?xml version="1.0" encoding="UTF-8"?>',
+            '<qti-assessment-test xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" identifier="STATGYAN-MOSPI-ASSESSMENT-2026" title="MoSPI Competency Assessment">',
+            '  <qti-test-part identifier="part_1" navigationMode="linear">',
+            '    <qti-assessment-section identifier="sec_official_stat" title="Statistical Competencies">'
+        ]
+        for item in items:
+            lines.append(f'      <assessmentItem identifier="{item["id"]}" title="{item.get("bloom_level", "MoSPI Item")}" adaptive="false" timeDependent="false">')
+            lines.append(f'        <qti-item-metadata citation="{item.get("citation", "")}"/>')
+            lines.append(f'        <itemBody><p>{item.get("question", "")}</p></itemBody>')
+            lines.append('      </assessmentItem>')
+        lines.append('    </qti-assessment-section>')
+        lines.append('  </qti-test-part>')
+        lines.append('</qti-assessment-test>')
+        return '\n'.join(lines)
 
-        part = ET.SubElement(root, "qti-test-part", {"identifier": "part_1", "navigationMode": "linear"})
-        section = ET.SubElement(part, "qti-assessment-section", {"identifier": "sec_official_stat", "title": "Statistical Competencies"})
+    export_qti_xml = export_qti
 
-        for item in assessment_data.get("items", []):
-            item_ref = ET.SubElement(section, "qti-assessment-item-ref", {
-                "identifier": item["id"],
-                "title": item["bloom_level"]
-            })
-            ET.SubElement(item_ref, "qti-item-metadata", {"citation": item["citation"]})
-
-        return ET.tostring(root, encoding="utf-8").decode("utf-8")
-
-    def export_moodle_xml(self, assessment_data: Dict[str, Any]) -> str:
+    def export_moodle_xml(self, assessment_data: Any) -> str:
         """
         Exports assessment to standard Moodle XML.
         """
+        items = assessment_data if isinstance(assessment_data, list) else assessment_data.get("items", [])
         lines = ['<?xml version="1.0" encoding="UTF-8"?>', '<quiz>']
-        for item in assessment_data.get("items", []):
+        for item in items:
             lines.append('  <question type="multichoice">')
             lines.append(f'    <name><text>{item["id"]}: {item["bloom_level"]}</text></name>')
             lines.append(f'    <questiontext format="html"><text><![CDATA[{item["question"]}]]></text></questiontext>')
@@ -313,3 +315,8 @@ class GroundedMCQGenerator:
             lines.append('  </question>')
         lines.append('</quiz>')
         return '\n'.join(lines)
+
+
+# Backwards-compatible alias
+MCQGenerator = GroundedMCQGenerator
+

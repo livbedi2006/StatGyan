@@ -24,10 +24,16 @@ class BlendedPathwayRecommender:
             comp = w["competency"]
             self.nssta_by_competency.setdefault(comp, []).append(w)
 
-    def generate_pathway(self, competency_gap_result: Dict[str, Any]) -> Dict[str, Any]:
+    def generate_pathway(self, competency_gap_result: Any = "jso") -> Dict[str, Any]:
         """
         Builds a sequenced blended pathway based on identified competency gaps.
+        Accepts either a competency gap result dictionary or a cadre ID string (e.g. 'jso').
         """
+        if isinstance(competency_gap_result, str):
+            from ml_engine.competency_model import CompetencyGapModel
+            gap_model = CompetencyGapModel()
+            competency_gap_result = gap_model.evaluate_gap(competency_gap_result)
+
         domain_breakdown = competency_gap_result.get("domain_breakdown", [])
         
         # Sort domains by gap descending (prioritize highest gaps)
