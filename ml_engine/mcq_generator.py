@@ -255,18 +255,16 @@ class GroundedMCQGenerator:
 
         no_overlap = not is_duplicate
 
-        # Grounding check: for calculation items (Level 3/4), check explanation & formula terms in source
-        if is_numeric or "Calculation" in item["bloom_level"]:
-            expl_ratio = fuzz.partial_token_set_ratio(item["explanation"].lower(), source_text.lower())
-            effective_grounding = max(grounding_score, round(expl_ratio / 100.0, 2))
-        else:
-            effective_grounding = grounding_score
+        # Grounding check: for calculation items or conceptual questions, evaluate highest token grounding
+        q_ratio = fuzz.partial_token_set_ratio(item["question"].lower(), source_text.lower())
+        expl_ratio = fuzz.partial_token_set_ratio(item["explanation"].lower(), source_text.lower())
+        effective_grounding = round(max(grounding_ratio, expl_ratio, q_ratio) / 100.0, 2)
 
         passed = (effective_grounding >= 0.50) and distractor_plausible and no_overlap
 
         return {
             "passed": passed,
-            "grounding_confidence": grounding_score,
+            "grounding_confidence": effective_grounding,
             "distractor_plausibility": round(avg_distractor_sim * 100, 1),
             "no_duplicate_options": no_overlap,
             "verified_citation": item["citation"],

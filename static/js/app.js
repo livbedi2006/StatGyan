@@ -133,6 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupProctoringEngine();
   setupSIHTour();
   setupSIHDocketModal();
+  checkFastAPIConnection();
 });
 
 // 1. Navigation Tabs
