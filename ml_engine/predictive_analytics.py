@@ -184,3 +184,8 @@ class PredictiveAnalyticsEngine:
             })
 
         return forecasts
+
+
+# Backwards-compatible alias
+PredictiveAnalytics = PredictiveAnalyticsEngine
+

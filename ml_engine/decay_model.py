@@ -6,7 +6,7 @@ Triggers proactive refresher alerts for cadre deployment readiness.
 """
 
 import math
-from typing import Dict, List, Any
+from typing import Dict, List, Any, Optional
 
 # Domain decay constants (higher = faster depreciation if not reinforced)
 DOMAIN_LAMBDAS = {
@@ -106,3 +106,44 @@ class SkillDecayModel:
             "competency_losses": decay_deltas,
             "active_drift_alerts": alerts
         }
+
+    def simulate_decay(
+        self,
+        cadre_id: str = "jso",
+        elapsed_months: float = 8.0,
+        active_events: Optional[List[str]] = None
+    ) -> Dict[str, Any]:
+        """
+        Simulates skill decay for a specific cadre, returning decay_curve and drift alerts.
+        """
+        from ml_engine.competency_model import CompetencyGapModel
+        gap_model = CompetencyGapModel()
+        gap_res = gap_model.evaluate_gap(cadre_id)
+        
+        assessed = gap_res["radar_data"]["assessed"]
+        labels = gap_res["radar_data"]["labels"]
+        base_dict = {labels[i]: assessed[i] for i in range(len(labels))}
+
+        res = self.compute_decay(
+            base_competencies=base_dict,
+            months_since_last_trained=elapsed_months,
+            active_events=active_events
+        )
+
+        decay_curve = []
+        for domain, s0 in base_dict.items():
+            post_score = res["decayed_competencies"].get(domain, s0)
+            decay_curve.append({
+                "domain": domain,
+                "baseline_score": s0,
+                "post_decay_score": post_score,
+                "loss": res["competency_losses"].get(domain, 0.0)
+            })
+
+        res["decay_curve"] = decay_curve
+        return res
+
+
+# Backwards-compatible alias
+DecayModel = SkillDecayModel
+

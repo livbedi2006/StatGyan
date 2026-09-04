@@ -95,8 +95,17 @@ class VirtualLabEvaluator:
         return {
             "status": "PASSED" if score_pct >= 80 else "NEEDS_REVISION",
             "score_pct": score_pct,
+            "passed_checks": passed_count,
+            "total_checks": len(test_results),
             "tests_passed": f"{passed_count}/{len(test_results)}",
             "metrics": official,
             "detailed_checks": test_results,
             "official_citation": "PLFS Manual Vol. I, Section 2.18, Formula (4.2)"
         }
+
+    def evaluate_code(self, script_code: str) -> Dict[str, Any]:
+        """
+        Alias for evaluate_submission.
+        """
+        return self.evaluate_submission(script_code)
+

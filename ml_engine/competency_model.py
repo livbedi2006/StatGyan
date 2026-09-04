@@ -135,6 +135,7 @@ class CompetencyGapModel:
         user_vec = self.vectorizer.transform([text])
         probs = self.classifier.predict_proba(user_vec)[0]
         classes = list(self.classifier.classes_)
+        max_p = max(probs)
 
         inferred = {}
         for domain in DOMAINS:
@@ -144,11 +145,14 @@ class CompetencyGapModel:
                 p = 0.0
             
             # Calibration formula:
-            # Base proficiency (40.0) + Probability boost (up to 55.0)
-            score = round(40.0 + (float(p) * 55.0), 1)
-            inferred[domain] = min(100.0, max(25.0, score))
+            # Base proficiency (42.0) + Probability boost (up to 50.0)
+            score = 42.0 + (float(p) * 50.0)
+            if p == max_p and p >= 0.25:
+                score += 10.0  # Dominant domain affinity boost
+            inferred[domain] = min(100.0, max(25.0, round(score, 1)))
 
         return inferred
+
 
     def evaluate_gap(
         self,

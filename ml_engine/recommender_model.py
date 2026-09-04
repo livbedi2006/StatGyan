@@ -104,3 +104,8 @@ class BlendedPathwayRecommender:
             "total_karmayogi_credits": round(total_credits, 1),
             "learning_pathway": blended_pathway
         }
+
+
+# Backwards-compatible alias
+BlendedRecommender = BlendedPathwayRecommender
+
