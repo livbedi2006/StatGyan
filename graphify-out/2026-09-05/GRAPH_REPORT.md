@@ -1,16 +1,16 @@
-# Graph Report - StatGyan AI  (2026-09-05)
+# Graph Report - StatGyan AI  (2026-09-04)
 
 ## Corpus Check
-- 56 files · ~96,232 words
+- 56 files · ~95,936 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 835 nodes · 950 edges · 46 communities (41 shown, 4 thin omitted)
+- 834 nodes · 945 edges · 46 communities (41 shown, 4 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 21 edges (avg confidence: 0.92)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `f703a619`
+- Built from commit: `b5c611a0`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -212,7 +212,7 @@ Nodes (39): analyze_competency(), AnalyzeRequest, cadre_analytics(), DecaySimula
 
 ### Community 31 - "app.js"
 Cohesion: 0.07
-Nodes (55): applyTourStep(), BUILTIN_CADRES, BUILTIN_GRAPH, checkFastAPIConnection(), computeClientSideGap(), computeClientSideInference(), drawMultiLaneGraph(), executeLabCode() (+47 more)
+Nodes (54): applyTourStep(), BUILTIN_CADRES, BUILTIN_GRAPH, checkFastAPIConnection(), computeClientSideGap(), computeClientSideInference(), drawMultiLaneGraph(), executeLabCode() (+46 more)
 
 ### Community 32 - "GroundedMCQGenerator"
 Cohesion: 0.18

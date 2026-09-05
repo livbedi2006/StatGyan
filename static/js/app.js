@@ -329,6 +329,69 @@ function computeClientSideInference(cadreId, text) {
   return computeClientSideGap(cadreId, scores);
 }
 
+async function inferFromNLP() {
+  const textarea = document.getElementById("nlp-statement-input");
+  const text = textarea ? textarea.value.trim() : "";
+  if (!text) {
+    // If empty, offer to use the placeholder example
+    const placeholder = textarea ? textarea.getAttribute("placeholder") : "";
+    if (placeholder && confirm("Textarea is empty. Would you like to use the example MoSPI statement:\n\n\"" + placeholder + "\"")) {
+      textarea.value = placeholder.replace(/^e\.g\.\s*/, "");
+      return inferFromNLP();
+    }
+    return;
+  }
+
+  const btn = event?.target;
+  const originalText = btn ? btn.textContent : "";
+  if (btn) btn.textContent = "Extracting ML Embeddings...";
+
+  try {
+    const res = await fetch(`${API_BASE}/api/competency/infer`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        cadre_id: state.activeCadre,
+        self_statement: text
+      })
+    });
+
+    if (res.ok) {
+      const data = await res.json();
+      state.gapAnalysis = data;
+      renderCompetencyOverview(data);
+      renderRadarChart(data.radar_data);
+      renderDomainList(data.domain_breakdown);
+
+      const badge = document.getElementById("profile-source-badge");
+      if (badge) {
+        badge.style.background = "rgba(16, 185, 129, 0.2)";
+        badge.style.color = "#10B981";
+        badge.textContent = "Personalized Self-Appraisal (ML Inferred)";
+      }
+      if (btn) btn.textContent = originalText;
+      return;
+    }
+  } catch (err) {
+    console.warn("FastAPI infer error, falling back to client inference:", err);
+  }
+
+  // Client-side fallback
+  const fallback = computeClientSideInference(state.activeCadre, text);
+  state.gapAnalysis = fallback;
+  renderCompetencyOverview(fallback);
+  renderRadarChart(fallback.radar_data);
+  renderDomainList(fallback.domain_breakdown);
+
+  const badge = document.getElementById("profile-source-badge");
+  if (badge) {
+    badge.style.background = "rgba(16, 185, 129, 0.2)";
+    badge.style.color = "#10B981";
+    badge.textContent = "Personalized Self-Appraisal (ML Inferred)";
+  }
+  if (btn) btn.textContent = originalText;
+}
+
 function renderCompetencyOverview(data) {
   document.getElementById("officer-readiness-val").textContent = `${data.overall_readiness_pct}%`;
   document.getElementById("avg-gap-val").textContent = `${data.average_gap} pts`;
