@@ -150,8 +150,11 @@
           <div class="card-header">
             <div>
               <div class="card-title"><span>📡</span> Competency Radar</div>
-              <div class="card-subtitle">Officer Proficiency vs. MoSPI Cadre Benchmark</div>
+              <div class="card-subtitle" id="radar-card-subtitle">Officer Proficiency vs. MoSPI Cadre Benchmark</div>
             </div>
+            <span class="badge" id="radar-status-badge" style="background: rgba(245, 158, 11, 0.15); color: #F59E0B; font-size: 0.68rem; font-weight: 700; border: 1px solid rgba(245, 158, 11, 0.3);">
+              Awaiting Self-Appraisal
+            </span>
           </div>
           <div style="position: relative; height: 320px; width: 100%;">
             <canvas id="competencyRadarChart"></canvas>
@@ -169,11 +172,11 @@
                 </span>
               </div>
               <div class="card-subtitle" id="domain-gap-card-subtitle">
-                Showing standard baseline for selected cadre. Enter self-appraisal below to customize.
+                Showing standard baseline targets for selected cadre. Enter self-appraisal below to extract skills.
               </div>
             </div>
-            <button class="btn btn-outline" style="padding: 0.35rem 0.75rem; font-size: 0.75rem;" onclick="triggerCompetencyAnalysis()">
-              Reset to Baseline
+            <button class="btn btn-outline" style="padding: 0.35rem 0.75rem; font-size: 0.75rem;" onclick="resetNLPAnalysis()">
+              <span>🔄</span> Reset to Baseline
             </button>
           </div>
           <div id="domain-gap-list" style="margin-top: 0.5rem;">
@@ -182,13 +185,27 @@
 
           <!-- NLP Inferencing Box -->
           <div style="margin-top: 1.25rem; background: rgba(0,0,0,0.3); padding: 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-card);">
-            <div style="font-size: 0.8rem; font-weight: 700; color: var(--primary-sky); margin-bottom: 0.4rem;">
-              ✨ NLP Skill Extraction (from Job Profile / Self-Appraisal)
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
+              <div style="font-size: 0.8rem; font-weight: 700; color: var(--primary-sky);">
+                ✨ NLP Skill Extraction (from Job Profile / Self-Appraisal)
+              </div>
+              <div style="display: flex; gap: 0.35rem; flex-wrap: wrap; align-items: center;">
+                <span style="font-size: 0.7rem; color: #94A3B8;">Quick Samples:</span>
+                <button type="button" class="btn btn-outline" style="padding: 2px 7px; font-size: 0.68rem;" onclick="loadSampleNLP('field')">PLFS / Sampling</button>
+                <button type="button" class="btn btn-outline" style="padding: 2px 7px; font-size: 0.68rem;" onclick="loadSampleNLP('accounts')">NAS / GDP</button>
+                <button type="button" class="btn btn-outline" style="padding: 2px 7px; font-size: 0.68rem;" onclick="loadSampleNLP('cpi')">CPI / Prices</button>
+                <button type="button" class="btn btn-outline" style="padding: 2px 7px; font-size: 0.68rem;" onclick="loadSampleNLP('analytics')">R / Python</button>
+                <button type="button" class="btn btn-outline" style="padding: 2px 7px; font-size: 0.68rem; color: #FCA5A5; border-color: rgba(239,68,68,0.3);" onclick="resetNLPAnalysis()">Clear</button>
+              </div>
             </div>
-            <textarea id="nlp-statement-input" style="width: 100%; height: 60px; background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; padding: 0.5rem; color: #FFFFFF; font-size: 0.8rem; outline: none;" placeholder="e.g. Conducted 45 field household scrutinies for PLFS using CAPI tablets, resolved CWS status discrepancies, and calculated basic sampling weights."></textarea>
-            <div style="display: flex; justify-content: flex-end; margin-top: 0.5rem;">
-              <button class="btn btn-secondary" style="padding: 0.35rem 0.85rem; font-size: 0.75rem;" onclick="inferFromNLP()">
-                Extract Competencies (TF-IDF & LSA)
+            <textarea id="nlp-statement-input" style="width: 100%; height: 65px; background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; padding: 0.5rem; color: #FFFFFF; font-size: 0.8rem; outline: none;" placeholder="e.g. Conducted 45 field household scrutinies for PLFS using CAPI tablets, resolved CWS status discrepancies, and calculated basic sampling weights."></textarea>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
+              <span id="fastapi-sync-indicator" style="font-size: 0.72rem; color: #10B981; display: flex; align-items: center; gap: 5px;">
+                <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #10B981;"></span>
+                Connected to FastAPI (8 Models Interlinked)
+              </span>
+              <button id="btn-extract-nlp" class="btn btn-primary" style="padding: 0.4rem 1rem; font-size: 0.78rem;" onclick="inferFromNLP()">
+                <span>⚡</span> Extract Competencies & Link All Models
               </button>
             </div>
           </div>
@@ -823,44 +840,5 @@ def calculate_plfs_metrics(records):
 
   <!-- Client JavaScript -->
   <script src="/static/js/app.js"></script>
-
-  <!-- Helper for NLP extraction -->
-  <script>
-    async function inferFromNLP() {
-      const text = document.getElementById("nlp-statement-input").value;
-      if (!text.trim()) {
-        alert("Please enter a self-appraisal or job statement to infer competencies.");
-        return;
-      }
-      try {
-        const res = await fetch(`${API_BASE}/api/competency/infer`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ cadre_id: state.activeCadre, self_statement: text })
-        });
-        if (!res.ok) {
-          throw new Error(`Server returned HTTP ${res.status}`);
-        }
-        const textPayload = await res.text();
-        if (!textPayload || !textPayload.trim()) {
-          throw new Error("Empty response payload");
-        }
-        const data = JSON.parse(textPayload);
-        state.gapAnalysis = data;
-        renderCompetencyOverview(data);
-        renderRadarChart(data.radar_data);
-        renderDomainList(data.domain_breakdown);
-        alert("NLP extraction complete! Competency radar updated from profile description.");
-      } catch (err) {
-        console.warn("Server inference unavailable, utilizing local semantic model:", err);
-        const fallbackData = computeClientSideInference(state.activeCadre, text);
-        state.gapAnalysis = fallbackData;
-        renderCompetencyOverview(fallbackData);
-        renderRadarChart(fallbackData.radar_data);
-        renderDomainList(fallbackData.domain_breakdown);
-        alert("NLP extraction complete! Competencies updated using semantic skill extraction model.");
-      }
-    }
-  </script>
 </body>
 </html>

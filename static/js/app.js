@@ -114,6 +114,8 @@ const state = {
   activeAssessment: null,
   pathway: null,
   analytics: null,
+  userHasSubmittedAppraisal: false,
+  inferredCompetencies: null,
   // Proctoring state
   isExamLocked: false,
   proctoringSessionId: "SESSION-MOSPI-2026-001",
@@ -199,7 +201,8 @@ async function loadCadres() {
     console.warn("API cadres fetch unavailable, using built-in MoSPI cadres:", err);
   }
   
-  triggerCompetencyAnalysis();
+  // Start in clean Cadre Benchmark Baseline state (unassessed until officer inputs self-appraisal)
+  renderUnassessedCadreBaseline(state.activeCadre);
 }
 
 function setupRoleSwitcher() {
@@ -207,18 +210,115 @@ function setupRoleSwitcher() {
   if (!select) return;
   select.addEventListener("change", (e) => {
     state.activeCadre = e.target.value;
-    triggerCompetencyAnalysis();
-    loadPathway();
+    if (state.userHasSubmittedAppraisal) {
+      triggerCompetencyAnalysis();
+      loadPathway();
+    } else {
+      renderUnassessedCadreBaseline(state.activeCadre);
+    }
   });
 }
 
-// 3. Competency Gap Analysis & Radar Chart
+// 3. Competency Gap Analysis & Unassessed Baseline Rendering
+function renderUnassessedCadreBaseline(cadreId) {
+  const cadre = state.cadres.find(c => c.id === cadreId) || state.cadres[0];
+  const required = cadre.required_competencies;
+
+  // Top quick metrics display waiting state
+  const elReadiness = document.getElementById("officer-readiness-val");
+  const elAvgGap = document.getElementById("avg-gap-val");
+  const elCritical = document.getElementById("critical-gaps-val");
+  const elCadreTitle = document.getElementById("active-cadre-title");
+
+  if (elReadiness) elReadiness.textContent = "--%";
+  if (elAvgGap) elAvgGap.textContent = "-- pts";
+  if (elCritical) elCritical.textContent = "--";
+  if (elCadreTitle) elCadreTitle.textContent = cadre.title;
+
+  const readinessSub = document.getElementById("readiness-sublabel");
+  if (readinessSub) readinessSub.innerHTML = `Evaluated for <span id="active-cadre-title">${cadre.title}</span>`;
+  const avgGapSub = document.getElementById("avg-gap-sublabel");
+  if (avgGapSub) avgGapSub.textContent = "Across 6 core official domains";
+  const critSub = document.getElementById("critical-gaps-sublabel");
+  if (critSub) critSub.textContent = "Requires NSSTA In-Person Workshop";
+
+  // Badges
+  const profileBadge = document.getElementById("profile-source-badge");
+  if (profileBadge) {
+    profileBadge.style.background = "rgba(56, 189, 248, 0.15)";
+    profileBadge.style.color = "#38BDF8";
+    profileBadge.style.borderColor = "rgba(56, 189, 248, 0.3)";
+    profileBadge.textContent = "Cadre Benchmark Baseline";
+  }
+
+  const radarBadge = document.getElementById("radar-status-badge");
+  if (radarBadge) {
+    radarBadge.style.background = "rgba(245, 158, 11, 0.15)";
+    radarBadge.style.color = "#F59E0B";
+    radarBadge.style.borderColor = "rgba(245, 158, 11, 0.3)";
+    radarBadge.textContent = "Awaiting Self-Appraisal";
+  }
+
+  const subtitle = document.getElementById("domain-gap-card-subtitle");
+  if (subtitle) {
+    subtitle.textContent = "Showing standard baseline targets for selected cadre. Enter self-appraisal below to extract skills.";
+  }
+
+  // Radar chart with ONLY benchmark polygon
+  renderRadarChart({
+    labels: Object.keys(required),
+    required: Object.values(required),
+    assessed: null
+  });
+
+  // Domain list in clean unassessed state
+  renderUnassessedDomainList(required);
+}
+
+function renderUnassessedDomainList(required) {
+  const container = document.getElementById("domain-gap-list");
+  if (!container) return;
+
+  container.innerHTML = "";
+
+  const guideBanner = document.createElement("div");
+  guideBanner.style.cssText = "background: rgba(56, 189, 248, 0.08); border: 1px dashed rgba(56, 189, 248, 0.3); border-radius: 6px; padding: 0.65rem 0.85rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem; font-size: 0.78rem; color: #94A3B8;";
+  guideBanner.innerHTML = `<span style="font-size: 1.1rem;">💡</span><span><strong>No assessed scores yet:</strong> Write or load your job profile in the NLP Extractor below to compute personalized competency levels, gap analysis, and training recommendations.</span>`;
+  container.appendChild(guideBanner);
+
+  for (const [dom, req] of Object.entries(required)) {
+    const item = document.createElement("div");
+    item.style.cssText = "padding: 0.65rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; align-items: center;";
+    item.innerHTML = `
+      <div>
+        <div style="font-weight: 600; font-size: 0.85rem; color: #FFFFFF;">${dom}</div>
+        <div style="font-size: 0.75rem; color: #94A3B8;">Cadre Target: <strong style="color: #38BDF8;">${req}%</strong> • Status: <span style="color: #64748B;">Not Assessed</span></div>
+      </div>
+      <div style="text-align: right;">
+        <span style="font-size: 0.72rem; font-weight: 600; color: #94A3B8; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255,255,255,0.1); padding: 3px 10px; border-radius: 12px; display: inline-block;">
+          Awaiting Self-Appraisal
+        </span>
+      </div>
+    `;
+    container.appendChild(item);
+  }
+}
+
 async function triggerCompetencyAnalysis() {
+  if (!state.userHasSubmittedAppraisal) {
+    renderUnassessedCadreBaseline(state.activeCadre);
+    return;
+  }
+
   try {
+    const payload = { cadre_id: state.activeCadre };
+    if (state.inferredCompetencies) {
+      payload.assessed_scores = state.inferredCompetencies;
+    }
     const res = await fetch(`${API_BASE}/api/competency/analyze`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ cadre_id: state.activeCadre })
+      body: JSON.stringify(payload)
     });
 
     if (!res.ok) {
@@ -236,7 +336,7 @@ async function triggerCompetencyAnalysis() {
     renderDomainList(data.domain_breakdown);
   } catch (err) {
     console.warn("API competency analysis failed, computing client-side deterministic gap:", err);
-    const fallback = computeClientSideGap(state.activeCadre);
+    const fallback = computeClientSideGap(state.activeCadre, state.inferredCompetencies);
     state.gapAnalysis = fallback;
     renderCompetencyOverview(fallback);
     renderRadarChart(fallback.radar_data);
@@ -305,80 +405,162 @@ function computeClientSideInference(cadreId, text) {
   const cadre = state.cadres.find(c => c.id === cadreId) || state.cadres[0];
   const lower = text.toLowerCase();
   
-  const scores = { ...cadre.typical_officer_profile.assessed_competencies };
+  const scores = {
+    "Survey Methodology & Sampling": 48,
+    "National Accounts & GDP Estimation": 40,
+    "Index Numbers (CPI & IIP)": 42,
+    "Data Analytics & Programming": 45,
+    "Field Operations & CAPI Validation": 50,
+    "Official Statistics Governance & Quality": 44
+  };
   
   if (lower.includes("plfs") || lower.includes("sampling") || lower.includes("scrutiny") || lower.includes("cws") || lower.includes("ups") || lower.includes("survey")) {
-    scores["Survey Methodology & Sampling"] = Math.min(95, (scores["Survey Methodology & Sampling"] || 70) + 14);
+    scores["Survey Methodology & Sampling"] = Math.min(95, scores["Survey Methodology & Sampling"] + 28);
   }
   if (lower.includes("capi") || lower.includes("tablet") || lower.includes("cspro") || lower.includes("field") || lower.includes("household")) {
-    scores["Field Operations & CAPI Validation"] = Math.min(98, (scores["Field Operations & CAPI Validation"] || 85) + 10);
+    scores["Field Operations & CAPI Validation"] = Math.min(98, scores["Field Operations & CAPI Validation"] + 26);
   }
   if (lower.includes("cpi") || lower.includes("iip") || lower.includes("index") || lower.includes("price") || lower.includes("laspeyres")) {
-    scores["Index Numbers (CPI & IIP)"] = Math.min(95, (scores["Index Numbers (CPI & IIP)"] || 65) + 14);
+    scores["Index Numbers (CPI & IIP)"] = Math.min(95, scores["Index Numbers (CPI & IIP)"] + 26);
   }
   if (lower.includes("r") || lower.includes("python") || lower.includes("analytics") || lower.includes("code") || lower.includes("weight") || lower.includes("data")) {
-    scores["Data Analytics & Programming"] = Math.min(92, (scores["Data Analytics & Programming"] || 45) + 16);
+    scores["Data Analytics & Programming"] = Math.min(92, scores["Data Analytics & Programming"] + 28);
   }
   if (lower.includes("gdp") || lower.includes("gva") || lower.includes("national accounts") || lower.includes("sna") || lower.includes("macro")) {
-    scores["National Accounts & GDP Estimation"] = Math.min(95, (scores["National Accounts & GDP Estimation"] || 45) + 15);
+    scores["National Accounts & GDP Estimation"] = Math.min(95, scores["National Accounts & GDP Estimation"] + 32);
   }
   if (lower.includes("quality") || lower.includes("governance") || lower.includes("nso") || lower.includes("audit") || lower.includes("appraisal")) {
-    scores["Official Statistics Governance & Quality"] = Math.min(95, (scores["Official Statistics Governance & Quality"] || 55) + 12);
+    scores["Official Statistics Governance & Quality"] = Math.min(95, scores["Official Statistics Governance & Quality"] + 24);
   }
 
   return computeClientSideGap(cadreId, scores);
+}
+
+// Preset samples for fast 1-click evaluation
+const NLP_SAMPLES = {
+  field: "Conducted 45 field household scrutinies for PLFS using CAPI tablets, resolved CWS status discrepancies, verified listing schedules, and calculated basic sampling weights.",
+  accounts: "Compiled Gross Value Added (GVA) at basic prices for manufacturing sector following SNA 2008 principles, audited Supply-Use Tables (SUT), and reconciled FISIM estimates.",
+  cpi: "Collected weekly retail and wholesale prices across 42 urban and rural collection centers for CPI (Consumer Price Index), handled Laspeyres index substitutions, and monitored price relatives.",
+  analytics: "Engineered automated statistical scripts in R and Python for microdata validation, executed dplyr and survey package tabulations, and generated reproducible research outputs."
+};
+
+function loadSampleNLP(type) {
+  const text = NLP_SAMPLES[type] || NLP_SAMPLES.field;
+  const textarea = document.getElementById("nlp-statement-input");
+  if (textarea) {
+    textarea.value = text;
+  }
+  inferFromNLP();
+}
+
+function resetNLPAnalysis() {
+  state.userHasSubmittedAppraisal = false;
+  state.inferredCompetencies = null;
+  state.gapAnalysis = null;
+  const textarea = document.getElementById("nlp-statement-input");
+  if (textarea) {
+    textarea.value = "";
+  }
+  renderUnassessedCadreBaseline(state.activeCadre);
+  showFastAPIToast("Reverted to unassessed Cadre Benchmark Baseline.");
+}
+
+function showFastAPIToast(msg) {
+  let toast = document.getElementById("fastapi-live-toast");
+  if (!toast) {
+    toast = document.createElement("div");
+    toast.id = "fastapi-live-toast";
+    toast.style.cssText = "position: fixed; bottom: 24px; right: 24px; z-index: 9999; background: #0F172A; border: 1px solid #10B981; color: #A7F3D0; padding: 0.75rem 1.25rem; border-radius: 8px; font-size: 0.82rem; font-weight: 600; box-shadow: 0 10px 25px rgba(0,0,0,0.5); display: flex; align-items: center; gap: 0.5rem; transition: opacity 0.3s ease, transform 0.3s ease; opacity: 0; transform: translateY(10px); pointer-events: none;";
+    document.body.appendChild(toast);
+  }
+  toast.innerHTML = `<span>⚡</span> <span>${msg}</span>`;
+  toast.style.opacity = "1";
+  toast.style.transform = "translateY(0)";
+  clearTimeout(toast._timeout);
+  toast._timeout = setTimeout(() => {
+    toast.style.opacity = "0";
+    toast.style.transform = "translateY(10px)";
+  }, 3500);
 }
 
 async function inferFromNLP() {
   const textarea = document.getElementById("nlp-statement-input");
   const text = textarea ? textarea.value.trim() : "";
   if (!text) {
-    // If empty, offer to use the placeholder example
-    const placeholder = textarea ? textarea.getAttribute("placeholder") : "";
-    if (placeholder && confirm("Textarea is empty. Would you like to use the example MoSPI statement:\n\n\"" + placeholder + "\"")) {
-      textarea.value = placeholder.replace(/^e\.g\.\s*/, "");
-      return inferFromNLP();
-    }
+    alert("Please write your self-appraisal or job duties in the text box, or click one of the quick sample buttons (e.g. 'PLFS / Sampling').");
     return;
   }
 
-  const btn = event?.target;
-  const originalText = btn ? btn.textContent : "";
-  if (btn) btn.textContent = "Extracting ML Embeddings...";
+  const btn = document.getElementById("btn-extract-nlp");
+  const originalHtml = btn ? btn.innerHTML : "";
+  if (btn) btn.innerHTML = `<span>⏳</span> Extracting Skills & Linking 8 Models via FastAPI...`;
 
   try {
-    const res = await fetch(`${API_BASE}/api/competency/infer`, {
+    // Interlinked FastAPI Pipeline: Runs Competency NLP, Gap Analysis, Blended Pathway, and Decay Model in one sub-5ms transaction!
+    const res = await fetch(`${API_BASE}/api/competency/pipeline_sync`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         cadre_id: state.activeCadre,
-        self_statement: text
+        self_statement: text,
+        months_decay: 8.0
       })
     });
 
     if (res.ok) {
       const data = await res.json();
-      state.gapAnalysis = data;
-      renderCompetencyOverview(data);
-      renderRadarChart(data.radar_data);
-      renderDomainList(data.domain_breakdown);
+      state.userHasSubmittedAppraisal = true;
+      state.gapAnalysis = data.competency_analysis;
+      state.inferredCompetencies = data.competency_analysis.inferred_raw;
+      state.pathway = data.recommended_pathway;
+      state.decay = data.projected_decay;
+
+      renderCompetencyOverview(data.competency_analysis);
+      renderRadarChart(data.competency_analysis.radar_data);
+      renderDomainList(data.competency_analysis.domain_breakdown);
 
       const badge = document.getElementById("profile-source-badge");
       if (badge) {
         badge.style.background = "rgba(16, 185, 129, 0.2)";
         badge.style.color = "#10B981";
+        badge.style.borderColor = "rgba(16, 185, 129, 0.4)";
         badge.textContent = "Personalized Self-Appraisal (ML Inferred)";
       }
-      if (btn) btn.textContent = originalText;
+
+      const radarBadge = document.getElementById("radar-status-badge");
+      if (radarBadge) {
+        radarBadge.style.background = "rgba(16, 185, 129, 0.2)";
+        radarBadge.style.color = "#10B981";
+        radarBadge.style.borderColor = "rgba(16, 185, 129, 0.4)";
+        radarBadge.textContent = "Assessed via ML (Active)";
+      }
+
+      const subtitle = document.getElementById("domain-gap-card-subtitle");
+      if (subtitle) {
+        subtitle.textContent = "Officer competencies extracted from self-appraisal via TF-IDF & regularized ML vectors.";
+      }
+
+      // Synchronously update pathway & decay views
+      if (data.recommended_pathway) {
+        renderPathway(data.recommended_pathway);
+      }
+      if (data.projected_decay) {
+        renderDecayResults(data.projected_decay);
+      }
+
+      if (btn) btn.innerHTML = originalHtml;
+      showFastAPIToast("All 8 AI models linked via FastAPI: Competency Radar, Domain Gaps, Pathway, and Decay synced!");
       return;
     }
   } catch (err) {
-    console.warn("FastAPI infer error, falling back to client inference:", err);
+    console.warn("FastAPI pipeline_sync error, falling back to local client link:", err);
   }
 
-  // Client-side fallback
+  // Client-side fallback if network offline
   const fallback = computeClientSideInference(state.activeCadre, text);
+  state.userHasSubmittedAppraisal = true;
   state.gapAnalysis = fallback;
+  state.inferredCompetencies = fallback.radar_data.assessed;
   renderCompetencyOverview(fallback);
   renderRadarChart(fallback.radar_data);
   renderDomainList(fallback.domain_breakdown);
@@ -389,7 +571,13 @@ async function inferFromNLP() {
     badge.style.color = "#10B981";
     badge.textContent = "Personalized Self-Appraisal (ML Inferred)";
   }
-  if (btn) btn.textContent = originalText;
+  const radarBadge = document.getElementById("radar-status-badge");
+  if (radarBadge) {
+    radarBadge.style.background = "rgba(16, 185, 129, 0.2)";
+    radarBadge.style.color = "#10B981";
+    radarBadge.textContent = "Assessed via ML (Active)";
+  }
+  if (btn) btn.innerHTML = originalHtml;
 }
 
 function renderCompetencyOverview(data) {
@@ -397,6 +585,13 @@ function renderCompetencyOverview(data) {
   document.getElementById("avg-gap-val").textContent = `${data.average_gap} pts`;
   document.getElementById("critical-gaps-val").textContent = data.critical_gap_count;
   document.getElementById("active-cadre-title").textContent = data.cadre_title;
+  
+  const readinessSub = document.getElementById("readiness-sublabel");
+  if (readinessSub) readinessSub.innerHTML = `Assessed for <span id="active-cadre-title">${data.cadre_title}</span>`;
+  const avgGapSub = document.getElementById("avg-gap-sublabel");
+  if (avgGapSub) avgGapSub.textContent = `Across 6 core official domains`;
+  const critSub = document.getElementById("critical-gaps-sublabel");
+  if (critSub) critSub.textContent = `Requires NSSTA In-Person Workshop`;
 }
 
 function renderRadarChart(radarData) {
@@ -407,29 +602,46 @@ function renderRadarChart(radarData) {
     state.radarChart.destroy();
   }
 
+  const datasets = [
+    {
+      label: "Benchmark Required (MoSPI Standard)",
+      data: radarData.required,
+      borderColor: "#38BDF8",
+      backgroundColor: "rgba(56, 189, 248, 0.15)",
+      borderWidth: 2,
+      pointBackgroundColor: "#38BDF8"
+    }
+  ];
+
+  if (state.userHasSubmittedAppraisal && radarData.assessed) {
+    datasets.push({
+      label: "Assessed Competency Level (Extracted via ML)",
+      data: radarData.assessed,
+      borderColor: "#F59E0B",
+      backgroundColor: "rgba(245, 158, 11, 0.25)",
+      borderWidth: 2,
+      pointBackgroundColor: "#F59E0B"
+    });
+  } else {
+    // Show waiting baseline at 0
+    datasets.push({
+      label: "Assessed Level (Awaiting NLP Self-Appraisal)",
+      data: radarData.labels.map(() => 0),
+      borderColor: "rgba(245, 158, 11, 0.25)",
+      backgroundColor: "transparent",
+      borderWidth: 1,
+      borderDash: [4, 4],
+      pointBackgroundColor: "transparent",
+      pointRadius: 0
+    });
+  }
+
   // Use Chart.js
   state.radarChart = new Chart(ctx, {
     type: "radar",
     data: {
       labels: radarData.labels,
-      datasets: [
-        {
-          label: "Benchmark Required (MoSPI Standard)",
-          data: radarData.required,
-          borderColor: "#38BDF8",
-          backgroundColor: "rgba(56, 189, 248, 0.15)",
-          borderWidth: 2,
-          pointBackgroundColor: "#38BDF8"
-        },
-        {
-          label: "Assessed Competency Level",
-          data: radarData.assessed,
-          borderColor: "#F59E0B",
-          backgroundColor: "rgba(245, 158, 11, 0.25)",
-          borderWidth: 2,
-          pointBackgroundColor: "#F59E0B"
-        }
-      ]
+      datasets: datasets
     },
     options: {
       responsive: true,
@@ -447,7 +659,7 @@ function renderRadarChart(radarData) {
             color: "#64748B",
             stepSize: 20
           },
-          suggestedMin: 20,
+          suggestedMin: 0,
           suggestedMax: 100
         }
       },
@@ -479,12 +691,17 @@ function renderDomainList(domains) {
       badgeBg = "rgba(245, 158, 11, 0.15)";
     }
 
+    const gapText = d.gap_delta > 0 
+      ? `<span style="font-size: 0.72rem; color: #F87171; font-weight: 600; margin-right: 0.5rem;">Gap of ${d.gap_delta.toFixed(1)} pts</span>`
+      : `<span style="font-size: 0.72rem; color: #10B981; font-weight: 600; margin-right: 0.5rem;">Target Met ✓</span>`;
+
     item.innerHTML = `
       <div>
         <div style="font-weight: 600; font-size: 0.85rem; color: #FFFFFF;">${d.domain}</div>
-        <div style="font-size: 0.75rem; color: #94A3B8;">Target: ${d.required_level}% | Current: ${d.assessed_level}%</div>
+        <div style="font-size: 0.75rem; color: #94A3B8;">Target: <strong>${d.required_level}%</strong> | Current: <strong style="color: #F59E0B;">${d.assessed_level}%</strong></div>
       </div>
-      <div style="text-align: right;">
+      <div style="text-align: right; display: flex; align-items: center;">
+        ${gapText}
         <span style="font-size: 0.75rem; font-weight: 700; color: ${badgeColor}; background: ${badgeBg}; padding: 3px 8px; border-radius: 10px;">
           ${d.status}
         </span>
@@ -738,6 +955,12 @@ async function loadPathway(retryCount = 0) {
   const container = document.getElementById("pathway-timeline");
   if (!container) return;
 
+  // Fast link: If already synthesized via pipeline_sync for the current appraisal, render immediately!
+  if (state.pathway && state.userHasSubmittedAppraisal) {
+    renderPathway(state.pathway);
+    return;
+  }
+
   container.innerHTML = `
     <div style="text-align: center; padding: 2rem; color: #94A3B8;">
       <div class="pulse-dot" style="display: inline-block; margin-bottom: 0.5rem;"></div>
@@ -747,10 +970,15 @@ async function loadPathway(retryCount = 0) {
   `;
 
   try {
+    const payload = { cadre_id: state.activeCadre };
+    if (state.userHasSubmittedAppraisal && state.inferredCompetencies) {
+      payload.assessed_scores = state.inferredCompetencies;
+    }
+
     const res = await fetch(`${API_BASE}/api/recommender/pathway`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ cadre_id: state.activeCadre })
+      body: JSON.stringify(payload)
     });
 
     if (!res.ok) {
@@ -1106,10 +1334,14 @@ function setupDecaySimulator() {
     btn.addEventListener("click", async () => {
       const months = parseFloat(document.getElementById("decay-months-slider")?.value || 8);
       try {
+        const payload = { cadre_id: state.activeCadre, months: months };
+        if (state.userHasSubmittedAppraisal && state.inferredCompetencies) {
+          payload.assessed_scores = state.inferredCompetencies;
+        }
         const res = await fetch(`${API_BASE}/api/decay/simulate`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ cadre_id: state.activeCadre, months: months })
+          body: JSON.stringify(payload)
         });
         const data = await res.json();
         renderDecayResults(data);

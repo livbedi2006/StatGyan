@@ -32,28 +32,34 @@ from ml_engine.virtual_lab_evaluator import VirtualLabEvaluator
 from ml_engine.proctoring_model import ProctoringTrustEngine
 from ml_engine.survey_ml_model import SurveyMicrodataMLModel, SurveyMLModel
 
-# Pre-warmed ML Models Container
-engines: Dict[str, Any] = {}
+# Pre-warmed ML Models Container (Pre-warmed at module load for zero-latency execution)
+def init_engines() -> Dict[str, Any]:
+    t0 = time.perf_counter()
+    e = {
+        "competency": CompetencyGapModel(),
+        "mcq": GroundedMCQGenerator(),
+        "pathway": BlendedPathwayRecommender(),
+        "decay": SkillDecayModel(),
+        "analytics": PredictiveAnalyticsEngine(),
+        "lab": VirtualLabEvaluator(),
+        "proctoring": ProctoringTrustEngine(),
+        "survey_ml": SurveyMicrodataMLModel(),
+    }
+    t1 = time.perf_counter()
+    print(f"StatGyan AI: All 8 ML engines pre-warmed in {(t1 - t0)*1000:.1f}ms")
+    return e
+
+engines: Dict[str, Any] = init_engines()
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """
-    Pre-warms all 7 custom ML models and caches vector representations at boot.
+    Ensures all 8 ML models are ready at server boot and pre-warmed in memory.
     Guarantees sub-5ms response latency for user requests.
     """
-    t0 = time.perf_counter()
-    engines["competency"] = CompetencyGapModel()
-    engines["mcq"] = GroundedMCQGenerator()
-    engines["pathway"] = BlendedPathwayRecommender()
-    engines["decay"] = SkillDecayModel()
-    engines["analytics"] = PredictiveAnalyticsEngine()
-    engines["lab"] = VirtualLabEvaluator()
-    engines["proctoring"] = ProctoringTrustEngine()
-    engines["survey_ml"] = SurveyMicrodataMLModel()
-    t1 = time.perf_counter()
-    print(f"StatGyan AI: All 8 ML engines pre-warmed in {(t1 - t0)*1000:.1f}ms")
+    if not engines:
+        engines.update(init_engines())
     yield
-    engines.clear()
 
 app = FastAPI(
     title="StatGyan AI - MoSPI Competency Platform",

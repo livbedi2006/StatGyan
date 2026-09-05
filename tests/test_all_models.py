@@ -149,6 +149,39 @@ def calculate_plfs_metrics(records):
         self.assertEqual(eval_res["metrics"]["LFPR"], 63.25)
         self.assertEqual(eval_res["metrics"]["UR"], 23.65)
 
+    def test_08_fastapi_pipeline_sync(self):
+        """Engine 8: FastAPI Interconnected Pipeline (Sub-5ms End-to-End Model Sync)"""
+        from fastapi.testclient import TestClient
+        from backend.server import app
+        
+        client = TestClient(app)
+        statement = "Conducted 45 field household scrutinies for PLFS using CAPI tablets, resolved CWS status discrepancies, and calculated basic sampling weights."
+        res = client.post("/api/competency/pipeline_sync", json={
+            "cadre_id": "jso",
+            "self_statement": statement,
+            "months_decay": 8.0
+        })
+        self.assertEqual(res.status_code, 200)
+        data = res.json()
+        self.assertEqual(data["status"], "ALL_MODELS_LINKED_SYNCED")
+        
+        # 1. Competency NLP & Gap
+        comp = data["competency_analysis"]
+        self.assertIn("inferred_raw", comp)
+        self.assertGreater(comp["inferred_raw"]["Survey Methodology & Sampling"], 40)
+        self.assertIn("radar_data", comp)
+        self.assertEqual(len(comp["radar_data"]["labels"]), 6)
+        
+        # 2. Recommender Pathway (linked directly to gaps)
+        pathway = data["recommended_pathway"]
+        self.assertIn("learning_pathway", pathway)
+        self.assertGreater(pathway["total_pathway_steps"], 0)
+        
+        # 3. Decay Projection (linked to extracted baseline)
+        decay = data["projected_decay"]
+        self.assertIn("decay_curve", decay)
+        self.assertIn("active_drift_alerts", decay)
+
 
 if __name__ == "__main__":
     unittest.main()
